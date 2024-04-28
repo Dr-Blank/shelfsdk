@@ -1,0 +1,12 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#0B1195",
+    "titleBar.activeBackground": "#0F18D1",
+    "titleBar.activeForeground": "#FDFDFF"
+  },
+  "files.exclude": {
+    "**/*.freezed.dart": true,
+    "**/*.g.dart": true
+  },
+  "cSpell.words": ["mocktail", "shelfsdk"]
+}
