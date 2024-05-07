@@ -49,7 +49,6 @@ mixin _$Media {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)
         book,
     required TResult Function(
@@ -59,8 +58,6 @@ mixin _$Media {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)
@@ -75,7 +72,6 @@ mixin _$Media {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)
         bookExpanded,
     required TResult Function(
@@ -126,7 +122,6 @@ mixin _$Media {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult? Function(
@@ -136,8 +131,6 @@ mixin _$Media {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -152,7 +145,6 @@ mixin _$Media {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult? Function(
@@ -203,7 +195,6 @@ mixin _$Media {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult Function(
@@ -213,8 +204,6 @@ mixin _$Media {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -229,7 +218,6 @@ mixin _$Media {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult Function(
@@ -374,7 +362,6 @@ abstract class _$$BookImplCopyWith<$Res> implements $MediaCopyWith<$Res> {
       List<String> tags,
       List<AudioFile> audioFiles,
       List<BookChapter> chapters,
-      List<int> missingParts,
       EBookFile? ebookFile});
 
   @override
@@ -398,7 +385,6 @@ class __$$BookImplCopyWithImpl<$Res>
     Object? tags = null,
     Object? audioFiles = null,
     Object? chapters = null,
-    Object? missingParts = null,
     Object? ebookFile = freezed,
   }) {
     return _then(_$BookImpl(
@@ -426,10 +412,6 @@ class __$$BookImplCopyWithImpl<$Res>
           ? _value._chapters
           : chapters // ignore: cast_nullable_to_non_nullable
               as List<BookChapter>,
-      missingParts: null == missingParts
-          ? _value._missingParts
-          : missingParts // ignore: cast_nullable_to_non_nullable
-              as List<int>,
       ebookFile: freezed == ebookFile
           ? _value.ebookFile
           : ebookFile // ignore: cast_nullable_to_non_nullable
@@ -460,13 +442,11 @@ class _$BookImpl extends Book {
       required final List<String> tags,
       required final List<AudioFile> audioFiles,
       required final List<BookChapter> chapters,
-      required final List<int> missingParts,
       this.ebookFile,
       final String? $type})
       : _tags = tags,
         _audioFiles = audioFiles,
         _chapters = chapters,
-        _missingParts = missingParts,
         $type = $type ?? 'book',
         super._();
 
@@ -503,14 +483,6 @@ class _$BookImpl extends Book {
     return EqualUnmodifiableListView(_chapters);
   }
 
-  final List<int> _missingParts;
-  @override
-  List<int> get missingParts {
-    if (_missingParts is EqualUnmodifiableListView) return _missingParts;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_missingParts);
-  }
-
   @override
   final EBookFile? ebookFile;
 
@@ -519,7 +491,7 @@ class _$BookImpl extends Book {
 
   @override
   String toString() {
-    return 'Media.book(libraryItemId: $libraryItemId, metadata: $metadata, coverPath: $coverPath, tags: $tags, audioFiles: $audioFiles, chapters: $chapters, missingParts: $missingParts, ebookFile: $ebookFile)';
+    return 'Media.book(libraryItemId: $libraryItemId, metadata: $metadata, coverPath: $coverPath, tags: $tags, audioFiles: $audioFiles, chapters: $chapters, ebookFile: $ebookFile)';
   }
 
   @override
@@ -537,8 +509,6 @@ class _$BookImpl extends Book {
             const DeepCollectionEquality()
                 .equals(other._audioFiles, _audioFiles) &&
             const DeepCollectionEquality().equals(other._chapters, _chapters) &&
-            const DeepCollectionEquality()
-                .equals(other._missingParts, _missingParts) &&
             (identical(other.ebookFile, ebookFile) ||
                 other.ebookFile == ebookFile));
   }
@@ -553,7 +523,6 @@ class _$BookImpl extends Book {
       const DeepCollectionEquality().hash(_tags),
       const DeepCollectionEquality().hash(_audioFiles),
       const DeepCollectionEquality().hash(_chapters),
-      const DeepCollectionEquality().hash(_missingParts),
       ebookFile);
 
   @JsonKey(ignore: true)
@@ -572,7 +541,6 @@ class _$BookImpl extends Book {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)
         book,
     required TResult Function(
@@ -582,8 +550,6 @@ class _$BookImpl extends Book {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)
@@ -598,7 +564,6 @@ class _$BookImpl extends Book {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)
         bookExpanded,
     required TResult Function(
@@ -640,7 +605,7 @@ class _$BookImpl extends Book {
         podcastExpanded,
   }) {
     return book(libraryItemId, metadata, coverPath, tags, audioFiles, chapters,
-        missingParts, ebookFile);
+        ebookFile);
   }
 
   @override
@@ -653,7 +618,6 @@ class _$BookImpl extends Book {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult? Function(
@@ -663,8 +627,6 @@ class _$BookImpl extends Book {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -679,7 +641,6 @@ class _$BookImpl extends Book {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult? Function(
@@ -721,7 +682,7 @@ class _$BookImpl extends Book {
         podcastExpanded,
   }) {
     return book?.call(libraryItemId, metadata, coverPath, tags, audioFiles,
-        chapters, missingParts, ebookFile);
+        chapters, ebookFile);
   }
 
   @override
@@ -734,7 +695,6 @@ class _$BookImpl extends Book {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult Function(
@@ -744,8 +704,6 @@ class _$BookImpl extends Book {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -760,7 +718,6 @@ class _$BookImpl extends Book {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult Function(
@@ -804,7 +761,7 @@ class _$BookImpl extends Book {
   }) {
     if (book != null) {
       return book(libraryItemId, metadata, coverPath, tags, audioFiles,
-          chapters, missingParts, ebookFile);
+          chapters, ebookFile);
     }
     return orElse();
   }
@@ -868,7 +825,6 @@ abstract class Book extends Media {
       required final List<String> tags,
       required final List<AudioFile> audioFiles,
       required final List<BookChapter> chapters,
-      required final List<int> missingParts,
       final EBookFile? ebookFile}) = _$BookImpl;
   const Book._() : super._();
 
@@ -883,7 +839,6 @@ abstract class Book extends Media {
   List<String> get tags;
   List<AudioFile> get audioFiles;
   List<BookChapter> get chapters;
-  List<int> get missingParts;
   EBookFile? get ebookFile;
   @override
   @JsonKey(ignore: true)
@@ -906,8 +861,6 @@ abstract class _$$BookMinifiedImplCopyWith<$Res>
       int numTracks,
       int numAudioFiles,
       int numChapters,
-      int numMissingParts,
-      int numInvalidAudioFiles,
       Duration duration,
       int size,
       String? ebookFormat});
@@ -933,8 +886,6 @@ class __$$BookMinifiedImplCopyWithImpl<$Res>
     Object? numTracks = null,
     Object? numAudioFiles = null,
     Object? numChapters = null,
-    Object? numMissingParts = null,
-    Object? numInvalidAudioFiles = null,
     Object? duration = null,
     Object? size = null,
     Object? ebookFormat = freezed,
@@ -964,14 +915,6 @@ class __$$BookMinifiedImplCopyWithImpl<$Res>
           ? _value.numChapters
           : numChapters // ignore: cast_nullable_to_non_nullable
               as int,
-      numMissingParts: null == numMissingParts
-          ? _value.numMissingParts
-          : numMissingParts // ignore: cast_nullable_to_non_nullable
-              as int,
-      numInvalidAudioFiles: null == numInvalidAudioFiles
-          ? _value.numInvalidAudioFiles
-          : numInvalidAudioFiles // ignore: cast_nullable_to_non_nullable
-              as int,
       duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
@@ -999,8 +942,6 @@ class _$BookMinifiedImpl extends BookMinified {
       required this.numTracks,
       required this.numAudioFiles,
       required this.numChapters,
-      required this.numMissingParts,
-      required this.numInvalidAudioFiles,
       required this.duration,
       required this.size,
       this.ebookFormat,
@@ -1031,10 +972,6 @@ class _$BookMinifiedImpl extends BookMinified {
   @override
   final int numChapters;
   @override
-  final int numMissingParts;
-  @override
-  final int numInvalidAudioFiles;
-  @override
   final Duration duration;
   @override
   final int size;
@@ -1046,7 +983,7 @@ class _$BookMinifiedImpl extends BookMinified {
 
   @override
   String toString() {
-    return 'Media.bookMinified(metadata: $metadata, coverPath: $coverPath, tags: $tags, numTracks: $numTracks, numAudioFiles: $numAudioFiles, numChapters: $numChapters, numMissingParts: $numMissingParts, numInvalidAudioFiles: $numInvalidAudioFiles, duration: $duration, size: $size, ebookFormat: $ebookFormat)';
+    return 'Media.bookMinified(metadata: $metadata, coverPath: $coverPath, tags: $tags, numTracks: $numTracks, numAudioFiles: $numAudioFiles, numChapters: $numChapters, duration: $duration, size: $size, ebookFormat: $ebookFormat)';
   }
 
   @override
@@ -1065,10 +1002,6 @@ class _$BookMinifiedImpl extends BookMinified {
                 other.numAudioFiles == numAudioFiles) &&
             (identical(other.numChapters, numChapters) ||
                 other.numChapters == numChapters) &&
-            (identical(other.numMissingParts, numMissingParts) ||
-                other.numMissingParts == numMissingParts) &&
-            (identical(other.numInvalidAudioFiles, numInvalidAudioFiles) ||
-                other.numInvalidAudioFiles == numInvalidAudioFiles) &&
             (identical(other.duration, duration) ||
                 other.duration == duration) &&
             (identical(other.size, size) || other.size == size) &&
@@ -1086,8 +1019,6 @@ class _$BookMinifiedImpl extends BookMinified {
       numTracks,
       numAudioFiles,
       numChapters,
-      numMissingParts,
-      numInvalidAudioFiles,
       duration,
       size,
       ebookFormat);
@@ -1108,7 +1039,6 @@ class _$BookMinifiedImpl extends BookMinified {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)
         book,
     required TResult Function(
@@ -1118,8 +1048,6 @@ class _$BookMinifiedImpl extends BookMinified {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)
@@ -1134,7 +1062,6 @@ class _$BookMinifiedImpl extends BookMinified {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)
         bookExpanded,
     required TResult Function(
@@ -1175,18 +1102,8 @@ class _$BookMinifiedImpl extends BookMinified {
             int size)
         podcastExpanded,
   }) {
-    return bookMinified(
-        metadata,
-        coverPath,
-        tags,
-        numTracks,
-        numAudioFiles,
-        numChapters,
-        numMissingParts,
-        numInvalidAudioFiles,
-        duration,
-        size,
-        ebookFormat);
+    return bookMinified(metadata, coverPath, tags, numTracks, numAudioFiles,
+        numChapters, duration, size, ebookFormat);
   }
 
   @override
@@ -1199,7 +1116,6 @@ class _$BookMinifiedImpl extends BookMinified {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult? Function(
@@ -1209,8 +1125,6 @@ class _$BookMinifiedImpl extends BookMinified {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -1225,7 +1139,6 @@ class _$BookMinifiedImpl extends BookMinified {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult? Function(
@@ -1266,18 +1179,8 @@ class _$BookMinifiedImpl extends BookMinified {
             int size)?
         podcastExpanded,
   }) {
-    return bookMinified?.call(
-        metadata,
-        coverPath,
-        tags,
-        numTracks,
-        numAudioFiles,
-        numChapters,
-        numMissingParts,
-        numInvalidAudioFiles,
-        duration,
-        size,
-        ebookFormat);
+    return bookMinified?.call(metadata, coverPath, tags, numTracks,
+        numAudioFiles, numChapters, duration, size, ebookFormat);
   }
 
   @override
@@ -1290,7 +1193,6 @@ class _$BookMinifiedImpl extends BookMinified {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult Function(
@@ -1300,8 +1202,6 @@ class _$BookMinifiedImpl extends BookMinified {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -1316,7 +1216,6 @@ class _$BookMinifiedImpl extends BookMinified {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult Function(
@@ -1359,18 +1258,8 @@ class _$BookMinifiedImpl extends BookMinified {
     required TResult orElse(),
   }) {
     if (bookMinified != null) {
-      return bookMinified(
-          metadata,
-          coverPath,
-          tags,
-          numTracks,
-          numAudioFiles,
-          numChapters,
-          numMissingParts,
-          numInvalidAudioFiles,
-          duration,
-          size,
-          ebookFormat);
+      return bookMinified(metadata, coverPath, tags, numTracks, numAudioFiles,
+          numChapters, duration, size, ebookFormat);
     }
     return orElse();
   }
@@ -1434,8 +1323,6 @@ abstract class BookMinified extends Media {
       required final int numTracks,
       required final int numAudioFiles,
       required final int numChapters,
-      required final int numMissingParts,
-      required final int numInvalidAudioFiles,
       required final Duration duration,
       required final int size,
       final String? ebookFormat}) = _$BookMinifiedImpl;
@@ -1453,8 +1340,6 @@ abstract class BookMinified extends Media {
   int get numTracks;
   int get numAudioFiles;
   int get numChapters;
-  int get numMissingParts;
-  int get numInvalidAudioFiles;
   Duration get duration;
   int get size;
   String? get ebookFormat;
@@ -1482,7 +1367,6 @@ abstract class _$$BookExpandedImplCopyWith<$Res>
       Duration duration,
       int size,
       List<AudioTrack> tracks,
-      List<int> missingParts,
       EBookFile? ebookFile});
 
   @override
@@ -1510,7 +1394,6 @@ class __$$BookExpandedImplCopyWithImpl<$Res>
     Object? duration = null,
     Object? size = null,
     Object? tracks = null,
-    Object? missingParts = null,
     Object? ebookFile = freezed,
   }) {
     return _then(_$BookExpandedImpl(
@@ -1550,10 +1433,6 @@ class __$$BookExpandedImplCopyWithImpl<$Res>
           ? _value._tracks
           : tracks // ignore: cast_nullable_to_non_nullable
               as List<AudioTrack>,
-      missingParts: null == missingParts
-          ? _value._missingParts
-          : missingParts // ignore: cast_nullable_to_non_nullable
-              as List<int>,
       ebookFile: freezed == ebookFile
           ? _value.ebookFile
           : ebookFile // ignore: cast_nullable_to_non_nullable
@@ -1588,14 +1467,12 @@ class _$BookExpandedImpl extends BookExpanded {
       required this.duration,
       required this.size,
       required final List<AudioTrack> tracks,
-      required final List<int> missingParts,
       this.ebookFile,
       final String? $type})
       : _tags = tags,
         _audioFiles = audioFiles,
         _chapters = chapters,
         _tracks = tracks,
-        _missingParts = missingParts,
         $type = $type ?? 'bookExpanded',
         super._();
 
@@ -1644,14 +1521,6 @@ class _$BookExpandedImpl extends BookExpanded {
     return EqualUnmodifiableListView(_tracks);
   }
 
-  final List<int> _missingParts;
-  @override
-  List<int> get missingParts {
-    if (_missingParts is EqualUnmodifiableListView) return _missingParts;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_missingParts);
-  }
-
   @override
   final EBookFile? ebookFile;
 
@@ -1660,7 +1529,7 @@ class _$BookExpandedImpl extends BookExpanded {
 
   @override
   String toString() {
-    return 'Media.bookExpanded(libraryItemId: $libraryItemId, metadata: $metadata, coverPath: $coverPath, tags: $tags, audioFiles: $audioFiles, chapters: $chapters, duration: $duration, size: $size, tracks: $tracks, missingParts: $missingParts, ebookFile: $ebookFile)';
+    return 'Media.bookExpanded(libraryItemId: $libraryItemId, metadata: $metadata, coverPath: $coverPath, tags: $tags, audioFiles: $audioFiles, chapters: $chapters, duration: $duration, size: $size, tracks: $tracks, ebookFile: $ebookFile)';
   }
 
   @override
@@ -1682,8 +1551,6 @@ class _$BookExpandedImpl extends BookExpanded {
                 other.duration == duration) &&
             (identical(other.size, size) || other.size == size) &&
             const DeepCollectionEquality().equals(other._tracks, _tracks) &&
-            const DeepCollectionEquality()
-                .equals(other._missingParts, _missingParts) &&
             (identical(other.ebookFile, ebookFile) ||
                 other.ebookFile == ebookFile));
   }
@@ -1701,7 +1568,6 @@ class _$BookExpandedImpl extends BookExpanded {
       duration,
       size,
       const DeepCollectionEquality().hash(_tracks),
-      const DeepCollectionEquality().hash(_missingParts),
       ebookFile);
 
   @JsonKey(ignore: true)
@@ -1720,7 +1586,6 @@ class _$BookExpandedImpl extends BookExpanded {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)
         book,
     required TResult Function(
@@ -1730,8 +1595,6 @@ class _$BookExpandedImpl extends BookExpanded {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)
@@ -1746,7 +1609,6 @@ class _$BookExpandedImpl extends BookExpanded {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)
         bookExpanded,
     required TResult Function(
@@ -1788,7 +1650,7 @@ class _$BookExpandedImpl extends BookExpanded {
         podcastExpanded,
   }) {
     return bookExpanded(libraryItemId, metadata, coverPath, tags, audioFiles,
-        chapters, duration, size, tracks, missingParts, ebookFile);
+        chapters, duration, size, tracks, ebookFile);
   }
 
   @override
@@ -1801,7 +1663,6 @@ class _$BookExpandedImpl extends BookExpanded {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult? Function(
@@ -1811,8 +1672,6 @@ class _$BookExpandedImpl extends BookExpanded {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -1827,7 +1686,6 @@ class _$BookExpandedImpl extends BookExpanded {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult? Function(
@@ -1869,7 +1727,7 @@ class _$BookExpandedImpl extends BookExpanded {
         podcastExpanded,
   }) {
     return bookExpanded?.call(libraryItemId, metadata, coverPath, tags,
-        audioFiles, chapters, duration, size, tracks, missingParts, ebookFile);
+        audioFiles, chapters, duration, size, tracks, ebookFile);
   }
 
   @override
@@ -1882,7 +1740,6 @@ class _$BookExpandedImpl extends BookExpanded {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult Function(
@@ -1892,8 +1749,6 @@ class _$BookExpandedImpl extends BookExpanded {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -1908,7 +1763,6 @@ class _$BookExpandedImpl extends BookExpanded {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult Function(
@@ -1952,7 +1806,7 @@ class _$BookExpandedImpl extends BookExpanded {
   }) {
     if (bookExpanded != null) {
       return bookExpanded(libraryItemId, metadata, coverPath, tags, audioFiles,
-          chapters, duration, size, tracks, missingParts, ebookFile);
+          chapters, duration, size, tracks, ebookFile);
     }
     return orElse();
   }
@@ -2019,7 +1873,6 @@ abstract class BookExpanded extends Media {
       required final Duration duration,
       required final int size,
       required final List<AudioTrack> tracks,
-      required final List<int> missingParts,
       final EBookFile? ebookFile}) = _$BookExpandedImpl;
   const BookExpanded._() : super._();
 
@@ -2038,7 +1891,6 @@ abstract class BookExpanded extends Media {
   Duration get duration;
   int get size;
   List<AudioTrack> get tracks;
-  List<int> get missingParts;
   EBookFile? get ebookFile;
   @override
   @JsonKey(ignore: true)
@@ -2271,7 +2123,6 @@ class _$PodcastImpl extends Podcast {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)
         book,
     required TResult Function(
@@ -2281,8 +2132,6 @@ class _$PodcastImpl extends Podcast {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)
@@ -2297,7 +2146,6 @@ class _$PodcastImpl extends Podcast {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)
         bookExpanded,
     required TResult Function(
@@ -2361,7 +2209,6 @@ class _$PodcastImpl extends Podcast {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult? Function(
@@ -2371,8 +2218,6 @@ class _$PodcastImpl extends Podcast {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -2387,7 +2232,6 @@ class _$PodcastImpl extends Podcast {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult? Function(
@@ -2451,7 +2295,6 @@ class _$PodcastImpl extends Podcast {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult Function(
@@ -2461,8 +2304,6 @@ class _$PodcastImpl extends Podcast {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -2477,7 +2318,6 @@ class _$PodcastImpl extends Podcast {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult Function(
@@ -2841,7 +2681,6 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)
         book,
     required TResult Function(
@@ -2851,8 +2690,6 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)
@@ -2867,7 +2704,6 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)
         bookExpanded,
     required TResult Function(
@@ -2931,7 +2767,6 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult? Function(
@@ -2941,8 +2776,6 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -2957,7 +2790,6 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult? Function(
@@ -3021,7 +2853,6 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult Function(
@@ -3031,8 +2862,6 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -3047,7 +2876,6 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult Function(
@@ -3430,7 +3258,6 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)
         book,
     required TResult Function(
@@ -3440,8 +3267,6 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)
@@ -3456,7 +3281,6 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)
         bookExpanded,
     required TResult Function(
@@ -3521,7 +3345,6 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult? Function(
@@ -3531,8 +3354,6 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -3547,7 +3368,6 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult? Function(
@@ -3612,7 +3432,6 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
             List<String> tags,
             List<AudioFile> audioFiles,
             List<BookChapter> chapters,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         book,
     TResult Function(
@@ -3622,8 +3441,6 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
             int numTracks,
             int numAudioFiles,
             int numChapters,
-            int numMissingParts,
-            int numInvalidAudioFiles,
             Duration duration,
             int size,
             String? ebookFormat)?
@@ -3638,7 +3455,6 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
             Duration duration,
             int size,
             List<AudioTrack> tracks,
-            List<int> missingParts,
             EBookFile? ebookFile)?
         bookExpanded,
     TResult Function(

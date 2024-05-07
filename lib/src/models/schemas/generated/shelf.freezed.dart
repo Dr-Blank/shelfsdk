@@ -20,7 +20,7 @@ Shelf _$ShelfFromJson(Map<String, dynamic> json) {
       return LibraryItemShelf.fromJson(json);
     case 'series':
       return SeriesShelf.fromJson(json);
-    case 'author':
+    case 'authors':
       return AuthorShelf.fromJson(json);
 
     default:
@@ -36,44 +36,44 @@ mixin _$Shelf {
   String get labelStringKey => throw _privateConstructorUsedError;
   ShelfType get type => throw _privateConstructorUsedError;
   List<Object> get entities => throw _privateConstructorUsedError;
-  String get category => throw _privateConstructorUsedError;
+  int get total => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)
+            ShelfType type, List<LibraryItem> entities, int total)
         libraryItem,
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)
+            ShelfType type, List<Series> entities, int total)
         series,
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)
-        author,
+            ShelfType type, List<Author> entities, int total)
+        authors,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)?
+            ShelfType type, List<LibraryItem> entities, int total)?
         libraryItem,
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)?
+            ShelfType type, List<Series> entities, int total)?
         series,
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)?
-        author,
+            ShelfType type, List<Author> entities, int total)?
+        authors,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)?
+            ShelfType type, List<LibraryItem> entities, int total)?
         libraryItem,
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)?
+            ShelfType type, List<Series> entities, int total)?
         series,
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)?
-        author,
+            ShelfType type, List<Author> entities, int total)?
+        authors,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -81,21 +81,21 @@ mixin _$Shelf {
   TResult map<TResult extends Object?>({
     required TResult Function(LibraryItemShelf value) libraryItem,
     required TResult Function(SeriesShelf value) series,
-    required TResult Function(AuthorShelf value) author,
+    required TResult Function(AuthorShelf value) authors,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LibraryItemShelf value)? libraryItem,
     TResult? Function(SeriesShelf value)? series,
-    TResult? Function(AuthorShelf value)? author,
+    TResult? Function(AuthorShelf value)? authors,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LibraryItemShelf value)? libraryItem,
     TResult Function(SeriesShelf value)? series,
-    TResult Function(AuthorShelf value)? author,
+    TResult Function(AuthorShelf value)? authors,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,7 +114,7 @@ abstract class $ShelfCopyWith<$Res> {
       String label,
       String labelStringKey,
       ShelfType type,
-      String category});
+      int total});
 }
 
 /// @nodoc
@@ -134,7 +134,7 @@ class _$ShelfCopyWithImpl<$Res, $Val extends Shelf>
     Object? label = null,
     Object? labelStringKey = null,
     Object? type = null,
-    Object? category = null,
+    Object? total = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -153,10 +153,10 @@ class _$ShelfCopyWithImpl<$Res, $Val extends Shelf>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as ShelfType,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String,
+      total: null == total
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -175,7 +175,7 @@ abstract class _$$LibraryItemShelfImplCopyWith<$Res>
       String labelStringKey,
       ShelfType type,
       List<LibraryItem> entities,
-      String category});
+      int total});
 }
 
 /// @nodoc
@@ -194,7 +194,7 @@ class __$$LibraryItemShelfImplCopyWithImpl<$Res>
     Object? labelStringKey = null,
     Object? type = null,
     Object? entities = null,
-    Object? category = null,
+    Object? total = null,
   }) {
     return _then(_$LibraryItemShelfImpl(
       id: null == id
@@ -217,10 +217,10 @@ class __$$LibraryItemShelfImplCopyWithImpl<$Res>
           ? _value._entities
           : entities // ignore: cast_nullable_to_non_nullable
               as List<LibraryItem>,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String,
+      total: null == total
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -234,7 +234,7 @@ class _$LibraryItemShelfImpl implements LibraryItemShelf {
       required this.labelStringKey,
       required this.type,
       required final List<LibraryItem> entities,
-      required this.category,
+      required this.total,
       final String? $type})
       : _entities = entities,
         $type = $type ?? 'libraryItem';
@@ -259,14 +259,14 @@ class _$LibraryItemShelfImpl implements LibraryItemShelf {
   }
 
   @override
-  final String category;
+  final int total;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'Shelf.libraryItem(id: $id, label: $label, labelStringKey: $labelStringKey, type: $type, entities: $entities, category: $category)';
+    return 'Shelf.libraryItem(id: $id, label: $label, labelStringKey: $labelStringKey, type: $type, entities: $entities, total: $total)';
   }
 
   @override
@@ -280,14 +280,13 @@ class _$LibraryItemShelfImpl implements LibraryItemShelf {
                 other.labelStringKey == labelStringKey) &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._entities, _entities) &&
-            (identical(other.category, category) ||
-                other.category == category));
+            (identical(other.total, total) || other.total == total));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, label, labelStringKey, type,
-      const DeepCollectionEquality().hash(_entities), category);
+      const DeepCollectionEquality().hash(_entities), total);
 
   @JsonKey(ignore: true)
   @override
@@ -300,51 +299,50 @@ class _$LibraryItemShelfImpl implements LibraryItemShelf {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)
+            ShelfType type, List<LibraryItem> entities, int total)
         libraryItem,
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)
+            ShelfType type, List<Series> entities, int total)
         series,
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)
-        author,
+            ShelfType type, List<Author> entities, int total)
+        authors,
   }) {
-    return libraryItem(id, label, labelStringKey, type, entities, category);
+    return libraryItem(id, label, labelStringKey, type, entities, total);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)?
+            ShelfType type, List<LibraryItem> entities, int total)?
         libraryItem,
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)?
+            ShelfType type, List<Series> entities, int total)?
         series,
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)?
-        author,
+            ShelfType type, List<Author> entities, int total)?
+        authors,
   }) {
-    return libraryItem?.call(
-        id, label, labelStringKey, type, entities, category);
+    return libraryItem?.call(id, label, labelStringKey, type, entities, total);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)?
+            ShelfType type, List<LibraryItem> entities, int total)?
         libraryItem,
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)?
+            ShelfType type, List<Series> entities, int total)?
         series,
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)?
-        author,
+            ShelfType type, List<Author> entities, int total)?
+        authors,
     required TResult orElse(),
   }) {
     if (libraryItem != null) {
-      return libraryItem(id, label, labelStringKey, type, entities, category);
+      return libraryItem(id, label, labelStringKey, type, entities, total);
     }
     return orElse();
   }
@@ -354,7 +352,7 @@ class _$LibraryItemShelfImpl implements LibraryItemShelf {
   TResult map<TResult extends Object?>({
     required TResult Function(LibraryItemShelf value) libraryItem,
     required TResult Function(SeriesShelf value) series,
-    required TResult Function(AuthorShelf value) author,
+    required TResult Function(AuthorShelf value) authors,
   }) {
     return libraryItem(this);
   }
@@ -364,7 +362,7 @@ class _$LibraryItemShelfImpl implements LibraryItemShelf {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LibraryItemShelf value)? libraryItem,
     TResult? Function(SeriesShelf value)? series,
-    TResult? Function(AuthorShelf value)? author,
+    TResult? Function(AuthorShelf value)? authors,
   }) {
     return libraryItem?.call(this);
   }
@@ -374,7 +372,7 @@ class _$LibraryItemShelfImpl implements LibraryItemShelf {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LibraryItemShelf value)? libraryItem,
     TResult Function(SeriesShelf value)? series,
-    TResult Function(AuthorShelf value)? author,
+    TResult Function(AuthorShelf value)? authors,
     required TResult orElse(),
   }) {
     if (libraryItem != null) {
@@ -398,7 +396,7 @@ abstract class LibraryItemShelf implements Shelf {
       required final String labelStringKey,
       required final ShelfType type,
       required final List<LibraryItem> entities,
-      required final String category}) = _$LibraryItemShelfImpl;
+      required final int total}) = _$LibraryItemShelfImpl;
 
   factory LibraryItemShelf.fromJson(Map<String, dynamic> json) =
       _$LibraryItemShelfImpl.fromJson;
@@ -414,7 +412,7 @@ abstract class LibraryItemShelf implements Shelf {
   @override
   List<LibraryItem> get entities;
   @override
-  String get category;
+  int get total;
   @override
   @JsonKey(ignore: true)
   _$$LibraryItemShelfImplCopyWith<_$LibraryItemShelfImpl> get copyWith =>
@@ -435,7 +433,7 @@ abstract class _$$SeriesShelfImplCopyWith<$Res>
       String labelStringKey,
       ShelfType type,
       List<Series> entities,
-      String category});
+      int total});
 }
 
 /// @nodoc
@@ -454,7 +452,7 @@ class __$$SeriesShelfImplCopyWithImpl<$Res>
     Object? labelStringKey = null,
     Object? type = null,
     Object? entities = null,
-    Object? category = null,
+    Object? total = null,
   }) {
     return _then(_$SeriesShelfImpl(
       id: null == id
@@ -477,10 +475,10 @@ class __$$SeriesShelfImplCopyWithImpl<$Res>
           ? _value._entities
           : entities // ignore: cast_nullable_to_non_nullable
               as List<Series>,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String,
+      total: null == total
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -494,7 +492,7 @@ class _$SeriesShelfImpl implements SeriesShelf {
       required this.labelStringKey,
       required this.type,
       required final List<Series> entities,
-      required this.category,
+      required this.total,
       final String? $type})
       : _entities = entities,
         $type = $type ?? 'series';
@@ -519,14 +517,14 @@ class _$SeriesShelfImpl implements SeriesShelf {
   }
 
   @override
-  final String category;
+  final int total;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'Shelf.series(id: $id, label: $label, labelStringKey: $labelStringKey, type: $type, entities: $entities, category: $category)';
+    return 'Shelf.series(id: $id, label: $label, labelStringKey: $labelStringKey, type: $type, entities: $entities, total: $total)';
   }
 
   @override
@@ -540,14 +538,13 @@ class _$SeriesShelfImpl implements SeriesShelf {
                 other.labelStringKey == labelStringKey) &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._entities, _entities) &&
-            (identical(other.category, category) ||
-                other.category == category));
+            (identical(other.total, total) || other.total == total));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, label, labelStringKey, type,
-      const DeepCollectionEquality().hash(_entities), category);
+      const DeepCollectionEquality().hash(_entities), total);
 
   @JsonKey(ignore: true)
   @override
@@ -559,50 +556,50 @@ class _$SeriesShelfImpl implements SeriesShelf {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)
+            ShelfType type, List<LibraryItem> entities, int total)
         libraryItem,
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)
+            ShelfType type, List<Series> entities, int total)
         series,
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)
-        author,
+            ShelfType type, List<Author> entities, int total)
+        authors,
   }) {
-    return series(id, label, labelStringKey, type, entities, category);
+    return series(id, label, labelStringKey, type, entities, total);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)?
+            ShelfType type, List<LibraryItem> entities, int total)?
         libraryItem,
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)?
+            ShelfType type, List<Series> entities, int total)?
         series,
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)?
-        author,
+            ShelfType type, List<Author> entities, int total)?
+        authors,
   }) {
-    return series?.call(id, label, labelStringKey, type, entities, category);
+    return series?.call(id, label, labelStringKey, type, entities, total);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)?
+            ShelfType type, List<LibraryItem> entities, int total)?
         libraryItem,
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)?
+            ShelfType type, List<Series> entities, int total)?
         series,
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)?
-        author,
+            ShelfType type, List<Author> entities, int total)?
+        authors,
     required TResult orElse(),
   }) {
     if (series != null) {
-      return series(id, label, labelStringKey, type, entities, category);
+      return series(id, label, labelStringKey, type, entities, total);
     }
     return orElse();
   }
@@ -612,7 +609,7 @@ class _$SeriesShelfImpl implements SeriesShelf {
   TResult map<TResult extends Object?>({
     required TResult Function(LibraryItemShelf value) libraryItem,
     required TResult Function(SeriesShelf value) series,
-    required TResult Function(AuthorShelf value) author,
+    required TResult Function(AuthorShelf value) authors,
   }) {
     return series(this);
   }
@@ -622,7 +619,7 @@ class _$SeriesShelfImpl implements SeriesShelf {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LibraryItemShelf value)? libraryItem,
     TResult? Function(SeriesShelf value)? series,
-    TResult? Function(AuthorShelf value)? author,
+    TResult? Function(AuthorShelf value)? authors,
   }) {
     return series?.call(this);
   }
@@ -632,7 +629,7 @@ class _$SeriesShelfImpl implements SeriesShelf {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LibraryItemShelf value)? libraryItem,
     TResult Function(SeriesShelf value)? series,
-    TResult Function(AuthorShelf value)? author,
+    TResult Function(AuthorShelf value)? authors,
     required TResult orElse(),
   }) {
     if (series != null) {
@@ -656,7 +653,7 @@ abstract class SeriesShelf implements Shelf {
       required final String labelStringKey,
       required final ShelfType type,
       required final List<Series> entities,
-      required final String category}) = _$SeriesShelfImpl;
+      required final int total}) = _$SeriesShelfImpl;
 
   factory SeriesShelf.fromJson(Map<String, dynamic> json) =
       _$SeriesShelfImpl.fromJson;
@@ -672,7 +669,7 @@ abstract class SeriesShelf implements Shelf {
   @override
   List<Series> get entities;
   @override
-  String get category;
+  int get total;
   @override
   @JsonKey(ignore: true)
   _$$SeriesShelfImplCopyWith<_$SeriesShelfImpl> get copyWith =>
@@ -693,7 +690,7 @@ abstract class _$$AuthorShelfImplCopyWith<$Res>
       String labelStringKey,
       ShelfType type,
       List<Author> entities,
-      String category});
+      int total});
 }
 
 /// @nodoc
@@ -712,7 +709,7 @@ class __$$AuthorShelfImplCopyWithImpl<$Res>
     Object? labelStringKey = null,
     Object? type = null,
     Object? entities = null,
-    Object? category = null,
+    Object? total = null,
   }) {
     return _then(_$AuthorShelfImpl(
       id: null == id
@@ -735,10 +732,10 @@ class __$$AuthorShelfImplCopyWithImpl<$Res>
           ? _value._entities
           : entities // ignore: cast_nullable_to_non_nullable
               as List<Author>,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String,
+      total: null == total
+          ? _value.total
+          : total // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -752,10 +749,10 @@ class _$AuthorShelfImpl implements AuthorShelf {
       required this.labelStringKey,
       required this.type,
       required final List<Author> entities,
-      required this.category,
+      required this.total,
       final String? $type})
       : _entities = entities,
-        $type = $type ?? 'author';
+        $type = $type ?? 'authors';
 
   factory _$AuthorShelfImpl.fromJson(Map<String, dynamic> json) =>
       _$$AuthorShelfImplFromJson(json);
@@ -777,14 +774,14 @@ class _$AuthorShelfImpl implements AuthorShelf {
   }
 
   @override
-  final String category;
+  final int total;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'Shelf.author(id: $id, label: $label, labelStringKey: $labelStringKey, type: $type, entities: $entities, category: $category)';
+    return 'Shelf.authors(id: $id, label: $label, labelStringKey: $labelStringKey, type: $type, entities: $entities, total: $total)';
   }
 
   @override
@@ -798,14 +795,13 @@ class _$AuthorShelfImpl implements AuthorShelf {
                 other.labelStringKey == labelStringKey) &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._entities, _entities) &&
-            (identical(other.category, category) ||
-                other.category == category));
+            (identical(other.total, total) || other.total == total));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, label, labelStringKey, type,
-      const DeepCollectionEquality().hash(_entities), category);
+      const DeepCollectionEquality().hash(_entities), total);
 
   @JsonKey(ignore: true)
   @override
@@ -817,50 +813,50 @@ class _$AuthorShelfImpl implements AuthorShelf {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)
+            ShelfType type, List<LibraryItem> entities, int total)
         libraryItem,
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)
+            ShelfType type, List<Series> entities, int total)
         series,
     required TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)
-        author,
+            ShelfType type, List<Author> entities, int total)
+        authors,
   }) {
-    return author(id, label, labelStringKey, type, entities, category);
+    return authors(id, label, labelStringKey, type, entities, total);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)?
+            ShelfType type, List<LibraryItem> entities, int total)?
         libraryItem,
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)?
+            ShelfType type, List<Series> entities, int total)?
         series,
     TResult? Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)?
-        author,
+            ShelfType type, List<Author> entities, int total)?
+        authors,
   }) {
-    return author?.call(id, label, labelStringKey, type, entities, category);
+    return authors?.call(id, label, labelStringKey, type, entities, total);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<LibraryItem> entities, String category)?
+            ShelfType type, List<LibraryItem> entities, int total)?
         libraryItem,
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Series> entities, String category)?
+            ShelfType type, List<Series> entities, int total)?
         series,
     TResult Function(String id, String label, String labelStringKey,
-            ShelfType type, List<Author> entities, String category)?
-        author,
+            ShelfType type, List<Author> entities, int total)?
+        authors,
     required TResult orElse(),
   }) {
-    if (author != null) {
-      return author(id, label, labelStringKey, type, entities, category);
+    if (authors != null) {
+      return authors(id, label, labelStringKey, type, entities, total);
     }
     return orElse();
   }
@@ -870,9 +866,9 @@ class _$AuthorShelfImpl implements AuthorShelf {
   TResult map<TResult extends Object?>({
     required TResult Function(LibraryItemShelf value) libraryItem,
     required TResult Function(SeriesShelf value) series,
-    required TResult Function(AuthorShelf value) author,
+    required TResult Function(AuthorShelf value) authors,
   }) {
-    return author(this);
+    return authors(this);
   }
 
   @override
@@ -880,9 +876,9 @@ class _$AuthorShelfImpl implements AuthorShelf {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LibraryItemShelf value)? libraryItem,
     TResult? Function(SeriesShelf value)? series,
-    TResult? Function(AuthorShelf value)? author,
+    TResult? Function(AuthorShelf value)? authors,
   }) {
-    return author?.call(this);
+    return authors?.call(this);
   }
 
   @override
@@ -890,11 +886,11 @@ class _$AuthorShelfImpl implements AuthorShelf {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LibraryItemShelf value)? libraryItem,
     TResult Function(SeriesShelf value)? series,
-    TResult Function(AuthorShelf value)? author,
+    TResult Function(AuthorShelf value)? authors,
     required TResult orElse(),
   }) {
-    if (author != null) {
-      return author(this);
+    if (authors != null) {
+      return authors(this);
     }
     return orElse();
   }
@@ -914,7 +910,7 @@ abstract class AuthorShelf implements Shelf {
       required final String labelStringKey,
       required final ShelfType type,
       required final List<Author> entities,
-      required final String category}) = _$AuthorShelfImpl;
+      required final int total}) = _$AuthorShelfImpl;
 
   factory AuthorShelf.fromJson(Map<String, dynamic> json) =
       _$AuthorShelfImpl.fromJson;
@@ -930,7 +926,7 @@ abstract class AuthorShelf implements Shelf {
   @override
   List<Author> get entities;
   @override
-  String get category;
+  int get total;
   @override
   @JsonKey(ignore: true)
   _$$AuthorShelfImplCopyWith<_$AuthorShelfImpl> get copyWith =>

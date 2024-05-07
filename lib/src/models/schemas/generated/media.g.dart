@@ -18,9 +18,6 @@ _$BookImpl _$$BookImplFromJson(Map<String, dynamic> json) => _$BookImpl(
       chapters: (json['chapters'] as List<dynamic>)
           .map((e) => BookChapter.fromJson(e as Map<String, dynamic>))
           .toList(),
-      missingParts: (json['missingParts'] as List<dynamic>)
-          .map((e) => (e as num).toInt())
-          .toList(),
       ebookFile: json['ebookFile'] == null
           ? null
           : EBookFile.fromJson(json['ebookFile'] as Map<String, dynamic>),
@@ -35,7 +32,6 @@ Map<String, dynamic> _$$BookImplToJson(_$BookImpl instance) =>
       'tags': instance.tags,
       'audioFiles': instance.audioFiles,
       'chapters': instance.chapters,
-      'missingParts': instance.missingParts,
       'ebookFile': instance.ebookFile,
       'runtimeType': instance.$type,
     };
@@ -49,8 +45,6 @@ _$BookMinifiedImpl _$$BookMinifiedImplFromJson(Map<String, dynamic> json) =>
       numTracks: (json['numTracks'] as num).toInt(),
       numAudioFiles: (json['numAudioFiles'] as num).toInt(),
       numChapters: (json['numChapters'] as num).toInt(),
-      numMissingParts: (json['numMissingParts'] as num).toInt(),
-      numInvalidAudioFiles: (json['numInvalidAudioFiles'] as num).toInt(),
       duration: const DurationPreciseSecondsConverter()
           .fromJson(json['duration'] as num),
       size: (json['size'] as num).toInt(),
@@ -66,8 +60,6 @@ Map<String, dynamic> _$$BookMinifiedImplToJson(_$BookMinifiedImpl instance) =>
       'numTracks': instance.numTracks,
       'numAudioFiles': instance.numAudioFiles,
       'numChapters': instance.numChapters,
-      'numMissingParts': instance.numMissingParts,
-      'numInvalidAudioFiles': instance.numInvalidAudioFiles,
       'duration':
           const DurationPreciseSecondsConverter().toJson(instance.duration),
       'size': instance.size,
@@ -94,9 +86,6 @@ _$BookExpandedImpl _$$BookExpandedImplFromJson(Map<String, dynamic> json) =>
       tracks: (json['tracks'] as List<dynamic>)
           .map((e) => AudioTrack.fromJson(e as Map<String, dynamic>))
           .toList(),
-      missingParts: (json['missingParts'] as List<dynamic>)
-          .map((e) => (e as num).toInt())
-          .toList(),
       ebookFile: json['ebookFile'] == null
           ? null
           : EBookFile.fromJson(json['ebookFile'] as Map<String, dynamic>),
@@ -115,7 +104,6 @@ Map<String, dynamic> _$$BookExpandedImplToJson(_$BookExpandedImpl instance) =>
           const DurationPreciseSecondsConverter().toJson(instance.duration),
       'size': instance.size,
       'tracks': instance.tracks,
-      'missingParts': instance.missingParts,
       'ebookFile': instance.ebookFile,
       'runtimeType': instance.$type,
     };

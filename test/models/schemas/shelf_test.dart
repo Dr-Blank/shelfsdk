@@ -8,14 +8,14 @@ void main() {
     const String id = 'id';
     const String label = 'label';
     const String labelStringKey = 'labelStringKey';
-    const String category = 'category';
+    const int total = 1;
 
     const jsonBase = {
       'id': id,
       'label': label,
       'labelStringKey': labelStringKey,
       'entities': <Map<String, Object?>>[],
-      'category': category,
+      'total': total,
     };
 
     const jsonLibraryItem = {
@@ -30,7 +30,7 @@ void main() {
 
     const jsonAuthor = {
       ...jsonBase,
-      'type': 'author',
+      'type': 'authors',
     };
 
     late Shelf sutLibraryItem;
@@ -44,7 +44,7 @@ void main() {
         labelStringKey: labelStringKey,
         type: ShelfType.book,
         entities: [],
-        category: category,
+        total: total,
       );
       sutSeries = const Shelf.series(
         id: id,
@@ -52,15 +52,15 @@ void main() {
         labelStringKey: labelStringKey,
         type: ShelfType.series,
         entities: [],
-        category: category,
+        total: total,
       );
-      sutAuthor = const Shelf.author(
+      sutAuthor = const Shelf.authors(
         id: id,
         label: label,
         labelStringKey: labelStringKey,
-        type: ShelfType.author,
+        type: ShelfType.authors,
         entities: [],
-        category: category,
+        total: total,
       );
     });
 

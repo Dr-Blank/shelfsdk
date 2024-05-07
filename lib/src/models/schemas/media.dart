@@ -27,7 +27,6 @@ class Media with _$Media {
     required List<String> tags,
     required List<AudioFile> audioFiles,
     required List<BookChapter> chapters,
-    required List<int> missingParts,
     EBookFile? ebookFile,
   }) = Book;
 
@@ -39,8 +38,6 @@ class Media with _$Media {
     required int numTracks,
     required int numAudioFiles,
     required int numChapters,
-    required int numMissingParts,
-    required int numInvalidAudioFiles,
     required Duration duration,
     required int size,
     String? ebookFormat,
@@ -57,7 +54,6 @@ class Media with _$Media {
     required Duration duration,
     required int size,
     required List<AudioTrack> tracks,
-    required List<int> missingParts,
     EBookFile? ebookFile,
   }) = BookExpanded;
 

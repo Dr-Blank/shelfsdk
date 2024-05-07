@@ -16,7 +16,7 @@ class Shelf with _$Shelf {
     required String labelStringKey,
     required ShelfType type,
     required List<LibraryItem> entities,
-    required String category,
+    required int total,
   }) = LibraryItemShelf;
 
   const factory Shelf.series({
@@ -25,23 +25,23 @@ class Shelf with _$Shelf {
     required String labelStringKey,
     required ShelfType type,
     required List<Series> entities,
-    required String category,
+    required int total,
   }) = SeriesShelf;
 
-  const factory Shelf.author({
+  const factory Shelf.authors({
     required String id,
     required String label,
     required String labelStringKey,
     required ShelfType type,
     required List<Author> entities,
-    required String category,
+    required int total,
   }) = AuthorShelf;
 
   factory Shelf.fromJson(Map<String, dynamic> json) =>
       const ShelfConverter().fromJson(json);
 }
 
-enum ShelfType { book, series, author, episode, podcast }
+enum ShelfType { book, series, authors, episode, podcast }
 
 class ShelfConverter implements JsonConverter<Shelf, Map<String, dynamic>> {
   const ShelfConverter();
@@ -59,7 +59,7 @@ class ShelfConverter implements JsonConverter<Shelf, Map<String, dynamic>> {
         return LibraryItemShelf.fromJson(json);
       case ShelfType.series:
         return SeriesShelf.fromJson(json);
-      case ShelfType.author:
+      case ShelfType.authors:
         return AuthorShelf.fromJson(json);
     }
   }

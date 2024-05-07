@@ -14,15 +14,12 @@ const audioFilesJson = [audio_file.json];
 final audioFiles = [audio_file.audioFile];
 const chaptersJson = [book_chapter.json];
 final chapters = [book_chapter.bookChapter];
-const missingParts = <int>[];
 const Map<String, Object>? ebookFileJson = null;
 const EBookFile? ebookFile = null;
 
 const numTracks = 1;
 const numAudioFiles = 1;
 const numChapters = 1;
-const numMissingParts = 0;
-const numInvalidAudioFiles = 0;
 const durationJson = 33854.905;
 final duration = const DurationPreciseSecondsConverter().fromJson(durationJson);
 const size = 268824228;
@@ -38,7 +35,6 @@ const json = {
   'tags': tags,
   'audioFiles': audioFilesJson,
   'chapters': chaptersJson,
-  'missingParts': missingParts,
   'ebookFile': ebookFileJson,
 };
 
@@ -49,7 +45,6 @@ final book = Media.book(
   tags: tags,
   audioFiles: audioFiles,
   chapters: chapters,
-  missingParts: missingParts,
   ebookFile: ebookFile,
 );
 
@@ -60,8 +55,6 @@ const jsonMinified = {
   'numTracks': numTracks,
   'numAudioFiles': numAudioFiles,
   'numChapters': numChapters,
-  'numMissingParts': numMissingParts,
-  'numInvalidAudioFiles': numInvalidAudioFiles,
   'duration': durationJson,
   'size': size,
   'ebookFormat': ebookFormat,
@@ -74,8 +67,6 @@ final bookMinified = Media.bookMinified(
   numTracks: numTracks,
   numAudioFiles: numAudioFiles,
   numChapters: numChapters,
-  numMissingParts: numMissingParts,
-  numInvalidAudioFiles: numInvalidAudioFiles,
   duration: duration,
   size: size,
   ebookFormat: ebookFormat,
@@ -91,7 +82,6 @@ const jsonExpanded = {
   'duration': durationJson,
   'size': size,
   'tracks': tracksJson,
-  'missingParts': missingParts,
   'ebookFile': ebookFileJson,
 };
 
@@ -105,6 +95,5 @@ final bookExpanded = Media.bookExpanded(
   duration: duration,
   size: size,
   tracks: tracks,
-  missingParts: missingParts,
   ebookFile: ebookFile,
 );
