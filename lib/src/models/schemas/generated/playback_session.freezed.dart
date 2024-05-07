@@ -39,7 +39,7 @@ mixin _$PlaybackSession {
   List<BookChapter> get chapters => throw _privateConstructorUsedError;
   String get displayTitle => throw _privateConstructorUsedError;
   String get displayAuthor => throw _privateConstructorUsedError;
-  String get coverPath => throw _privateConstructorUsedError;
+  String? get coverPath => throw _privateConstructorUsedError;
   Duration get duration => throw _privateConstructorUsedError;
   PlayMethod get playMethod => throw _privateConstructorUsedError;
   String get mediaPlayer => throw _privateConstructorUsedError;
@@ -64,7 +64,7 @@ mixin _$PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -89,7 +89,7 @@ mixin _$PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -119,7 +119,7 @@ mixin _$PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -144,7 +144,7 @@ mixin _$PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -174,7 +174,7 @@ mixin _$PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -199,7 +199,7 @@ mixin _$PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -259,7 +259,7 @@ abstract class $PlaybackSessionCopyWith<$Res> {
       List<BookChapter> chapters,
       String displayTitle,
       String displayAuthor,
-      String coverPath,
+      String? coverPath,
       Duration duration,
       PlayMethod playMethod,
       String mediaPlayer,
@@ -299,7 +299,7 @@ class _$PlaybackSessionCopyWithImpl<$Res, $Val extends PlaybackSession>
     Object? chapters = null,
     Object? displayTitle = null,
     Object? displayAuthor = null,
-    Object? coverPath = null,
+    Object? coverPath = freezed,
     Object? duration = null,
     Object? playMethod = null,
     Object? mediaPlayer = null,
@@ -353,10 +353,10 @@ class _$PlaybackSessionCopyWithImpl<$Res, $Val extends PlaybackSession>
           ? _value.displayAuthor
           : displayAuthor // ignore: cast_nullable_to_non_nullable
               as String,
-      coverPath: null == coverPath
+      coverPath: freezed == coverPath
           ? _value.coverPath
           : coverPath // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
@@ -440,7 +440,7 @@ abstract class _$$PlaybackSessionImplCopyWith<$Res>
       List<BookChapter> chapters,
       String displayTitle,
       String displayAuthor,
-      String coverPath,
+      String? coverPath,
       Duration duration,
       PlayMethod playMethod,
       String mediaPlayer,
@@ -482,7 +482,7 @@ class __$$PlaybackSessionImplCopyWithImpl<$Res>
     Object? chapters = null,
     Object? displayTitle = null,
     Object? displayAuthor = null,
-    Object? coverPath = null,
+    Object? coverPath = freezed,
     Object? duration = null,
     Object? playMethod = null,
     Object? mediaPlayer = null,
@@ -537,10 +537,10 @@ class __$$PlaybackSessionImplCopyWithImpl<$Res>
           ? _value.displayAuthor
           : displayAuthor // ignore: cast_nullable_to_non_nullable
               as String,
-      coverPath: null == coverPath
+      coverPath: freezed == coverPath
           ? _value.coverPath
           : coverPath // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
@@ -620,7 +620,7 @@ class _$PlaybackSessionImpl extends _PlaybackSession {
       required final List<BookChapter> chapters,
       required this.displayTitle,
       required this.displayAuthor,
-      required this.coverPath,
+      this.coverPath,
       required this.duration,
       required this.playMethod,
       required this.mediaPlayer,
@@ -668,7 +668,7 @@ class _$PlaybackSessionImpl extends _PlaybackSession {
   @override
   final String displayAuthor;
   @override
-  final String coverPath;
+  final String? coverPath;
   @override
   final Duration duration;
   @override
@@ -800,7 +800,7 @@ class _$PlaybackSessionImpl extends _PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -825,7 +825,7 @@ class _$PlaybackSessionImpl extends _PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -881,7 +881,7 @@ class _$PlaybackSessionImpl extends _PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -906,7 +906,7 @@ class _$PlaybackSessionImpl extends _PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -962,7 +962,7 @@ class _$PlaybackSessionImpl extends _PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -987,7 +987,7 @@ class _$PlaybackSessionImpl extends _PlaybackSession {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -1084,7 +1084,7 @@ abstract class _PlaybackSession extends PlaybackSession {
       required final List<BookChapter> chapters,
       required final String displayTitle,
       required final String displayAuthor,
-      required final String coverPath,
+      final String? coverPath,
       required final Duration duration,
       required final PlayMethod playMethod,
       required final String mediaPlayer,
@@ -1123,7 +1123,7 @@ abstract class _PlaybackSession extends PlaybackSession {
   @override
   String get displayAuthor;
   @override
-  String get coverPath;
+  String? get coverPath;
   @override
   Duration get duration;
   @override
@@ -1173,7 +1173,7 @@ abstract class _$$PlaybackSessionExpandedImplCopyWith<$Res>
       List<BookChapter> chapters,
       String displayTitle,
       String displayAuthor,
-      String coverPath,
+      String? coverPath,
       Duration duration,
       PlayMethod playMethod,
       String mediaPlayer,
@@ -1217,7 +1217,7 @@ class __$$PlaybackSessionExpandedImplCopyWithImpl<$Res>
     Object? chapters = null,
     Object? displayTitle = null,
     Object? displayAuthor = null,
-    Object? coverPath = null,
+    Object? coverPath = freezed,
     Object? duration = null,
     Object? playMethod = null,
     Object? mediaPlayer = null,
@@ -1273,10 +1273,10 @@ class __$$PlaybackSessionExpandedImplCopyWithImpl<$Res>
           ? _value.displayAuthor
           : displayAuthor // ignore: cast_nullable_to_non_nullable
               as String,
-      coverPath: null == coverPath
+      coverPath: freezed == coverPath
           ? _value.coverPath
           : coverPath // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
@@ -1356,7 +1356,7 @@ class _$PlaybackSessionExpandedImpl extends PlaybackSessionExpanded {
       required final List<BookChapter> chapters,
       required this.displayTitle,
       required this.displayAuthor,
-      required this.coverPath,
+      this.coverPath,
       required this.duration,
       required this.playMethod,
       required this.mediaPlayer,
@@ -1406,7 +1406,7 @@ class _$PlaybackSessionExpandedImpl extends PlaybackSessionExpanded {
   @override
   final String displayAuthor;
   @override
-  final String coverPath;
+  final String? coverPath;
   @override
   final Duration duration;
   @override
@@ -1550,7 +1550,7 @@ class _$PlaybackSessionExpandedImpl extends PlaybackSessionExpanded {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -1575,7 +1575,7 @@ class _$PlaybackSessionExpandedImpl extends PlaybackSessionExpanded {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -1632,7 +1632,7 @@ class _$PlaybackSessionExpandedImpl extends PlaybackSessionExpanded {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -1657,7 +1657,7 @@ class _$PlaybackSessionExpandedImpl extends PlaybackSessionExpanded {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -1714,7 +1714,7 @@ class _$PlaybackSessionExpandedImpl extends PlaybackSessionExpanded {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -1739,7 +1739,7 @@ class _$PlaybackSessionExpandedImpl extends PlaybackSessionExpanded {
             List<BookChapter> chapters,
             String displayTitle,
             String displayAuthor,
-            String coverPath,
+            String? coverPath,
             Duration duration,
             PlayMethod playMethod,
             String mediaPlayer,
@@ -1837,7 +1837,7 @@ abstract class PlaybackSessionExpanded extends PlaybackSession {
       required final List<BookChapter> chapters,
       required final String displayTitle,
       required final String displayAuthor,
-      required final String coverPath,
+      final String? coverPath,
       required final Duration duration,
       required final PlayMethod playMethod,
       required final String mediaPlayer,
@@ -1877,7 +1877,7 @@ abstract class PlaybackSessionExpanded extends PlaybackSession {
   @override
   String get displayAuthor;
   @override
-  String get coverPath;
+  String? get coverPath;
   @override
   Duration get duration;
   @override

@@ -13,6 +13,8 @@ const libraryItemId = 'li_bufnnmp4y5o2gbbxfm';
 const episodeId = 'ep_lh6ko39pumnrma3dhv';
 const mediaTypeJson = 'podcast';
 const mediaType = MediaType.podcast;
+// !mediaMetadata 
+// !chapters []
 const displayTitle = '1 - Pilot';
 const displayAuthor = 'Night Vale Presents';
 const coverPath = '/metadata/items/li_bufnnmp4y5o2gbbxfm/cover.jpg';
@@ -21,6 +23,8 @@ final duration = const DurationPreciseSecondsConverter().fromJson(durationJson);
 const playMethodJson = 0;
 const playMethod = PlayMethod.directPlay;
 const mediaPlayer = 'unknown';
+// !deviceInfo
+// !serverVersion
 const date = '2022-11-11';
 const dayOfWeek = 'Friday';
 const timeListeningJson = 0;

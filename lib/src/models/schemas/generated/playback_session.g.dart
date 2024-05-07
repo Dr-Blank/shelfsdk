@@ -22,7 +22,7 @@ _$PlaybackSessionImpl _$$PlaybackSessionImplFromJson(
           .toList(),
       displayTitle: json['displayTitle'] as String,
       displayAuthor: json['displayAuthor'] as String,
-      coverPath: json['coverPath'] as String,
+      coverPath: json['coverPath'] as String?,
       duration: const DurationPreciseSecondsConverter()
           .fromJson(json['duration'] as num),
       playMethod: $enumDecode(_$PlayMethodEnumMap, json['playMethod']),
@@ -108,7 +108,7 @@ _$PlaybackSessionExpandedImpl _$$PlaybackSessionExpandedImplFromJson(
           .toList(),
       displayTitle: json['displayTitle'] as String,
       displayAuthor: json['displayAuthor'] as String,
-      coverPath: json['coverPath'] as String,
+      coverPath: json['coverPath'] as String?,
       duration: const DurationPreciseSecondsConverter()
           .fromJson(json['duration'] as num),
       playMethod: $enumDecode(_$PlayMethodEnumMap, json['playMethod']),
