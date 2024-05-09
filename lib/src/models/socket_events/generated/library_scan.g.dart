@@ -22,7 +22,7 @@ Map<String, dynamic> _$$LibraryScanImplToJson(_$LibraryScanImpl instance) =>
       'id': instance.libraryId,
       'type': instance.type,
       'name': instance.name,
-      'results': instance.results,
+      'results': instance.results?.toJson(),
     };
 
 _$LibraryScanResultsImpl _$$LibraryScanResultsImplFromJson(

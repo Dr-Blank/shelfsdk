@@ -29,7 +29,7 @@ Map<String, dynamic> _$$NotificationEventImplToJson(
       'libraryMediaType': _$MediaTypeEnumMap[instance.libraryMediaType],
       'description': instance.description,
       'variables': instance.variables,
-      'defaults': instance.defaults,
+      'defaults': instance.defaults.toJson(),
       'testData': instance.testData,
     };
 

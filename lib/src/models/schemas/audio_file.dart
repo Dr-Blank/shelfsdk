@@ -23,7 +23,6 @@ class AudioFile with _$AudioFile {
     int? trackNumFromFilename,
     int? discNumFromFilename,
     required bool manuallyVerified,
-    required bool invalid,
     required bool exclude,
     String? error,
     String? format,

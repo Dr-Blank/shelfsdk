@@ -18,8 +18,8 @@ _$PodcastFeedImpl _$$PodcastFeedImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$PodcastFeedImplToJson(_$PodcastFeedImpl instance) =>
     <String, dynamic>{
-      'metadata': instance.metadata,
-      'episodes': instance.episodes,
+      'metadata': instance.metadata.toJson(),
+      'episodes': instance.episodes.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
@@ -35,7 +35,7 @@ _$PodcastFeedMinifiedImpl _$$PodcastFeedMinifiedImplFromJson(
 Map<String, dynamic> _$$PodcastFeedMinifiedImplToJson(
         _$PodcastFeedMinifiedImpl instance) =>
     <String, dynamic>{
-      'metadata': instance.metadata,
+      'metadata': instance.metadata.toJson(),
       'numEpisodes': instance.numEpisodes,
       'runtimeType': instance.$type,
     };

@@ -30,7 +30,6 @@ mixin _$AudioFile {
   int? get trackNumFromFilename => throw _privateConstructorUsedError;
   int? get discNumFromFilename => throw _privateConstructorUsedError;
   bool get manuallyVerified => throw _privateConstructorUsedError;
-  bool get invalid => throw _privateConstructorUsedError;
   bool get exclude => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
   String? get format => throw _privateConstructorUsedError;
@@ -68,7 +67,6 @@ abstract class $AudioFileCopyWith<$Res> {
       int? trackNumFromFilename,
       int? discNumFromFilename,
       bool manuallyVerified,
-      bool invalid,
       bool exclude,
       String? error,
       String? format,
@@ -111,7 +109,6 @@ class _$AudioFileCopyWithImpl<$Res, $Val extends AudioFile>
     Object? trackNumFromFilename = freezed,
     Object? discNumFromFilename = freezed,
     Object? manuallyVerified = null,
-    Object? invalid = null,
     Object? exclude = null,
     Object? error = freezed,
     Object? format = freezed,
@@ -167,10 +164,6 @@ class _$AudioFileCopyWithImpl<$Res, $Val extends AudioFile>
       manuallyVerified: null == manuallyVerified
           ? _value.manuallyVerified
           : manuallyVerified // ignore: cast_nullable_to_non_nullable
-              as bool,
-      invalid: null == invalid
-          ? _value.invalid
-          : invalid // ignore: cast_nullable_to_non_nullable
               as bool,
       exclude: null == exclude
           ? _value.exclude
@@ -267,7 +260,6 @@ abstract class _$$AudioFileImplCopyWith<$Res>
       int? trackNumFromFilename,
       int? discNumFromFilename,
       bool manuallyVerified,
-      bool invalid,
       bool exclude,
       String? error,
       String? format,
@@ -310,7 +302,6 @@ class __$$AudioFileImplCopyWithImpl<$Res>
     Object? trackNumFromFilename = freezed,
     Object? discNumFromFilename = freezed,
     Object? manuallyVerified = null,
-    Object? invalid = null,
     Object? exclude = null,
     Object? error = freezed,
     Object? format = freezed,
@@ -366,10 +357,6 @@ class __$$AudioFileImplCopyWithImpl<$Res>
       manuallyVerified: null == manuallyVerified
           ? _value.manuallyVerified
           : manuallyVerified // ignore: cast_nullable_to_non_nullable
-              as bool,
-      invalid: null == invalid
-          ? _value.invalid
-          : invalid // ignore: cast_nullable_to_non_nullable
               as bool,
       exclude: null == exclude
           ? _value.exclude
@@ -446,7 +433,6 @@ class _$AudioFileImpl implements _AudioFile {
       this.trackNumFromFilename,
       this.discNumFromFilename,
       required this.manuallyVerified,
-      required this.invalid,
       required this.exclude,
       this.error,
       this.format,
@@ -487,8 +473,6 @@ class _$AudioFileImpl implements _AudioFile {
   @override
   final bool manuallyVerified;
   @override
-  final bool invalid;
-  @override
   final bool exclude;
   @override
   final String? error;
@@ -525,7 +509,7 @@ class _$AudioFileImpl implements _AudioFile {
 
   @override
   String toString() {
-    return 'AudioFile(index: $index, ino: $ino, metadata: $metadata, addedAt: $addedAt, updatedAt: $updatedAt, trackNumFromMeta: $trackNumFromMeta, discNumFromMeta: $discNumFromMeta, trackNumFromFilename: $trackNumFromFilename, discNumFromFilename: $discNumFromFilename, manuallyVerified: $manuallyVerified, invalid: $invalid, exclude: $exclude, error: $error, format: $format, duration: $duration, bitRate: $bitRate, language: $language, codec: $codec, timeBase: $timeBase, channels: $channels, channelLayout: $channelLayout, chapters: $chapters, embeddedCoverArt: $embeddedCoverArt, metaTags: $metaTags, mimeType: $mimeType)';
+    return 'AudioFile(index: $index, ino: $ino, metadata: $metadata, addedAt: $addedAt, updatedAt: $updatedAt, trackNumFromMeta: $trackNumFromMeta, discNumFromMeta: $discNumFromMeta, trackNumFromFilename: $trackNumFromFilename, discNumFromFilename: $discNumFromFilename, manuallyVerified: $manuallyVerified, exclude: $exclude, error: $error, format: $format, duration: $duration, bitRate: $bitRate, language: $language, codec: $codec, timeBase: $timeBase, channels: $channels, channelLayout: $channelLayout, chapters: $chapters, embeddedCoverArt: $embeddedCoverArt, metaTags: $metaTags, mimeType: $mimeType)';
   }
 
   @override
@@ -550,7 +534,6 @@ class _$AudioFileImpl implements _AudioFile {
                 other.discNumFromFilename == discNumFromFilename) &&
             (identical(other.manuallyVerified, manuallyVerified) ||
                 other.manuallyVerified == manuallyVerified) &&
-            (identical(other.invalid, invalid) || other.invalid == invalid) &&
             (identical(other.exclude, exclude) || other.exclude == exclude) &&
             (identical(other.error, error) || other.error == error) &&
             (identical(other.format, format) || other.format == format) &&
@@ -589,7 +572,6 @@ class _$AudioFileImpl implements _AudioFile {
         trackNumFromFilename,
         discNumFromFilename,
         manuallyVerified,
-        invalid,
         exclude,
         error,
         format,
@@ -632,7 +614,6 @@ abstract class _AudioFile implements AudioFile {
       final int? trackNumFromFilename,
       final int? discNumFromFilename,
       required final bool manuallyVerified,
-      required final bool invalid,
       required final bool exclude,
       final String? error,
       final String? format,
@@ -671,8 +652,6 @@ abstract class _AudioFile implements AudioFile {
   int? get discNumFromFilename;
   @override
   bool get manuallyVerified;
-  @override
-  bool get invalid;
   @override
   bool get exclude;
   @override

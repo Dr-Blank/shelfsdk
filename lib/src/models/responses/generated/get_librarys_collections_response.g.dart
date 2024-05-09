@@ -22,7 +22,7 @@ _$GetLibrarysCollectionsResponseImpl
 Map<String, dynamic> _$$GetLibrarysCollectionsResponseImplToJson(
         _$GetLibrarysCollectionsResponseImpl instance) =>
     <String, dynamic>{
-      'results': instance.results,
+      'results': instance.results.map((e) => e.toJson()).toList(),
       'total': instance.total,
       'limit': instance.limit,
       'page': instance.page,

@@ -38,7 +38,7 @@ Map<String, dynamic> _$$PlaylistItemExpandedImplToJson(
     <String, dynamic>{
       'libraryItemId': instance.libraryItemId,
       'episodeId': instance.episodeId,
-      'episode': instance.episode,
-      'libraryItem': instance.libraryItem,
+      'episode': instance.episode?.toJson(),
+      'libraryItem': instance.libraryItem.toJson(),
       'runtimeType': instance.$type,
     };

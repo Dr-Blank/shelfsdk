@@ -20,6 +20,6 @@ _$GetOnlineUsersResponseImpl _$$GetOnlineUsersResponseImplFromJson(
 Map<String, dynamic> _$$GetOnlineUsersResponseImplToJson(
         _$GetOnlineUsersResponseImpl instance) =>
     <String, dynamic>{
-      'usersOnline': instance.usersOnline,
-      'openSessions': instance.openSessions,
+      'usersOnline': instance.usersOnline.map((e) => e.toJson()).toList(),
+      'openSessions': instance.openSessions.map((e) => e.toJson()).toList(),
     };

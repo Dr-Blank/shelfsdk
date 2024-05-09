@@ -30,8 +30,8 @@ Map<String, dynamic> _$$SeriesImplToJson(_$SeriesImpl instance) =>
       'description': instance.description,
       'addedAt': const DateTimeEpochConverter().toJson(instance.addedAt),
       'updatedAt': const DateTimeEpochConverter().toJson(instance.updatedAt),
-      'progress': instance.progress,
-      'rssFeed': instance.rssFeed,
+      'progress': instance.progress?.toJson(),
+      'rssFeed': instance.rssFeed?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -87,11 +87,11 @@ Map<String, dynamic> _$$SeriesBooksImplToJson(_$SeriesBooksImpl instance) =>
       'nameIgnorePrefix': instance.nameIgnorePrefix,
       'nameIgnorePrefixSort': instance.nameIgnorePrefixSort,
       'type': instance.type,
-      'books': instance.books,
+      'books': instance.books.map((e) => e.toJson()).toList(),
       'addedAt': const DateTimeEpochConverter().toJson(instance.addedAt),
       'totalDuration': const DurationPreciseSecondsConverter()
           .toJson(instance.totalDuration),
-      'rssFeed': instance.rssFeed,
+      'rssFeed': instance.rssFeed?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -146,14 +146,14 @@ Map<String, dynamic> _$$ShelfSeriesImplToJson(_$ShelfSeriesImpl instance) =>
       'description': instance.description,
       'addedAt': const DateTimeEpochConverter().toJson(instance.addedAt),
       'updatedAt': const DateTimeEpochConverter().toJson(instance.updatedAt),
-      'books': instance.books,
+      'books': instance.books.map((e) => e.toJson()).toList(),
       'inProgress': instance.inProgress,
       'hasActiveBook': instance.hasActiveBook,
       'hideFromContinueListening': instance.hideFromContinueListening,
       'bookInProgressLastUpdate': const DateTimeEpochConverter()
           .toJson(instance.bookInProgressLastUpdate),
-      'firstBookUnread': instance.firstBookUnread,
-      'rssFeed': instance.rssFeed,
+      'firstBookUnread': instance.firstBookUnread?.toJson(),
+      'rssFeed': instance.rssFeed?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -171,6 +171,6 @@ Map<String, dynamic> _$$AuthorSeriesImplToJson(_$AuthorSeriesImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'items': instance.items,
+      'items': instance.items?.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };

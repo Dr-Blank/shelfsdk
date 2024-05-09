@@ -18,5 +18,5 @@ Map<String, dynamic> _$$UpdateServerSettingsResponseImplToJson(
         _$UpdateServerSettingsResponseImpl instance) =>
     <String, dynamic>{
       'success': instance.success,
-      'serverSettings': instance.serverSettings,
+      'serverSettings': instance.serverSettings.toJson(),
     };

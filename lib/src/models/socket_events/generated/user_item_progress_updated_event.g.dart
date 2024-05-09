@@ -17,5 +17,5 @@ Map<String, dynamic> _$$UserItemProgressUpdatedEventImplToJson(
         _$UserItemProgressUpdatedEventImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'data': instance.data,
+      'data': instance.data.toJson(),
     };

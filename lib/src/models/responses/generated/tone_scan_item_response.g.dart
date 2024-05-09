@@ -18,9 +18,9 @@ _$ToneScanItemResponseImpl _$$ToneScanItemResponseImplFromJson(
 Map<String, dynamic> _$$ToneScanItemResponseImplToJson(
         _$ToneScanItemResponseImpl instance) =>
     <String, dynamic>{
-      'audio': instance.audio,
+      'audio': instance.audio.toJson(),
       'meta': instance.meta,
-      'file': instance.file,
+      'file': instance.file.toJson(),
     };
 
 _$ToneScanAudioResponseImpl _$$ToneScanAudioResponseImplFromJson(
@@ -47,8 +47,8 @@ Map<String, dynamic> _$$ToneScanAudioResponseImplToJson(
       'format': instance.format,
       'formatShort': instance.formatShort,
       'duration': const DurationMsConverter().toJson(instance.duration),
-      'channels': instance.channels,
-      'frames': instance.frames,
+      'channels': instance.channels.toJson(),
+      'frames': instance.frames.toJson(),
       'metaFormat': instance.metaFormat,
     };
 

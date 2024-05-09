@@ -31,5 +31,5 @@ Map<String, dynamic> _$$AudioTrackImplToJson(_$AudioTrackImpl instance) =>
       'title': instance.title,
       'contentUrl': instance.contentUrl,
       'mimeType': instance.mimeType,
-      'metadata': instance.metadata,
+      'metadata': instance.metadata?.toJson(),
     };

@@ -25,7 +25,7 @@ Map<String, dynamic> _$$AudioMetadataStartedEventImplToJson(
       'userId': instance.userId,
       'libraryItemId': instance.libraryItemId,
       'startedAt': const DateTimeEpochConverter().toJson(instance.startedAt),
-      'audioFiles': instance.audioFiles,
+      'audioFiles': instance.audioFiles.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
@@ -56,8 +56,8 @@ Map<String, dynamic> _$$AudioMetadataFinishedEventImplToJson(
       'userId': instance.userId,
       'libraryItemId': instance.libraryItemId,
       'startedAt': const DateTimeEpochConverter().toJson(instance.startedAt),
-      'audioFiles': instance.audioFiles,
-      'results': instance.results,
+      'audioFiles': instance.audioFiles.map((e) => e.toJson()).toList(),
+      'results': instance.results.map((e) => e.toJson()).toList(),
       'elapsed': const DurationMsConverter().toJson(instance.elapsed),
       'finishedAt': const DateTimeEpochConverter().toJson(instance.finishedAt),
       'runtimeType': instance.$type,

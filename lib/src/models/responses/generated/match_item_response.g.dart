@@ -18,5 +18,5 @@ Map<String, dynamic> _$$MatchItemResponseImplToJson(
         _$MatchItemResponseImpl instance) =>
     <String, dynamic>{
       'updated': instance.updated,
-      'libraryItem': instance.libraryItem,
+      'libraryItem': instance.libraryItem.toJson(),
     };

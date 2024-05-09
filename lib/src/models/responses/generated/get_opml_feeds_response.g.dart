@@ -25,7 +25,7 @@ Map<String, dynamic> _$$GetOpmlFeedsResponseImplToJson(
     }
   }
 
-  writeNotNull('feeds', instance.feeds);
+  writeNotNull('feeds', instance.feeds?.map((e) => e.toJson()).toList());
   writeNotNull('error', instance.error);
   return val;
 }

@@ -25,5 +25,5 @@ Map<String, dynamic> _$$FilesystemDirectoryImplToJson(
       'dirname': instance.dirname,
       'fullPath': instance.fullPath,
       'level': instance.level,
-      'dirs': instance.dirs,
+      'dirs': instance.dirs.map((e) => e.toJson()).toList(),
     };

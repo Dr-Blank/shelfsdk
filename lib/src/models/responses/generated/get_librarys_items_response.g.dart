@@ -28,7 +28,7 @@ _$GetLibrarysItemsResponseImpl _$$GetLibrarysItemsResponseImplFromJson(
 Map<String, dynamic> _$$GetLibrarysItemsResponseImplToJson(
         _$GetLibrarysItemsResponseImpl instance) =>
     <String, dynamic>{
-      'results': instance.results,
+      'results': instance.results.map((e) => e.toJson()).toList(),
       'total': instance.total,
       'limit': instance.limit,
       'page': instance.page,

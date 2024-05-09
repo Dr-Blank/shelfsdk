@@ -20,7 +20,7 @@ _$LibraryFileImpl _$$LibraryFileImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$LibraryFileImplToJson(_$LibraryFileImpl instance) =>
     <String, dynamic>{
       'ino': instance.ino,
-      'metadata': instance.metadata,
+      'metadata': instance.metadata.toJson(),
       'addedAt': const DateTimeEpochConverter().toJson(instance.addedAt),
       'updatedAt': const DateTimeEpochConverter().toJson(instance.updatedAt),
       'fileType': _$FileTypeEnumMap[instance.fileType]!,

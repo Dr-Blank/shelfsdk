@@ -23,6 +23,8 @@ Map<String, dynamic> _$$SyncLocalProgressResponseImplToJson(
         _$SyncLocalProgressResponseImpl instance) =>
     <String, dynamic>{
       'numServerProgressUpdates': instance.numServerProgressUpdates,
-      'localProgressUpdates': instance.localProgressUpdates,
-      'serverProgressUpdates': instance.serverProgressUpdates,
+      'localProgressUpdates':
+          instance.localProgressUpdates.map((e) => e.toJson()).toList(),
+      'serverProgressUpdates':
+          instance.serverProgressUpdates.map((e) => e.toJson()).toList(),
     };

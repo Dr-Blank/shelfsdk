@@ -27,12 +27,12 @@ _$BookImpl _$$BookImplFromJson(Map<String, dynamic> json) => _$BookImpl(
 Map<String, dynamic> _$$BookImplToJson(_$BookImpl instance) =>
     <String, dynamic>{
       'libraryItemId': instance.libraryItemId,
-      'metadata': instance.metadata,
+      'metadata': instance.metadata.toJson(),
       'coverPath': instance.coverPath,
       'tags': instance.tags,
-      'audioFiles': instance.audioFiles,
-      'chapters': instance.chapters,
-      'ebookFile': instance.ebookFile,
+      'audioFiles': instance.audioFiles.map((e) => e.toJson()).toList(),
+      'chapters': instance.chapters.map((e) => e.toJson()).toList(),
+      'ebookFile': instance.ebookFile?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -54,7 +54,7 @@ _$BookMinifiedImpl _$$BookMinifiedImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$BookMinifiedImplToJson(_$BookMinifiedImpl instance) =>
     <String, dynamic>{
-      'metadata': instance.metadata,
+      'metadata': instance.metadata.toJson(),
       'coverPath': instance.coverPath,
       'tags': instance.tags,
       'numTracks': instance.numTracks,
@@ -95,16 +95,16 @@ _$BookExpandedImpl _$$BookExpandedImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$BookExpandedImplToJson(_$BookExpandedImpl instance) =>
     <String, dynamic>{
       'libraryItemId': instance.libraryItemId,
-      'metadata': instance.metadata,
+      'metadata': instance.metadata.toJson(),
       'coverPath': instance.coverPath,
       'tags': instance.tags,
-      'audioFiles': instance.audioFiles,
-      'chapters': instance.chapters,
+      'audioFiles': instance.audioFiles.map((e) => e.toJson()).toList(),
+      'chapters': instance.chapters.map((e) => e.toJson()).toList(),
       'duration':
           const DurationPreciseSecondsConverter().toJson(instance.duration),
       'size': instance.size,
-      'tracks': instance.tracks,
-      'ebookFile': instance.ebookFile,
+      'tracks': instance.tracks.map((e) => e.toJson()).toList(),
+      'ebookFile': instance.ebookFile?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -133,10 +133,10 @@ _$PodcastImpl _$$PodcastImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$PodcastImplToJson(_$PodcastImpl instance) =>
     <String, dynamic>{
       'libraryItemId': instance.libraryItemId,
-      'metadata': instance.metadata,
+      'metadata': instance.metadata.toJson(),
       'coverPath': instance.coverPath,
       'tags': instance.tags,
-      'episodes': instance.episodes,
+      'episodes': instance.episodes.map((e) => e.toJson()).toList(),
       'autoDownloadEpisodes': instance.autoDownloadEpisodes,
       'autoDownloadSchedule': _$JsonConverterToJson<String, CronExpression>(
           instance.autoDownloadSchedule,
@@ -184,7 +184,7 @@ _$PodcastMinifiedImpl _$$PodcastMinifiedImplFromJson(
 Map<String, dynamic> _$$PodcastMinifiedImplToJson(
         _$PodcastMinifiedImpl instance) =>
     <String, dynamic>{
-      'metadata': instance.metadata,
+      'metadata': instance.metadata.toJson(),
       'coverPath': instance.coverPath,
       'tags': instance.tags,
       'numEpisodes': instance.numEpisodes,
@@ -228,10 +228,10 @@ Map<String, dynamic> _$$PodcastExpandedImplToJson(
         _$PodcastExpandedImpl instance) =>
     <String, dynamic>{
       'libraryItemId': instance.libraryItemId,
-      'metadata': instance.metadata,
+      'metadata': instance.metadata.toJson(),
       'coverPath': instance.coverPath,
       'tags': instance.tags,
-      'episodes': instance.episodes,
+      'episodes': instance.episodes.map((e) => e.toJson()).toList(),
       'autoDownloadEpisodes': instance.autoDownloadEpisodes,
       'autoDownloadSchedule': _$JsonConverterToJson<String, CronExpression>(
           instance.autoDownloadSchedule,

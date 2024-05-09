@@ -34,12 +34,12 @@ Map<String, dynamic> _$$GetUserStatsResponseImplToJson(
         _$GetUserStatsResponseImpl instance) =>
     <String, dynamic>{
       'totalTime': const DurationSecConverter().toJson(instance.totalTime),
-      'items': instance.items,
+      'items': instance.items.map((k, e) => MapEntry(k, e.toJson())),
       'days': _daysToJson(instance.days),
       'dayOfWeek': instance.dayOfWeek.map((k, e) => MapEntry(
           _$DayOfTheWeekEnumMap[k]!, const DurationSecConverter().toJson(e))),
       'today': const DurationSecConverter().toJson(instance.today),
-      'recentSessions': instance.recentSessions,
+      'recentSessions': instance.recentSessions.map((e) => e.toJson()).toList(),
     };
 
 const _$DayOfTheWeekEnumMap = {
@@ -68,5 +68,5 @@ Map<String, dynamic> _$$ItemsListenedToResponseImplToJson(
       'id': instance.libraryItemId,
       'timeListening':
           const DurationSecConverter().toJson(instance.timeListening),
-      'mediaMetadata': instance.mediaMetadata,
+      'mediaMetadata': instance.mediaMetadata.toJson(),
     };

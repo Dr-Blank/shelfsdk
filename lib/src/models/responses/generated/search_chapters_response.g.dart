@@ -46,7 +46,7 @@ Map<String, dynamic> _$$SearchChaptersResponseResponseImplToJson(
           const DurationMsConverter().toJson(instance.brandIntroDuration),
       'brandOutroDurationMs':
           const DurationMsConverter().toJson(instance.brandOutroDuration),
-      'chapters': instance.chapters,
+      'chapters': instance.chapters.map((e) => e.toJson()).toList(),
       'isAccurate': instance.isAccurate,
       'runtimeLengthMs':
           const DurationMsConverter().toJson(instance.runtimeLength),

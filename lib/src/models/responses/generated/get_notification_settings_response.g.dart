@@ -17,8 +17,8 @@ _$GetNotificationSettingsResponseImpl
 Map<String, dynamic> _$$GetNotificationSettingsResponseImplToJson(
         _$GetNotificationSettingsResponseImpl instance) =>
     <String, dynamic>{
-      'data': instance.data,
-      'settings': instance.settings,
+      'data': instance.data.toJson(),
+      'settings': instance.settings.toJson(),
     };
 
 _$NotificationDataImpl _$$NotificationDataImplFromJson(
@@ -32,5 +32,5 @@ _$NotificationDataImpl _$$NotificationDataImplFromJson(
 Map<String, dynamic> _$$NotificationDataImplToJson(
         _$NotificationDataImpl instance) =>
     <String, dynamic>{
-      'events': instance.events,
+      'events': instance.events.map((e) => e.toJson()).toList(),
     };

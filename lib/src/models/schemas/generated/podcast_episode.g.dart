@@ -42,9 +42,9 @@ Map<String, dynamic> _$$PodcastEpisodeImplToJson(
       'title': instance.title,
       'subtitle': instance.subtitle,
       'description': instance.description,
-      'enclosure': instance.enclosure,
+      'enclosure': instance.enclosure.toJson(),
       'pubDate': instance.pubDate,
-      'audioFile': instance.audioFile,
+      'audioFile': instance.audioFile.toJson(),
       'publishedAt':
           const DateTimeEpochConverter().toJson(instance.publishedAt),
       'addedAt': const DateTimeEpochConverter().toJson(instance.addedAt),
@@ -97,17 +97,17 @@ Map<String, dynamic> _$$PodcastEpisodeExpandedImplToJson(
       'title': instance.title,
       'subtitle': instance.subtitle,
       'description': instance.description,
-      'enclosure': instance.enclosure,
+      'enclosure': instance.enclosure.toJson(),
       'pubDate': instance.pubDate,
-      'audioFile': instance.audioFile,
+      'audioFile': instance.audioFile.toJson(),
       'publishedAt':
           const DateTimeEpochConverter().toJson(instance.publishedAt),
       'addedAt': const DateTimeEpochConverter().toJson(instance.addedAt),
       'updatedAt': const DateTimeEpochConverter().toJson(instance.updatedAt),
-      'audioTrack': instance.audioTrack,
+      'audioTrack': instance.audioTrack.toJson(),
       'duration':
           const DurationPreciseSecondsConverter().toJson(instance.duration),
       'size': instance.size,
-      'podcast': instance.podcast,
+      'podcast': instance.podcast?.toJson(),
       'runtimeType': instance.$type,
     };

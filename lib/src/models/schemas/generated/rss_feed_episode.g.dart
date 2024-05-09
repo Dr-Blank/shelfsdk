@@ -31,7 +31,7 @@ Map<String, dynamic> _$$RssFeedEpisodeImplToJson(
       'id': instance.id,
       'title': instance.title,
       'description': instance.description,
-      'enclosure': instance.enclosure,
+      'enclosure': instance.enclosure.toJson(),
       'pubDate': instance.pubDate,
       'link': instance.link.toString(),
       'author': instance.author,

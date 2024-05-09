@@ -17,8 +17,8 @@ _$LoginResponseImpl _$$LoginResponseImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$LoginResponseImplToJson(_$LoginResponseImpl instance) =>
     <String, dynamic>{
-      'user': instance.user,
+      'user': instance.user.toJson(),
       'userDefaultLibraryId': instance.userDefaultLibraryId,
-      'serverSettings': instance.serverSettings,
+      'serverSettings': instance.serverSettings.toJson(),
       'Source': instance.source,
     };

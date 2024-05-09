@@ -42,5 +42,5 @@ Map<String, dynamic> _$$PodcastFeedEpisodeImplToJson(
       'explicit': instance.explicit,
       'publishedAt':
           const DateTimeEpochConverter().toJson(instance.publishedAt),
-      'enclosure': instance.enclosure,
+      'enclosure': instance.enclosure.toJson(),
     };

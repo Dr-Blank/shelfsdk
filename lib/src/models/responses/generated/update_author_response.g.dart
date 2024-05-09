@@ -17,7 +17,7 @@ _$UpdateAuthorResponseImpl _$$UpdateAuthorResponseImplFromJson(
 Map<String, dynamic> _$$UpdateAuthorResponseImplToJson(
         _$UpdateAuthorResponseImpl instance) =>
     <String, dynamic>{
-      'author': instance.author,
+      'author': instance.author.toJson(),
       'merged': instance.merged,
       'updated': instance.updated,
     };

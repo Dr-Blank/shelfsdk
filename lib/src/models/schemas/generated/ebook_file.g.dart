@@ -20,7 +20,7 @@ _$EBookFileImpl _$$EBookFileImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$EBookFileImplToJson(_$EBookFileImpl instance) =>
     <String, dynamic>{
       'ino': instance.ino,
-      'metadata': instance.metadata,
+      'metadata': instance.metadata.toJson(),
       'ebookFormat': instance.ebookFormat,
       'addedAt': const DateTimeEpochConverter().toJson(instance.addedAt),
       'updatedAt': const DateTimeEpochConverter().toJson(instance.updatedAt),

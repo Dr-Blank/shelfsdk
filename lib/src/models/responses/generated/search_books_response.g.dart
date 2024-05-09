@@ -150,7 +150,7 @@ Map<String, dynamic> _$$SearchBooksResponseAudibleImplToJson(
       'cover': instance.cover?.toString(),
       'asin': instance.asin,
       'tags': instance.tags,
-      'series': instance.series,
+      'series': instance.series.map((e) => e.toJson()).toList(),
       'language': instance.language,
       'duration': const DurationMinConverter().toJson(instance.duration),
       'region': instance.region,

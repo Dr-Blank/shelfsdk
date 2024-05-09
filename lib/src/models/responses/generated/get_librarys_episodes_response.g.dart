@@ -20,7 +20,7 @@ _$GetLibrarysEpisodesResponseImpl _$$GetLibrarysEpisodesResponseImplFromJson(
 Map<String, dynamic> _$$GetLibrarysEpisodesResponseImplToJson(
         _$GetLibrarysEpisodesResponseImpl instance) =>
     <String, dynamic>{
-      'episodes': instance.episodes,
+      'episodes': instance.episodes.map((e) => e.toJson()).toList(),
       'total': instance.total,
       'limit': instance.limit,
       'page': instance.page,

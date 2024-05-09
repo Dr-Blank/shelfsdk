@@ -23,5 +23,5 @@ Map<String, dynamic> _$$GetUserSessionsResponseImplToJson(
       'total': instance.total,
       'numPages': instance.numPages,
       'itemsPerPage': instance.itemsPerPage,
-      'sessions': instance.sessions,
+      'sessions': instance.sessions.map((e) => e.toJson()).toList(),
     };

@@ -17,5 +17,5 @@ Map<String, dynamic> _$$UpdateUserResponseImplToJson(
         _$UpdateUserResponseImpl instance) =>
     <String, dynamic>{
       'success': instance.success,
-      'user': instance.user,
+      'user': instance.user.toJson(),
     };

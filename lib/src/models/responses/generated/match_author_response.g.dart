@@ -17,5 +17,5 @@ Map<String, dynamic> _$$MatchAuthorResponseImplToJson(
         _$MatchAuthorResponseImpl instance) =>
     <String, dynamic>{
       'updated': instance.updated,
-      'author': instance.author,
+      'author': instance.author.toJson(),
     };

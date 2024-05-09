@@ -26,10 +26,10 @@ _$BookLibrarySearchResponseImpl _$$BookLibrarySearchResponseImplFromJson(
 Map<String, dynamic> _$$BookLibrarySearchResponseImplToJson(
         _$BookLibrarySearchResponseImpl instance) =>
     <String, dynamic>{
-      'book': instance.book,
+      'book': instance.book.map((e) => e.toJson()).toList(),
       'tags': instance.tags,
-      'authors': instance.authors,
-      'series': instance.series,
+      'authors': instance.authors.map((e) => e.toJson()).toList(),
+      'series': instance.series.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
@@ -53,10 +53,10 @@ _$PodcastLibrarySearchResponseImpl _$$PodcastLibrarySearchResponseImplFromJson(
 Map<String, dynamic> _$$PodcastLibrarySearchResponseImplToJson(
         _$PodcastLibrarySearchResponseImpl instance) =>
     <String, dynamic>{
-      'podcast': instance.podcast,
+      'podcast': instance.podcast.map((e) => e.toJson()).toList(),
       'tags': instance.tags,
-      'authors': instance.authors,
-      'series': instance.series,
+      'authors': instance.authors.map((e) => e.toJson()).toList(),
+      'series': instance.series.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
@@ -72,7 +72,7 @@ _$LibraryItemSearchResultImpl _$$LibraryItemSearchResultImplFromJson(
 Map<String, dynamic> _$$LibraryItemSearchResultImplToJson(
         _$LibraryItemSearchResultImpl instance) =>
     <String, dynamic>{
-      'libraryItem': instance.libraryItem,
+      'libraryItem': instance.libraryItem.toJson(),
       'matchKey': instance.matchKey,
       'matchText': instance.matchText,
     };

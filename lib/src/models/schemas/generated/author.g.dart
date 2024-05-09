@@ -34,8 +34,8 @@ Map<String, dynamic> _$$AuthorImplToJson(_$AuthorImpl instance) =>
       'imagePath': instance.imagePath,
       'addedAt': const DateTimeEpochConverter().toJson(instance.addedAt),
       'updatedAt': const DateTimeEpochConverter().toJson(instance.updatedAt),
-      'libraryItems': instance.libraryItems,
-      'series': instance.series,
+      'libraryItems': instance.libraryItems?.map((e) => e.toJson()).toList(),
+      'series': instance.series?.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 

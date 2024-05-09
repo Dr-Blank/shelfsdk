@@ -101,7 +101,7 @@ Map<String, dynamic> _$$MediaProgressWithMediaImplToJson(
       'startedAt': const DateTimeEpochConverter().toJson(instance.startedAt),
       'finishedAt': _$JsonConverterToJson<int, DateTime>(
           instance.finishedAt, const DateTimeEpochConverter().toJson),
-      'media': instance.media,
-      'episode': instance.episode,
+      'media': instance.media.toJson(),
+      'episode': instance.episode?.toJson(),
       'runtimeType': instance.$type,
     };

@@ -41,16 +41,16 @@ Map<String, dynamic> _$$UserImplToJson(_$UserImpl instance) =>
       'username': instance.username,
       'type': _$UserTypeEnumMap[instance.type]!,
       'token': instance.token,
-      'mediaProgress': instance.mediaProgress,
+      'mediaProgress': instance.mediaProgress.map((e) => e.toJson()).toList(),
       'seriesHideFromContinueListening':
           instance.seriesHideFromContinueListening,
-      'bookmarks': instance.bookmarks,
+      'bookmarks': instance.bookmarks.map((e) => e.toJson()).toList(),
       'isActive': instance.isActive,
       'isLocked': instance.isLocked,
       'lastSeen': _$JsonConverterToJson<int, DateTime>(
           instance.lastSeen, const DateTimeEpochConverter().toJson),
       'createdAt': const DateTimeEpochConverter().toJson(instance.createdAt),
-      'permissions': instance.permissions,
+      'permissions': instance.permissions.toJson(),
       'librariesAccessible': instance.librariesAccessible,
       'runtimeType': instance.$type,
     };
@@ -102,8 +102,8 @@ Map<String, dynamic> _$$UserWithSessionAndMostRecentProgressImplToJson(
       'id': instance.id,
       'username': instance.username,
       'type': _$UserTypeEnumMap[instance.type]!,
-      'session': instance.session,
-      'mostRecent': instance.mostRecent,
+      'session': instance.session?.toJson(),
+      'mostRecent': instance.mostRecent?.toJson(),
       'lastSeen': _$JsonConverterToJson<int, DateTime>(
           instance.lastSeen, const DateTimeEpochConverter().toJson),
       'createdAt': const DateTimeEpochConverter().toJson(instance.createdAt),

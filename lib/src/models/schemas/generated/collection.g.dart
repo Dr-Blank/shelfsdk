@@ -36,8 +36,8 @@ Map<String, dynamic> _$$CollectionImplToJson(_$CollectionImpl instance) =>
       'description': instance.description,
       'cover': instance.cover,
       'coverFullPath': instance.coverFullPath,
-      'books': instance.books,
+      'books': instance.books.map((e) => e.toJson()).toList(),
       'lastUpdate': const DateTimeEpochConverter().toJson(instance.lastUpdate),
       'createdAt': const DateTimeEpochConverter().toJson(instance.createdAt),
-      'rssFeed': instance.rssFeed,
+      'rssFeed': instance.rssFeed?.toJson(),
     };

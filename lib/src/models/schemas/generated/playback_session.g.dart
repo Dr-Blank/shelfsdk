@@ -56,8 +56,8 @@ Map<String, dynamic> _$$PlaybackSessionImplToJson(
       'libraryItemId': instance.libraryItemId,
       'episodeId': instance.episodeId,
       'mediaType': _$MediaTypeEnumMap[instance.mediaType]!,
-      'mediaMetadata': instance.mediaMetadata,
-      'chapters': instance.chapters,
+      'mediaMetadata': instance.mediaMetadata.toJson(),
+      'chapters': instance.chapters.map((e) => e.toJson()).toList(),
       'displayTitle': instance.displayTitle,
       'displayAuthor': instance.displayAuthor,
       'coverPath': instance.coverPath,
@@ -65,7 +65,7 @@ Map<String, dynamic> _$$PlaybackSessionImplToJson(
           const DurationPreciseSecondsConverter().toJson(instance.duration),
       'playMethod': _$PlayMethodEnumMap[instance.playMethod]!,
       'mediaPlayer': instance.mediaPlayer,
-      'deviceInfo': instance.deviceInfo,
+      'deviceInfo': instance.deviceInfo.toJson(),
       'date': instance.date,
       'dayOfWeek': instance.dayOfWeek,
       'timeListening': const DurationPreciseSecondsConverter()
@@ -76,7 +76,7 @@ Map<String, dynamic> _$$PlaybackSessionImplToJson(
           const DurationPreciseSecondsConverter().toJson(instance.currentTime),
       'startedAt': const DateTimeEpochConverter().toJson(instance.startedAt),
       'updatedAt': const DateTimeEpochConverter().toJson(instance.updatedAt),
-      'user': instance.user,
+      'user': instance.user?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -144,8 +144,8 @@ Map<String, dynamic> _$$PlaybackSessionExpandedImplToJson(
       'libraryItemId': instance.libraryItemId,
       'episodeId': instance.episodeId,
       'mediaType': _$MediaTypeEnumMap[instance.mediaType]!,
-      'mediaMetadata': instance.mediaMetadata,
-      'chapters': instance.chapters,
+      'mediaMetadata': instance.mediaMetadata.toJson(),
+      'chapters': instance.chapters.map((e) => e.toJson()).toList(),
       'displayTitle': instance.displayTitle,
       'displayAuthor': instance.displayAuthor,
       'coverPath': instance.coverPath,
@@ -153,7 +153,7 @@ Map<String, dynamic> _$$PlaybackSessionExpandedImplToJson(
           const DurationPreciseSecondsConverter().toJson(instance.duration),
       'playMethod': _$PlayMethodEnumMap[instance.playMethod]!,
       'mediaPlayer': instance.mediaPlayer,
-      'deviceInfo': instance.deviceInfo,
+      'deviceInfo': instance.deviceInfo.toJson(),
       'date': instance.date,
       'dayOfWeek': instance.dayOfWeek,
       'timeListening': const DurationPreciseSecondsConverter()
@@ -164,7 +164,7 @@ Map<String, dynamic> _$$PlaybackSessionExpandedImplToJson(
           const DurationPreciseSecondsConverter().toJson(instance.currentTime),
       'startedAt': const DateTimeEpochConverter().toJson(instance.startedAt),
       'updatedAt': const DateTimeEpochConverter().toJson(instance.updatedAt),
-      'audioTracks': instance.audioTracks,
-      'libraryItem': instance.libraryItem,
+      'audioTracks': instance.audioTracks.map((e) => e.toJson()).toList(),
+      'libraryItem': instance.libraryItem.toJson(),
       'runtimeType': instance.$type,
     };

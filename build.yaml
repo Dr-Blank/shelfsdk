@@ -15,3 +15,7 @@ targets:
             '^lib/src/models/schemas/{{}}.dart': 'lib/src/models/schemas/generated/{{}}.freezed.dart'
             '^lib/src/models/socket_events/{{}}.dart': 'lib/src/models/socket_events/generated/{{}}.freezed.dart'
             '^lib/src/models/utils/{{}}.dart': 'lib/src/models/utils/generated/{{}}.freezed.dart'
+      json_serializable:
+        options:
+        # enables nested toJson see https://github.com/rrousselGit/freezed/issues/86#issuecomment-593936459
+          explicit_to_json: true

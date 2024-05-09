@@ -29,12 +29,12 @@ Map<String, dynamic> _$$LibraryImplToJson(_$LibraryImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'folders': instance.folders,
+      'folders': instance.folders.map((e) => e.toJson()).toList(),
       'displayOrder': instance.displayOrder,
       'icon': _$LibraryIconEnumMap[instance.icon]!,
       'mediaType': _$MediaTypeEnumMap[instance.mediaType]!,
       'provider': _$MetadataProviderEnumMap[instance.provider]!,
-      'settings': instance.settings,
+      'settings': instance.settings.toJson(),
       'createdAt': const DateTimeEpochConverter().toJson(instance.createdAt),
       'lastUpdate': const DateTimeEpochConverter().toJson(instance.lastUpdate),
     };

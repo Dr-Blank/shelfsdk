@@ -31,7 +31,7 @@ Map<String, dynamic> _$$PlaylistImplToJson(_$PlaylistImpl instance) =>
       'name': instance.name,
       'description': instance.description,
       'coverPath': instance.coverPath,
-      'items': instance.items,
+      'items': instance.items.map((e) => e.toJson()).toList(),
       'lastUpdate': const DateTimeEpochConverter().toJson(instance.lastUpdate),
       'createdAt': const DateTimeEpochConverter().toJson(instance.createdAt),
     };

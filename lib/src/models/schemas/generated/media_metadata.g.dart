@@ -41,9 +41,9 @@ Map<String, dynamic> _$$BookMetadataImplToJson(_$BookMetadataImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'subtitle': instance.subtitle,
-      'authors': instance.authors,
+      'authors': instance.authors.map((e) => e.toJson()).toList(),
       'narrators': instance.narrators,
-      'series': instance.series,
+      'series': instance.series.map((e) => e.toJson()).toList(),
       'genres': instance.genres,
       'publishedYear': instance.publishedYear,
       'publishedDate': instance.publishedDate,
@@ -90,9 +90,9 @@ Map<String, dynamic> _$$BookMetadataSeriesFilterImplToJson(
     <String, dynamic>{
       'title': instance.title,
       'subtitle': instance.subtitle,
-      'authors': instance.authors,
+      'authors': instance.authors.map((e) => e.toJson()).toList(),
       'narrators': instance.narrators,
-      'series': instance.seriesSequence,
+      'series': instance.seriesSequence.toJson(),
       'genres': instance.genres,
       'publishedYear': instance.publishedYear,
       'publishedDate': instance.publishedDate,
@@ -152,7 +152,7 @@ Map<String, dynamic> _$$BookMetadataMinifiedImplToJson(
       'asin': instance.asin,
       'language': instance.language,
       'explicit': instance.explicit,
-      'series': instance.seriesSequence,
+      'series': instance.seriesSequence?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -203,7 +203,7 @@ Map<String, dynamic> _$$BookMetadataMinifiedSeriesFilterImplToJson(
       'asin': instance.asin,
       'language': instance.language,
       'explicit': instance.explicit,
-      'series': instance.seriesSequence,
+      'series': instance.seriesSequence.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -250,9 +250,9 @@ Map<String, dynamic> _$$BookMetadataExpandedImplToJson(
       'title': instance.title,
       'titleIgnorePrefix': instance.titleIgnorePrefix,
       'subtitle': instance.subtitle,
-      'authors': instance.authors,
+      'authors': instance.authors.map((e) => e.toJson()).toList(),
       'narrators': instance.narrators,
-      'series': instance.series,
+      'series': instance.series.map((e) => e.toJson()).toList(),
       'genres': instance.genres,
       'publishedYear': instance.publishedYear,
       'publishedDate': instance.publishedDate,

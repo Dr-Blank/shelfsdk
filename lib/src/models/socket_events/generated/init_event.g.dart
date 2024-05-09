@@ -23,5 +23,5 @@ Map<String, dynamic> _$$InitEventImplToJson(_$InitEventImpl instance) =>
       'userId': instance.userId,
       'username': instance.username,
       'librariesScanning': instance.librariesScanning,
-      'usersOnline': instance.usersOnline,
+      'usersOnline': instance.usersOnline?.map((e) => e.toJson()).toList(),
     };

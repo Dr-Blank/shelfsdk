@@ -20,7 +20,7 @@ _$GetLibrarysPlaylistsResponseImpl _$$GetLibrarysPlaylistsResponseImplFromJson(
 Map<String, dynamic> _$$GetLibrarysPlaylistsResponseImplToJson(
         _$GetLibrarysPlaylistsResponseImpl instance) =>
     <String, dynamic>{
-      'results': instance.results,
+      'results': instance.results.map((e) => e.toJson()).toList(),
       'total': instance.total,
       'limit': instance.limit,
       'page': instance.page,

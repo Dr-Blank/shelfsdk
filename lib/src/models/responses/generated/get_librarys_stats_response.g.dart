@@ -35,11 +35,13 @@ Map<String, dynamic> _$$GetLibrarysStatsResponseImplToJson(
       'totalGenres': instance.totalGenres,
       'totalDuration': const DurationPreciseSecondsConverter()
           .toJson(instance.totalDuration),
-      'longestItems': instance.longestItems,
+      'longestItems': instance.longestItems.map((e) => e.toJson()).toList(),
       'numAudioTrack': instance.numAudioTrack,
       'totalSize': instance.totalSize,
-      'authorsWithCount': instance.authorsWithCount,
-      'genresWithCount': instance.genresWithCount,
+      'authorsWithCount':
+          instance.authorsWithCount.map((e) => e.toJson()).toList(),
+      'genresWithCount':
+          instance.genresWithCount.map((e) => e.toJson()).toList(),
     };
 
 _$LibraryItemStatsImpl _$$LibraryItemStatsImplFromJson(

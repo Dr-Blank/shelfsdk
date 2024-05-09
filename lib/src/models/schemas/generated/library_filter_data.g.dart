@@ -27,10 +27,10 @@ _$LibraryFilterDataImpl _$$LibraryFilterDataImplFromJson(
 Map<String, dynamic> _$$LibraryFilterDataImplToJson(
         _$LibraryFilterDataImpl instance) =>
     <String, dynamic>{
-      'authors': instance.authors,
+      'authors': instance.authors.map((e) => e.toJson()).toList(),
       'genres': instance.genres,
       'tags': instance.tags,
-      'series': instance.series,
+      'series': instance.series.map((e) => e.toJson()).toList(),
       'narrators': instance.narrators,
       'languages': instance.languages,
     };

@@ -29,8 +29,8 @@ Map<String, dynamic> _$$StreamSchemaImplToJson(_$StreamSchemaImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'userId': instance.userId,
-      'libraryItem': instance.libraryItem,
-      'episode': instance.episode,
+      'libraryItem': instance.libraryItem.toJson(),
+      'episode': instance.episode?.toJson(),
       'segmentLength':
           const DurationSecConverter().toJson(instance.segmentLength),
       'playlistPath': instance.playlistPath,

@@ -17,6 +17,6 @@ _$PodcastSearchEpisodeResponseImpl _$$PodcastSearchEpisodeResponseImplFromJson(
 Map<String, dynamic> _$$PodcastSearchEpisodeResponseImplToJson(
         _$PodcastSearchEpisodeResponseImpl instance) =>
     <String, dynamic>{
-      'episode': instance.episode,
+      'episode': instance.episode.toJson(),
       'levenshtein': instance.levenshtein,
     };

@@ -15,7 +15,6 @@ const int? discNumFromMeta = null;
 const trackNumFromFilename = 1;
 const int? discNumFromFilename = null;
 const manuallyVerified = false;
-const invalid = false;
 const exclude = false;
 const String? error = null;
 const format = 'MP2/3 (MPEG audio layer 2/3)';
@@ -41,7 +40,6 @@ const json = {
   'trackNumFromFilename': trackNumFromFilename,
   'discNumFromFilename': discNumFromFilename,
   'manuallyVerified': manuallyVerified,
-  'invalid': invalid,
   'exclude': exclude,
   'error': error,
   'format': format,
@@ -69,7 +67,6 @@ final audioFile = AudioFile(
   trackNumFromFilename: trackNumFromFilename,
   discNumFromFilename: discNumFromFilename,
   manuallyVerified: manuallyVerified,
-  invalid: invalid,
   exclude: exclude,
   error: error,
   format: format,

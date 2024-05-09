@@ -29,7 +29,7 @@ Map<String, dynamic> _$$NotificationSettingsImplToJson(
       'id': instance.id,
       'appriseType': instance.appriseType,
       'appriseApiUrl': instance.appriseApiUrl?.toString(),
-      'notifications': instance.notifications,
+      'notifications': instance.notifications.map((e) => e.toJson()).toList(),
       'maxFailedAttempts': instance.maxFailedAttempts,
       'maxNotificationQueue': instance.maxNotificationQueue,
       'notificationDelay':

@@ -27,7 +27,7 @@ Map<String, dynamic> _$$LibraryItemShelfImplToJson(
       'label': instance.label,
       'labelStringKey': instance.labelStringKey,
       'type': _$ShelfTypeEnumMap[instance.type]!,
-      'entities': instance.entities,
+      'entities': instance.entities.map((e) => e.toJson()).toList(),
       'total': instance.total,
       'runtimeType': instance.$type,
     };
@@ -59,7 +59,7 @@ Map<String, dynamic> _$$SeriesShelfImplToJson(_$SeriesShelfImpl instance) =>
       'label': instance.label,
       'labelStringKey': instance.labelStringKey,
       'type': _$ShelfTypeEnumMap[instance.type]!,
-      'entities': instance.entities,
+      'entities': instance.entities.map((e) => e.toJson()).toList(),
       'total': instance.total,
       'runtimeType': instance.$type,
     };
@@ -83,7 +83,7 @@ Map<String, dynamic> _$$AuthorShelfImplToJson(_$AuthorShelfImpl instance) =>
       'label': instance.label,
       'labelStringKey': instance.labelStringKey,
       'type': _$ShelfTypeEnumMap[instance.type]!,
-      'entities': instance.entities,
+      'entities': instance.entities.map((e) => e.toJson()).toList(),
       'total': instance.total,
       'runtimeType': instance.$type,
     };
