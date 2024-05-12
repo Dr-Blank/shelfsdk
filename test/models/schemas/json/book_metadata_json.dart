@@ -20,6 +20,7 @@ const String? isbn = null;
 const asin = 'B002V0QK4C';
 const String? language = null;
 const explicit = false;
+const abridged = false;
 
 const titleIgnorePrefix = 'Wizards First Rule';
 const authorName = 'Terry Goodkind';
@@ -42,6 +43,7 @@ const json = {
   'asin': asin,
   'language': language,
   'explicit': explicit,
+  'abridged': abridged,
 };
 
 const bookMetadata = MediaMetadata.book(
@@ -59,6 +61,8 @@ const bookMetadata = MediaMetadata.book(
   asin: asin,
   language: language,
   explicit: explicit,
+  abridged: abridged,
+
 );
 
 const jsonSeriesFilter = {
@@ -193,6 +197,7 @@ const jsonExpanded = {
   'authorNameLF': authorNameLF,
   'narratorName': narratorName,
   'seriesName': seriesName,
+  'abridged': abridged,
 };
 
 const bookMetadataExpanded = MediaMetadata.bookExpanded(
@@ -215,4 +220,5 @@ const bookMetadataExpanded = MediaMetadata.bookExpanded(
   authorNameLF: authorNameLF,
   narratorName: narratorName,
   seriesName: seriesName,
+  abridged: abridged,
 );

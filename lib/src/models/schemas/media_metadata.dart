@@ -29,6 +29,7 @@ class MediaMetadata with _$MediaMetadata {
     String? asin,
     String? language,
     @Default(false) bool explicit,
+    bool? abridged,
   }) = BookMetadata;
 
   const factory MediaMetadata.bookSeriesFilter({
@@ -108,6 +109,7 @@ class MediaMetadata with _$MediaMetadata {
     String? authorNameLF,
     String? narratorName,
     String? seriesName,
+    bool? abridged,
   }) = BookMetadataExpanded;
 
   const factory MediaMetadata.podcast({

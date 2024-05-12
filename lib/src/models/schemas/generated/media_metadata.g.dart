@@ -34,6 +34,7 @@ _$BookMetadataImpl _$$BookMetadataImplFromJson(Map<String, dynamic> json) =>
       asin: json['asin'] as String?,
       language: json['language'] as String?,
       explicit: json['explicit'] as bool? ?? false,
+      abridged: json['abridged'] as bool?,
       $type: json['runtimeType'] as String?,
     );
 
@@ -53,6 +54,7 @@ Map<String, dynamic> _$$BookMetadataImplToJson(_$BookMetadataImpl instance) =>
       'asin': instance.asin,
       'language': instance.language,
       'explicit': instance.explicit,
+      'abridged': instance.abridged,
       'runtimeType': instance.$type,
     };
 
@@ -241,6 +243,7 @@ _$BookMetadataExpandedImpl _$$BookMetadataExpandedImplFromJson(
       authorNameLF: json['authorNameLF'] as String?,
       narratorName: json['narratorName'] as String?,
       seriesName: json['seriesName'] as String?,
+      abridged: json['abridged'] as bool?,
       $type: json['runtimeType'] as String?,
     );
 
@@ -266,6 +269,7 @@ Map<String, dynamic> _$$BookMetadataExpandedImplToJson(
       'authorNameLF': instance.authorNameLF,
       'narratorName': instance.narratorName,
       'seriesName': instance.seriesName,
+      'abridged': instance.abridged,
       'runtimeType': instance.$type,
     };
 

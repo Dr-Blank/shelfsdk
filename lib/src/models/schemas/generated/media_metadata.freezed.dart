@@ -60,7 +60,8 @@ mixin _$MediaMetadata {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)
+            bool explicit,
+            bool? abridged)
         book,
     required TResult Function(
             String? title,
@@ -135,7 +136,8 @@ mixin _$MediaMetadata {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)
+            String? seriesName,
+            bool? abridged)
         bookExpanded,
     required TResult Function(
             String? title,
@@ -184,7 +186,8 @@ mixin _$MediaMetadata {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult? Function(
             String? title,
@@ -259,7 +262,8 @@ mixin _$MediaMetadata {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult? Function(
             String? title,
@@ -308,7 +312,8 @@ mixin _$MediaMetadata {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult Function(
             String? title,
@@ -383,7 +388,8 @@ mixin _$MediaMetadata {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult Function(
             String? title,
@@ -540,7 +546,8 @@ abstract class _$$BookMetadataImplCopyWith<$Res>
       String? isbn,
       String? asin,
       String? language,
-      bool explicit});
+      bool explicit,
+      bool? abridged});
 }
 
 /// @nodoc
@@ -568,6 +575,7 @@ class __$$BookMetadataImplCopyWithImpl<$Res>
     Object? asin = freezed,
     Object? language = freezed,
     Object? explicit = null,
+    Object? abridged = freezed,
   }) {
     return _then(_$BookMetadataImpl(
       title: freezed == title
@@ -626,6 +634,10 @@ class __$$BookMetadataImplCopyWithImpl<$Res>
           ? _value.explicit
           : explicit // ignore: cast_nullable_to_non_nullable
               as bool,
+      abridged: freezed == abridged
+          ? _value.abridged
+          : abridged // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -648,6 +660,7 @@ class _$BookMetadataImpl extends BookMetadata {
       this.asin,
       this.language,
       this.explicit = false,
+      this.abridged,
       final String? $type})
       : _authors = authors,
         _narrators = narrators,
@@ -716,13 +729,15 @@ class _$BookMetadataImpl extends BookMetadata {
   @override
   @JsonKey()
   final bool explicit;
+  @override
+  final bool? abridged;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'MediaMetadata.book(title: $title, subtitle: $subtitle, authors: $authors, narrators: $narrators, series: $series, genres: $genres, publishedYear: $publishedYear, publishedDate: $publishedDate, publisher: $publisher, description: $description, isbn: $isbn, asin: $asin, language: $language, explicit: $explicit)';
+    return 'MediaMetadata.book(title: $title, subtitle: $subtitle, authors: $authors, narrators: $narrators, series: $series, genres: $genres, publishedYear: $publishedYear, publishedDate: $publishedDate, publisher: $publisher, description: $description, isbn: $isbn, asin: $asin, language: $language, explicit: $explicit, abridged: $abridged)';
   }
 
   @override
@@ -751,7 +766,9 @@ class _$BookMetadataImpl extends BookMetadata {
             (identical(other.language, language) ||
                 other.language == language) &&
             (identical(other.explicit, explicit) ||
-                other.explicit == explicit));
+                other.explicit == explicit) &&
+            (identical(other.abridged, abridged) ||
+                other.abridged == abridged));
   }
 
   @JsonKey(ignore: true)
@@ -771,7 +788,8 @@ class _$BookMetadataImpl extends BookMetadata {
       isbn,
       asin,
       language,
-      explicit);
+      explicit,
+      abridged);
 
   @JsonKey(ignore: true)
   @override
@@ -796,7 +814,8 @@ class _$BookMetadataImpl extends BookMetadata {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)
+            bool explicit,
+            bool? abridged)
         book,
     required TResult Function(
             String? title,
@@ -871,7 +890,8 @@ class _$BookMetadataImpl extends BookMetadata {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)
+            String? seriesName,
+            bool? abridged)
         bookExpanded,
     required TResult Function(
             String? title,
@@ -917,7 +937,8 @@ class _$BookMetadataImpl extends BookMetadata {
         isbn,
         asin,
         language,
-        explicit);
+        explicit,
+        abridged);
   }
 
   @override
@@ -937,7 +958,8 @@ class _$BookMetadataImpl extends BookMetadata {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult? Function(
             String? title,
@@ -1012,7 +1034,8 @@ class _$BookMetadataImpl extends BookMetadata {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult? Function(
             String? title,
@@ -1058,7 +1081,8 @@ class _$BookMetadataImpl extends BookMetadata {
         isbn,
         asin,
         language,
-        explicit);
+        explicit,
+        abridged);
   }
 
   @override
@@ -1078,7 +1102,8 @@ class _$BookMetadataImpl extends BookMetadata {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult Function(
             String? title,
@@ -1153,7 +1178,8 @@ class _$BookMetadataImpl extends BookMetadata {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult Function(
             String? title,
@@ -1201,7 +1227,8 @@ class _$BookMetadataImpl extends BookMetadata {
           isbn,
           asin,
           language,
-          explicit);
+          explicit,
+          abridged);
     }
     return orElse();
   }
@@ -1278,7 +1305,8 @@ abstract class BookMetadata extends MediaMetadata {
       final String? isbn,
       final String? asin,
       final String? language,
-      final bool explicit}) = _$BookMetadataImpl;
+      final bool explicit,
+      final bool? abridged}) = _$BookMetadataImpl;
   const BookMetadata._() : super._();
 
   factory BookMetadata.fromJson(Map<String, dynamic> json) =
@@ -1303,6 +1331,7 @@ abstract class BookMetadata extends MediaMetadata {
   String? get language;
   @override
   bool get explicit;
+  bool? get abridged;
   @override
   @JsonKey(ignore: true)
   _$$BookMetadataImplCopyWith<_$BookMetadataImpl> get copyWith =>
@@ -1594,7 +1623,8 @@ class _$BookMetadataSeriesFilterImpl extends BookMetadataSeriesFilter {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)
+            bool explicit,
+            bool? abridged)
         book,
     required TResult Function(
             String? title,
@@ -1669,7 +1699,8 @@ class _$BookMetadataSeriesFilterImpl extends BookMetadataSeriesFilter {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)
+            String? seriesName,
+            bool? abridged)
         bookExpanded,
     required TResult Function(
             String? title,
@@ -1735,7 +1766,8 @@ class _$BookMetadataSeriesFilterImpl extends BookMetadataSeriesFilter {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult? Function(
             String? title,
@@ -1810,7 +1842,8 @@ class _$BookMetadataSeriesFilterImpl extends BookMetadataSeriesFilter {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult? Function(
             String? title,
@@ -1876,7 +1909,8 @@ class _$BookMetadataSeriesFilterImpl extends BookMetadataSeriesFilter {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult Function(
             String? title,
@@ -1951,7 +1985,8 @@ class _$BookMetadataSeriesFilterImpl extends BookMetadataSeriesFilter {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult Function(
             String? title,
@@ -2417,7 +2452,8 @@ class _$BookMetadataMinifiedImpl extends BookMetadataMinified {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)
+            bool explicit,
+            bool? abridged)
         book,
     required TResult Function(
             String? title,
@@ -2492,7 +2528,8 @@ class _$BookMetadataMinifiedImpl extends BookMetadataMinified {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)
+            String? seriesName,
+            bool? abridged)
         bookExpanded,
     required TResult Function(
             String? title,
@@ -2561,7 +2598,8 @@ class _$BookMetadataMinifiedImpl extends BookMetadataMinified {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult? Function(
             String? title,
@@ -2636,7 +2674,8 @@ class _$BookMetadataMinifiedImpl extends BookMetadataMinified {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult? Function(
             String? title,
@@ -2705,7 +2744,8 @@ class _$BookMetadataMinifiedImpl extends BookMetadataMinified {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult Function(
             String? title,
@@ -2780,7 +2820,8 @@ class _$BookMetadataMinifiedImpl extends BookMetadataMinified {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult Function(
             String? title,
@@ -3257,7 +3298,8 @@ class _$BookMetadataMinifiedSeriesFilterImpl
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)
+            bool explicit,
+            bool? abridged)
         book,
     required TResult Function(
             String? title,
@@ -3332,7 +3374,8 @@ class _$BookMetadataMinifiedSeriesFilterImpl
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)
+            String? seriesName,
+            bool? abridged)
         bookExpanded,
     required TResult Function(
             String? title,
@@ -3401,7 +3444,8 @@ class _$BookMetadataMinifiedSeriesFilterImpl
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult? Function(
             String? title,
@@ -3476,7 +3520,8 @@ class _$BookMetadataMinifiedSeriesFilterImpl
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult? Function(
             String? title,
@@ -3545,7 +3590,8 @@ class _$BookMetadataMinifiedSeriesFilterImpl
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult Function(
             String? title,
@@ -3620,7 +3666,8 @@ class _$BookMetadataMinifiedSeriesFilterImpl
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult Function(
             String? title,
@@ -3815,7 +3862,8 @@ abstract class _$$BookMetadataExpandedImplCopyWith<$Res>
       String? authorName,
       String? authorNameLF,
       String? narratorName,
-      String? seriesName});
+      String? seriesName,
+      bool? abridged});
 }
 
 /// @nodoc
@@ -3848,6 +3896,7 @@ class __$$BookMetadataExpandedImplCopyWithImpl<$Res>
     Object? authorNameLF = freezed,
     Object? narratorName = freezed,
     Object? seriesName = freezed,
+    Object? abridged = freezed,
   }) {
     return _then(_$BookMetadataExpandedImpl(
       title: freezed == title
@@ -3926,6 +3975,10 @@ class __$$BookMetadataExpandedImplCopyWithImpl<$Res>
           ? _value.seriesName
           : seriesName // ignore: cast_nullable_to_non_nullable
               as String?,
+      abridged: freezed == abridged
+          ? _value.abridged
+          : abridged // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -3953,6 +4006,7 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
       this.authorNameLF,
       this.narratorName,
       this.seriesName,
+      this.abridged,
       final String? $type})
       : _authors = authors,
         _narrators = narrators,
@@ -4031,13 +4085,15 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
   final String? narratorName;
   @override
   final String? seriesName;
+  @override
+  final bool? abridged;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'MediaMetadata.bookExpanded(title: $title, titleIgnorePrefix: $titleIgnorePrefix, subtitle: $subtitle, authors: $authors, narrators: $narrators, series: $series, genres: $genres, publishedYear: $publishedYear, publishedDate: $publishedDate, publisher: $publisher, description: $description, isbn: $isbn, asin: $asin, language: $language, explicit: $explicit, authorName: $authorName, authorNameLF: $authorNameLF, narratorName: $narratorName, seriesName: $seriesName)';
+    return 'MediaMetadata.bookExpanded(title: $title, titleIgnorePrefix: $titleIgnorePrefix, subtitle: $subtitle, authors: $authors, narrators: $narrators, series: $series, genres: $genres, publishedYear: $publishedYear, publishedDate: $publishedDate, publisher: $publisher, description: $description, isbn: $isbn, asin: $asin, language: $language, explicit: $explicit, authorName: $authorName, authorNameLF: $authorNameLF, narratorName: $narratorName, seriesName: $seriesName, abridged: $abridged)';
   }
 
   @override
@@ -4076,7 +4132,9 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
             (identical(other.narratorName, narratorName) ||
                 other.narratorName == narratorName) &&
             (identical(other.seriesName, seriesName) ||
-                other.seriesName == seriesName));
+                other.seriesName == seriesName) &&
+            (identical(other.abridged, abridged) ||
+                other.abridged == abridged));
   }
 
   @JsonKey(ignore: true)
@@ -4101,7 +4159,8 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
         authorName,
         authorNameLF,
         narratorName,
-        seriesName
+        seriesName,
+        abridged
       ]);
 
   @JsonKey(ignore: true)
@@ -4129,7 +4188,8 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)
+            bool explicit,
+            bool? abridged)
         book,
     required TResult Function(
             String? title,
@@ -4204,7 +4264,8 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)
+            String? seriesName,
+            bool? abridged)
         bookExpanded,
     required TResult Function(
             String? title,
@@ -4255,7 +4316,8 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
         authorName,
         authorNameLF,
         narratorName,
-        seriesName);
+        seriesName,
+        abridged);
   }
 
   @override
@@ -4275,7 +4337,8 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult? Function(
             String? title,
@@ -4350,7 +4413,8 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult? Function(
             String? title,
@@ -4401,7 +4465,8 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
         authorName,
         authorNameLF,
         narratorName,
-        seriesName);
+        seriesName,
+        abridged);
   }
 
   @override
@@ -4421,7 +4486,8 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult Function(
             String? title,
@@ -4496,7 +4562,8 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult Function(
             String? title,
@@ -4549,7 +4616,8 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
           authorName,
           authorNameLF,
           narratorName,
-          seriesName);
+          seriesName,
+          abridged);
     }
     return orElse();
   }
@@ -4631,7 +4699,8 @@ abstract class BookMetadataExpanded extends MediaMetadata {
       final String? authorName,
       final String? authorNameLF,
       final String? narratorName,
-      final String? seriesName}) = _$BookMetadataExpandedImpl;
+      final String? seriesName,
+      final bool? abridged}) = _$BookMetadataExpandedImpl;
   const BookMetadataExpanded._() : super._();
 
   factory BookMetadataExpanded.fromJson(Map<String, dynamic> json) =
@@ -4661,6 +4730,7 @@ abstract class BookMetadataExpanded extends MediaMetadata {
   String? get authorNameLF;
   String? get narratorName;
   String? get seriesName;
+  bool? get abridged;
   @override
   @JsonKey(ignore: true)
   _$$BookMetadataExpandedImplCopyWith<_$BookMetadataExpandedImpl>
@@ -4900,7 +4970,8 @@ class _$PodcastMetadataImpl extends PodcastMetadata {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)
+            bool explicit,
+            bool? abridged)
         book,
     required TResult Function(
             String? title,
@@ -4975,7 +5046,8 @@ class _$PodcastMetadataImpl extends PodcastMetadata {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)
+            String? seriesName,
+            bool? abridged)
         bookExpanded,
     required TResult Function(
             String? title,
@@ -5028,7 +5100,8 @@ class _$PodcastMetadataImpl extends PodcastMetadata {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult? Function(
             String? title,
@@ -5103,7 +5176,8 @@ class _$PodcastMetadataImpl extends PodcastMetadata {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult? Function(
             String? title,
@@ -5167,7 +5241,8 @@ class _$PodcastMetadataImpl extends PodcastMetadata {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult Function(
             String? title,
@@ -5242,7 +5317,8 @@ class _$PodcastMetadataImpl extends PodcastMetadata {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult Function(
             String? title,
@@ -5639,7 +5715,8 @@ class _$PodcastMetadataExpandedImpl extends PodcastMetadataExpanded {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)
+            bool explicit,
+            bool? abridged)
         book,
     required TResult Function(
             String? title,
@@ -5714,7 +5791,8 @@ class _$PodcastMetadataExpandedImpl extends PodcastMetadataExpanded {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)
+            String? seriesName,
+            bool? abridged)
         bookExpanded,
     required TResult Function(
             String? title,
@@ -5779,7 +5857,8 @@ class _$PodcastMetadataExpandedImpl extends PodcastMetadataExpanded {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult? Function(
             String? title,
@@ -5854,7 +5933,8 @@ class _$PodcastMetadataExpandedImpl extends PodcastMetadataExpanded {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult? Function(
             String? title,
@@ -5919,7 +5999,8 @@ class _$PodcastMetadataExpandedImpl extends PodcastMetadataExpanded {
             String? isbn,
             String? asin,
             String? language,
-            bool explicit)?
+            bool explicit,
+            bool? abridged)?
         book,
     TResult Function(
             String? title,
@@ -5994,7 +6075,8 @@ class _$PodcastMetadataExpandedImpl extends PodcastMetadataExpanded {
             String? authorName,
             String? authorNameLF,
             String? narratorName,
-            String? seriesName)?
+            String? seriesName,
+            bool? abridged)?
         bookExpanded,
     TResult Function(
             String? title,
