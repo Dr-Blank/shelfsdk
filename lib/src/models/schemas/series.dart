@@ -40,11 +40,12 @@ class Series with _$Series {
     required String id,
     required String name,
     required String nameIgnorePrefix,
-    required String nameIgnorePrefixSort,
+    required String? nameIgnorePrefixSort,
     @Default('series') String type,
     required List<LibraryItem> books,
     required DateTime addedAt,
-    required Duration totalDuration,
+    required DateTime updatedAt,
+    required Duration? totalDuration,
     // From [Get a Library's Series](https://api.audiobookshelf.org/#get-a-library-39-s-series)
     RssFeed? rssFeed,
   }) = SeriesBooks;
@@ -130,6 +131,15 @@ class SeriesConverter implements JsonConverter<Series, Map<String, dynamic>> {
       case SeriesVariant.numBooks:
         return SeriesNumBooks.fromJson(json);
       case SeriesVariant.books:
+        // ! workaround
+        // currently all the keys except for 'books' are nested inside the 'series' key, hence the workaround to remove the 'series' key and bring the nested keys to the top level
+        // check if series key exists
+        if (json.containsKey('series')) {
+          // remove the series key and bring the nested keys to the top level
+          final Map<String, dynamic> tmpjson = json['series'];
+          tmpjson['books'] = json['books'];
+          return SeriesBooks.fromJson(tmpjson);
+        }
         return SeriesBooks.fromJson(json);
       case SeriesVariant.sequence:
         return SeriesSequence.fromJson(json);

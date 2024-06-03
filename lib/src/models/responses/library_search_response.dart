@@ -1,4 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:shelfsdk/src/models/schemas/narrator.dart';
+import 'package:shelfsdk/src/models/schemas/tag.dart';
 
 import '../schemas/author.dart';
 import '../schemas/library_item.dart';
@@ -12,14 +14,15 @@ part 'generated/library_search_response.g.dart';
 class LibrarySearchResponse with _$LibrarySearchResponse {
   const factory LibrarySearchResponse.book({
     required List<LibraryItemSearchResult> book,
-    required List<String> tags,
-    required List<Author> authors,
+    required List<Narrator> narrators,
+    required List<Tag> tags,
     required List<Series> series,
+    required List<Author> authors,
   }) = BookLibrarySearchResponse;
 
   const factory LibrarySearchResponse.podcast({
     required List<LibraryItemSearchResult> podcast,
-    required List<String> tags,
+    required List<Tag> tags,
     required List<Author> authors,
     required List<Series> series,
   }) = PodcastLibrarySearchResponse;

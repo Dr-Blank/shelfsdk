@@ -62,11 +62,12 @@ mixin _$Series {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)
         books,
     required TResult Function(String id, String name, String? sequence)
@@ -112,11 +113,12 @@ mixin _$Series {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult? Function(String id, String name, String? sequence)? sequence,
@@ -160,11 +162,12 @@ mixin _$Series {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult Function(String id, String name, String? sequence)? sequence,
@@ -451,11 +454,12 @@ class _$SeriesImpl extends _Series {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)
         books,
     required TResult Function(String id, String name, String? sequence)
@@ -505,11 +509,12 @@ class _$SeriesImpl extends _Series {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult? Function(String id, String name, String? sequence)? sequence,
@@ -557,11 +562,12 @@ class _$SeriesImpl extends _Series {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult Function(String id, String name, String? sequence)? sequence,
@@ -838,11 +844,12 @@ class _$SeriesNumBooksImpl extends SeriesNumBooks {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)
         books,
     required TResult Function(String id, String name, String? sequence)
@@ -892,11 +899,12 @@ class _$SeriesNumBooksImpl extends SeriesNumBooks {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult? Function(String id, String name, String? sequence)? sequence,
@@ -944,11 +952,12 @@ class _$SeriesNumBooksImpl extends SeriesNumBooks {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult Function(String id, String name, String? sequence)? sequence,
@@ -1066,11 +1075,12 @@ abstract class _$$SeriesBooksImplCopyWith<$Res>
       {String id,
       String name,
       String nameIgnorePrefix,
-      String nameIgnorePrefixSort,
+      String? nameIgnorePrefixSort,
       String type,
       List<LibraryItem> books,
       DateTime addedAt,
-      Duration totalDuration,
+      DateTime updatedAt,
+      Duration? totalDuration,
       RssFeed? rssFeed});
 
   $RssFeedCopyWith<$Res>? get rssFeed;
@@ -1090,11 +1100,12 @@ class __$$SeriesBooksImplCopyWithImpl<$Res>
     Object? id = null,
     Object? name = null,
     Object? nameIgnorePrefix = null,
-    Object? nameIgnorePrefixSort = null,
+    Object? nameIgnorePrefixSort = freezed,
     Object? type = null,
     Object? books = null,
     Object? addedAt = null,
-    Object? totalDuration = null,
+    Object? updatedAt = null,
+    Object? totalDuration = freezed,
     Object? rssFeed = freezed,
   }) {
     return _then(_$SeriesBooksImpl(
@@ -1110,10 +1121,10 @@ class __$$SeriesBooksImplCopyWithImpl<$Res>
           ? _value.nameIgnorePrefix
           : nameIgnorePrefix // ignore: cast_nullable_to_non_nullable
               as String,
-      nameIgnorePrefixSort: null == nameIgnorePrefixSort
+      nameIgnorePrefixSort: freezed == nameIgnorePrefixSort
           ? _value.nameIgnorePrefixSort
           : nameIgnorePrefixSort // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -1126,10 +1137,14 @@ class __$$SeriesBooksImplCopyWithImpl<$Res>
           ? _value.addedAt
           : addedAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      totalDuration: null == totalDuration
+      updatedAt: null == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      totalDuration: freezed == totalDuration
           ? _value.totalDuration
           : totalDuration // ignore: cast_nullable_to_non_nullable
-              as Duration,
+              as Duration?,
       rssFeed: freezed == rssFeed
           ? _value.rssFeed
           : rssFeed // ignore: cast_nullable_to_non_nullable
@@ -1162,6 +1177,7 @@ class _$SeriesBooksImpl extends SeriesBooks {
       this.type = 'series',
       required final List<LibraryItem> books,
       required this.addedAt,
+      required this.updatedAt,
       required this.totalDuration,
       this.rssFeed,
       final String? $type})
@@ -1179,7 +1195,7 @@ class _$SeriesBooksImpl extends SeriesBooks {
   @override
   final String nameIgnorePrefix;
   @override
-  final String nameIgnorePrefixSort;
+  final String? nameIgnorePrefixSort;
   @override
   @JsonKey()
   final String type;
@@ -1194,7 +1210,9 @@ class _$SeriesBooksImpl extends SeriesBooks {
   @override
   final DateTime addedAt;
   @override
-  final Duration totalDuration;
+  final DateTime updatedAt;
+  @override
+  final Duration? totalDuration;
 // From [Get a Library's Series](https://api.audiobookshelf.org/#get-a-library-39-s-series)
   @override
   final RssFeed? rssFeed;
@@ -1204,7 +1222,7 @@ class _$SeriesBooksImpl extends SeriesBooks {
 
   @override
   String toString() {
-    return 'Series.books(id: $id, name: $name, nameIgnorePrefix: $nameIgnorePrefix, nameIgnorePrefixSort: $nameIgnorePrefixSort, type: $type, books: $books, addedAt: $addedAt, totalDuration: $totalDuration, rssFeed: $rssFeed)';
+    return 'Series.books(id: $id, name: $name, nameIgnorePrefix: $nameIgnorePrefix, nameIgnorePrefixSort: $nameIgnorePrefixSort, type: $type, books: $books, addedAt: $addedAt, updatedAt: $updatedAt, totalDuration: $totalDuration, rssFeed: $rssFeed)';
   }
 
   @override
@@ -1221,6 +1239,8 @@ class _$SeriesBooksImpl extends SeriesBooks {
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._books, _books) &&
             (identical(other.addedAt, addedAt) || other.addedAt == addedAt) &&
+            (identical(other.updatedAt, updatedAt) ||
+                other.updatedAt == updatedAt) &&
             (identical(other.totalDuration, totalDuration) ||
                 other.totalDuration == totalDuration) &&
             (identical(other.rssFeed, rssFeed) || other.rssFeed == rssFeed));
@@ -1237,6 +1257,7 @@ class _$SeriesBooksImpl extends SeriesBooks {
       type,
       const DeepCollectionEquality().hash(_books),
       addedAt,
+      updatedAt,
       totalDuration,
       rssFeed);
 
@@ -1270,11 +1291,12 @@ class _$SeriesBooksImpl extends SeriesBooks {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)
         books,
     required TResult Function(String id, String name, String? sequence)
@@ -1297,7 +1319,7 @@ class _$SeriesBooksImpl extends SeriesBooks {
         author,
   }) {
     return books(id, name, nameIgnorePrefix, nameIgnorePrefixSort, type,
-        this.books, addedAt, totalDuration, rssFeed);
+        this.books, addedAt, updatedAt, totalDuration, rssFeed);
   }
 
   @override
@@ -1324,11 +1346,12 @@ class _$SeriesBooksImpl extends SeriesBooks {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult? Function(String id, String name, String? sequence)? sequence,
@@ -1349,7 +1372,7 @@ class _$SeriesBooksImpl extends SeriesBooks {
     TResult? Function(String id, String name, List<LibraryItem>? items)? author,
   }) {
     return books?.call(id, name, nameIgnorePrefix, nameIgnorePrefixSort, type,
-        this.books, addedAt, totalDuration, rssFeed);
+        this.books, addedAt, updatedAt, totalDuration, rssFeed);
   }
 
   @override
@@ -1376,11 +1399,12 @@ class _$SeriesBooksImpl extends SeriesBooks {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult Function(String id, String name, String? sequence)? sequence,
@@ -1403,7 +1427,7 @@ class _$SeriesBooksImpl extends SeriesBooks {
   }) {
     if (books != null) {
       return books(id, name, nameIgnorePrefix, nameIgnorePrefixSort, type,
-          this.books, addedAt, totalDuration, rssFeed);
+          this.books, addedAt, updatedAt, totalDuration, rssFeed);
     }
     return orElse();
   }
@@ -1464,11 +1488,12 @@ abstract class SeriesBooks extends Series {
       {required final String id,
       required final String name,
       required final String nameIgnorePrefix,
-      required final String nameIgnorePrefixSort,
+      required final String? nameIgnorePrefixSort,
       final String type,
       required final List<LibraryItem> books,
       required final DateTime addedAt,
-      required final Duration totalDuration,
+      required final DateTime updatedAt,
+      required final Duration? totalDuration,
       final RssFeed? rssFeed}) = _$SeriesBooksImpl;
   const SeriesBooks._() : super._();
 
@@ -1480,11 +1505,12 @@ abstract class SeriesBooks extends Series {
   @override
   String get name;
   String get nameIgnorePrefix;
-  String get nameIgnorePrefixSort;
+  String? get nameIgnorePrefixSort;
   String get type;
   List<LibraryItem> get books;
   DateTime get addedAt;
-  Duration
+  DateTime get updatedAt;
+  Duration?
       get totalDuration; // From [Get a Library's Series](https://api.audiobookshelf.org/#get-a-library-39-s-series)
   RssFeed? get rssFeed;
   @override
@@ -1611,11 +1637,12 @@ class _$SeriesSequenceImpl extends SeriesSequence {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)
         books,
     required TResult Function(String id, String name, String? sequence)
@@ -1664,11 +1691,12 @@ class _$SeriesSequenceImpl extends SeriesSequence {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult? Function(String id, String name, String? sequence)? sequence,
@@ -1715,11 +1743,12 @@ class _$SeriesSequenceImpl extends SeriesSequence {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult Function(String id, String name, String? sequence)? sequence,
@@ -2084,11 +2113,12 @@ class _$ShelfSeriesImpl extends ShelfSeries {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)
         books,
     required TResult Function(String id, String name, String? sequence)
@@ -2149,11 +2179,12 @@ class _$ShelfSeriesImpl extends ShelfSeries {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult? Function(String id, String name, String? sequence)? sequence,
@@ -2212,11 +2243,12 @@ class _$ShelfSeriesImpl extends ShelfSeries {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult Function(String id, String name, String? sequence)? sequence,
@@ -2470,11 +2502,12 @@ class _$AuthorSeriesImpl extends AuthorSeries {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)
         books,
     required TResult Function(String id, String name, String? sequence)
@@ -2523,11 +2556,12 @@ class _$AuthorSeriesImpl extends AuthorSeries {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult? Function(String id, String name, String? sequence)? sequence,
@@ -2574,11 +2608,12 @@ class _$AuthorSeriesImpl extends AuthorSeries {
             String id,
             String name,
             String nameIgnorePrefix,
-            String nameIgnorePrefixSort,
+            String? nameIgnorePrefixSort,
             String type,
             List<LibraryItem> books,
             DateTime addedAt,
-            Duration totalDuration,
+            DateTime updatedAt,
+            Duration? totalDuration,
             RssFeed? rssFeed)?
         books,
     TResult Function(String id, String name, String? sequence)? sequence,

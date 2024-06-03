@@ -78,6 +78,7 @@ const jsonBooks = {
   'type': type,
   'books': booksJson,
   'addedAt': addedAtJson,
+  'updatedAt': updatedAtJson,
   'totalDuration': totalDurationJson,
   'rssFeed': rss_feed.jsonMinified,
 };
@@ -90,6 +91,7 @@ final seriesBooks = Series.books(
   type: type,
   books: books,
   addedAt: addedAt,
+  updatedAt: updatedAt,
   totalDuration: totalDuration,
   rssFeed: rss_feed.rssFeedMinified,
 );

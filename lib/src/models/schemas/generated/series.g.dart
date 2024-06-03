@@ -65,15 +65,18 @@ _$SeriesBooksImpl _$$SeriesBooksImplFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
       name: json['name'] as String,
       nameIgnorePrefix: json['nameIgnorePrefix'] as String,
-      nameIgnorePrefixSort: json['nameIgnorePrefixSort'] as String,
+      nameIgnorePrefixSort: json['nameIgnorePrefixSort'] as String?,
       type: json['type'] as String? ?? 'series',
       books: (json['books'] as List<dynamic>)
           .map((e) => LibraryItem.fromJson(e as Map<String, dynamic>))
           .toList(),
       addedAt: const DateTimeEpochConverter()
           .fromJson((json['addedAt'] as num).toInt()),
-      totalDuration: const DurationPreciseSecondsConverter()
-          .fromJson(json['totalDuration'] as num),
+      updatedAt: const DateTimeEpochConverter()
+          .fromJson((json['updatedAt'] as num).toInt()),
+      totalDuration: _$JsonConverterFromJson<num, Duration>(
+          json['totalDuration'],
+          const DurationPreciseSecondsConverter().fromJson),
       rssFeed: json['rssFeed'] == null
           ? null
           : RssFeed.fromJson(json['rssFeed'] as Map<String, dynamic>),
@@ -89,11 +92,25 @@ Map<String, dynamic> _$$SeriesBooksImplToJson(_$SeriesBooksImpl instance) =>
       'type': instance.type,
       'books': instance.books.map((e) => e.toJson()).toList(),
       'addedAt': const DateTimeEpochConverter().toJson(instance.addedAt),
-      'totalDuration': const DurationPreciseSecondsConverter()
-          .toJson(instance.totalDuration),
+      'updatedAt': const DateTimeEpochConverter().toJson(instance.updatedAt),
+      'totalDuration': _$JsonConverterToJson<num, Duration>(
+          instance.totalDuration,
+          const DurationPreciseSecondsConverter().toJson),
       'rssFeed': instance.rssFeed?.toJson(),
       'runtimeType': instance.$type,
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
 
 _$SeriesSequenceImpl _$$SeriesSequenceImplFromJson(Map<String, dynamic> json) =>
     _$SeriesSequenceImpl(

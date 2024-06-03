@@ -13,12 +13,17 @@ _$BookLibrarySearchResponseImpl _$$BookLibrarySearchResponseImplFromJson(
           .map((e) =>
               LibraryItemSearchResult.fromJson(e as Map<String, dynamic>))
           .toList(),
-      tags: (json['tags'] as List<dynamic>).map((e) => e as String).toList(),
-      authors: (json['authors'] as List<dynamic>)
-          .map((e) => Author.fromJson(e as Map<String, dynamic>))
+      narrators: (json['narrators'] as List<dynamic>)
+          .map((e) => Narrator.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      tags: (json['tags'] as List<dynamic>)
+          .map((e) => Tag.fromJson(e as Map<String, dynamic>))
           .toList(),
       series: (json['series'] as List<dynamic>)
           .map((e) => Series.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      authors: (json['authors'] as List<dynamic>)
+          .map((e) => Author.fromJson(e as Map<String, dynamic>))
           .toList(),
       $type: json['runtimeType'] as String?,
     );
@@ -27,9 +32,10 @@ Map<String, dynamic> _$$BookLibrarySearchResponseImplToJson(
         _$BookLibrarySearchResponseImpl instance) =>
     <String, dynamic>{
       'book': instance.book.map((e) => e.toJson()).toList(),
-      'tags': instance.tags,
-      'authors': instance.authors.map((e) => e.toJson()).toList(),
+      'narrators': instance.narrators.map((e) => e.toJson()).toList(),
+      'tags': instance.tags.map((e) => e.toJson()).toList(),
       'series': instance.series.map((e) => e.toJson()).toList(),
+      'authors': instance.authors.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
@@ -40,7 +46,9 @@ _$PodcastLibrarySearchResponseImpl _$$PodcastLibrarySearchResponseImplFromJson(
           .map((e) =>
               LibraryItemSearchResult.fromJson(e as Map<String, dynamic>))
           .toList(),
-      tags: (json['tags'] as List<dynamic>).map((e) => e as String).toList(),
+      tags: (json['tags'] as List<dynamic>)
+          .map((e) => Tag.fromJson(e as Map<String, dynamic>))
+          .toList(),
       authors: (json['authors'] as List<dynamic>)
           .map((e) => Author.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -54,7 +62,7 @@ Map<String, dynamic> _$$PodcastLibrarySearchResponseImplToJson(
         _$PodcastLibrarySearchResponseImpl instance) =>
     <String, dynamic>{
       'podcast': instance.podcast.map((e) => e.toJson()).toList(),
-      'tags': instance.tags,
+      'tags': instance.tags.map((e) => e.toJson()).toList(),
       'authors': instance.authors.map((e) => e.toJson()).toList(),
       'series': instance.series.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,

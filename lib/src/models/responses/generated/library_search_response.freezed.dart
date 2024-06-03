@@ -33,35 +33,47 @@ LibrarySearchResponse _$LibrarySearchResponseFromJson(
 
 /// @nodoc
 mixin _$LibrarySearchResponse {
-  List<String> get tags => throw _privateConstructorUsedError;
-  List<Author> get authors => throw _privateConstructorUsedError;
+  List<Tag> get tags => throw _privateConstructorUsedError;
   List<Series> get series => throw _privateConstructorUsedError;
+  List<Author> get authors => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<LibraryItemSearchResult> book,
-            List<String> tags, List<Author> authors, List<Series> series)
+    required TResult Function(
+            List<LibraryItemSearchResult> book,
+            List<Narrator> narrators,
+            List<Tag> tags,
+            List<Series> series,
+            List<Author> authors)
         book,
     required TResult Function(List<LibraryItemSearchResult> podcast,
-            List<String> tags, List<Author> authors, List<Series> series)
+            List<Tag> tags, List<Author> authors, List<Series> series)
         podcast,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(List<LibraryItemSearchResult> book, List<String> tags,
-            List<Author> authors, List<Series> series)?
+    TResult? Function(
+            List<LibraryItemSearchResult> book,
+            List<Narrator> narrators,
+            List<Tag> tags,
+            List<Series> series,
+            List<Author> authors)?
         book,
-    TResult? Function(List<LibraryItemSearchResult> podcast, List<String> tags,
+    TResult? Function(List<LibraryItemSearchResult> podcast, List<Tag> tags,
             List<Author> authors, List<Series> series)?
         podcast,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<LibraryItemSearchResult> book, List<String> tags,
-            List<Author> authors, List<Series> series)?
+    TResult Function(
+            List<LibraryItemSearchResult> book,
+            List<Narrator> narrators,
+            List<Tag> tags,
+            List<Series> series,
+            List<Author> authors)?
         book,
-    TResult Function(List<LibraryItemSearchResult> podcast, List<String> tags,
+    TResult Function(List<LibraryItemSearchResult> podcast, List<Tag> tags,
             List<Author> authors, List<Series> series)?
         podcast,
     required TResult orElse(),
@@ -98,7 +110,7 @@ abstract class $LibrarySearchResponseCopyWith<$Res> {
           $Res Function(LibrarySearchResponse) then) =
       _$LibrarySearchResponseCopyWithImpl<$Res, LibrarySearchResponse>;
   @useResult
-  $Res call({List<String> tags, List<Author> authors, List<Series> series});
+  $Res call({List<Tag> tags, List<Series> series, List<Author> authors});
 }
 
 /// @nodoc
@@ -116,22 +128,22 @@ class _$LibrarySearchResponseCopyWithImpl<$Res,
   @override
   $Res call({
     Object? tags = null,
-    Object? authors = null,
     Object? series = null,
+    Object? authors = null,
   }) {
     return _then(_value.copyWith(
       tags: null == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      authors: null == authors
-          ? _value.authors
-          : authors // ignore: cast_nullable_to_non_nullable
-              as List<Author>,
+              as List<Tag>,
       series: null == series
           ? _value.series
           : series // ignore: cast_nullable_to_non_nullable
               as List<Series>,
+      authors: null == authors
+          ? _value.authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<Author>,
     ) as $Val);
   }
 }
@@ -147,9 +159,10 @@ abstract class _$$BookLibrarySearchResponseImplCopyWith<$Res>
   @useResult
   $Res call(
       {List<LibraryItemSearchResult> book,
-      List<String> tags,
-      List<Author> authors,
-      List<Series> series});
+      List<Narrator> narrators,
+      List<Tag> tags,
+      List<Series> series,
+      List<Author> authors});
 }
 
 /// @nodoc
@@ -166,27 +179,32 @@ class __$$BookLibrarySearchResponseImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? book = null,
+    Object? narrators = null,
     Object? tags = null,
-    Object? authors = null,
     Object? series = null,
+    Object? authors = null,
   }) {
     return _then(_$BookLibrarySearchResponseImpl(
       book: null == book
           ? _value._book
           : book // ignore: cast_nullable_to_non_nullable
               as List<LibraryItemSearchResult>,
+      narrators: null == narrators
+          ? _value._narrators
+          : narrators // ignore: cast_nullable_to_non_nullable
+              as List<Narrator>,
       tags: null == tags
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      authors: null == authors
-          ? _value._authors
-          : authors // ignore: cast_nullable_to_non_nullable
-              as List<Author>,
+              as List<Tag>,
       series: null == series
           ? _value._series
           : series // ignore: cast_nullable_to_non_nullable
               as List<Series>,
+      authors: null == authors
+          ? _value._authors
+          : authors // ignore: cast_nullable_to_non_nullable
+              as List<Author>,
     ));
   }
 }
@@ -196,14 +214,16 @@ class __$$BookLibrarySearchResponseImplCopyWithImpl<$Res>
 class _$BookLibrarySearchResponseImpl implements BookLibrarySearchResponse {
   const _$BookLibrarySearchResponseImpl(
       {required final List<LibraryItemSearchResult> book,
-      required final List<String> tags,
-      required final List<Author> authors,
+      required final List<Narrator> narrators,
+      required final List<Tag> tags,
       required final List<Series> series,
+      required final List<Author> authors,
       final String? $type})
       : _book = book,
+        _narrators = narrators,
         _tags = tags,
-        _authors = authors,
         _series = series,
+        _authors = authors,
         $type = $type ?? 'book';
 
   factory _$BookLibrarySearchResponseImpl.fromJson(Map<String, dynamic> json) =>
@@ -217,20 +237,20 @@ class _$BookLibrarySearchResponseImpl implements BookLibrarySearchResponse {
     return EqualUnmodifiableListView(_book);
   }
 
-  final List<String> _tags;
+  final List<Narrator> _narrators;
   @override
-  List<String> get tags {
+  List<Narrator> get narrators {
+    if (_narrators is EqualUnmodifiableListView) return _narrators;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_narrators);
+  }
+
+  final List<Tag> _tags;
+  @override
+  List<Tag> get tags {
     if (_tags is EqualUnmodifiableListView) return _tags;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_tags);
-  }
-
-  final List<Author> _authors;
-  @override
-  List<Author> get authors {
-    if (_authors is EqualUnmodifiableListView) return _authors;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_authors);
   }
 
   final List<Series> _series;
@@ -241,12 +261,20 @@ class _$BookLibrarySearchResponseImpl implements BookLibrarySearchResponse {
     return EqualUnmodifiableListView(_series);
   }
 
+  final List<Author> _authors;
+  @override
+  List<Author> get authors {
+    if (_authors is EqualUnmodifiableListView) return _authors;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_authors);
+  }
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'LibrarySearchResponse.book(book: $book, tags: $tags, authors: $authors, series: $series)';
+    return 'LibrarySearchResponse.book(book: $book, narrators: $narrators, tags: $tags, series: $series, authors: $authors)';
   }
 
   @override
@@ -255,9 +283,11 @@ class _$BookLibrarySearchResponseImpl implements BookLibrarySearchResponse {
         (other.runtimeType == runtimeType &&
             other is _$BookLibrarySearchResponseImpl &&
             const DeepCollectionEquality().equals(other._book, _book) &&
+            const DeepCollectionEquality()
+                .equals(other._narrators, _narrators) &&
             const DeepCollectionEquality().equals(other._tags, _tags) &&
-            const DeepCollectionEquality().equals(other._authors, _authors) &&
-            const DeepCollectionEquality().equals(other._series, _series));
+            const DeepCollectionEquality().equals(other._series, _series) &&
+            const DeepCollectionEquality().equals(other._authors, _authors));
   }
 
   @JsonKey(ignore: true)
@@ -265,9 +295,10 @@ class _$BookLibrarySearchResponseImpl implements BookLibrarySearchResponse {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_book),
+      const DeepCollectionEquality().hash(_narrators),
       const DeepCollectionEquality().hash(_tags),
-      const DeepCollectionEquality().hash(_authors),
-      const DeepCollectionEquality().hash(_series));
+      const DeepCollectionEquality().hash(_series),
+      const DeepCollectionEquality().hash(_authors));
 
   @JsonKey(ignore: true)
   @override
@@ -279,42 +310,54 @@ class _$BookLibrarySearchResponseImpl implements BookLibrarySearchResponse {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<LibraryItemSearchResult> book,
-            List<String> tags, List<Author> authors, List<Series> series)
+    required TResult Function(
+            List<LibraryItemSearchResult> book,
+            List<Narrator> narrators,
+            List<Tag> tags,
+            List<Series> series,
+            List<Author> authors)
         book,
     required TResult Function(List<LibraryItemSearchResult> podcast,
-            List<String> tags, List<Author> authors, List<Series> series)
+            List<Tag> tags, List<Author> authors, List<Series> series)
         podcast,
   }) {
-    return book(this.book, tags, authors, series);
+    return book(this.book, narrators, tags, series, authors);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(List<LibraryItemSearchResult> book, List<String> tags,
-            List<Author> authors, List<Series> series)?
+    TResult? Function(
+            List<LibraryItemSearchResult> book,
+            List<Narrator> narrators,
+            List<Tag> tags,
+            List<Series> series,
+            List<Author> authors)?
         book,
-    TResult? Function(List<LibraryItemSearchResult> podcast, List<String> tags,
+    TResult? Function(List<LibraryItemSearchResult> podcast, List<Tag> tags,
             List<Author> authors, List<Series> series)?
         podcast,
   }) {
-    return book?.call(this.book, tags, authors, series);
+    return book?.call(this.book, narrators, tags, series, authors);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<LibraryItemSearchResult> book, List<String> tags,
-            List<Author> authors, List<Series> series)?
+    TResult Function(
+            List<LibraryItemSearchResult> book,
+            List<Narrator> narrators,
+            List<Tag> tags,
+            List<Series> series,
+            List<Author> authors)?
         book,
-    TResult Function(List<LibraryItemSearchResult> podcast, List<String> tags,
+    TResult Function(List<LibraryItemSearchResult> podcast, List<Tag> tags,
             List<Author> authors, List<Series> series)?
         podcast,
     required TResult orElse(),
   }) {
     if (book != null) {
-      return book(this.book, tags, authors, series);
+      return book(this.book, narrators, tags, series, authors);
     }
     return orElse();
   }
@@ -361,20 +404,22 @@ class _$BookLibrarySearchResponseImpl implements BookLibrarySearchResponse {
 abstract class BookLibrarySearchResponse implements LibrarySearchResponse {
   const factory BookLibrarySearchResponse(
       {required final List<LibraryItemSearchResult> book,
-      required final List<String> tags,
-      required final List<Author> authors,
-      required final List<Series> series}) = _$BookLibrarySearchResponseImpl;
+      required final List<Narrator> narrators,
+      required final List<Tag> tags,
+      required final List<Series> series,
+      required final List<Author> authors}) = _$BookLibrarySearchResponseImpl;
 
   factory BookLibrarySearchResponse.fromJson(Map<String, dynamic> json) =
       _$BookLibrarySearchResponseImpl.fromJson;
 
   List<LibraryItemSearchResult> get book;
+  List<Narrator> get narrators;
   @override
-  List<String> get tags;
-  @override
-  List<Author> get authors;
+  List<Tag> get tags;
   @override
   List<Series> get series;
+  @override
+  List<Author> get authors;
   @override
   @JsonKey(ignore: true)
   _$$BookLibrarySearchResponseImplCopyWith<_$BookLibrarySearchResponseImpl>
@@ -392,7 +437,7 @@ abstract class _$$PodcastLibrarySearchResponseImplCopyWith<$Res>
   @useResult
   $Res call(
       {List<LibraryItemSearchResult> podcast,
-      List<String> tags,
+      List<Tag> tags,
       List<Author> authors,
       List<Series> series});
 }
@@ -423,7 +468,7 @@ class __$$PodcastLibrarySearchResponseImplCopyWithImpl<$Res>
       tags: null == tags
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<Tag>,
       authors: null == authors
           ? _value._authors
           : authors // ignore: cast_nullable_to_non_nullable
@@ -442,7 +487,7 @@ class _$PodcastLibrarySearchResponseImpl
     implements PodcastLibrarySearchResponse {
   const _$PodcastLibrarySearchResponseImpl(
       {required final List<LibraryItemSearchResult> podcast,
-      required final List<String> tags,
+      required final List<Tag> tags,
       required final List<Author> authors,
       required final List<Series> series,
       final String? $type})
@@ -464,9 +509,9 @@ class _$PodcastLibrarySearchResponseImpl
     return EqualUnmodifiableListView(_podcast);
   }
 
-  final List<String> _tags;
+  final List<Tag> _tags;
   @override
-  List<String> get tags {
+  List<Tag> get tags {
     if (_tags is EqualUnmodifiableListView) return _tags;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_tags);
@@ -527,11 +572,15 @@ class _$PodcastLibrarySearchResponseImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<LibraryItemSearchResult> book,
-            List<String> tags, List<Author> authors, List<Series> series)
+    required TResult Function(
+            List<LibraryItemSearchResult> book,
+            List<Narrator> narrators,
+            List<Tag> tags,
+            List<Series> series,
+            List<Author> authors)
         book,
     required TResult Function(List<LibraryItemSearchResult> podcast,
-            List<String> tags, List<Author> authors, List<Series> series)
+            List<Tag> tags, List<Author> authors, List<Series> series)
         podcast,
   }) {
     return podcast(this.podcast, tags, authors, series);
@@ -540,10 +589,14 @@ class _$PodcastLibrarySearchResponseImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(List<LibraryItemSearchResult> book, List<String> tags,
-            List<Author> authors, List<Series> series)?
+    TResult? Function(
+            List<LibraryItemSearchResult> book,
+            List<Narrator> narrators,
+            List<Tag> tags,
+            List<Series> series,
+            List<Author> authors)?
         book,
-    TResult? Function(List<LibraryItemSearchResult> podcast, List<String> tags,
+    TResult? Function(List<LibraryItemSearchResult> podcast, List<Tag> tags,
             List<Author> authors, List<Series> series)?
         podcast,
   }) {
@@ -553,10 +606,14 @@ class _$PodcastLibrarySearchResponseImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<LibraryItemSearchResult> book, List<String> tags,
-            List<Author> authors, List<Series> series)?
+    TResult Function(
+            List<LibraryItemSearchResult> book,
+            List<Narrator> narrators,
+            List<Tag> tags,
+            List<Series> series,
+            List<Author> authors)?
         book,
-    TResult Function(List<LibraryItemSearchResult> podcast, List<String> tags,
+    TResult Function(List<LibraryItemSearchResult> podcast, List<Tag> tags,
             List<Author> authors, List<Series> series)?
         podcast,
     required TResult orElse(),
@@ -609,7 +666,7 @@ class _$PodcastLibrarySearchResponseImpl
 abstract class PodcastLibrarySearchResponse implements LibrarySearchResponse {
   const factory PodcastLibrarySearchResponse(
       {required final List<LibraryItemSearchResult> podcast,
-      required final List<String> tags,
+      required final List<Tag> tags,
       required final List<Author> authors,
       required final List<Series> series}) = _$PodcastLibrarySearchResponseImpl;
 
@@ -618,7 +675,7 @@ abstract class PodcastLibrarySearchResponse implements LibrarySearchResponse {
 
   List<LibraryItemSearchResult> get podcast;
   @override
-  List<String> get tags;
+  List<Tag> get tags;
   @override
   List<Author> get authors;
   @override

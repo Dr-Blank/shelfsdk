@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shelfsdk/audiobookshelf_api.dart';
+import 'package:shelfsdk/src/models/schemas/narrator.dart';
+import 'package:shelfsdk/src/models/schemas/tag.dart';
 import 'package:test/test.dart';
 
 import '../../matchers.dart';
@@ -9,12 +11,14 @@ void main() {
   group('LibrarySearchResponse', () {
     const book = <LibraryItemSearchResult>[];
     const podcast = book;
-    const tags = <String>[];
+    const narrators = <Narrator>[];
+    const tags = <Tag>[];
     const authors = <Author>[];
     const series = <Series>[];
 
     const jsonBook = {
       'book': book,
+      'narrators': narrators,
       'tags': tags,
       'authors': authors,
       'series': series,
@@ -30,11 +34,12 @@ void main() {
     late LibrarySearchResponse sutPodcast;
 
     setUp(() {
-      sutBook = const LibrarySearchResponse.book(
+      sutBook =  LibrarySearchResponse.book(
         book: book,
         tags: tags,
         authors: authors,
         series: series,
+        narrators: [],
       );
       sutPodcast = const LibrarySearchResponse.podcast(
         podcast: podcast,
