@@ -39,6 +39,7 @@ class DeviceInfo with _$DeviceInfo {
     String? model,
     String? sdkVersion,
     String? clientName,
+    String? deviceName,
     String? clientVersion,
   }) = _DeviceInfo;
 

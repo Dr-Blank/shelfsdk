@@ -21,6 +21,7 @@ _$DeviceInfoImpl _$$DeviceInfoImplFromJson(Map<String, dynamic> json) =>
       model: json['model'] as String?,
       sdkVersion: json['sdkVersion'] as String?,
       clientName: json['clientName'] as String?,
+      deviceName: json['deviceName'] as String?,
       clientVersion: json['clientVersion'] as String?,
     );
 
@@ -39,5 +40,6 @@ Map<String, dynamic> _$$DeviceInfoImplToJson(_$DeviceInfoImpl instance) =>
       'model': instance.model,
       'sdkVersion': instance.sdkVersion,
       'clientName': instance.clientName,
+      'deviceName': instance.deviceName,
       'clientVersion': instance.clientVersion,
     };

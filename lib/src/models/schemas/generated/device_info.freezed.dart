@@ -33,6 +33,7 @@ mixin _$DeviceInfo {
   String? get model => throw _privateConstructorUsedError;
   String? get sdkVersion => throw _privateConstructorUsedError;
   String? get clientName => throw _privateConstructorUsedError;
+  String? get deviceName => throw _privateConstructorUsedError;
   String? get clientVersion => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -61,6 +62,7 @@ abstract class $DeviceInfoCopyWith<$Res> {
       String? model,
       String? sdkVersion,
       String? clientName,
+      String? deviceName,
       String? clientVersion});
 }
 
@@ -90,6 +92,7 @@ class _$DeviceInfoCopyWithImpl<$Res, $Val extends DeviceInfo>
     Object? model = freezed,
     Object? sdkVersion = freezed,
     Object? clientName = freezed,
+    Object? deviceName = freezed,
     Object? clientVersion = freezed,
   }) {
     return _then(_value.copyWith(
@@ -145,6 +148,10 @@ class _$DeviceInfoCopyWithImpl<$Res, $Val extends DeviceInfo>
           ? _value.clientName
           : clientName // ignore: cast_nullable_to_non_nullable
               as String?,
+      deviceName: freezed == deviceName
+          ? _value.deviceName
+          : deviceName // ignore: cast_nullable_to_non_nullable
+              as String?,
       clientVersion: freezed == clientVersion
           ? _value.clientVersion
           : clientVersion // ignore: cast_nullable_to_non_nullable
@@ -175,6 +182,7 @@ abstract class _$$DeviceInfoImplCopyWith<$Res>
       String? model,
       String? sdkVersion,
       String? clientName,
+      String? deviceName,
       String? clientVersion});
 }
 
@@ -202,6 +210,7 @@ class __$$DeviceInfoImplCopyWithImpl<$Res>
     Object? model = freezed,
     Object? sdkVersion = freezed,
     Object? clientName = freezed,
+    Object? deviceName = freezed,
     Object? clientVersion = freezed,
   }) {
     return _then(_$DeviceInfoImpl(
@@ -257,6 +266,10 @@ class __$$DeviceInfoImplCopyWithImpl<$Res>
           ? _value.clientName
           : clientName // ignore: cast_nullable_to_non_nullable
               as String?,
+      deviceName: freezed == deviceName
+          ? _value.deviceName
+          : deviceName // ignore: cast_nullable_to_non_nullable
+              as String?,
       clientVersion: freezed == clientVersion
           ? _value.clientVersion
           : clientVersion // ignore: cast_nullable_to_non_nullable
@@ -282,6 +295,7 @@ class _$DeviceInfoImpl implements _DeviceInfo {
       this.model,
       this.sdkVersion,
       this.clientName,
+      this.deviceName,
       this.clientVersion});
 
   factory _$DeviceInfoImpl.fromJson(Map<String, dynamic> json) =>
@@ -314,11 +328,13 @@ class _$DeviceInfoImpl implements _DeviceInfo {
   @override
   final String? clientName;
   @override
+  final String? deviceName;
+  @override
   final String? clientVersion;
 
   @override
   String toString() {
-    return 'DeviceInfo(id: $id, userId: $userId, deviceId: $deviceId, ipAddress: $ipAddress, browserName: $browserName, browserVersion: $browserVersion, osName: $osName, osVersion: $osVersion, deviceType: $deviceType, manufacturer: $manufacturer, model: $model, sdkVersion: $sdkVersion, clientName: $clientName, clientVersion: $clientVersion)';
+    return 'DeviceInfo(id: $id, userId: $userId, deviceId: $deviceId, ipAddress: $ipAddress, browserName: $browserName, browserVersion: $browserVersion, osName: $osName, osVersion: $osVersion, deviceType: $deviceType, manufacturer: $manufacturer, model: $model, sdkVersion: $sdkVersion, clientName: $clientName, deviceName: $deviceName, clientVersion: $clientVersion)';
   }
 
   @override
@@ -348,6 +364,8 @@ class _$DeviceInfoImpl implements _DeviceInfo {
                 other.sdkVersion == sdkVersion) &&
             (identical(other.clientName, clientName) ||
                 other.clientName == clientName) &&
+            (identical(other.deviceName, deviceName) ||
+                other.deviceName == deviceName) &&
             (identical(other.clientVersion, clientVersion) ||
                 other.clientVersion == clientVersion));
   }
@@ -369,6 +387,7 @@ class _$DeviceInfoImpl implements _DeviceInfo {
       model,
       sdkVersion,
       clientName,
+      deviceName,
       clientVersion);
 
   @JsonKey(ignore: true)
@@ -400,6 +419,7 @@ abstract class _DeviceInfo implements DeviceInfo {
       final String? model,
       final String? sdkVersion,
       final String? clientName,
+      final String? deviceName,
       final String? clientVersion}) = _$DeviceInfoImpl;
 
   factory _DeviceInfo.fromJson(Map<String, dynamic> json) =
@@ -431,6 +451,8 @@ abstract class _DeviceInfo implements DeviceInfo {
   String? get sdkVersion;
   @override
   String? get clientName;
+  @override
+  String? get deviceName;
   @override
   String? get clientVersion;
   @override

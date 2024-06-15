@@ -32,6 +32,9 @@ Map<String, dynamic> _$DeviceInfoReqParamsToJson(DeviceInfoReqParams instance) {
     }
   }
 
+  writeNotNull('deviceId', instance.deviceId);
+  writeNotNull('clientName', instance.clientName);
+  writeNotNull('deviceName', instance.deviceName);
   writeNotNull('clientVersion', instance.clientVersion);
   writeNotNull('manufacturer', instance.manufacturer);
   writeNotNull('model', instance.model);

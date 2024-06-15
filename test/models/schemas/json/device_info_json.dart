@@ -30,6 +30,7 @@ const String? manufacturer = null;
 const String? model = null;
 const String? sdkVersion = null;
 const clientName = 'Abs Web';
+const deviceName = 'iPhone';
 const clientVersion = '2.3.3';
 
 const json = {
@@ -46,6 +47,7 @@ const json = {
   'model': model,
   'sdkVersion': sdkVersion,
   'clientName': clientName,
+  'deviceName': deviceName,
   'clientVersion': clientVersion,
 };
 
@@ -63,5 +65,6 @@ const deviceInfo = DeviceInfo(
   model: model,
   sdkVersion: sdkVersion,
   clientName: clientName,
+  deviceName: deviceName,
   clientVersion: clientVersion,
 );

@@ -30,15 +30,35 @@ class PlayItemReqParams {
       _$PlayItemReqParamsToJson(this).removeDefaults(defaults);
 }
 
+
 @requestToJsonRemoveNull
 class DeviceInfoReqParams {
+  /// The client device identifier.
+  final String? deviceId;
+
+  /// The name of the client.
+  final String? clientName;
+
+  /// The name of the device.
+  final String? deviceName;
+
+  /// The version of the client.
   final String? clientVersion;
+
+  /// The manufacturer of the client device.
   final String? manufacturer;
+
+  /// The model of the client device.
   final String? model;
+
+  /// For Android client only
   final String? sdkVersion;
 
   /// See [Play a Library Item or Podcast Episode](https://api.audiobookshelf.org/#play-a-library-item-or-podcast-episode)
   const DeviceInfoReqParams({
+    this.deviceId,
+    this.clientName,
+    this.deviceName,
     this.clientVersion,
     this.manufacturer,
     this.model,
