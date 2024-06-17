@@ -11,8 +11,8 @@ _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
       username: json['username'] as String,
       type: $enumDecode(_$UserTypeEnumMap, json['type']),
       token: json['token'] as String,
-      mediaProgress: (json['mediaProgress'] as List<dynamic>)
-          .map((e) => MediaProgress.fromJson(e as Map<String, dynamic>))
+      mediaProgress: (json['mediaProgress'] as List<dynamic>?)
+          ?.map((e) => MediaProgress.fromJson(e as Map<String, dynamic>))
           .toList(),
       seriesHideFromContinueListening:
           (json['seriesHideFromContinueListening'] as List<dynamic>)
@@ -41,7 +41,7 @@ Map<String, dynamic> _$$UserImplToJson(_$UserImpl instance) =>
       'username': instance.username,
       'type': _$UserTypeEnumMap[instance.type]!,
       'token': instance.token,
-      'mediaProgress': instance.mediaProgress.map((e) => e.toJson()).toList(),
+      'mediaProgress': instance.mediaProgress?.map((e) => e.toJson()).toList(),
       'seriesHideFromContinueListening':
           instance.seriesHideFromContinueListening,
       'bookmarks': instance.bookmarks.map((e) => e.toJson()).toList(),
@@ -93,6 +93,9 @@ _$UserWithSessionAndMostRecentProgressImpl
               json['lastSeen'], const DateTimeEpochConverter().fromJson),
           createdAt: const DateTimeEpochConverter()
               .fromJson((json['createdAt'] as num).toInt()),
+          mediaProgress: (json['mediaProgress'] as List<dynamic>?)
+              ?.map((e) => MediaProgress.fromJson(e as Map<String, dynamic>))
+              .toList(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -107,5 +110,6 @@ Map<String, dynamic> _$$UserWithSessionAndMostRecentProgressImplToJson(
       'lastSeen': _$JsonConverterToJson<int, DateTime>(
           instance.lastSeen, const DateTimeEpochConverter().toJson),
       'createdAt': const DateTimeEpochConverter().toJson(instance.createdAt),
+      'mediaProgress': instance.mediaProgress?.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };

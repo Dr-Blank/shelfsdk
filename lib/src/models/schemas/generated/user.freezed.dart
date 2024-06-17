@@ -32,6 +32,7 @@ mixin _$User {
   String get id => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
   UserType get type => throw _privateConstructorUsedError;
+  List<MediaProgress>? get mediaProgress => throw _privateConstructorUsedError;
   DateTime? get lastSeen => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,7 +42,7 @@ mixin _$User {
             String username,
             UserType type,
             String token,
-            List<MediaProgress> mediaProgress,
+            List<MediaProgress>? mediaProgress,
             List<String> seriesHideFromContinueListening,
             List<AudioBookmark> bookmarks,
             bool isActive,
@@ -58,7 +59,8 @@ mixin _$User {
             PlaybackSession? session,
             MediaProgress? mostRecent,
             DateTime? lastSeen,
-            DateTime createdAt)
+            DateTime createdAt,
+            List<MediaProgress>? mediaProgress)
         withSessionAndMostRecentProgress,
   }) =>
       throw _privateConstructorUsedError;
@@ -69,7 +71,7 @@ mixin _$User {
             String username,
             UserType type,
             String token,
-            List<MediaProgress> mediaProgress,
+            List<MediaProgress>? mediaProgress,
             List<String> seriesHideFromContinueListening,
             List<AudioBookmark> bookmarks,
             bool isActive,
@@ -86,7 +88,8 @@ mixin _$User {
             PlaybackSession? session,
             MediaProgress? mostRecent,
             DateTime? lastSeen,
-            DateTime createdAt)?
+            DateTime createdAt,
+            List<MediaProgress>? mediaProgress)?
         withSessionAndMostRecentProgress,
   }) =>
       throw _privateConstructorUsedError;
@@ -97,7 +100,7 @@ mixin _$User {
             String username,
             UserType type,
             String token,
-            List<MediaProgress> mediaProgress,
+            List<MediaProgress>? mediaProgress,
             List<String> seriesHideFromContinueListening,
             List<AudioBookmark> bookmarks,
             bool isActive,
@@ -114,7 +117,8 @@ mixin _$User {
             PlaybackSession? session,
             MediaProgress? mostRecent,
             DateTime? lastSeen,
-            DateTime createdAt)?
+            DateTime createdAt,
+            List<MediaProgress>? mediaProgress)?
         withSessionAndMostRecentProgress,
     required TResult orElse(),
   }) =>
@@ -155,6 +159,7 @@ abstract class $UserCopyWith<$Res> {
       {String id,
       String username,
       UserType type,
+      List<MediaProgress>? mediaProgress,
       DateTime? lastSeen,
       DateTime createdAt});
 }
@@ -175,6 +180,7 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? id = null,
     Object? username = null,
     Object? type = null,
+    Object? mediaProgress = freezed,
     Object? lastSeen = freezed,
     Object? createdAt = null,
   }) {
@@ -191,6 +197,10 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as UserType,
+      mediaProgress: freezed == mediaProgress
+          ? _value.mediaProgress
+          : mediaProgress // ignore: cast_nullable_to_non_nullable
+              as List<MediaProgress>?,
       lastSeen: freezed == lastSeen
           ? _value.lastSeen
           : lastSeen // ignore: cast_nullable_to_non_nullable
@@ -215,7 +225,7 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       String username,
       UserType type,
       String token,
-      List<MediaProgress> mediaProgress,
+      List<MediaProgress>? mediaProgress,
       List<String> seriesHideFromContinueListening,
       List<AudioBookmark> bookmarks,
       bool isActive,
@@ -242,7 +252,7 @@ class __$$UserImplCopyWithImpl<$Res>
     Object? username = null,
     Object? type = null,
     Object? token = null,
-    Object? mediaProgress = null,
+    Object? mediaProgress = freezed,
     Object? seriesHideFromContinueListening = null,
     Object? bookmarks = null,
     Object? isActive = null,
@@ -269,10 +279,10 @@ class __$$UserImplCopyWithImpl<$Res>
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-      mediaProgress: null == mediaProgress
+      mediaProgress: freezed == mediaProgress
           ? _value._mediaProgress
           : mediaProgress // ignore: cast_nullable_to_non_nullable
-              as List<MediaProgress>,
+              as List<MediaProgress>?,
       seriesHideFromContinueListening: null == seriesHideFromContinueListening
           ? _value._seriesHideFromContinueListening
           : seriesHideFromContinueListening // ignore: cast_nullable_to_non_nullable
@@ -326,7 +336,7 @@ class _$UserImpl extends _User {
       required this.username,
       required this.type,
       required this.token,
-      required final List<MediaProgress> mediaProgress,
+      final List<MediaProgress>? mediaProgress,
       required final List<String> seriesHideFromContinueListening,
       required final List<AudioBookmark> bookmarks,
       required this.isActive,
@@ -354,12 +364,14 @@ class _$UserImpl extends _User {
   final UserType type;
   @override
   final String token;
-  final List<MediaProgress> _mediaProgress;
+  final List<MediaProgress>? _mediaProgress;
   @override
-  List<MediaProgress> get mediaProgress {
+  List<MediaProgress>? get mediaProgress {
+    final value = _mediaProgress;
+    if (value == null) return null;
     if (_mediaProgress is EqualUnmodifiableListView) return _mediaProgress;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_mediaProgress);
+    return EqualUnmodifiableListView(value);
   }
 
   final List<String> _seriesHideFromContinueListening;
@@ -469,7 +481,7 @@ class _$UserImpl extends _User {
             String username,
             UserType type,
             String token,
-            List<MediaProgress> mediaProgress,
+            List<MediaProgress>? mediaProgress,
             List<String> seriesHideFromContinueListening,
             List<AudioBookmark> bookmarks,
             bool isActive,
@@ -486,7 +498,8 @@ class _$UserImpl extends _User {
             PlaybackSession? session,
             MediaProgress? mostRecent,
             DateTime? lastSeen,
-            DateTime createdAt)
+            DateTime createdAt,
+            List<MediaProgress>? mediaProgress)
         withSessionAndMostRecentProgress,
   }) {
     return $default(
@@ -513,7 +526,7 @@ class _$UserImpl extends _User {
             String username,
             UserType type,
             String token,
-            List<MediaProgress> mediaProgress,
+            List<MediaProgress>? mediaProgress,
             List<String> seriesHideFromContinueListening,
             List<AudioBookmark> bookmarks,
             bool isActive,
@@ -530,7 +543,8 @@ class _$UserImpl extends _User {
             PlaybackSession? session,
             MediaProgress? mostRecent,
             DateTime? lastSeen,
-            DateTime createdAt)?
+            DateTime createdAt,
+            List<MediaProgress>? mediaProgress)?
         withSessionAndMostRecentProgress,
   }) {
     return $default?.call(
@@ -557,7 +571,7 @@ class _$UserImpl extends _User {
             String username,
             UserType type,
             String token,
-            List<MediaProgress> mediaProgress,
+            List<MediaProgress>? mediaProgress,
             List<String> seriesHideFromContinueListening,
             List<AudioBookmark> bookmarks,
             bool isActive,
@@ -574,7 +588,8 @@ class _$UserImpl extends _User {
             PlaybackSession? session,
             MediaProgress? mostRecent,
             DateTime? lastSeen,
-            DateTime createdAt)?
+            DateTime createdAt,
+            List<MediaProgress>? mediaProgress)?
         withSessionAndMostRecentProgress,
     required TResult orElse(),
   }) {
@@ -645,7 +660,7 @@ abstract class _User extends User {
       required final String username,
       required final UserType type,
       required final String token,
-      required final List<MediaProgress> mediaProgress,
+      final List<MediaProgress>? mediaProgress,
       required final List<String> seriesHideFromContinueListening,
       required final List<AudioBookmark> bookmarks,
       required final bool isActive,
@@ -665,7 +680,8 @@ abstract class _User extends User {
   @override
   UserType get type;
   String get token;
-  List<MediaProgress> get mediaProgress;
+  @override
+  List<MediaProgress>? get mediaProgress;
   List<String> get seriesHideFromContinueListening;
   List<AudioBookmark> get bookmarks;
   bool get isActive;
@@ -698,7 +714,8 @@ abstract class _$$UserWithSessionAndMostRecentProgressImplCopyWith<$Res>
       PlaybackSession? session,
       MediaProgress? mostRecent,
       DateTime? lastSeen,
-      DateTime createdAt});
+      DateTime createdAt,
+      List<MediaProgress>? mediaProgress});
 
   $PlaybackSessionCopyWith<$Res>? get session;
   $MediaProgressCopyWith<$Res>? get mostRecent;
@@ -723,6 +740,7 @@ class __$$UserWithSessionAndMostRecentProgressImplCopyWithImpl<$Res>
     Object? mostRecent = freezed,
     Object? lastSeen = freezed,
     Object? createdAt = null,
+    Object? mediaProgress = freezed,
   }) {
     return _then(_$UserWithSessionAndMostRecentProgressImpl(
       id: null == id
@@ -753,6 +771,10 @@ class __$$UserWithSessionAndMostRecentProgressImplCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      mediaProgress: freezed == mediaProgress
+          ? _value._mediaProgress
+          : mediaProgress // ignore: cast_nullable_to_non_nullable
+              as List<MediaProgress>?,
     ));
   }
 
@@ -794,8 +816,10 @@ class _$UserWithSessionAndMostRecentProgressImpl
       this.mostRecent,
       this.lastSeen,
       required this.createdAt,
+      final List<MediaProgress>? mediaProgress,
       final String? $type})
-      : $type = $type ?? 'withSessionAndMostRecentProgress',
+      : _mediaProgress = mediaProgress,
+        $type = $type ?? 'withSessionAndMostRecentProgress',
         super._();
 
   factory _$UserWithSessionAndMostRecentProgressImpl.fromJson(
@@ -816,13 +840,22 @@ class _$UserWithSessionAndMostRecentProgressImpl
   final DateTime? lastSeen;
   @override
   final DateTime createdAt;
+  final List<MediaProgress>? _mediaProgress;
+  @override
+  List<MediaProgress>? get mediaProgress {
+    final value = _mediaProgress;
+    if (value == null) return null;
+    if (_mediaProgress is EqualUnmodifiableListView) return _mediaProgress;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'User.withSessionAndMostRecentProgress(id: $id, username: $username, type: $type, session: $session, mostRecent: $mostRecent, lastSeen: $lastSeen, createdAt: $createdAt)';
+    return 'User.withSessionAndMostRecentProgress(id: $id, username: $username, type: $type, session: $session, mostRecent: $mostRecent, lastSeen: $lastSeen, createdAt: $createdAt, mediaProgress: $mediaProgress)';
   }
 
   @override
@@ -840,13 +873,23 @@ class _$UserWithSessionAndMostRecentProgressImpl
             (identical(other.lastSeen, lastSeen) ||
                 other.lastSeen == lastSeen) &&
             (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+                other.createdAt == createdAt) &&
+            const DeepCollectionEquality()
+                .equals(other._mediaProgress, _mediaProgress));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, username, type, session,
-      mostRecent, lastSeen, createdAt);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      username,
+      type,
+      session,
+      mostRecent,
+      lastSeen,
+      createdAt,
+      const DeepCollectionEquality().hash(_mediaProgress));
 
   @JsonKey(ignore: true)
   @override
@@ -864,7 +907,7 @@ class _$UserWithSessionAndMostRecentProgressImpl
             String username,
             UserType type,
             String token,
-            List<MediaProgress> mediaProgress,
+            List<MediaProgress>? mediaProgress,
             List<String> seriesHideFromContinueListening,
             List<AudioBookmark> bookmarks,
             bool isActive,
@@ -881,11 +924,12 @@ class _$UserWithSessionAndMostRecentProgressImpl
             PlaybackSession? session,
             MediaProgress? mostRecent,
             DateTime? lastSeen,
-            DateTime createdAt)
+            DateTime createdAt,
+            List<MediaProgress>? mediaProgress)
         withSessionAndMostRecentProgress,
   }) {
-    return withSessionAndMostRecentProgress(
-        id, username, type, session, mostRecent, lastSeen, createdAt);
+    return withSessionAndMostRecentProgress(id, username, type, session,
+        mostRecent, lastSeen, createdAt, mediaProgress);
   }
 
   @override
@@ -896,7 +940,7 @@ class _$UserWithSessionAndMostRecentProgressImpl
             String username,
             UserType type,
             String token,
-            List<MediaProgress> mediaProgress,
+            List<MediaProgress>? mediaProgress,
             List<String> seriesHideFromContinueListening,
             List<AudioBookmark> bookmarks,
             bool isActive,
@@ -913,11 +957,12 @@ class _$UserWithSessionAndMostRecentProgressImpl
             PlaybackSession? session,
             MediaProgress? mostRecent,
             DateTime? lastSeen,
-            DateTime createdAt)?
+            DateTime createdAt,
+            List<MediaProgress>? mediaProgress)?
         withSessionAndMostRecentProgress,
   }) {
-    return withSessionAndMostRecentProgress?.call(
-        id, username, type, session, mostRecent, lastSeen, createdAt);
+    return withSessionAndMostRecentProgress?.call(id, username, type, session,
+        mostRecent, lastSeen, createdAt, mediaProgress);
   }
 
   @override
@@ -928,7 +973,7 @@ class _$UserWithSessionAndMostRecentProgressImpl
             String username,
             UserType type,
             String token,
-            List<MediaProgress> mediaProgress,
+            List<MediaProgress>? mediaProgress,
             List<String> seriesHideFromContinueListening,
             List<AudioBookmark> bookmarks,
             bool isActive,
@@ -945,13 +990,14 @@ class _$UserWithSessionAndMostRecentProgressImpl
             PlaybackSession? session,
             MediaProgress? mostRecent,
             DateTime? lastSeen,
-            DateTime createdAt)?
+            DateTime createdAt,
+            List<MediaProgress>? mediaProgress)?
         withSessionAndMostRecentProgress,
     required TResult orElse(),
   }) {
     if (withSessionAndMostRecentProgress != null) {
-      return withSessionAndMostRecentProgress(
-          id, username, type, session, mostRecent, lastSeen, createdAt);
+      return withSessionAndMostRecentProgress(id, username, type, session,
+          mostRecent, lastSeen, createdAt, mediaProgress);
     }
     return orElse();
   }
@@ -1006,7 +1052,8 @@ abstract class UserWithSessionAndMostRecentProgress extends User {
           final PlaybackSession? session,
           final MediaProgress? mostRecent,
           final DateTime? lastSeen,
-          required final DateTime createdAt}) =
+          required final DateTime createdAt,
+          final List<MediaProgress>? mediaProgress}) =
       _$UserWithSessionAndMostRecentProgressImpl;
   const UserWithSessionAndMostRecentProgress._() : super._();
 
@@ -1026,6 +1073,8 @@ abstract class UserWithSessionAndMostRecentProgress extends User {
   DateTime? get lastSeen;
   @override
   DateTime get createdAt;
+  @override
+  List<MediaProgress>? get mediaProgress;
   @override
   @JsonKey(ignore: true)
   _$$UserWithSessionAndMostRecentProgressImplCopyWith<

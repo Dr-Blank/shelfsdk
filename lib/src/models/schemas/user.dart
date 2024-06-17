@@ -21,7 +21,7 @@ class User with _$User {
     required String username,
     required UserType type,
     required String token,
-    required List<MediaProgress> mediaProgress,
+    List<MediaProgress>? mediaProgress,
     required List<String> seriesHideFromContinueListening,
     required List<AudioBookmark> bookmarks,
     required bool isActive,
@@ -41,6 +41,7 @@ class User with _$User {
     MediaProgress? mostRecent,
     DateTime? lastSeen,
     required DateTime createdAt,
+    List<MediaProgress>? mediaProgress,
   }) = UserWithSessionAndMostRecentProgress;
 
   factory User.fromJson(Map<String, dynamic> json) =>
