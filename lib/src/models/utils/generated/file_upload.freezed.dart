@@ -66,7 +66,9 @@ mixin _$FileUpload {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FileUploadCopyWith<FileUpload> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -90,6 +92,8 @@ class _$FileUploadCopyWithImpl<$Res, $Val extends FileUpload>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,6 +127,8 @@ class __$$FileUploadImplCopyWithImpl<$Res>
       _$FileUploadImpl _value, $Res Function(_$FileUploadImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -182,7 +188,9 @@ class _$FileUploadImpl implements _FileUpload {
   @override
   int get hashCode => Object.hash(runtimeType, filename, byteStream, length);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FileUploadImplCopyWith<_$FileUploadImpl> get copyWith =>
@@ -273,8 +281,11 @@ abstract class _FileUpload implements FileUpload {
 
   /// The size of the file, in bytes.
   int get length;
+
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FileUploadImplCopyWith<_$FileUploadImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -298,6 +309,8 @@ class __$$FileUploadBytesImplCopyWithImpl<$Res>
       _$FileUploadBytesImpl _value, $Res Function(_$FileUploadBytesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -353,7 +366,9 @@ class _$FileUploadBytesImpl implements FileUploadBytes {
   int get hashCode => Object.hash(
       runtimeType, filename, const DeepCollectionEquality().hash(_bytes));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FileUploadBytesImplCopyWith<_$FileUploadBytesImpl> get copyWith =>
@@ -441,8 +456,11 @@ abstract class FileUploadBytes implements FileUpload {
   @override
   String get filename;
   List<int> get bytes;
+
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FileUploadBytesImplCopyWith<_$FileUploadBytesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -466,6 +484,8 @@ class __$$FileUploadPathImplCopyWithImpl<$Res>
       _$FileUploadPathImpl _value, $Res Function(_$FileUploadPathImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -514,7 +534,9 @@ class _$FileUploadPathImpl implements FileUploadPath {
   @override
   int get hashCode => Object.hash(runtimeType, filename, filePath);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FileUploadPathImplCopyWith<_$FileUploadPathImpl> get copyWith =>
@@ -602,8 +624,11 @@ abstract class FileUploadPath implements FileUpload {
   @override
   String get filename;
   String get filePath;
+
+  /// Create a copy of FileUpload
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FileUploadPathImplCopyWith<_$FileUploadPathImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

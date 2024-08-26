@@ -156,8 +156,13 @@ mixin _$MediaProgress {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this MediaProgress to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MediaProgress
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MediaProgressCopyWith<MediaProgress> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -192,6 +197,8 @@ class _$MediaProgressCopyWithImpl<$Res, $Val extends MediaProgress>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MediaProgress
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -286,6 +293,8 @@ class __$$MediaProgressImplCopyWithImpl<$Res>
       _$MediaProgressImpl _value, $Res Function(_$MediaProgressImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaProgress
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -433,7 +442,7 @@ class _$MediaProgressImpl extends _MediaProgress {
                 other.finishedAt == finishedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -449,7 +458,9 @@ class _$MediaProgressImpl extends _MediaProgress {
       startedAt,
       finishedAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaProgress
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MediaProgressImplCopyWith<_$MediaProgressImpl> get copyWith =>
@@ -676,8 +687,11 @@ abstract class _MediaProgress extends MediaProgress {
   DateTime get startedAt;
   @override
   DateTime? get finishedAt;
+
+  /// Create a copy of MediaProgress
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MediaProgressImplCopyWith<_$MediaProgressImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -719,6 +733,8 @@ class __$$MediaProgressWithMediaImplCopyWithImpl<$Res>
       $Res Function(_$MediaProgressWithMediaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaProgress
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -792,6 +808,8 @@ class __$$MediaProgressWithMediaImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of MediaProgress
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaCopyWith<$Res> get media {
@@ -800,6 +818,8 @@ class __$$MediaProgressWithMediaImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of MediaProgress
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PodcastEpisodeCopyWith<$Res>? get episode {
@@ -904,7 +924,7 @@ class _$MediaProgressWithMediaImpl extends MediaProgressWithMedia {
             (identical(other.episode, episode) || other.episode == episode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -922,7 +942,9 @@ class _$MediaProgressWithMediaImpl extends MediaProgressWithMedia {
       media,
       episode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaProgress
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MediaProgressWithMediaImplCopyWith<_$MediaProgressWithMediaImpl>
@@ -1160,8 +1182,11 @@ abstract class MediaProgressWithMedia extends MediaProgress {
   DateTime? get finishedAt;
   Media get media;
   PodcastEpisode? get episode;
+
+  /// Create a copy of MediaProgress
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MediaProgressWithMediaImplCopyWith<_$MediaProgressWithMediaImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

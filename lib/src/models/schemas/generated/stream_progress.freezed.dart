@@ -26,8 +26,12 @@ mixin _$StreamProgress {
   List<String> get chunks => throw _privateConstructorUsedError;
   int get numSegments => throw _privateConstructorUsedError;
 
+  /// Serializes this StreamProgress to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StreamProgress
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StreamProgressCopyWith<StreamProgress> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$StreamProgressCopyWithImpl<$Res, $Val extends StreamProgress>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StreamProgress
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,6 +113,8 @@ class __$$StreamProgressImplCopyWithImpl<$Res>
       _$StreamProgressImpl _value, $Res Function(_$StreamProgressImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StreamProgress
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -183,12 +191,14 @@ class _$StreamProgressImpl implements _StreamProgress {
                 other.numSegments == numSegments));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, streamId, percent,
       const DeepCollectionEquality().hash(_chunks), numSegments);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StreamProgress
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StreamProgressImplCopyWith<_$StreamProgressImpl> get copyWith =>
@@ -222,8 +232,11 @@ abstract class _StreamProgress implements StreamProgress {
   List<String> get chunks;
   @override
   int get numSegments;
+
+  /// Create a copy of StreamProgress
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StreamProgressImplCopyWith<_$StreamProgressImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

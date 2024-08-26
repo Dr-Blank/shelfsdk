@@ -31,8 +31,12 @@ mixin _$GetLibrarysSeriesResponse {
   bool get minified => throw _privateConstructorUsedError;
   String get include => throw _privateConstructorUsedError;
 
+  /// Serializes this GetLibrarysSeriesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetLibrarysSeriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetLibrarysSeriesResponseCopyWith<GetLibrarysSeriesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -66,6 +70,8 @@ class _$GetLibrarysSeriesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetLibrarysSeriesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -151,6 +157,8 @@ class __$$GetLibrarysSeriesResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetLibrarysSeriesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetLibrarysSeriesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -273,7 +281,7 @@ class _$GetLibrarysSeriesResponseImpl implements _GetLibrarysSeriesResponse {
             (identical(other.include, include) || other.include == include));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -287,7 +295,9 @@ class _$GetLibrarysSeriesResponseImpl implements _GetLibrarysSeriesResponse {
       minified,
       include);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetLibrarysSeriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetLibrarysSeriesResponseImplCopyWith<_$GetLibrarysSeriesResponseImpl>
@@ -335,8 +345,11 @@ abstract class _GetLibrarysSeriesResponse implements GetLibrarysSeriesResponse {
   bool get minified;
   @override
   String get include;
+
+  /// Create a copy of GetLibrarysSeriesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetLibrarysSeriesResponseImplCopyWith<_$GetLibrarysSeriesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -92,6 +92,8 @@ mixin _$SearchChaptersResponse {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SearchChaptersResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -112,6 +114,9 @@ class _$SearchChaptersResponseCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SearchChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -134,6 +139,8 @@ class __$$SearchChaptersResponseErrorImplCopyWithImpl<$Res>
       $Res Function(_$SearchChaptersResponseErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -179,11 +186,13 @@ class _$SearchChaptersResponseErrorImpl extends SearchChaptersResponseError {
             (identical(other.error, error) || other.error == error));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchChaptersResponseErrorImplCopyWith<_$SearchChaptersResponseErrorImpl>
@@ -290,7 +299,10 @@ abstract class SearchChaptersResponseError extends SearchChaptersResponse {
       _$SearchChaptersResponseErrorImpl.fromJson;
 
   String get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchChaptersResponseErrorImplCopyWith<_$SearchChaptersResponseErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -321,6 +333,8 @@ class __$$SearchChaptersResponseResponseImplCopyWithImpl<$Res>
       $Res Function(_$SearchChaptersResponseResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -428,7 +442,7 @@ class _$SearchChaptersResponseResponseImpl
                 other.runtimeLength == runtimeLength));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -439,7 +453,9 @@ class _$SearchChaptersResponseResponseImpl
       isAccurate,
       runtimeLength);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchChaptersResponseResponseImplCopyWith<
@@ -567,7 +583,10 @@ abstract class SearchChaptersResponseResponse extends SearchChaptersResponse {
   bool get isAccurate;
   @JsonKey(name: 'runtimeLengthMs')
   Duration get runtimeLength;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchChaptersResponseResponseImplCopyWith<
           _$SearchChaptersResponseResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -585,8 +604,12 @@ mixin _$SearchResultChapter {
   Duration get startOffset => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
 
+  /// Serializes this SearchResultChapter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchResultChapter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchResultChapterCopyWith<SearchResultChapter> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -613,6 +636,8 @@ class _$SearchResultChapterCopyWithImpl<$Res, $Val extends SearchResultChapter>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchResultChapter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -659,6 +684,8 @@ class __$$SearchResultChapterImplCopyWithImpl<$Res>
       $Res Function(_$SearchResultChapterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchResultChapter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -720,11 +747,13 @@ class _$SearchResultChapterImpl implements _SearchResultChapter {
             (identical(other.title, title) || other.title == title));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, length, startOffset, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchResultChapter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchResultChapterImplCopyWith<_$SearchResultChapterImpl> get copyWith =>
@@ -756,8 +785,11 @@ abstract class _SearchResultChapter implements SearchResultChapter {
   Duration get startOffset;
   @override
   String get title;
+
+  /// Create a copy of SearchResultChapter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchResultChapterImplCopyWith<_$SearchResultChapterImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

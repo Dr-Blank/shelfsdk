@@ -24,8 +24,12 @@ mixin _$ToneScanItemResponse {
   Map<String, dynamic> get meta => throw _privateConstructorUsedError;
   ToneScanFileResponse get file => throw _privateConstructorUsedError;
 
+  /// Serializes this ToneScanItemResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ToneScanItemResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ToneScanItemResponseCopyWith<ToneScanItemResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$ToneScanItemResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ToneScanItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$ToneScanItemResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ToneScanItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ToneScanAudioResponseCopyWith<$Res> get audio {
@@ -87,6 +95,8 @@ class _$ToneScanItemResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ToneScanItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ToneScanFileResponseCopyWith<$Res> get file {
@@ -123,6 +133,8 @@ class __$$ToneScanItemResponseImplCopyWithImpl<$Res>
       $Res Function(_$ToneScanItemResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ToneScanItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -187,12 +199,14 @@ class _$ToneScanItemResponseImpl implements _ToneScanItemResponse {
             (identical(other.file, file) || other.file == file));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, audio, const DeepCollectionEquality().hash(_meta), file);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ToneScanItemResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ToneScanItemResponseImplCopyWith<_$ToneScanItemResponseImpl>
@@ -223,8 +237,11 @@ abstract class _ToneScanItemResponse implements ToneScanItemResponse {
   Map<String, dynamic> get meta;
   @override
   ToneScanFileResponse get file;
+
+  /// Create a copy of ToneScanItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ToneScanItemResponseImplCopyWith<_$ToneScanItemResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -246,8 +263,12 @@ mixin _$ToneScanAudioResponse {
   ToneScanAudioFramesResponse get frames => throw _privateConstructorUsedError;
   List<String> get metaFormat => throw _privateConstructorUsedError;
 
+  /// Serializes this ToneScanAudioResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ToneScanAudioResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ToneScanAudioResponseCopyWith<ToneScanAudioResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -282,6 +303,8 @@ class _$ToneScanAudioResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ToneScanAudioResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -325,6 +348,8 @@ class _$ToneScanAudioResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ToneScanAudioResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ToneScanAudioChannelsResponseCopyWith<$Res> get channels {
@@ -334,6 +359,8 @@ class _$ToneScanAudioResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ToneScanAudioResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ToneScanAudioFramesResponseCopyWith<$Res> get frames {
@@ -376,6 +403,8 @@ class __$$ToneScanAudioResponseImplCopyWithImpl<$Res>
       $Res Function(_$ToneScanAudioResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ToneScanAudioResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -480,7 +509,7 @@ class _$ToneScanAudioResponseImpl implements _ToneScanAudioResponse {
                 .equals(other._metaFormat, _metaFormat));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -492,7 +521,9 @@ class _$ToneScanAudioResponseImpl implements _ToneScanAudioResponse {
       frames,
       const DeepCollectionEquality().hash(_metaFormat));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ToneScanAudioResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ToneScanAudioResponseImplCopyWith<_$ToneScanAudioResponseImpl>
@@ -535,8 +566,11 @@ abstract class _ToneScanAudioResponse implements ToneScanAudioResponse {
   ToneScanAudioFramesResponse get frames;
   @override
   List<String> get metaFormat;
+
+  /// Create a copy of ToneScanAudioResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ToneScanAudioResponseImplCopyWith<_$ToneScanAudioResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -551,8 +585,12 @@ mixin _$ToneScanAudioChannelsResponse {
   int get count => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
 
+  /// Serializes this ToneScanAudioChannelsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ToneScanAudioChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ToneScanAudioChannelsResponseCopyWith<ToneScanAudioChannelsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -579,6 +617,8 @@ class _$ToneScanAudioChannelsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ToneScanAudioChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -620,6 +660,8 @@ class __$$ToneScanAudioChannelsResponseImplCopyWithImpl<$Res>
       $Res Function(_$ToneScanAudioChannelsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ToneScanAudioChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -670,11 +712,13 @@ class _$ToneScanAudioChannelsResponseImpl
                 other.description == description));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, count, description);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ToneScanAudioChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ToneScanAudioChannelsResponseImplCopyWith<
@@ -703,8 +747,11 @@ abstract class _ToneScanAudioChannelsResponse
   int get count;
   @override
   String get description;
+
+  /// Create a copy of ToneScanAudioChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ToneScanAudioChannelsResponseImplCopyWith<
           _$ToneScanAudioChannelsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -720,8 +767,12 @@ mixin _$ToneScanAudioFramesResponse {
   int get offset => throw _privateConstructorUsedError;
   int get length => throw _privateConstructorUsedError;
 
+  /// Serializes this ToneScanAudioFramesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ToneScanAudioFramesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ToneScanAudioFramesResponseCopyWith<ToneScanAudioFramesResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -748,6 +799,8 @@ class _$ToneScanAudioFramesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ToneScanAudioFramesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -789,6 +842,8 @@ class __$$ToneScanAudioFramesResponseImplCopyWithImpl<$Res>
       $Res Function(_$ToneScanAudioFramesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ToneScanAudioFramesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -838,11 +893,13 @@ class _$ToneScanAudioFramesResponseImpl
             (identical(other.length, length) || other.length == length));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, offset, length);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ToneScanAudioFramesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ToneScanAudioFramesResponseImplCopyWith<_$ToneScanAudioFramesResponseImpl>
@@ -870,8 +927,11 @@ abstract class _ToneScanAudioFramesResponse
   int get offset;
   @override
   int get length;
+
+  /// Create a copy of ToneScanAudioFramesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ToneScanAudioFramesResponseImplCopyWith<_$ToneScanAudioFramesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -889,8 +949,12 @@ mixin _$ToneScanFileResponse {
   String get path => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
 
+  /// Serializes this ToneScanFileResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ToneScanFileResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ToneScanFileResponseCopyWith<ToneScanFileResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -921,6 +985,8 @@ class _$ToneScanFileResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ToneScanFileResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -985,6 +1051,8 @@ class __$$ToneScanFileResponseImplCopyWithImpl<$Res>
       $Res Function(_$ToneScanFileResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ToneScanFileResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1071,12 +1139,14 @@ class _$ToneScanFileResponseImpl implements _ToneScanFileResponse {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, size, created, modified, accessed, path, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ToneScanFileResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ToneScanFileResponseImplCopyWith<_$ToneScanFileResponseImpl>
@@ -1116,8 +1186,11 @@ abstract class _ToneScanFileResponse implements ToneScanFileResponse {
   String get path;
   @override
   String get name;
+
+  /// Create a copy of ToneScanFileResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ToneScanFileResponseImplCopyWith<_$ToneScanFileResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

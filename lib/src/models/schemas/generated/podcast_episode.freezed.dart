@@ -190,8 +190,13 @@ mixin _$PodcastEpisode {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this PodcastEpisode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PodcastEpisodeCopyWith<PodcastEpisode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -233,6 +238,8 @@ class _$PodcastEpisodeCopyWithImpl<$Res, $Val extends PodcastEpisode>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -316,6 +323,8 @@ class _$PodcastEpisodeCopyWithImpl<$Res, $Val extends PodcastEpisode>
     ) as $Val);
   }
 
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PodcastEpisodeEnclosureCopyWith<$Res> get enclosure {
@@ -324,6 +333,8 @@ class _$PodcastEpisodeCopyWithImpl<$Res, $Val extends PodcastEpisode>
     });
   }
 
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AudioFileCopyWith<$Res> get audioFile {
@@ -372,6 +383,8 @@ class __$$PodcastEpisodeImplCopyWithImpl<$Res>
       _$PodcastEpisodeImpl _value, $Res Function(_$PodcastEpisodeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -552,7 +565,7 @@ class _$PodcastEpisodeImpl extends _PodcastEpisode {
                 other.updatedAt == updatedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -572,7 +585,9 @@ class _$PodcastEpisodeImpl extends _PodcastEpisode {
       addedAt,
       updatedAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastEpisodeImplCopyWith<_$PodcastEpisodeImpl> get copyWith =>
@@ -854,8 +869,11 @@ abstract class _PodcastEpisode extends PodcastEpisode {
   DateTime get addedAt;
   @override
   DateTime get updatedAt;
+
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastEpisodeImplCopyWith<_$PodcastEpisodeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -907,6 +925,8 @@ class __$$PodcastEpisodeExpandedImplCopyWithImpl<$Res>
       $Res Function(_$PodcastEpisodeExpandedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1010,6 +1030,8 @@ class __$$PodcastEpisodeExpandedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AudioTrackCopyWith<$Res> get audioTrack {
@@ -1018,6 +1040,8 @@ class __$$PodcastEpisodeExpandedImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaCopyWith<$Res>? get podcast {
@@ -1145,7 +1169,7 @@ class _$PodcastEpisodeExpandedImpl extends PodcastEpisodeExpanded {
             (identical(other.podcast, podcast) || other.podcast == podcast));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1170,7 +1194,9 @@ class _$PodcastEpisodeExpandedImpl extends PodcastEpisodeExpanded {
         podcast
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastEpisodeExpandedImplCopyWith<_$PodcastEpisodeExpandedImpl>
@@ -1472,8 +1498,11 @@ abstract class PodcastEpisodeExpanded extends PodcastEpisode {
   Duration get duration;
   int get size;
   Media? get podcast;
+
+  /// Create a copy of PodcastEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastEpisodeExpandedImplCopyWith<_$PodcastEpisodeExpandedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

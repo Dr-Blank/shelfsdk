@@ -460,8 +460,13 @@ mixin _$MediaMetadata {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this MediaMetadata to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MediaMetadataCopyWith<MediaMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -490,6 +495,8 @@ class _$MediaMetadataCopyWithImpl<$Res, $Val extends MediaMetadata>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -558,6 +565,8 @@ class __$$BookMetadataImplCopyWithImpl<$Res>
       _$BookMetadataImpl _value, $Res Function(_$BookMetadataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -771,7 +780,7 @@ class _$BookMetadataImpl extends BookMetadata {
                 other.abridged == abridged));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -791,7 +800,9 @@ class _$BookMetadataImpl extends BookMetadata {
       explicit,
       abridged);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookMetadataImplCopyWith<_$BookMetadataImpl> get copyWith =>
@@ -1332,8 +1343,11 @@ abstract class BookMetadata extends MediaMetadata {
   @override
   bool get explicit;
   bool? get abridged;
+
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookMetadataImplCopyWith<_$BookMetadataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1375,6 +1389,8 @@ class __$$BookMetadataSeriesFilterImplCopyWithImpl<$Res>
       $Res Function(_$BookMetadataSeriesFilterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1453,6 +1469,8 @@ class __$$BookMetadataSeriesFilterImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SeriesCopyWith<$Res> get seriesSequence {
@@ -1580,7 +1598,7 @@ class _$BookMetadataSeriesFilterImpl extends BookMetadataSeriesFilter {
                 other.explicit == explicit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1599,7 +1617,9 @@ class _$BookMetadataSeriesFilterImpl extends BookMetadataSeriesFilter {
       language,
       explicit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookMetadataSeriesFilterImplCopyWith<_$BookMetadataSeriesFilterImpl>
@@ -2137,8 +2157,11 @@ abstract class BookMetadataSeriesFilter extends MediaMetadata {
   String? get language;
   @override
   bool get explicit;
+
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookMetadataSeriesFilterImplCopyWith<_$BookMetadataSeriesFilterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2181,6 +2204,8 @@ class __$$BookMetadataMinifiedImplCopyWithImpl<$Res>
       $Res Function(_$BookMetadataMinifiedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2274,6 +2299,8 @@ class __$$BookMetadataMinifiedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SeriesCopyWith<$Res>? get seriesSequence {
@@ -2405,7 +2432,7 @@ class _$BookMetadataMinifiedImpl extends BookMetadataMinified {
                 other.seriesSequence == seriesSequence));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2427,7 +2454,9 @@ class _$BookMetadataMinifiedImpl extends BookMetadataMinified {
       explicit,
       seriesSequence);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookMetadataMinifiedImplCopyWith<_$BookMetadataMinifiedImpl>
@@ -2982,8 +3011,11 @@ abstract class BookMetadataMinified extends MediaMetadata {
   bool get explicit;
   @JsonKey(name: 'series')
   Series? get seriesSequence;
+
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookMetadataMinifiedImplCopyWith<_$BookMetadataMinifiedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3029,6 +3061,8 @@ class __$$BookMetadataMinifiedSeriesFilterImplCopyWithImpl<$Res>
       $Res Function(_$BookMetadataMinifiedSeriesFilterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3122,6 +3156,8 @@ class __$$BookMetadataMinifiedSeriesFilterImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SeriesCopyWith<$Res> get seriesSequence {
@@ -3251,7 +3287,7 @@ class _$BookMetadataMinifiedSeriesFilterImpl
                 other.seriesSequence == seriesSequence));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3273,7 +3309,9 @@ class _$BookMetadataMinifiedSeriesFilterImpl
       explicit,
       seriesSequence);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookMetadataMinifiedSeriesFilterImplCopyWith<
@@ -3828,8 +3866,11 @@ abstract class BookMetadataMinifiedSeriesFilter extends MediaMetadata {
   bool get explicit;
   @JsonKey(name: 'series')
   Series get seriesSequence;
+
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookMetadataMinifiedSeriesFilterImplCopyWith<
           _$BookMetadataMinifiedSeriesFilterImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -3874,6 +3915,8 @@ class __$$BookMetadataExpandedImplCopyWithImpl<$Res>
       $Res Function(_$BookMetadataExpandedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4137,7 +4180,7 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
                 other.abridged == abridged));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -4163,7 +4206,9 @@ class _$BookMetadataExpandedImpl extends BookMetadataExpanded {
         abridged
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookMetadataExpandedImplCopyWith<_$BookMetadataExpandedImpl>
@@ -4731,8 +4776,11 @@ abstract class BookMetadataExpanded extends MediaMetadata {
   String? get narratorName;
   String? get seriesName;
   bool? get abridged;
+
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookMetadataExpandedImplCopyWith<_$BookMetadataExpandedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4768,6 +4816,8 @@ class __$$PodcastMetadataImplCopyWithImpl<$Res>
       _$PodcastMetadataImpl _value, $Res Function(_$PodcastMetadataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4929,7 +4979,7 @@ class _$PodcastMetadataImpl extends PodcastMetadata {
                 other.language == language));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4946,7 +4996,9 @@ class _$PodcastMetadataImpl extends PodcastMetadata {
       explicit,
       language);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastMetadataImplCopyWith<_$PodcastMetadataImpl> get copyWith =>
@@ -5462,8 +5514,11 @@ abstract class PodcastMetadata extends MediaMetadata {
   bool get explicit;
   @override
   String? get language;
+
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastMetadataImplCopyWith<_$PodcastMetadataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5502,6 +5557,8 @@ class __$$PodcastMetadataExpandedImplCopyWithImpl<$Res>
       $Res Function(_$PodcastMetadataExpandedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5673,7 +5730,7 @@ class _$PodcastMetadataExpandedImpl extends PodcastMetadataExpanded {
                 other.language == language));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5691,7 +5748,9 @@ class _$PodcastMetadataExpandedImpl extends PodcastMetadataExpanded {
       explicit,
       language);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastMetadataExpandedImplCopyWith<_$PodcastMetadataExpandedImpl>
@@ -6223,8 +6282,11 @@ abstract class PodcastMetadataExpanded extends MediaMetadata {
   bool get explicit;
   @override
   String? get language;
+
+  /// Create a copy of MediaMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastMetadataExpandedImplCopyWith<_$PodcastMetadataExpandedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

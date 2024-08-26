@@ -51,8 +51,12 @@ mixin _$AudioMetaTags {
   String? get tagMusicBrainzAlbumArtistId => throw _privateConstructorUsedError;
   String? get tagMusicBrainzArtistId => throw _privateConstructorUsedError;
 
+  /// Serializes this AudioMetaTags to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AudioMetaTags
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AudioMetaTagsCopyWith<AudioMetaTags> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -106,6 +110,8 @@ class _$AudioMetaTagsCopyWithImpl<$Res, $Val extends AudioMetaTags>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AudioMetaTags
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -314,6 +320,8 @@ class __$$AudioMetaTagsImplCopyWithImpl<$Res>
       _$AudioMetaTagsImpl _value, $Res Function(_$AudioMetaTagsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AudioMetaTags
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -643,7 +651,7 @@ class _$AudioMetaTagsImpl implements _AudioMetaTags {
                 other.tagMusicBrainzArtistId == tagMusicBrainzArtistId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -679,7 +687,9 @@ class _$AudioMetaTagsImpl implements _AudioMetaTags {
         tagMusicBrainzArtistId
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AudioMetaTags
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AudioMetaTagsImplCopyWith<_$AudioMetaTagsImpl> get copyWith =>
@@ -789,8 +799,11 @@ abstract class _AudioMetaTags implements AudioMetaTags {
   String? get tagMusicBrainzAlbumArtistId;
   @override
   String? get tagMusicBrainzArtistId;
+
+  /// Create a copy of AudioMetaTags
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AudioMetaTagsImplCopyWith<_$AudioMetaTagsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

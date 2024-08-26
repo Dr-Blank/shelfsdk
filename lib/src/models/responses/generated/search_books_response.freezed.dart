@@ -284,8 +284,13 @@ mixin _$SearchBooksResponse {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SearchBooksResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchBooksResponseCopyWith<SearchBooksResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -309,6 +314,8 @@ class _$SearchBooksResponseCopyWithImpl<$Res, $Val extends SearchBooksResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -369,6 +376,8 @@ class __$$SearchBooksResponseGoogleImplCopyWithImpl<$Res>
       $Res Function(_$SearchBooksResponseGoogleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -496,7 +505,7 @@ class _$SearchBooksResponseGoogleImpl extends SearchBooksResponseGoogle {
             (identical(other.isbn, isbn) || other.isbn == isbn));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -510,7 +519,9 @@ class _$SearchBooksResponseGoogleImpl extends SearchBooksResponseGoogle {
       const DeepCollectionEquality().hash(_genres),
       isbn);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchBooksResponseGoogleImplCopyWith<_$SearchBooksResponseGoogleImpl>
@@ -826,8 +837,11 @@ abstract class SearchBooksResponseGoogle extends SearchBooksResponse {
   Uri? get cover;
   List<String> get genres;
   String get isbn;
+
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchBooksResponseGoogleImplCopyWith<_$SearchBooksResponseGoogleImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -870,6 +884,8 @@ class __$$SearchBooksResponseOpenLibraryImplCopyWithImpl<$Res>
       $Res Function(_$SearchBooksResponseOpenLibraryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1069,7 +1085,7 @@ class _$SearchBooksResponseOpenLibraryImpl
                 other.includesTitle == includesTitle));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1090,7 +1106,9 @@ class _$SearchBooksResponseOpenLibraryImpl
       totalDistance,
       includesTitle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchBooksResponseOpenLibraryImplCopyWith<
@@ -1467,8 +1485,11 @@ abstract class SearchBooksResponseOpenLibrary extends SearchBooksResponse {
   String get includesAuthor;
   int get totalDistance;
   String get includesTitle;
+
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchBooksResponseOpenLibraryImplCopyWith<
           _$SearchBooksResponseOpenLibraryImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1504,6 +1525,8 @@ class __$$SearchBooksResponseITunesImplCopyWithImpl<$Res>
       $Res Function(_$SearchBooksResponseITunesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1622,7 +1645,7 @@ class _$SearchBooksResponseITunesImpl extends SearchBooksResponseITunes {
             (identical(other.cover, cover) || other.cover == cover));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1635,7 +1658,9 @@ class _$SearchBooksResponseITunesImpl extends SearchBooksResponseITunes {
       const DeepCollectionEquality().hash(_genres),
       cover);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchBooksResponseITunesImplCopyWith<_$SearchBooksResponseITunesImpl>
@@ -1949,8 +1974,11 @@ abstract class SearchBooksResponseITunes extends SearchBooksResponse {
   List<String> get genres;
   @override
   Uri? get cover;
+
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchBooksResponseITunesImplCopyWith<_$SearchBooksResponseITunesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1992,6 +2020,8 @@ class __$$SearchBooksResponseAudibleImplCopyWithImpl<$Res>
       $Res Function(_$SearchBooksResponseAudibleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2179,7 +2209,7 @@ class _$SearchBooksResponseAudibleImpl extends SearchBooksResponseAudible {
             (identical(other.rating, rating) || other.rating == rating));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2199,7 +2229,9 @@ class _$SearchBooksResponseAudibleImpl extends SearchBooksResponseAudible {
       region,
       rating);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchBooksResponseAudibleImplCopyWith<_$SearchBooksResponseAudibleImpl>
@@ -2570,8 +2602,11 @@ abstract class SearchBooksResponseAudible extends SearchBooksResponse {
   Duration get duration;
   String? get region;
   String? get rating;
+
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchBooksResponseAudibleImplCopyWith<_$SearchBooksResponseAudibleImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2608,6 +2643,8 @@ class __$$SearchBooksResponseFantLabImplCopyWithImpl<$Res>
       $Res Function(_$SearchBooksResponseFantLabImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2746,7 +2783,7 @@ class _$SearchBooksResponseFantLabImpl extends SearchBooksResponseFantLab {
             (identical(other.isbn, isbn) || other.isbn == isbn));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2761,7 +2798,9 @@ class _$SearchBooksResponseFantLabImpl extends SearchBooksResponseFantLab {
       const DeepCollectionEquality().hash(_genres),
       isbn);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchBooksResponseFantLabImplCopyWith<_$SearchBooksResponseFantLabImpl>
@@ -3079,8 +3118,11 @@ abstract class SearchBooksResponseFantLab extends SearchBooksResponse {
   Uri? get cover;
   List<String> get genres;
   String? get isbn;
+
+  /// Create a copy of SearchBooksResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchBooksResponseFantLabImplCopyWith<_$SearchBooksResponseFantLabImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3094,8 +3136,12 @@ mixin _$AudibleSeries {
   String get series => throw _privateConstructorUsedError;
   String get sequence => throw _privateConstructorUsedError;
 
+  /// Serializes this AudibleSeries to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AudibleSeries
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AudibleSeriesCopyWith<AudibleSeries> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3119,6 +3165,8 @@ class _$AudibleSeriesCopyWithImpl<$Res, $Val extends AudibleSeries>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AudibleSeries
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3157,6 +3205,8 @@ class __$$AudibleSeriesImplCopyWithImpl<$Res>
       _$AudibleSeriesImpl _value, $Res Function(_$AudibleSeriesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AudibleSeries
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3204,11 +3254,13 @@ class _$AudibleSeriesImpl implements _AudibleSeries {
                 other.sequence == sequence));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, series, sequence);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AudibleSeries
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AudibleSeriesImplCopyWith<_$AudibleSeriesImpl> get copyWith =>
@@ -3234,8 +3286,11 @@ abstract class _AudibleSeries implements AudibleSeries {
   String get series;
   @override
   String get sequence;
+
+  /// Create a copy of AudibleSeries
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AudibleSeriesImplCopyWith<_$AudibleSeriesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

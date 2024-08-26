@@ -22,7 +22,9 @@ mixin _$CronExpression {
   Set<Month> get months => throw _privateConstructorUsedError;
   Set<DayOfTheWeek> get daysOfWeek => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CronExpression
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CronExpressionCopyWith<CronExpression> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +53,8 @@ class _$CronExpressionCopyWithImpl<$Res, $Val extends CronExpression>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CronExpression
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -109,6 +113,8 @@ class __$$CronExpressionImplCopyWithImpl<$Res>
       _$CronExpressionImpl _value, $Res Function(_$CronExpressionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CronExpression
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -227,7 +233,9 @@ class _$CronExpressionImpl extends _CronExpression {
       const DeepCollectionEquality().hash(_months),
       const DeepCollectionEquality().hash(_daysOfWeek));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CronExpression
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CronExpressionImplCopyWith<_$CronExpressionImpl> get copyWith =>
@@ -254,8 +262,11 @@ abstract class _CronExpression extends CronExpression {
   Set<Month> get months;
   @override
   Set<DayOfTheWeek> get daysOfWeek;
+
+  /// Create a copy of CronExpression
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CronExpressionImplCopyWith<_$CronExpressionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

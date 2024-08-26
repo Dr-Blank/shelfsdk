@@ -26,8 +26,12 @@ mixin _$SearchAuthorsResponse {
   Uri get image => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
 
+  /// Serializes this SearchAuthorsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchAuthorsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchAuthorsResponseCopyWith<SearchAuthorsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$SearchAuthorsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchAuthorsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,6 +108,8 @@ class __$$SearchAuthorsResponseImplCopyWithImpl<$Res>
       $Res Function(_$SearchAuthorsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchAuthorsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -169,11 +177,13 @@ class _$SearchAuthorsResponseImpl implements _SearchAuthorsResponse {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, asin, description, image, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchAuthorsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchAuthorsResponseImplCopyWith<_$SearchAuthorsResponseImpl>
@@ -206,8 +216,11 @@ abstract class _SearchAuthorsResponse implements SearchAuthorsResponse {
   Uri get image;
   @override
   String get name;
+
+  /// Create a copy of SearchAuthorsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchAuthorsResponseImplCopyWith<_$SearchAuthorsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

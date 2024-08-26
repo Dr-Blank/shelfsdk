@@ -33,8 +33,12 @@ mixin _$StreamSchema {
   int get segmentStartNumber => throw _privateConstructorUsedError;
   bool get isTranscodeComplete => throw _privateConstructorUsedError;
 
+  /// Serializes this StreamSchema to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StreamSchema
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StreamSchemaCopyWith<StreamSchema> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -71,6 +75,8 @@ class _$StreamSchemaCopyWithImpl<$Res, $Val extends StreamSchema>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StreamSchema
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,6 +135,8 @@ class _$StreamSchemaCopyWithImpl<$Res, $Val extends StreamSchema>
     ) as $Val);
   }
 
+  /// Create a copy of StreamSchema
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LibraryItemCopyWith<$Res> get libraryItem {
@@ -137,6 +145,8 @@ class _$StreamSchemaCopyWithImpl<$Res, $Val extends StreamSchema>
     });
   }
 
+  /// Create a copy of StreamSchema
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PodcastEpisodeCopyWith<$Res>? get episode {
@@ -184,6 +194,8 @@ class __$$StreamSchemaImplCopyWithImpl<$Res>
       _$StreamSchemaImpl _value, $Res Function(_$StreamSchemaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StreamSchema
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -313,7 +325,7 @@ class _$StreamSchemaImpl implements _StreamSchema {
                 other.isTranscodeComplete == isTranscodeComplete));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -328,7 +340,9 @@ class _$StreamSchemaImpl implements _StreamSchema {
       segmentStartNumber,
       isTranscodeComplete);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StreamSchema
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StreamSchemaImplCopyWith<_$StreamSchemaImpl> get copyWith =>
@@ -380,8 +394,11 @@ abstract class _StreamSchema implements StreamSchema {
   int get segmentStartNumber;
   @override
   bool get isTranscodeComplete;
+
+  /// Create a copy of StreamSchema
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StreamSchemaImplCopyWith<_$StreamSchemaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

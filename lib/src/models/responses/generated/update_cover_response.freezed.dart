@@ -23,8 +23,12 @@ mixin _$UpdateCoverResponse {
   bool get success => throw _privateConstructorUsedError;
   String get cover => throw _privateConstructorUsedError;
 
+  /// Serializes this UpdateCoverResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateCoverResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UpdateCoverResponseCopyWith<UpdateCoverResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$UpdateCoverResponseCopyWithImpl<$Res, $Val extends UpdateCoverResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UpdateCoverResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$UpdateCoverResponseImplCopyWithImpl<$Res>
       $Res Function(_$UpdateCoverResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateCoverResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,11 +140,13 @@ class _$UpdateCoverResponseImpl implements _UpdateCoverResponse {
             (identical(other.cover, cover) || other.cover == cover));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, success, cover);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateCoverResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateCoverResponseImplCopyWith<_$UpdateCoverResponseImpl> get copyWith =>
@@ -163,8 +173,11 @@ abstract class _UpdateCoverResponse implements UpdateCoverResponse {
   bool get success;
   @override
   String get cover;
+
+  /// Create a copy of UpdateCoverResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateCoverResponseImplCopyWith<_$UpdateCoverResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

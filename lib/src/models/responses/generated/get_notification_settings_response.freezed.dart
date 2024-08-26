@@ -24,8 +24,12 @@ mixin _$GetNotificationSettingsResponse {
   NotificationData get data => throw _privateConstructorUsedError;
   NotificationSettings get settings => throw _privateConstructorUsedError;
 
+  /// Serializes this GetNotificationSettingsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetNotificationSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetNotificationSettingsResponseCopyWith<GetNotificationSettingsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$GetNotificationSettingsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetNotificationSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -73,6 +79,8 @@ class _$GetNotificationSettingsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetNotificationSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationDataCopyWith<$Res> get data {
@@ -81,6 +89,8 @@ class _$GetNotificationSettingsResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of GetNotificationSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NotificationSettingsCopyWith<$Res> get settings {
@@ -117,6 +127,8 @@ class __$$GetNotificationSettingsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetNotificationSettingsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetNotificationSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -167,11 +179,13 @@ class _$GetNotificationSettingsResponseImpl
                 other.settings == settings));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, data, settings);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetNotificationSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetNotificationSettingsResponseImplCopyWith<
@@ -201,8 +215,11 @@ abstract class _GetNotificationSettingsResponse
   NotificationData get data;
   @override
   NotificationSettings get settings;
+
+  /// Create a copy of GetNotificationSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetNotificationSettingsResponseImplCopyWith<
           _$GetNotificationSettingsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -216,8 +233,12 @@ NotificationData _$NotificationDataFromJson(Map<String, dynamic> json) {
 mixin _$NotificationData {
   List<NotificationEvent> get events => throw _privateConstructorUsedError;
 
+  /// Serializes this NotificationData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotificationData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationDataCopyWith<NotificationData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -241,6 +262,8 @@ class _$NotificationDataCopyWithImpl<$Res, $Val extends NotificationData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotificationData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -274,6 +297,8 @@ class __$$NotificationDataImplCopyWithImpl<$Res>
       $Res Function(_$NotificationDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotificationData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -318,12 +343,14 @@ class _$NotificationDataImpl implements _NotificationData {
             const DeepCollectionEquality().equals(other._events, _events));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_events));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotificationData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationDataImplCopyWith<_$NotificationDataImpl> get copyWith =>
@@ -347,8 +374,11 @@ abstract class _NotificationData implements NotificationData {
 
   @override
   List<NotificationEvent> get events;
+
+  /// Create a copy of NotificationData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationDataImplCopyWith<_$NotificationDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

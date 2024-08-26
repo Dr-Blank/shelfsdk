@@ -32,8 +32,12 @@ mixin _$PodcastFeedMetadata {
   String get pubDate => throw _privateConstructorUsedError;
   Uri get link => throw _privateConstructorUsedError;
 
+  /// Serializes this PodcastFeedMetadata to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PodcastFeedMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PodcastFeedMetadataCopyWith<PodcastFeedMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$PodcastFeedMetadataCopyWithImpl<$Res, $Val extends PodcastFeedMetadata>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PodcastFeedMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -162,6 +168,8 @@ class __$$PodcastFeedMetadataImplCopyWithImpl<$Res>
       $Res Function(_$PodcastFeedMetadataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PodcastFeedMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -303,7 +311,7 @@ class _$PodcastFeedMetadataImpl implements _PodcastFeedMetadata {
             (identical(other.link, link) || other.link == link));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -319,7 +327,9 @@ class _$PodcastFeedMetadataImpl implements _PodcastFeedMetadata {
       pubDate,
       link);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PodcastFeedMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastFeedMetadataImplCopyWith<_$PodcastFeedMetadataImpl> get copyWith =>
@@ -373,8 +383,11 @@ abstract class _PodcastFeedMetadata implements PodcastFeedMetadata {
   String get pubDate;
   @override
   Uri get link;
+
+  /// Create a copy of PodcastFeedMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastFeedMetadataImplCopyWith<_$PodcastFeedMetadataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

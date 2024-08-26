@@ -26,8 +26,12 @@ mixin _$GetSessionsResponse {
   List<PlaybackSession> get sessions => throw _privateConstructorUsedError;
   String? get userFilter => throw _privateConstructorUsedError;
 
+  /// Serializes this GetSessionsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSessionsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSessionsResponseCopyWith<GetSessionsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$GetSessionsResponseCopyWithImpl<$Res, $Val extends GetSessionsResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSessionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$GetSessionsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetSessionsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSessionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -199,12 +207,14 @@ class _$GetSessionsResponseImpl implements _GetSessionsResponse {
                 other.userFilter == userFilter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, total, numPages, itemsPerPage,
       const DeepCollectionEquality().hash(_sessions), userFilter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSessionsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetSessionsResponseImplCopyWith<_$GetSessionsResponseImpl> get copyWith =>
@@ -240,8 +250,11 @@ abstract class _GetSessionsResponse implements GetSessionsResponse {
   List<PlaybackSession> get sessions;
   @override
   String? get userFilter;
+
+  /// Create a copy of GetSessionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetSessionsResponseImplCopyWith<_$GetSessionsResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

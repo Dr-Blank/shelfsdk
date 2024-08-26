@@ -26,8 +26,12 @@ mixin _$SyncLocalSessionResult {
   String? get error => throw _privateConstructorUsedError;
   bool? get progressSynced => throw _privateConstructorUsedError;
 
+  /// Serializes this SyncLocalSessionResult to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SyncLocalSessionResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SyncLocalSessionResultCopyWith<SyncLocalSessionResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$SyncLocalSessionResultCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SyncLocalSessionResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,6 +109,8 @@ class __$$SyncLocalSessionResultImplCopyWithImpl<$Res>
       $Res Function(_$SyncLocalSessionResultImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SyncLocalSessionResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,12 +178,14 @@ class _$SyncLocalSessionResultImpl implements _SyncLocalSessionResult {
                 other.progressSynced == progressSynced));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, success, error, progressSynced);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SyncLocalSessionResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SyncLocalSessionResultImplCopyWith<_$SyncLocalSessionResultImpl>
@@ -208,8 +218,11 @@ abstract class _SyncLocalSessionResult implements SyncLocalSessionResult {
   String? get error;
   @override
   bool? get progressSynced;
+
+  /// Create a copy of SyncLocalSessionResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SyncLocalSessionResultImplCopyWith<_$SyncLocalSessionResultImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

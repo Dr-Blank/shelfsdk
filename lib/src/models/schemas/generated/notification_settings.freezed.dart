@@ -29,8 +29,12 @@ mixin _$NotificationSettings {
   @DurationMsConverter()
   Duration get notificationDelay => throw _privateConstructorUsedError;
 
+  /// Serializes this NotificationSettings to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotificationSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotificationSettingsCopyWith<NotificationSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$NotificationSettingsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotificationSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,6 +138,8 @@ class __$$NotificationSettingsImplCopyWithImpl<$Res>
       $Res Function(_$NotificationSettingsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotificationSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -239,7 +247,7 @@ class _$NotificationSettingsImpl implements _NotificationSettings {
                 other.notificationDelay == notificationDelay));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -251,7 +259,9 @@ class _$NotificationSettingsImpl implements _NotificationSettings {
       maxNotificationQueue,
       notificationDelay);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotificationSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationSettingsImplCopyWith<_$NotificationSettingsImpl>
@@ -296,8 +306,11 @@ abstract class _NotificationSettings implements NotificationSettings {
   @override
   @DurationMsConverter()
   Duration get notificationDelay;
+
+  /// Create a copy of NotificationSettings
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NotificationSettingsImplCopyWith<_$NotificationSettingsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

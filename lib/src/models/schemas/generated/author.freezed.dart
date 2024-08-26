@@ -134,8 +134,13 @@ mixin _$Author {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this Author to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AuthorCopyWith<Author> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -157,6 +162,8 @@ class _$AuthorCopyWithImpl<$Res, $Val extends Author>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -203,6 +210,8 @@ class __$$AuthorImplCopyWithImpl<$Res>
       _$AuthorImpl _value, $Res Function(_$AuthorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -342,7 +351,7 @@ class _$AuthorImpl extends _Author {
             const DeepCollectionEquality().equals(other._series, _series));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -356,7 +365,9 @@ class _$AuthorImpl extends _Author {
       const DeepCollectionEquality().hash(_libraryItems),
       const DeepCollectionEquality().hash(_series));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthorImplCopyWith<_$AuthorImpl> get copyWith =>
@@ -524,8 +535,11 @@ abstract class _Author extends Author {
   DateTime get updatedAt;
   List<LibraryItem>? get libraryItems;
   List<Series>? get series;
+
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthorImplCopyWith<_$AuthorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -549,6 +563,8 @@ class __$$AuthorMinifiedImplCopyWithImpl<$Res>
       _$AuthorMinifiedImpl _value, $Res Function(_$AuthorMinifiedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -602,11 +618,13 @@ class _$AuthorMinifiedImpl extends AuthorMinified {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthorMinifiedImplCopyWith<_$AuthorMinifiedImpl> get copyWith =>
@@ -759,8 +777,11 @@ abstract class AuthorMinified extends Author {
   String get id;
   @override
   String get name;
+
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthorMinifiedImplCopyWith<_$AuthorMinifiedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -792,6 +813,8 @@ class __$$AuthorExpandedImplCopyWithImpl<$Res>
       _$AuthorExpandedImpl _value, $Res Function(_$AuthorExpandedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -905,12 +928,14 @@ class _$AuthorExpandedImpl extends AuthorExpanded {
                 other.numBooks == numBooks));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, asin, name, description,
       imagePath, addedAt, updatedAt, numBooks);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthorExpandedImplCopyWith<_$AuthorExpandedImpl> get copyWith =>
@@ -1078,8 +1103,11 @@ abstract class AuthorExpanded extends Author {
   DateTime get addedAt;
   DateTime get updatedAt;
   int get numBooks;
+
+  /// Create a copy of Author
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthorExpandedImplCopyWith<_$AuthorExpandedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

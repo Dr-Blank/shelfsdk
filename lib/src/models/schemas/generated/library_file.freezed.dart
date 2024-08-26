@@ -26,8 +26,12 @@ mixin _$LibraryFile {
   DateTime get updatedAt => throw _privateConstructorUsedError;
   FileType get fileType => throw _privateConstructorUsedError;
 
+  /// Serializes this LibraryFile to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LibraryFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LibraryFileCopyWith<LibraryFile> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$LibraryFileCopyWithImpl<$Res, $Val extends LibraryFile>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LibraryFile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class _$LibraryFileCopyWithImpl<$Res, $Val extends LibraryFile>
     ) as $Val);
   }
 
+  /// Create a copy of LibraryFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FileMetadataCopyWith<$Res> get metadata {
@@ -127,6 +135,8 @@ class __$$LibraryFileImplCopyWithImpl<$Res>
       _$LibraryFileImpl _value, $Res Function(_$LibraryFileImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibraryFile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -206,12 +216,14 @@ class _$LibraryFileImpl implements _LibraryFile {
                 other.fileType == fileType));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, ino, metadata, addedAt, updatedAt, fileType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibraryFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LibraryFileImplCopyWith<_$LibraryFileImpl> get copyWith =>
@@ -246,8 +258,11 @@ abstract class _LibraryFile implements LibraryFile {
   DateTime get updatedAt;
   @override
   FileType get fileType;
+
+  /// Create a copy of LibraryFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LibraryFileImplCopyWith<_$LibraryFileImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

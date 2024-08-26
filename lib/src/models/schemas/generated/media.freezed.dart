@@ -291,8 +291,13 @@ mixin _$Media {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this Media to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MediaCopyWith<Media> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -316,6 +321,8 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -339,6 +346,8 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
     ) as $Val);
   }
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaMetadataCopyWith<$Res> get metadata {
@@ -376,6 +385,8 @@ class __$$BookImplCopyWithImpl<$Res>
   __$$BookImplCopyWithImpl(_$BookImpl _value, $Res Function(_$BookImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -419,6 +430,8 @@ class __$$BookImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EBookFileCopyWith<$Res>? get ebookFile {
@@ -513,7 +526,7 @@ class _$BookImpl extends Book {
                 other.ebookFile == ebookFile));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -525,7 +538,9 @@ class _$BookImpl extends Book {
       const DeepCollectionEquality().hash(_chapters),
       ebookFile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookImplCopyWith<_$BookImpl> get copyWith =>
@@ -840,8 +855,11 @@ abstract class Book extends Media {
   List<AudioFile> get audioFiles;
   List<BookChapter> get chapters;
   EBookFile? get ebookFile;
+
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookImplCopyWith<_$BookImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -877,6 +895,8 @@ class __$$BookMinifiedImplCopyWithImpl<$Res>
       _$BookMinifiedImpl _value, $Res Function(_$BookMinifiedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1009,7 +1029,7 @@ class _$BookMinifiedImpl extends BookMinified {
                 other.ebookFormat == ebookFormat));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1023,7 +1043,9 @@ class _$BookMinifiedImpl extends BookMinified {
       size,
       ebookFormat);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookMinifiedImplCopyWith<_$BookMinifiedImpl> get copyWith =>
@@ -1343,8 +1365,11 @@ abstract class BookMinified extends Media {
   Duration get duration;
   int get size;
   String? get ebookFormat;
+
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookMinifiedImplCopyWith<_$BookMinifiedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1382,6 +1407,8 @@ class __$$BookExpandedImplCopyWithImpl<$Res>
       _$BookExpandedImpl _value, $Res Function(_$BookExpandedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1440,6 +1467,8 @@ class __$$BookExpandedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EBookFileCopyWith<$Res>? get ebookFile {
@@ -1555,7 +1584,7 @@ class _$BookExpandedImpl extends BookExpanded {
                 other.ebookFile == ebookFile));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1570,7 +1599,9 @@ class _$BookExpandedImpl extends BookExpanded {
       const DeepCollectionEquality().hash(_tracks),
       ebookFile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookExpandedImplCopyWith<_$BookExpandedImpl> get copyWith =>
@@ -1892,8 +1923,11 @@ abstract class BookExpanded extends Media {
   int get size;
   List<AudioTrack> get tracks;
   EBookFile? get ebookFile;
+
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookExpandedImplCopyWith<_$BookExpandedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1930,6 +1964,8 @@ class __$$PodcastImplCopyWithImpl<$Res>
       _$PodcastImpl _value, $Res Function(_$PodcastImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1988,6 +2024,8 @@ class __$$PodcastImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CronExpressionCopyWith<$Res>? get autoDownloadSchedule {
@@ -2092,7 +2130,7 @@ class _$PodcastImpl extends Podcast {
                 other.maxNewEpisodesToDownload == maxNewEpisodesToDownload));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2107,7 +2145,9 @@ class _$PodcastImpl extends Podcast {
       maxEpisodesToKeep,
       maxNewEpisodesToDownload);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastImplCopyWith<_$PodcastImpl> get copyWith =>
@@ -2455,8 +2495,11 @@ abstract class Podcast extends Media {
   DateTime get lastEpisodeCheck;
   int get maxEpisodesToKeep;
   int get maxNewEpisodesToDownload;
+
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastImplCopyWith<_$PodcastImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2494,6 +2537,8 @@ class __$$PodcastMinifiedImplCopyWithImpl<$Res>
       _$PodcastMinifiedImpl _value, $Res Function(_$PodcastMinifiedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2552,6 +2597,8 @@ class __$$PodcastMinifiedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CronExpressionCopyWith<$Res>? get autoDownloadSchedule {
@@ -2649,7 +2696,7 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
             (identical(other.size, size) || other.size == size));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2664,7 +2711,9 @@ class _$PodcastMinifiedImpl extends PodcastMinified {
       maxNewEpisodesToDownload,
       size);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastMinifiedImplCopyWith<_$PodcastMinifiedImpl> get copyWith =>
@@ -3014,8 +3063,11 @@ abstract class PodcastMinified extends Media {
   int get maxEpisodesToKeep;
   int get maxNewEpisodesToDownload;
   int get size;
+
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastMinifiedImplCopyWith<_$PodcastMinifiedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3054,6 +3106,8 @@ class __$$PodcastExpandedImplCopyWithImpl<$Res>
       _$PodcastExpandedImpl _value, $Res Function(_$PodcastExpandedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3117,6 +3171,8 @@ class __$$PodcastExpandedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CronExpressionCopyWith<$Res>? get autoDownloadSchedule {
@@ -3225,7 +3281,7 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
             (identical(other.size, size) || other.size == size));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3241,7 +3297,9 @@ class _$PodcastExpandedImpl extends PodcastExpanded {
       maxNewEpisodesToDownload,
       size);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastExpandedImplCopyWith<_$PodcastExpandedImpl> get copyWith =>
@@ -3596,8 +3654,11 @@ abstract class PodcastExpanded extends Media {
   int get maxEpisodesToKeep;
   int get maxNewEpisodesToDownload;
   int get size;
+
+  /// Create a copy of Media
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastExpandedImplCopyWith<_$PodcastExpandedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

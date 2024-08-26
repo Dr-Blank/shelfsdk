@@ -31,8 +31,12 @@ mixin _$GetUserStatsResponse {
   List<PlaybackSession> get recentSessions =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetUserStatsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetUserStatsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetUserStatsResponseCopyWith<GetUserStatsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -63,6 +67,8 @@ class _$GetUserStatsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetUserStatsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,6 +133,8 @@ class __$$GetUserStatsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetUserStatsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetUserStatsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -243,7 +251,7 @@ class _$GetUserStatsResponseImpl implements _GetUserStatsResponse {
                 .equals(other._recentSessions, _recentSessions));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -254,7 +262,9 @@ class _$GetUserStatsResponseImpl implements _GetUserStatsResponse {
       today,
       const DeepCollectionEquality().hash(_recentSessions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetUserStatsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetUserStatsResponseImplCopyWith<_$GetUserStatsResponseImpl>
@@ -296,8 +306,11 @@ abstract class _GetUserStatsResponse implements GetUserStatsResponse {
   Duration get today;
   @override
   List<PlaybackSession> get recentSessions;
+
+  /// Create a copy of GetUserStatsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetUserStatsResponseImplCopyWith<_$GetUserStatsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -314,8 +327,12 @@ mixin _$ItemsListenedToResponse {
   Duration get timeListening => throw _privateConstructorUsedError;
   MediaMetadata get mediaMetadata => throw _privateConstructorUsedError;
 
+  /// Serializes this ItemsListenedToResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ItemsListenedToResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ItemsListenedToResponseCopyWith<ItemsListenedToResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -345,6 +362,8 @@ class _$ItemsListenedToResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ItemsListenedToResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -368,6 +387,8 @@ class _$ItemsListenedToResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ItemsListenedToResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaMetadataCopyWith<$Res> get mediaMetadata {
@@ -405,6 +426,8 @@ class __$$ItemsListenedToResponseImplCopyWithImpl<$Res>
       $Res Function(_$ItemsListenedToResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ItemsListenedToResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -467,12 +490,14 @@ class _$ItemsListenedToResponseImpl implements _ItemsListenedToResponse {
                 other.mediaMetadata == mediaMetadata));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, libraryItemId, timeListening, mediaMetadata);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ItemsListenedToResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ItemsListenedToResponseImplCopyWith<_$ItemsListenedToResponseImpl>
@@ -504,8 +529,11 @@ abstract class _ItemsListenedToResponse implements ItemsListenedToResponse {
   Duration get timeListening;
   @override
   MediaMetadata get mediaMetadata;
+
+  /// Create a copy of ItemsListenedToResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ItemsListenedToResponseImplCopyWith<_$ItemsListenedToResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

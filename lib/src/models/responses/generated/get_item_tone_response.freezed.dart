@@ -37,8 +37,12 @@ mixin _$GetItemToneResponse {
   String get publishingDate => throw _privateConstructorUsedError;
   List<String> get additionalFields => throw _privateConstructorUsedError;
 
+  /// Serializes this GetItemToneResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetItemToneResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetItemToneResponseCopyWith<GetItemToneResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -78,6 +82,8 @@ class _$GetItemToneResponseCopyWithImpl<$Res, $Val extends GetItemToneResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetItemToneResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -202,6 +208,8 @@ class __$$GetItemToneResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetItemToneResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetItemToneResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -395,7 +403,7 @@ class _$GetItemToneResponseImpl implements _GetItemToneResponse {
                 .equals(other._additionalFields, _additionalFields));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -416,7 +424,9 @@ class _$GetItemToneResponseImpl implements _GetItemToneResponse {
       publishingDate,
       const DeepCollectionEquality().hash(_additionalFields));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetItemToneResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetItemToneResponseImplCopyWith<_$GetItemToneResponseImpl> get copyWith =>
@@ -486,8 +496,11 @@ abstract class _GetItemToneResponse implements GetItemToneResponse {
   String get publishingDate;
   @override
   List<String> get additionalFields;
+
+  /// Create a copy of GetItemToneResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetItemToneResponseImplCopyWith<_$GetItemToneResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

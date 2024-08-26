@@ -23,8 +23,12 @@ mixin _$MatchItemResponse {
   bool get updated => throw _privateConstructorUsedError;
   LibraryItem get libraryItem => throw _privateConstructorUsedError;
 
+  /// Serializes this MatchItemResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MatchItemResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MatchItemResponseCopyWith<MatchItemResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$MatchItemResponseCopyWithImpl<$Res, $Val extends MatchItemResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MatchItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$MatchItemResponseCopyWithImpl<$Res, $Val extends MatchItemResponse>
     ) as $Val);
   }
 
+  /// Create a copy of MatchItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LibraryItemCopyWith<$Res> get libraryItem {
@@ -99,6 +107,8 @@ class __$$MatchItemResponseImplCopyWithImpl<$Res>
       $Res Function(_$MatchItemResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MatchItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,11 +157,13 @@ class _$MatchItemResponseImpl implements _MatchItemResponse {
                 other.libraryItem == libraryItem));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, updated, libraryItem);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MatchItemResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MatchItemResponseImplCopyWith<_$MatchItemResponseImpl> get copyWith =>
@@ -178,8 +190,11 @@ abstract class _MatchItemResponse implements MatchItemResponse {
   bool get updated;
   @override
   LibraryItem get libraryItem;
+
+  /// Create a copy of MatchItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MatchItemResponseImplCopyWith<_$MatchItemResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

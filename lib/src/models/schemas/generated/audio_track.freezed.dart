@@ -28,8 +28,12 @@ mixin _$AudioTrack {
   String get mimeType => throw _privateConstructorUsedError;
   FileMetadata? get metadata => throw _privateConstructorUsedError;
 
+  /// Serializes this AudioTrack to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AudioTrack
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AudioTrackCopyWith<AudioTrack> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$AudioTrackCopyWithImpl<$Res, $Val extends AudioTrack>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AudioTrack
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -105,6 +111,8 @@ class _$AudioTrackCopyWithImpl<$Res, $Val extends AudioTrack>
     ) as $Val);
   }
 
+  /// Create a copy of AudioTrack
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FileMetadataCopyWith<$Res>? get metadata {
@@ -147,6 +155,8 @@ class __$$AudioTrackImplCopyWithImpl<$Res>
       _$AudioTrackImpl _value, $Res Function(_$AudioTrackImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AudioTrack
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -246,12 +256,14 @@ class _$AudioTrackImpl implements _AudioTrack {
                 other.metadata == metadata));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, index, startOffset, duration,
       title, contentUrl, mimeType, metadata);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AudioTrack
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AudioTrackImplCopyWith<_$AudioTrackImpl> get copyWith =>
@@ -292,8 +304,11 @@ abstract class _AudioTrack implements AudioTrack {
   String get mimeType;
   @override
   FileMetadata? get metadata;
+
+  /// Create a copy of AudioTrack
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AudioTrackImplCopyWith<_$AudioTrackImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

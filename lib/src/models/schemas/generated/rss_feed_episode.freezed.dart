@@ -34,8 +34,12 @@ mixin _$RssFeedEpisode {
   int get trackIndex => throw _privateConstructorUsedError;
   String get fullPath => throw _privateConstructorUsedError;
 
+  /// Serializes this RssFeedEpisode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RssFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RssFeedEpisodeCopyWith<RssFeedEpisode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,6 +78,8 @@ class _$RssFeedEpisodeCopyWithImpl<$Res, $Val extends RssFeedEpisode>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RssFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,6 +153,8 @@ class _$RssFeedEpisodeCopyWithImpl<$Res, $Val extends RssFeedEpisode>
     ) as $Val);
   }
 
+  /// Create a copy of RssFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RssFeedEpisodeEnclosureCopyWith<$Res> get enclosure {
@@ -191,6 +199,8 @@ class __$$RssFeedEpisodeImplCopyWithImpl<$Res>
       _$RssFeedEpisodeImpl _value, $Res Function(_$RssFeedEpisodeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RssFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -347,7 +357,7 @@ class _$RssFeedEpisodeImpl implements _RssFeedEpisode {
                 other.fullPath == fullPath));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -365,7 +375,9 @@ class _$RssFeedEpisodeImpl implements _RssFeedEpisode {
       trackIndex,
       fullPath);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RssFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RssFeedEpisodeImplCopyWith<_$RssFeedEpisodeImpl> get copyWith =>
@@ -425,8 +437,11 @@ abstract class _RssFeedEpisode implements RssFeedEpisode {
   int get trackIndex;
   @override
   String get fullPath;
+
+  /// Create a copy of RssFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RssFeedEpisodeImplCopyWith<_$RssFeedEpisodeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

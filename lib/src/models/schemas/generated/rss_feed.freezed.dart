@@ -116,8 +116,13 @@ mixin _$RssFeed {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this RssFeed to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RssFeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RssFeedCopyWith<RssFeed> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -139,6 +144,8 @@ class _$RssFeedCopyWithImpl<$Res, $Val extends RssFeed>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RssFeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -200,6 +207,8 @@ class __$$RssFeedImplCopyWithImpl<$Res>
       _$RssFeedImpl _value, $Res Function(_$RssFeedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RssFeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -268,6 +277,8 @@ class __$$RssFeedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of RssFeed
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RssFeedMetadataCopyWith<$Res> get meta {
@@ -366,7 +377,7 @@ class _$RssFeedImpl extends _RssFeed {
                 other.updatedAt == updatedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -383,7 +394,9 @@ class _$RssFeedImpl extends _RssFeed {
       createdAt,
       updatedAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RssFeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RssFeedImplCopyWith<_$RssFeedImpl> get copyWith =>
@@ -541,8 +554,11 @@ abstract class _RssFeed extends RssFeed {
   List<RssFeedEpisode> get episodes;
   DateTime get createdAt;
   DateTime get updatedAt;
+
+  /// Create a copy of RssFeed
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RssFeedImplCopyWith<_$RssFeedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -566,6 +582,8 @@ class __$$RssFeedMinifiedImplCopyWithImpl<$Res>
       _$RssFeedMinifiedImpl _value, $Res Function(_$RssFeedMinifiedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RssFeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -640,12 +658,14 @@ class _$RssFeedMinifiedImpl extends RssFeedMinified {
             (identical(other.feedUrl, feedUrl) || other.feedUrl == feedUrl));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, entityType, entityId, feedUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RssFeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RssFeedMinifiedImplCopyWith<_$RssFeedMinifiedImpl> get copyWith =>
@@ -786,8 +806,11 @@ abstract class RssFeedMinified extends RssFeed {
   String get entityId;
   @override
   Uri get feedUrl;
+
+  /// Create a copy of RssFeed
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RssFeedMinifiedImplCopyWith<_$RssFeedMinifiedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -23,8 +23,12 @@ mixin _$GetOpmlFeedsResponse {
   List<PodcastFeed>? get feeds => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
 
+  /// Serializes this GetOpmlFeedsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetOpmlFeedsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetOpmlFeedsResponseCopyWith<GetOpmlFeedsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$GetOpmlFeedsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetOpmlFeedsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$GetOpmlFeedsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetOpmlFeedsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetOpmlFeedsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,12 +151,14 @@ class _$GetOpmlFeedsResponseImpl implements _GetOpmlFeedsResponse {
             (identical(other.error, error) || other.error == error));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_feeds), error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetOpmlFeedsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetOpmlFeedsResponseImplCopyWith<_$GetOpmlFeedsResponseImpl>
@@ -176,8 +186,11 @@ abstract class _GetOpmlFeedsResponse implements GetOpmlFeedsResponse {
   List<PodcastFeed>? get feeds;
   @override
   String? get error;
+
+  /// Create a copy of GetOpmlFeedsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetOpmlFeedsResponseImplCopyWith<_$GetOpmlFeedsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -65,7 +65,9 @@ mixin _$GetLibraryResponse {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetLibraryResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetLibraryResponseCopyWith<GetLibraryResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -91,6 +93,8 @@ class _$GetLibraryResponseCopyWithImpl<$Res, $Val extends GetLibraryResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetLibraryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -104,6 +108,8 @@ class _$GetLibraryResponseCopyWithImpl<$Res, $Val extends GetLibraryResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetLibraryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LibraryCopyWith<$Res> get library {
@@ -143,6 +149,8 @@ class __$$GetLibraryResponseFilterDataImplCopyWithImpl<$Res>
       $Res Function(_$GetLibraryResponseFilterDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetLibraryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -171,6 +179,8 @@ class __$$GetLibraryResponseFilterDataImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of GetLibraryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LibraryFilterDataCopyWith<$Res> get filterData {
@@ -223,7 +233,9 @@ class _$GetLibraryResponseFilterDataImpl
   int get hashCode =>
       Object.hash(runtimeType, filterData, issues, numUserPlaylists, library);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetLibraryResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetLibraryResponseFilterDataImplCopyWith<
@@ -318,8 +330,11 @@ abstract class GetLibraryResponseFilterData implements GetLibraryResponse {
   int get numUserPlaylists;
   @override
   Library get library;
+
+  /// Create a copy of GetLibraryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetLibraryResponseFilterDataImplCopyWith<
           _$GetLibraryResponseFilterDataImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -350,6 +365,8 @@ class __$$GetLibraryResponseLibraryImplCopyWithImpl<$Res>
       $Res Function(_$GetLibraryResponseLibraryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetLibraryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -388,7 +405,9 @@ class _$GetLibraryResponseLibraryImpl implements GetLibraryResponseLibrary {
   @override
   int get hashCode => Object.hash(runtimeType, library);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetLibraryResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetLibraryResponseLibraryImplCopyWith<_$GetLibraryResponseLibraryImpl>
@@ -473,8 +492,11 @@ abstract class GetLibraryResponseLibrary implements GetLibraryResponse {
 
   @override
   Library get library;
+
+  /// Create a copy of GetLibraryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetLibraryResponseLibraryImplCopyWith<_$GetLibraryResponseLibraryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

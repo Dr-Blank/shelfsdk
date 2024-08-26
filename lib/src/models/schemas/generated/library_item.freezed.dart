@@ -335,8 +335,13 @@ mixin _$LibraryItem {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this LibraryItem to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LibraryItemCopyWith<LibraryItem> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -382,6 +387,8 @@ class _$LibraryItemCopyWithImpl<$Res, $Val extends LibraryItem>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -485,6 +492,8 @@ class _$LibraryItemCopyWithImpl<$Res, $Val extends LibraryItem>
     ) as $Val);
   }
 
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaCopyWith<$Res> get media {
@@ -493,6 +502,8 @@ class _$LibraryItemCopyWithImpl<$Res, $Val extends LibraryItem>
     });
   }
 
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RssFeedCopyWith<$Res>? get rssFeed {
@@ -555,6 +566,8 @@ class __$$LibraryItemImplCopyWithImpl<$Res>
       _$LibraryItemImpl _value, $Res Function(_$LibraryItemImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -683,6 +696,8 @@ class __$$LibraryItemImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SeriesCopyWith<$Res>? get collapsedSeries {
@@ -845,7 +860,7 @@ class _$LibraryItemImpl extends _LibraryItem {
                 other.seriesSequence == seriesSequence));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -875,7 +890,9 @@ class _$LibraryItemImpl extends _LibraryItem {
         seriesSequence
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LibraryItemImplCopyWith<_$LibraryItemImpl> get copyWith =>
@@ -1337,15 +1354,19 @@ abstract class _LibraryItem extends LibraryItem {
   Media get media;
   List<LibraryFile>
       get libraryFiles; // From [Get a Library's Items](https://api.audiobookshelf.org/#get-a-library-39-s-items)
-  Series? get collapsedSeries;
-  @override // From [Get a Library's Items](https://api.audiobookshelf.org/#get-a-library-39-s-items)
+  Series?
+      get collapsedSeries; // From [Get a Library's Items](https://api.audiobookshelf.org/#get-a-library-39-s-items)
+  @override
   RssFeed? get rssFeed;
   @override
   String? get sequence;
   @override
   String? get seriesSequence;
+
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LibraryItemImplCopyWith<_$LibraryItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1403,6 +1424,8 @@ class __$$LibraryItemMinifiedImplCopyWithImpl<$Res>
       $Res Function(_$LibraryItemMinifiedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1546,6 +1569,8 @@ class __$$LibraryItemMinifiedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SeriesCopyWith<$Res>? get collapsedSeries {
@@ -1558,6 +1583,8 @@ class __$$LibraryItemMinifiedImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PodcastEpisodeCopyWith<$Res>? get recentEpisode {
@@ -1732,7 +1759,7 @@ class _$LibraryItemMinifiedImpl extends LibraryItemMinified {
                     prevBookInProgressLastUpdate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1765,7 +1792,9 @@ class _$LibraryItemMinifiedImpl extends LibraryItemMinified {
         prevBookInProgressLastUpdate
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LibraryItemMinifiedImplCopyWith<_$LibraryItemMinifiedImpl> get copyWith =>
@@ -2238,9 +2267,10 @@ abstract class LibraryItemMinified extends LibraryItem {
   Media get media;
   int get numFiles;
   int get size; // From [Get a Library's Items](https://api.audiobookshelf.org/#get-a-library-39-s-items)
-  Series? get collapsedSeries;
-  @override // From [Get a Library's Items](https://api.audiobookshelf.org/#get-a-library-39-s-items)
+  Series?
+      get collapsedSeries; // From [Get a Library's Items](https://api.audiobookshelf.org/#get-a-library-39-s-items)
 // and [Get a Library's Personalized View](https://api.audiobookshelf.org/#get-a-library-39-s-personalized-view)
+  @override
   RssFeed?
       get rssFeed; // From [Get a Library's Personalized View](https://api.audiobookshelf.org/#get-a-library-39-s-personalized-view),
 // recommended shelf
@@ -2253,8 +2283,11 @@ abstract class LibraryItemMinified extends LibraryItem {
   DateTime? get finishedAt;
   DateTime? get progressLastUpdate;
   DateTime? get prevBookInProgressLastUpdate;
+
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LibraryItemMinifiedImplCopyWith<_$LibraryItemMinifiedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2309,6 +2342,8 @@ class __$$LibraryItemExpandedImplCopyWithImpl<$Res>
       $Res Function(_$LibraryItemExpandedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2442,6 +2477,8 @@ class __$$LibraryItemExpandedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaProgressCopyWith<$Res>? get userMediaProgress {
@@ -2620,7 +2657,7 @@ class _$LibraryItemExpandedImpl extends LibraryItemExpanded {
                 .equals(other._episodesDownloading, _episodesDownloading));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -2651,7 +2688,9 @@ class _$LibraryItemExpandedImpl extends LibraryItemExpanded {
         const DeepCollectionEquality().hash(_episodesDownloading)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LibraryItemExpandedImplCopyWith<_$LibraryItemExpandedImpl> get copyWith =>
@@ -3123,13 +3162,17 @@ abstract class LibraryItemExpanded extends LibraryItem {
   @override
   String?
       get seriesSequence; // From [Get a Library Item](https://api.audiobookshelf.org/#get-a-library-item)
-  MediaProgress? get userMediaProgress;
-  @override // From [Get a Library Item](https://api.audiobookshelf.org/#get-a-library-item)
+  MediaProgress?
+      get userMediaProgress; // From [Get a Library Item](https://api.audiobookshelf.org/#get-a-library-item)
+  @override
   RssFeed?
       get rssFeed; // From [Get a Library Item](https://api.audiobookshelf.org/#get-a-library-item)
   List<PodcastEpisodeDownload>? get episodesDownloading;
+
+  /// Create a copy of LibraryItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LibraryItemExpandedImplCopyWith<_$LibraryItemExpandedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

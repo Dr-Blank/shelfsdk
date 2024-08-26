@@ -28,8 +28,12 @@ mixin _$RssFeedMetadata {
   Uri get link => throw _privateConstructorUsedError;
   bool get explicit => throw _privateConstructorUsedError;
 
+  /// Serializes this RssFeedMetadata to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RssFeedMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RssFeedMetadataCopyWith<RssFeedMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$RssFeedMetadataCopyWithImpl<$Res, $Val extends RssFeedMetadata>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RssFeedMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -130,6 +136,8 @@ class __$$RssFeedMetadataImplCopyWithImpl<$Res>
       _$RssFeedMetadataImpl _value, $Res Function(_$RssFeedMetadataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RssFeedMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -226,12 +234,14 @@ class _$RssFeedMetadataImpl implements _RssFeedMetadata {
                 other.explicit == explicit));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title, description, author,
       imageUrl, feedUrl, link, explicit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RssFeedMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RssFeedMetadataImplCopyWith<_$RssFeedMetadataImpl> get copyWith =>
@@ -273,8 +283,11 @@ abstract class _RssFeedMetadata implements RssFeedMetadata {
   Uri get link;
   @override
   bool get explicit;
+
+  /// Create a copy of RssFeedMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RssFeedMetadataImplCopyWith<_$RssFeedMetadataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

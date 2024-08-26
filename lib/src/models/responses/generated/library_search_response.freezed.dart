@@ -98,8 +98,13 @@ mixin _$LibrarySearchResponse {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this LibrarySearchResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LibrarySearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LibrarySearchResponseCopyWith<LibrarySearchResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -124,6 +129,8 @@ class _$LibrarySearchResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LibrarySearchResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -175,6 +182,8 @@ class __$$BookLibrarySearchResponseImplCopyWithImpl<$Res>
       $Res Function(_$BookLibrarySearchResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibrarySearchResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -290,7 +299,7 @@ class _$BookLibrarySearchResponseImpl implements BookLibrarySearchResponse {
             const DeepCollectionEquality().equals(other._authors, _authors));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -300,7 +309,9 @@ class _$BookLibrarySearchResponseImpl implements BookLibrarySearchResponse {
       const DeepCollectionEquality().hash(_series),
       const DeepCollectionEquality().hash(_authors));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibrarySearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BookLibrarySearchResponseImplCopyWith<_$BookLibrarySearchResponseImpl>
@@ -420,8 +431,11 @@ abstract class BookLibrarySearchResponse implements LibrarySearchResponse {
   List<Series> get series;
   @override
   List<Author> get authors;
+
+  /// Create a copy of LibrarySearchResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BookLibrarySearchResponseImplCopyWith<_$BookLibrarySearchResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -452,6 +466,8 @@ class __$$PodcastLibrarySearchResponseImplCopyWithImpl<$Res>
       $Res Function(_$PodcastLibrarySearchResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibrarySearchResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -552,7 +568,7 @@ class _$PodcastLibrarySearchResponseImpl
             const DeepCollectionEquality().equals(other._series, _series));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -561,7 +577,9 @@ class _$PodcastLibrarySearchResponseImpl
       const DeepCollectionEquality().hash(_authors),
       const DeepCollectionEquality().hash(_series));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibrarySearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastLibrarySearchResponseImplCopyWith<
@@ -680,8 +698,11 @@ abstract class PodcastLibrarySearchResponse implements LibrarySearchResponse {
   List<Author> get authors;
   @override
   List<Series> get series;
+
+  /// Create a copy of LibrarySearchResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastLibrarySearchResponseImplCopyWith<
           _$PodcastLibrarySearchResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -698,8 +719,12 @@ mixin _$LibraryItemSearchResult {
   String? get matchKey => throw _privateConstructorUsedError;
   String? get matchText => throw _privateConstructorUsedError;
 
+  /// Serializes this LibraryItemSearchResult to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LibraryItemSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LibraryItemSearchResultCopyWith<LibraryItemSearchResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -726,6 +751,8 @@ class _$LibraryItemSearchResultCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LibraryItemSearchResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -749,6 +776,8 @@ class _$LibraryItemSearchResultCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of LibraryItemSearchResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LibraryItemCopyWith<$Res> get libraryItem {
@@ -783,6 +812,8 @@ class __$$LibraryItemSearchResultImplCopyWithImpl<$Res>
       $Res Function(_$LibraryItemSearchResultImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibraryItemSearchResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -841,12 +872,14 @@ class _$LibraryItemSearchResultImpl implements _LibraryItemSearchResult {
                 other.matchText == matchText));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, libraryItem, matchKey, matchText);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibraryItemSearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LibraryItemSearchResultImplCopyWith<_$LibraryItemSearchResultImpl>
@@ -876,8 +909,11 @@ abstract class _LibraryItemSearchResult implements LibraryItemSearchResult {
   String? get matchKey;
   @override
   String? get matchText;
+
+  /// Create a copy of LibraryItemSearchResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LibraryItemSearchResultImplCopyWith<_$LibraryItemSearchResultImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

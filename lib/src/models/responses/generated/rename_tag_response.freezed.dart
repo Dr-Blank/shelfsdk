@@ -23,8 +23,12 @@ mixin _$RenameTagResponse {
   bool get tagMerged => throw _privateConstructorUsedError;
   int get numItemsUpdated => throw _privateConstructorUsedError;
 
+  /// Serializes this RenameTagResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RenameTagResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RenameTagResponseCopyWith<RenameTagResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$RenameTagResponseCopyWithImpl<$Res, $Val extends RenameTagResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RenameTagResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$RenameTagResponseImplCopyWithImpl<$Res>
       $Res Function(_$RenameTagResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RenameTagResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,11 +143,13 @@ class _$RenameTagResponseImpl implements _RenameTagResponse {
                 other.numItemsUpdated == numItemsUpdated));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, tagMerged, numItemsUpdated);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RenameTagResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RenameTagResponseImplCopyWith<_$RenameTagResponseImpl> get copyWith =>
@@ -166,8 +176,11 @@ abstract class _RenameTagResponse implements RenameTagResponse {
   bool get tagMerged;
   @override
   int get numItemsUpdated;
+
+  /// Create a copy of RenameTagResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RenameTagResponseImplCopyWith<_$RenameTagResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -24,8 +24,12 @@ mixin _$GetOnlineUsersResponse {
   List<User> get usersOnline => throw _privateConstructorUsedError;
   List<PlaybackSession> get openSessions => throw _privateConstructorUsedError;
 
+  /// Serializes this GetOnlineUsersResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetOnlineUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetOnlineUsersResponseCopyWith<GetOnlineUsersResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$GetOnlineUsersResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetOnlineUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$GetOnlineUsersResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetOnlineUsersResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetOnlineUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -154,14 +162,16 @@ class _$GetOnlineUsersResponseImpl implements _GetOnlineUsersResponse {
                 .equals(other._openSessions, _openSessions));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_usersOnline),
       const DeepCollectionEquality().hash(_openSessions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetOnlineUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetOnlineUsersResponseImplCopyWith<_$GetOnlineUsersResponseImpl>
@@ -189,8 +199,11 @@ abstract class _GetOnlineUsersResponse implements GetOnlineUsersResponse {
   List<User> get usersOnline;
   @override
   List<PlaybackSession> get openSessions;
+
+  /// Create a copy of GetOnlineUsersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetOnlineUsersResponseImplCopyWith<_$GetOnlineUsersResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

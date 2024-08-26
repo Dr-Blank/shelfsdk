@@ -25,8 +25,12 @@ mixin _$RssFeedEpisodeEnclosure {
   String get type => throw _privateConstructorUsedError;
   int get size => throw _privateConstructorUsedError;
 
+  /// Serializes this RssFeedEpisodeEnclosure to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RssFeedEpisodeEnclosure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RssFeedEpisodeEnclosureCopyWith<RssFeedEpisodeEnclosure> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$RssFeedEpisodeEnclosureCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RssFeedEpisodeEnclosure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$RssFeedEpisodeEnclosureImplCopyWithImpl<$Res>
       $Res Function(_$RssFeedEpisodeEnclosureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RssFeedEpisodeEnclosure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -152,11 +160,13 @@ class _$RssFeedEpisodeEnclosureImpl implements _RssFeedEpisodeEnclosure {
             (identical(other.size, size) || other.size == size));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, url, type, size);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RssFeedEpisodeEnclosure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RssFeedEpisodeEnclosureImplCopyWith<_$RssFeedEpisodeEnclosureImpl>
@@ -186,8 +196,11 @@ abstract class _RssFeedEpisodeEnclosure implements RssFeedEpisodeEnclosure {
   String get type;
   @override
   int get size;
+
+  /// Create a copy of RssFeedEpisodeEnclosure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RssFeedEpisodeEnclosureImplCopyWith<_$RssFeedEpisodeEnclosureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

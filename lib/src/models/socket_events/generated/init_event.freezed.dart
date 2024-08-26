@@ -25,8 +25,12 @@ mixin _$InitEvent {
   List<String> get librariesScanning => throw _privateConstructorUsedError;
   List<User>? get usersOnline => throw _privateConstructorUsedError;
 
+  /// Serializes this InitEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InitEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InitEventCopyWith<InitEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$InitEventCopyWithImpl<$Res, $Val extends InitEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InitEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -105,6 +111,8 @@ class __$$InitEventImplCopyWithImpl<$Res>
       _$InitEventImpl _value, $Res Function(_$InitEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InitEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -190,7 +198,7 @@ class _$InitEventImpl implements _InitEvent {
                 .equals(other._usersOnline, _usersOnline));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -199,7 +207,9 @@ class _$InitEventImpl implements _InitEvent {
       const DeepCollectionEquality().hash(_librariesScanning),
       const DeepCollectionEquality().hash(_usersOnline));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InitEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InitEventImplCopyWith<_$InitEventImpl> get copyWith =>
@@ -231,8 +241,11 @@ abstract class _InitEvent implements InitEvent {
   List<String> get librariesScanning;
   @override
   List<User>? get usersOnline;
+
+  /// Create a copy of InitEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InitEventImplCopyWith<_$InitEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

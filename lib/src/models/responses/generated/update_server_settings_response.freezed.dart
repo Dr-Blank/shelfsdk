@@ -24,8 +24,12 @@ mixin _$UpdateServerSettingsResponse {
   bool get success => throw _privateConstructorUsedError;
   ServerSettings get serverSettings => throw _privateConstructorUsedError;
 
+  /// Serializes this UpdateServerSettingsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateServerSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UpdateServerSettingsResponseCopyWith<UpdateServerSettingsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$UpdateServerSettingsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UpdateServerSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,6 +78,8 @@ class _$UpdateServerSettingsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of UpdateServerSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ServerSettingsCopyWith<$Res> get serverSettings {
@@ -106,6 +114,8 @@ class __$$UpdateServerSettingsResponseImplCopyWithImpl<$Res>
       $Res Function(_$UpdateServerSettingsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateServerSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,11 +166,13 @@ class _$UpdateServerSettingsResponseImpl
                 other.serverSettings == serverSettings));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, success, serverSettings);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateServerSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateServerSettingsResponseImplCopyWith<
@@ -190,8 +202,11 @@ abstract class _UpdateServerSettingsResponse
   bool get success;
   @override
   ServerSettings get serverSettings;
+
+  /// Create a copy of UpdateServerSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateServerSettingsResponseImplCopyWith<
           _$UpdateServerSettingsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

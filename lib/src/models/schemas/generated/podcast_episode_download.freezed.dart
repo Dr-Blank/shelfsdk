@@ -32,8 +32,12 @@ mixin _$PodcastEpisodeDownload {
   DateTime get createdAt => throw _privateConstructorUsedError;
   DateTime? get finishedAt => throw _privateConstructorUsedError;
 
+  /// Serializes this PodcastEpisodeDownload to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PodcastEpisodeDownload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PodcastEpisodeDownloadCopyWith<PodcastEpisodeDownload> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$PodcastEpisodeDownloadCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PodcastEpisodeDownload
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -159,6 +165,8 @@ class __$$PodcastEpisodeDownloadImplCopyWithImpl<$Res>
       $Res Function(_$PodcastEpisodeDownloadImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PodcastEpisodeDownload
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -287,7 +295,7 @@ class _$PodcastEpisodeDownloadImpl implements _PodcastEpisodeDownload {
                 other.finishedAt == finishedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -302,7 +310,9 @@ class _$PodcastEpisodeDownloadImpl implements _PodcastEpisodeDownload {
       createdAt,
       finishedAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PodcastEpisodeDownload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastEpisodeDownloadImplCopyWith<_$PodcastEpisodeDownloadImpl>
@@ -353,8 +363,11 @@ abstract class _PodcastEpisodeDownload implements PodcastEpisodeDownload {
   DateTime get createdAt;
   @override
   DateTime? get finishedAt;
+
+  /// Create a copy of PodcastEpisodeDownload
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastEpisodeDownloadImplCopyWith<_$PodcastEpisodeDownloadImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

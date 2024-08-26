@@ -24,8 +24,12 @@ mixin _$PodcastSearchEpisodeResponse {
   PodcastFeedEpisode get episode => throw _privateConstructorUsedError;
   int get levenshtein => throw _privateConstructorUsedError;
 
+  /// Serializes this PodcastSearchEpisodeResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PodcastSearchEpisodeResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PodcastSearchEpisodeResponseCopyWith<PodcastSearchEpisodeResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$PodcastSearchEpisodeResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PodcastSearchEpisodeResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,6 +78,8 @@ class _$PodcastSearchEpisodeResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PodcastSearchEpisodeResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PodcastFeedEpisodeCopyWith<$Res> get episode {
@@ -106,6 +114,8 @@ class __$$PodcastSearchEpisodeResponseImplCopyWithImpl<$Res>
       $Res Function(_$PodcastSearchEpisodeResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PodcastSearchEpisodeResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,11 +166,13 @@ class _$PodcastSearchEpisodeResponseImpl
                 other.levenshtein == levenshtein));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, episode, levenshtein);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PodcastSearchEpisodeResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastSearchEpisodeResponseImplCopyWith<
@@ -189,8 +201,11 @@ abstract class _PodcastSearchEpisodeResponse
   PodcastFeedEpisode get episode;
   @override
   int get levenshtein;
+
+  /// Create a copy of PodcastSearchEpisodeResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastSearchEpisodeResponseImplCopyWith<
           _$PodcastSearchEpisodeResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

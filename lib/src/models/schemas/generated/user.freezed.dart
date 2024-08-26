@@ -145,8 +145,13 @@ mixin _$User {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this User to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -174,6 +179,8 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -245,6 +252,8 @@ class __$$UserImplCopyWithImpl<$Res>
   __$$UserImplCopyWithImpl(_$UserImpl _value, $Res Function(_$UserImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -318,6 +327,8 @@ class __$$UserImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserPermissionsCopyWith<$Res> get permissions {
@@ -449,7 +460,7 @@ class _$UserImpl extends _User {
                 .equals(other._librariesAccessible, _librariesAccessible));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -467,7 +478,9 @@ class _$UserImpl extends _User {
       permissions,
       const DeepCollectionEquality().hash(_librariesAccessible));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserImplCopyWith<_$UserImpl> get copyWith =>
@@ -692,8 +705,11 @@ abstract class _User extends User {
   DateTime get createdAt;
   UserPermissions get permissions;
   List<String> get librariesAccessible;
+
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserImplCopyWith<_$UserImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -730,6 +746,8 @@ class __$$UserWithSessionAndMostRecentProgressImplCopyWithImpl<$Res>
       $Res Function(_$UserWithSessionAndMostRecentProgressImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -778,6 +796,8 @@ class __$$UserWithSessionAndMostRecentProgressImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlaybackSessionCopyWith<$Res>? get session {
@@ -790,6 +810,8 @@ class __$$UserWithSessionAndMostRecentProgressImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MediaProgressCopyWith<$Res>? get mostRecent {
@@ -878,7 +900,7 @@ class _$UserWithSessionAndMostRecentProgressImpl
                 .equals(other._mediaProgress, _mediaProgress));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -891,7 +913,9 @@ class _$UserWithSessionAndMostRecentProgressImpl
       createdAt,
       const DeepCollectionEquality().hash(_mediaProgress));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserWithSessionAndMostRecentProgressImplCopyWith<
@@ -1075,8 +1099,11 @@ abstract class UserWithSessionAndMostRecentProgress extends User {
   DateTime get createdAt;
   @override
   List<MediaProgress>? get mediaProgress;
+
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserWithSessionAndMostRecentProgressImplCopyWith<
           _$UserWithSessionAndMostRecentProgressImpl>
       get copyWith => throw _privateConstructorUsedError;

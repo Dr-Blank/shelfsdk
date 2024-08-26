@@ -23,8 +23,12 @@ mixin _$Narrator {
   String get name => throw _privateConstructorUsedError;
   num get numBooks => throw _privateConstructorUsedError;
 
+  /// Serializes this Narrator to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Narrator
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NarratorCopyWith<Narrator> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$NarratorCopyWithImpl<$Res, $Val extends Narrator>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Narrator
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$NarratorImplCopyWithImpl<$Res>
       _$NarratorImpl _value, $Res Function(_$NarratorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Narrator
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,11 +140,13 @@ class _$NarratorImpl implements _Narrator {
                 other.numBooks == numBooks));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, numBooks);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Narrator
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NarratorImplCopyWith<_$NarratorImpl> get copyWith =>
@@ -162,8 +172,11 @@ abstract class _Narrator implements Narrator {
   String get name;
   @override
   num get numBooks;
+
+  /// Create a copy of Narrator
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NarratorImplCopyWith<_$NarratorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -25,8 +25,12 @@ mixin _$Folder {
   String get libraryId => throw _privateConstructorUsedError;
   DateTime get addedAt => throw _privateConstructorUsedError;
 
+  /// Serializes this Folder to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Folder
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FolderCopyWith<Folder> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -48,6 +52,8 @@ class _$FolderCopyWithImpl<$Res, $Val extends Folder>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Folder
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +101,8 @@ class __$$FolderImplCopyWithImpl<$Res>
       _$FolderImpl _value, $Res Function(_$FolderImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Folder
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -164,12 +172,14 @@ class _$FolderImpl implements _Folder {
             (identical(other.addedAt, addedAt) || other.addedAt == addedAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, fullPath, libraryId, addedAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Folder
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FolderImplCopyWith<_$FolderImpl> get copyWith =>
@@ -200,8 +210,11 @@ abstract class _Folder implements Folder {
   String get libraryId;
   @override
   DateTime get addedAt;
+
+  /// Create a copy of Folder
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FolderImplCopyWith<_$FolderImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

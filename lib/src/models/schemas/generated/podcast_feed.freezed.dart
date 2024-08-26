@@ -75,8 +75,13 @@ mixin _$PodcastFeed {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this PodcastFeed to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PodcastFeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PodcastFeedCopyWith<PodcastFeed> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -102,6 +107,8 @@ class _$PodcastFeedCopyWithImpl<$Res, $Val extends PodcastFeed>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PodcastFeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -115,6 +122,8 @@ class _$PodcastFeedCopyWithImpl<$Res, $Val extends PodcastFeed>
     ) as $Val);
   }
 
+  /// Create a copy of PodcastFeed
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PodcastFeedMetadataCopyWith<$Res> get metadata {
@@ -146,6 +155,8 @@ class __$$PodcastFeedImplCopyWithImpl<$Res>
       _$PodcastFeedImpl _value, $Res Function(_$PodcastFeedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PodcastFeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -207,12 +218,14 @@ class _$PodcastFeedImpl extends _PodcastFeed {
             const DeepCollectionEquality().equals(other._episodes, _episodes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, metadata, const DeepCollectionEquality().hash(_episodes));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PodcastFeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastFeedImplCopyWith<_$PodcastFeedImpl> get copyWith =>
@@ -307,8 +320,11 @@ abstract class _PodcastFeed extends PodcastFeed {
   @override
   PodcastFeedMetadata get metadata;
   List<PodcastFeedEpisode> get episodes;
+
+  /// Create a copy of PodcastFeed
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastFeedImplCopyWith<_$PodcastFeedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -335,6 +351,8 @@ class __$$PodcastFeedMinifiedImplCopyWithImpl<$Res>
       $Res Function(_$PodcastFeedMinifiedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PodcastFeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -389,11 +407,13 @@ class _$PodcastFeedMinifiedImpl extends PodcastFeedMinified {
                 other.numEpisodes == numEpisodes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, metadata, numEpisodes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PodcastFeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastFeedMinifiedImplCopyWith<_$PodcastFeedMinifiedImpl> get copyWith =>
@@ -489,8 +509,11 @@ abstract class PodcastFeedMinified extends PodcastFeed {
   @override
   PodcastFeedMetadata get metadata;
   int get numEpisodes;
+
+  /// Create a copy of PodcastFeed
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastFeedMinifiedImplCopyWith<_$PodcastFeedMinifiedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

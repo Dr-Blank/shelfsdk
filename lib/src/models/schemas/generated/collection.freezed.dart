@@ -34,8 +34,12 @@ mixin _$Collection {
 // and [Get a Library's Collections](https://api.audiobookshelf.org/#get-a-library-39-s-collections)
   RssFeed? get rssFeed => throw _privateConstructorUsedError;
 
+  /// Serializes this Collection to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Collection
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CollectionCopyWith<Collection> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -72,6 +76,8 @@ class _$CollectionCopyWithImpl<$Res, $Val extends Collection>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Collection
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,6 +141,8 @@ class _$CollectionCopyWithImpl<$Res, $Val extends Collection>
     ) as $Val);
   }
 
+  /// Create a copy of Collection
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RssFeedCopyWith<$Res>? get rssFeed {
@@ -181,6 +189,8 @@ class __$$CollectionImplCopyWithImpl<$Res>
       _$CollectionImpl _value, $Res Function(_$CollectionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Collection
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -325,7 +335,7 @@ class _$CollectionImpl implements _Collection {
             (identical(other.rssFeed, rssFeed) || other.rssFeed == rssFeed));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -341,7 +351,9 @@ class _$CollectionImpl implements _Collection {
       createdAt,
       rssFeed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Collection
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CollectionImplCopyWith<_$CollectionImpl> get copyWith =>
@@ -391,12 +403,16 @@ abstract class _Collection implements Collection {
   @override
   DateTime get lastUpdate;
   @override
-  DateTime get createdAt;
-  @override // From [Get a Collection](https://api.audiobookshelf.org/#get-a-collection)
+  DateTime
+      get createdAt; // From [Get a Collection](https://api.audiobookshelf.org/#get-a-collection)
 // and [Get a Library's Collections](https://api.audiobookshelf.org/#get-a-library-39-s-collections)
-  RssFeed? get rssFeed;
   @override
-  @JsonKey(ignore: true)
+  RssFeed? get rssFeed;
+
+  /// Create a copy of Collection
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CollectionImplCopyWith<_$CollectionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

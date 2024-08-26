@@ -23,8 +23,12 @@ mixin _$MatchAuthorResponse {
   bool get updated => throw _privateConstructorUsedError;
   Author get author => throw _privateConstructorUsedError;
 
+  /// Serializes this MatchAuthorResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MatchAuthorResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MatchAuthorResponseCopyWith<MatchAuthorResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$MatchAuthorResponseCopyWithImpl<$Res, $Val extends MatchAuthorResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MatchAuthorResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$MatchAuthorResponseCopyWithImpl<$Res, $Val extends MatchAuthorResponse>
     ) as $Val);
   }
 
+  /// Create a copy of MatchAuthorResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AuthorCopyWith<$Res> get author {
@@ -99,6 +107,8 @@ class __$$MatchAuthorResponseImplCopyWithImpl<$Res>
       $Res Function(_$MatchAuthorResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MatchAuthorResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -146,11 +156,13 @@ class _$MatchAuthorResponseImpl implements _MatchAuthorResponse {
             (identical(other.author, author) || other.author == author));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, updated, author);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MatchAuthorResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MatchAuthorResponseImplCopyWith<_$MatchAuthorResponseImpl> get copyWith =>
@@ -177,8 +189,11 @@ abstract class _MatchAuthorResponse implements MatchAuthorResponse {
   bool get updated;
   @override
   Author get author;
+
+  /// Create a copy of MatchAuthorResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MatchAuthorResponseImplCopyWith<_$MatchAuthorResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -34,8 +34,12 @@ mixin _$PodcastFeedEpisode {
   DateTime get publishedAt => throw _privateConstructorUsedError;
   PodcastEpisodeEnclosure get enclosure => throw _privateConstructorUsedError;
 
+  /// Serializes this PodcastFeedEpisode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PodcastFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PodcastFeedEpisodeCopyWith<PodcastFeedEpisode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,6 +78,8 @@ class _$PodcastFeedEpisodeCopyWithImpl<$Res, $Val extends PodcastFeedEpisode>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PodcastFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,6 +153,8 @@ class _$PodcastFeedEpisodeCopyWithImpl<$Res, $Val extends PodcastFeedEpisode>
     ) as $Val);
   }
 
+  /// Create a copy of PodcastFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PodcastEpisodeEnclosureCopyWith<$Res> get enclosure {
@@ -191,6 +199,8 @@ class __$$PodcastFeedEpisodeImplCopyWithImpl<$Res>
       $Res Function(_$PodcastFeedEpisodeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PodcastFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -347,7 +357,7 @@ class _$PodcastFeedEpisodeImpl implements _PodcastFeedEpisode {
                 other.enclosure == enclosure));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -365,7 +375,9 @@ class _$PodcastFeedEpisodeImpl implements _PodcastFeedEpisode {
       publishedAt,
       enclosure);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PodcastFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastFeedEpisodeImplCopyWith<_$PodcastFeedEpisodeImpl> get copyWith =>
@@ -426,8 +438,11 @@ abstract class _PodcastFeedEpisode implements PodcastFeedEpisode {
   DateTime get publishedAt;
   @override
   PodcastEpisodeEnclosure get enclosure;
+
+  /// Create a copy of PodcastFeedEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastFeedEpisodeImplCopyWith<_$PodcastFeedEpisodeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

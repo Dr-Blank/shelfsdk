@@ -31,8 +31,12 @@ mixin _$GetLibrarysStatsResponse {
   List<AuthorStats> get authorsWithCount => throw _privateConstructorUsedError;
   List<GenreStats> get genresWithCount => throw _privateConstructorUsedError;
 
+  /// Serializes this GetLibrarysStatsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetLibrarysStatsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetLibrarysStatsResponseCopyWith<GetLibrarysStatsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -66,6 +70,8 @@ class _$GetLibrarysStatsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetLibrarysStatsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -151,6 +157,8 @@ class __$$GetLibrarysStatsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetLibrarysStatsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetLibrarysStatsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -293,7 +301,7 @@ class _$GetLibrarysStatsResponseImpl implements _GetLibrarysStatsResponse {
                 .equals(other._genresWithCount, _genresWithCount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -307,7 +315,9 @@ class _$GetLibrarysStatsResponseImpl implements _GetLibrarysStatsResponse {
       const DeepCollectionEquality().hash(_authorsWithCount),
       const DeepCollectionEquality().hash(_genresWithCount));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetLibrarysStatsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetLibrarysStatsResponseImplCopyWith<_$GetLibrarysStatsResponseImpl>
@@ -356,8 +366,11 @@ abstract class _GetLibrarysStatsResponse implements GetLibrarysStatsResponse {
   List<AuthorStats> get authorsWithCount;
   @override
   List<GenreStats> get genresWithCount;
+
+  /// Create a copy of GetLibrarysStatsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetLibrarysStatsResponseImplCopyWith<_$GetLibrarysStatsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -372,8 +385,12 @@ mixin _$LibraryItemStats {
   String get title => throw _privateConstructorUsedError;
   Duration get duration => throw _privateConstructorUsedError;
 
+  /// Serializes this LibraryItemStats to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LibraryItemStats
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LibraryItemStatsCopyWith<LibraryItemStats> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -397,6 +414,8 @@ class _$LibraryItemStatsCopyWithImpl<$Res, $Val extends LibraryItemStats>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LibraryItemStats
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -440,6 +459,8 @@ class __$$LibraryItemStatsImplCopyWithImpl<$Res>
       $Res Function(_$LibraryItemStatsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibraryItemStats
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -497,11 +518,13 @@ class _$LibraryItemStatsImpl implements _LibraryItemStats {
                 other.duration == duration));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, title, duration);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibraryItemStats
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LibraryItemStatsImplCopyWith<_$LibraryItemStatsImpl> get copyWith =>
@@ -531,8 +554,11 @@ abstract class _LibraryItemStats implements LibraryItemStats {
   String get title;
   @override
   Duration get duration;
+
+  /// Create a copy of LibraryItemStats
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LibraryItemStatsImplCopyWith<_$LibraryItemStatsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -547,8 +573,12 @@ mixin _$AuthorStats {
   String get name => throw _privateConstructorUsedError;
   int get count => throw _privateConstructorUsedError;
 
+  /// Serializes this AuthorStats to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AuthorStats
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AuthorStatsCopyWith<AuthorStats> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -572,6 +602,8 @@ class _$AuthorStatsCopyWithImpl<$Res, $Val extends AuthorStats>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AuthorStats
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -615,6 +647,8 @@ class __$$AuthorStatsImplCopyWithImpl<$Res>
       _$AuthorStatsImpl _value, $Res Function(_$AuthorStatsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AuthorStats
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -670,11 +704,13 @@ class _$AuthorStatsImpl implements _AuthorStats {
             (identical(other.count, count) || other.count == count));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, count);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AuthorStats
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthorStatsImplCopyWith<_$AuthorStatsImpl> get copyWith =>
@@ -703,8 +739,11 @@ abstract class _AuthorStats implements AuthorStats {
   String get name;
   @override
   int get count;
+
+  /// Create a copy of AuthorStats
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthorStatsImplCopyWith<_$AuthorStatsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -718,8 +757,12 @@ mixin _$GenreStats {
   String get genre => throw _privateConstructorUsedError;
   int get count => throw _privateConstructorUsedError;
 
+  /// Serializes this GenreStats to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GenreStats
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GenreStatsCopyWith<GenreStats> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -743,6 +786,8 @@ class _$GenreStatsCopyWithImpl<$Res, $Val extends GenreStats>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GenreStats
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -781,6 +826,8 @@ class __$$GenreStatsImplCopyWithImpl<$Res>
       _$GenreStatsImpl _value, $Res Function(_$GenreStatsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GenreStats
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -827,11 +874,13 @@ class _$GenreStatsImpl implements _GenreStats {
             (identical(other.count, count) || other.count == count));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genre, count);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GenreStats
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GenreStatsImplCopyWith<_$GenreStatsImpl> get copyWith =>
@@ -857,8 +906,11 @@ abstract class _GenreStats implements GenreStats {
   String get genre;
   @override
   int get count;
+
+  /// Create a copy of GenreStats
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GenreStatsImplCopyWith<_$GenreStatsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

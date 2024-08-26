@@ -23,8 +23,12 @@ mixin _$UpdateUserResponse {
   bool get success => throw _privateConstructorUsedError;
   User get user => throw _privateConstructorUsedError;
 
+  /// Serializes this UpdateUserResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateUserResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UpdateUserResponseCopyWith<UpdateUserResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$UpdateUserResponseCopyWithImpl<$Res, $Val extends UpdateUserResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UpdateUserResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$UpdateUserResponseCopyWithImpl<$Res, $Val extends UpdateUserResponse>
     ) as $Val);
   }
 
+  /// Create a copy of UpdateUserResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserCopyWith<$Res> get user {
@@ -99,6 +107,8 @@ class __$$UpdateUserResponseImplCopyWithImpl<$Res>
       $Res Function(_$UpdateUserResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateUserResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,11 +155,13 @@ class _$UpdateUserResponseImpl implements _UpdateUserResponse {
             (identical(other.user, user) || other.user == user));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, success, user);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateUserResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateUserResponseImplCopyWith<_$UpdateUserResponseImpl> get copyWith =>
@@ -176,8 +188,11 @@ abstract class _UpdateUserResponse implements UpdateUserResponse {
   bool get success;
   @override
   User get user;
+
+  /// Create a copy of UpdateUserResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateUserResponseImplCopyWith<_$UpdateUserResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -26,8 +26,12 @@ mixin _$AudioBookmark {
   Duration get time => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
 
+  /// Serializes this AudioBookmark to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AudioBookmark
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AudioBookmarkCopyWith<AudioBookmark> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$AudioBookmarkCopyWithImpl<$Res, $Val extends AudioBookmark>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AudioBookmark
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,6 +113,8 @@ class __$$AudioBookmarkImplCopyWithImpl<$Res>
       _$AudioBookmarkImpl _value, $Res Function(_$AudioBookmarkImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AudioBookmark
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -177,12 +185,14 @@ class _$AudioBookmarkImpl implements _AudioBookmark {
                 other.createdAt == createdAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, libraryItemId, title, time, createdAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AudioBookmark
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AudioBookmarkImplCopyWith<_$AudioBookmarkImpl> get copyWith =>
@@ -215,8 +225,11 @@ abstract class _AudioBookmark implements AudioBookmark {
   Duration get time;
   @override
   DateTime get createdAt;
+
+  /// Create a copy of AudioBookmark
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AudioBookmarkImplCopyWith<_$AudioBookmarkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

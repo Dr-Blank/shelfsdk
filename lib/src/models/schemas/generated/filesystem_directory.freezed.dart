@@ -26,8 +26,12 @@ mixin _$FilesystemDirectory {
   int get level => throw _privateConstructorUsedError;
   List<FilesystemDirectory> get dirs => throw _privateConstructorUsedError;
 
+  /// Serializes this FilesystemDirectory to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FilesystemDirectory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FilesystemDirectoryCopyWith<FilesystemDirectory> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$FilesystemDirectoryCopyWithImpl<$Res, $Val extends FilesystemDirectory>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FilesystemDirectory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$FilesystemDirectoryImplCopyWithImpl<$Res>
       $Res Function(_$FilesystemDirectoryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FilesystemDirectory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -196,12 +204,14 @@ class _$FilesystemDirectoryImpl implements _FilesystemDirectory {
             const DeepCollectionEquality().equals(other._dirs, _dirs));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, path, dirname, fullPath, level,
       const DeepCollectionEquality().hash(_dirs));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FilesystemDirectory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FilesystemDirectoryImplCopyWith<_$FilesystemDirectoryImpl> get copyWith =>
@@ -238,8 +248,11 @@ abstract class _FilesystemDirectory implements FilesystemDirectory {
   int get level;
   @override
   List<FilesystemDirectory> get dirs;
+
+  /// Create a copy of FilesystemDirectory
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FilesystemDirectoryImplCopyWith<_$FilesystemDirectoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

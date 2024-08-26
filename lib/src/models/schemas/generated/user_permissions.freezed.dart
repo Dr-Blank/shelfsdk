@@ -28,8 +28,12 @@ mixin _$UserPermissions {
   bool get accessAllTags => throw _privateConstructorUsedError;
   bool get accessExplicitContent => throw _privateConstructorUsedError;
 
+  /// Serializes this UserPermissions to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UserPermissions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UserPermissionsCopyWith<UserPermissions> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$UserPermissionsCopyWithImpl<$Res, $Val extends UserPermissions>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UserPermissions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -130,6 +136,8 @@ class __$$UserPermissionsImplCopyWithImpl<$Res>
       _$UserPermissionsImpl _value, $Res Function(_$UserPermissionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UserPermissions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -227,12 +235,14 @@ class _$UserPermissionsImpl implements _UserPermissions {
                 other.accessExplicitContent == accessExplicitContent));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, download, update, delete, upload,
       accessAllLibraries, accessAllTags, accessExplicitContent);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UserPermissions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserPermissionsImplCopyWith<_$UserPermissionsImpl> get copyWith =>
@@ -274,8 +284,11 @@ abstract class _UserPermissions implements UserPermissions {
   bool get accessAllTags;
   @override
   bool get accessExplicitContent;
+
+  /// Create a copy of UserPermissions
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserPermissionsImplCopyWith<_$UserPermissionsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

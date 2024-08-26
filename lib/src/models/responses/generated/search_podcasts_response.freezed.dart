@@ -34,8 +34,12 @@ mixin _$SearchPodcastsResponse {
   Uri get feedUrl => throw _privateConstructorUsedError;
   Uri get pageUrl => throw _privateConstructorUsedError;
 
+  /// Serializes this SearchPodcastsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchPodcastsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchPodcastsResponseCopyWith<SearchPodcastsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -72,6 +76,8 @@ class _$SearchPodcastsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchPodcastsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -175,6 +181,8 @@ class __$$SearchPodcastsResponseImplCopyWithImpl<$Res>
       $Res Function(_$SearchPodcastsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchPodcastsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -326,7 +334,7 @@ class _$SearchPodcastsResponseImpl implements _SearchPodcastsResponse {
             (identical(other.pageUrl, pageUrl) || other.pageUrl == pageUrl));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -343,7 +351,9 @@ class _$SearchPodcastsResponseImpl implements _SearchPodcastsResponse {
       feedUrl,
       pageUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchPodcastsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchPodcastsResponseImplCopyWith<_$SearchPodcastsResponseImpl>
@@ -400,8 +410,11 @@ abstract class _SearchPodcastsResponse implements SearchPodcastsResponse {
   Uri get feedUrl;
   @override
   Uri get pageUrl;
+
+  /// Create a copy of SearchPodcastsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchPodcastsResponseImplCopyWith<_$SearchPodcastsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

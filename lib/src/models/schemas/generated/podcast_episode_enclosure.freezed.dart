@@ -25,8 +25,12 @@ mixin _$PodcastEpisodeEnclosure {
   String get type => throw _privateConstructorUsedError;
   String get length => throw _privateConstructorUsedError;
 
+  /// Serializes this PodcastEpisodeEnclosure to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PodcastEpisodeEnclosure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PodcastEpisodeEnclosureCopyWith<PodcastEpisodeEnclosure> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$PodcastEpisodeEnclosureCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PodcastEpisodeEnclosure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$PodcastEpisodeEnclosureImplCopyWithImpl<$Res>
       $Res Function(_$PodcastEpisodeEnclosureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PodcastEpisodeEnclosure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -152,11 +160,13 @@ class _$PodcastEpisodeEnclosureImpl implements _PodcastEpisodeEnclosure {
             (identical(other.length, length) || other.length == length));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, url, type, length);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PodcastEpisodeEnclosure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PodcastEpisodeEnclosureImplCopyWith<_$PodcastEpisodeEnclosureImpl>
@@ -186,8 +196,11 @@ abstract class _PodcastEpisodeEnclosure implements PodcastEpisodeEnclosure {
   String get type;
   @override
   String get length;
+
+  /// Create a copy of PodcastEpisodeEnclosure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PodcastEpisodeEnclosureImplCopyWith<_$PodcastEpisodeEnclosureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

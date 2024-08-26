@@ -26,8 +26,12 @@ mixin _$LogEvent {
   String get levelName => throw _privateConstructorUsedError;
   LogLevel get level => throw _privateConstructorUsedError;
 
+  /// Serializes this LogEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LogEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LogEventCopyWith<LogEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$LogEventCopyWithImpl<$Res, $Val extends LogEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LogEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class __$$LogEventImplCopyWithImpl<$Res>
       _$LogEventImpl _value, $Res Function(_$LogEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LogEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -175,12 +183,14 @@ class _$LogEventImpl implements _LogEvent {
             (identical(other.level, level) || other.level == level));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, timestamp, message, levelName, level);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LogEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LogEventImplCopyWith<_$LogEventImpl> get copyWith =>
@@ -213,8 +223,11 @@ abstract class _LogEvent implements LogEvent {
   String get levelName;
   @override
   LogLevel get level;
+
+  /// Create a copy of LogEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LogEventImplCopyWith<_$LogEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -75,8 +75,13 @@ mixin _$PlaylistItem {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this PlaylistItem to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PlaylistItemCopyWith<PlaylistItem> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -100,6 +105,8 @@ class _$PlaylistItemCopyWithImpl<$Res, $Val extends PlaylistItem>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,6 +145,8 @@ class __$$PlaylistItemImplCopyWithImpl<$Res>
       _$PlaylistItemImpl _value, $Res Function(_$PlaylistItemImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,11 +201,13 @@ class _$PlaylistItemImpl extends _PlaylistItem {
                 other.episodeId == episodeId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, libraryItemId, episodeId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistItemImplCopyWith<_$PlaylistItemImpl> get copyWith =>
@@ -291,8 +302,11 @@ abstract class _PlaylistItem extends PlaylistItem {
   String get libraryItemId;
   @override
   String? get episodeId;
+
+  /// Create a copy of PlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlaylistItemImplCopyWith<_$PlaylistItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -323,6 +337,8 @@ class __$$PlaylistItemExpandedImplCopyWithImpl<$Res>
       $Res Function(_$PlaylistItemExpandedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -351,6 +367,8 @@ class __$$PlaylistItemExpandedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of PlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PodcastEpisodeCopyWith<$Res>? get episode {
@@ -363,6 +381,8 @@ class __$$PlaylistItemExpandedImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of PlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LibraryItemCopyWith<$Res> get libraryItem {
@@ -418,12 +438,14 @@ class _$PlaylistItemExpandedImpl extends PlaylistItemExpanded {
                 other.libraryItem == libraryItem));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, libraryItemId, episodeId, episode, libraryItem);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistItemExpandedImplCopyWith<_$PlaylistItemExpandedImpl>
@@ -524,8 +546,11 @@ abstract class PlaylistItemExpanded extends PlaylistItem {
   String? get episodeId;
   PodcastEpisode? get episode;
   LibraryItem get libraryItem;
+
+  /// Create a copy of PlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlaylistItemExpandedImplCopyWith<_$PlaylistItemExpandedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

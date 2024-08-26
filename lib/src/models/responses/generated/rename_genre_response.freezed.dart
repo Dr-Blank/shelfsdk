@@ -23,8 +23,12 @@ mixin _$RenameGenreResponse {
   bool get genreMerged => throw _privateConstructorUsedError;
   int get numItemsUpdated => throw _privateConstructorUsedError;
 
+  /// Serializes this RenameGenreResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RenameGenreResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RenameGenreResponseCopyWith<RenameGenreResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$RenameGenreResponseCopyWithImpl<$Res, $Val extends RenameGenreResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RenameGenreResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$RenameGenreResponseImplCopyWithImpl<$Res>
       $Res Function(_$RenameGenreResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RenameGenreResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,11 +143,13 @@ class _$RenameGenreResponseImpl implements _RenameGenreResponse {
                 other.numItemsUpdated == numItemsUpdated));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genreMerged, numItemsUpdated);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RenameGenreResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RenameGenreResponseImplCopyWith<_$RenameGenreResponseImpl> get copyWith =>
@@ -166,8 +176,11 @@ abstract class _RenameGenreResponse implements RenameGenreResponse {
   bool get genreMerged;
   @override
   int get numItemsUpdated;
+
+  /// Create a copy of RenameGenreResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RenameGenreResponseImplCopyWith<_$RenameGenreResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

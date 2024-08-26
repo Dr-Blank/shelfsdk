@@ -87,8 +87,13 @@ mixin _$AudioFileMetadataEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this AudioFileMetadataEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AudioFileMetadataEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AudioFileMetadataEventCopyWith<AudioFileMetadataEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -113,6 +118,8 @@ class _$AudioFileMetadataEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AudioFileMetadataEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -164,6 +171,8 @@ class __$$AudioFileMetadataStartedEventImplCopyWithImpl<$Res>
       $Res Function(_$AudioFileMetadataStartedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AudioFileMetadataEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -240,12 +249,14 @@ class _$AudioFileMetadataStartedEventImpl
                 other.filename == filename));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, libraryItemId, index, ino, filename);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AudioFileMetadataEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AudioFileMetadataStartedEventImplCopyWith<
@@ -354,8 +365,11 @@ abstract class AudioFileMetadataStartedEvent extends AudioFileMetadataEvent {
   String get ino;
   @override
   String get filename;
+
+  /// Create a copy of AudioFileMetadataEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AudioFileMetadataStartedEventImplCopyWith<
           _$AudioFileMetadataStartedEventImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -388,6 +402,8 @@ class __$$AudioFileMetadataFinishedEventImplCopyWithImpl<$Res>
       $Res Function(_$AudioFileMetadataFinishedEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AudioFileMetadataEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -473,12 +489,14 @@ class _$AudioFileMetadataFinishedEventImpl
             (identical(other.success, success) || other.success == success));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, libraryItemId, index, ino, filename, success);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AudioFileMetadataEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AudioFileMetadataFinishedEventImplCopyWith<
@@ -589,8 +607,11 @@ abstract class AudioFileMetadataFinishedEvent extends AudioFileMetadataEvent {
   @override
   String get filename;
   bool get success;
+
+  /// Create a copy of AudioFileMetadataEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AudioFileMetadataFinishedEventImplCopyWith<
           _$AudioFileMetadataFinishedEventImpl>
       get copyWith => throw _privateConstructorUsedError;

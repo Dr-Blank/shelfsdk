@@ -27,8 +27,12 @@ mixin _$LibraryFilterData {
   List<String> get narrators => throw _privateConstructorUsedError;
   List<String> get languages => throw _privateConstructorUsedError;
 
+  /// Serializes this LibraryFilterData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LibraryFilterData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LibraryFilterDataCopyWith<LibraryFilterData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$LibraryFilterDataCopyWithImpl<$Res, $Val extends LibraryFilterData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LibraryFilterData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,6 +128,8 @@ class __$$LibraryFilterDataImplCopyWithImpl<$Res>
       $Res Function(_$LibraryFilterDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibraryFilterData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -249,7 +257,7 @@ class _$LibraryFilterDataImpl implements _LibraryFilterData {
                 .equals(other._languages, _languages));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -260,7 +268,9 @@ class _$LibraryFilterDataImpl implements _LibraryFilterData {
       const DeepCollectionEquality().hash(_narrators),
       const DeepCollectionEquality().hash(_languages));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibraryFilterData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LibraryFilterDataImplCopyWith<_$LibraryFilterDataImpl> get copyWith =>
@@ -299,8 +309,11 @@ abstract class _LibraryFilterData implements LibraryFilterData {
   List<String> get narrators;
   @override
   List<String> get languages;
+
+  /// Create a copy of LibraryFilterData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LibraryFilterDataImplCopyWith<_$LibraryFilterDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

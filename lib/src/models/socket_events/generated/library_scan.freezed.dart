@@ -26,8 +26,12 @@ mixin _$LibraryScan {
   String get name => throw _privateConstructorUsedError;
   LibraryScanResults? get results => throw _privateConstructorUsedError;
 
+  /// Serializes this LibraryScan to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LibraryScan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LibraryScanCopyWith<LibraryScan> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$LibraryScanCopyWithImpl<$Res, $Val extends LibraryScan>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LibraryScan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class _$LibraryScanCopyWithImpl<$Res, $Val extends LibraryScan>
     ) as $Val);
   }
 
+  /// Create a copy of LibraryScan
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LibraryScanResultsCopyWith<$Res>? get results {
@@ -124,6 +132,8 @@ class __$$LibraryScanImplCopyWithImpl<$Res>
       _$LibraryScanImpl _value, $Res Function(_$LibraryScanImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibraryScan
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,11 +202,13 @@ class _$LibraryScanImpl implements _LibraryScan {
             (identical(other.results, results) || other.results == results));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, libraryId, type, name, results);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibraryScan
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LibraryScanImplCopyWith<_$LibraryScanImpl> get copyWith =>
@@ -229,8 +241,11 @@ abstract class _LibraryScan implements LibraryScan {
   String get name;
   @override
   LibraryScanResults? get results;
+
+  /// Create a copy of LibraryScan
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LibraryScanImplCopyWith<_$LibraryScanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -245,8 +260,12 @@ mixin _$LibraryScanResults {
   int get updated => throw _privateConstructorUsedError;
   int get missing => throw _privateConstructorUsedError;
 
+  /// Serializes this LibraryScanResults to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LibraryScanResults
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LibraryScanResultsCopyWith<LibraryScanResults> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -270,6 +289,8 @@ class _$LibraryScanResultsCopyWithImpl<$Res, $Val extends LibraryScanResults>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LibraryScanResults
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -313,6 +334,8 @@ class __$$LibraryScanResultsImplCopyWithImpl<$Res>
       $Res Function(_$LibraryScanResultsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LibraryScanResults
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -368,11 +391,13 @@ class _$LibraryScanResultsImpl implements _LibraryScanResults {
             (identical(other.missing, missing) || other.missing == missing));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, added, updated, missing);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LibraryScanResults
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LibraryScanResultsImplCopyWith<_$LibraryScanResultsImpl> get copyWith =>
@@ -402,8 +427,11 @@ abstract class _LibraryScanResults implements LibraryScanResults {
   int get updated;
   @override
   int get missing;
+
+  /// Create a copy of LibraryScanResults
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LibraryScanResultsImplCopyWith<_$LibraryScanResultsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

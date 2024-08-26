@@ -23,8 +23,12 @@ mixin _$SessionUser {
   String get id => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
 
+  /// Serializes this SessionUser to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SessionUser
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SessionUserCopyWith<SessionUser> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$SessionUserCopyWithImpl<$Res, $Val extends SessionUser>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SessionUser
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$SessionUserImplCopyWithImpl<$Res>
       _$SessionUserImpl _value, $Res Function(_$SessionUserImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SessionUser
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,11 +141,13 @@ class _$SessionUserImpl implements _SessionUser {
                 other.username == username));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, username);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SessionUser
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SessionUserImplCopyWith<_$SessionUserImpl> get copyWith =>
@@ -163,8 +173,11 @@ abstract class _SessionUser implements SessionUser {
   String get id;
   @override
   String get username;
+
+  /// Create a copy of SessionUser
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SessionUserImplCopyWith<_$SessionUserImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

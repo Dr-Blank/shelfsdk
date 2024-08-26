@@ -45,8 +45,12 @@ mixin _$AudioFile {
   AudioMetaTags get metaTags => throw _privateConstructorUsedError;
   String get mimeType => throw _privateConstructorUsedError;
 
+  /// Serializes this AudioFile to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AudioFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AudioFileCopyWith<AudioFile> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -96,6 +100,8 @@ class _$AudioFileCopyWithImpl<$Res, $Val extends AudioFile>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AudioFile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -224,6 +230,8 @@ class _$AudioFileCopyWithImpl<$Res, $Val extends AudioFile>
     ) as $Val);
   }
 
+  /// Create a copy of AudioFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FileMetadataCopyWith<$Res> get metadata {
@@ -232,6 +240,8 @@ class _$AudioFileCopyWithImpl<$Res, $Val extends AudioFile>
     });
   }
 
+  /// Create a copy of AudioFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AudioMetaTagsCopyWith<$Res> get metaTags {
@@ -289,6 +299,8 @@ class __$$AudioFileImplCopyWithImpl<$Res>
       _$AudioFileImpl _value, $Res Function(_$AudioFileImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AudioFile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -558,7 +570,7 @@ class _$AudioFileImpl implements _AudioFile {
                 other.mimeType == mimeType));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -588,7 +600,9 @@ class _$AudioFileImpl implements _AudioFile {
         mimeType
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AudioFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AudioFileImplCopyWith<_$AudioFileImpl> get copyWith =>
@@ -680,8 +694,11 @@ abstract class _AudioFile implements AudioFile {
   AudioMetaTags get metaTags;
   @override
   String get mimeType;
+
+  /// Create a copy of AudioFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AudioFileImplCopyWith<_$AudioFileImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

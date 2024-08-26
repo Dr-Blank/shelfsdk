@@ -24,8 +24,12 @@ mixin _$BatchUpdateItemResponse {
   bool get success => throw _privateConstructorUsedError;
   int get updates => throw _privateConstructorUsedError;
 
+  /// Serializes this BatchUpdateItemResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BatchUpdateItemResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BatchUpdateItemResponseCopyWith<BatchUpdateItemResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$BatchUpdateItemResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BatchUpdateItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$BatchUpdateItemResponseImplCopyWithImpl<$Res>
       $Res Function(_$BatchUpdateItemResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BatchUpdateItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +146,13 @@ class _$BatchUpdateItemResponseImpl implements _BatchUpdateItemResponse {
             (identical(other.updates, updates) || other.updates == updates));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, success, updates);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BatchUpdateItemResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BatchUpdateItemResponseImplCopyWith<_$BatchUpdateItemResponseImpl>
@@ -169,8 +179,11 @@ abstract class _BatchUpdateItemResponse implements BatchUpdateItemResponse {
   bool get success;
   @override
   int get updates;
+
+  /// Create a copy of BatchUpdateItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BatchUpdateItemResponseImplCopyWith<_$BatchUpdateItemResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

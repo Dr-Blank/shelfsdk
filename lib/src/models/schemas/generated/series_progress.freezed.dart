@@ -24,8 +24,12 @@ mixin _$SeriesProgress {
   List<String> get libraryItemIdsFinished => throw _privateConstructorUsedError;
   bool get isFinished => throw _privateConstructorUsedError;
 
+  /// Serializes this SeriesProgress to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SeriesProgress
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SeriesProgressCopyWith<SeriesProgress> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$SeriesProgressCopyWithImpl<$Res, $Val extends SeriesProgress>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SeriesProgress
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class __$$SeriesProgressImplCopyWithImpl<$Res>
       _$SeriesProgressImpl _value, $Res Function(_$SeriesProgressImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SeriesProgress
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -173,7 +181,7 @@ class _$SeriesProgressImpl implements _SeriesProgress {
                 other.isFinished == isFinished));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -181,7 +189,9 @@ class _$SeriesProgressImpl implements _SeriesProgress {
       const DeepCollectionEquality().hash(_libraryItemIdsFinished),
       isFinished);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SeriesProgress
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SeriesProgressImplCopyWith<_$SeriesProgressImpl> get copyWith =>
@@ -211,8 +221,11 @@ abstract class _SeriesProgress implements SeriesProgress {
   List<String> get libraryItemIdsFinished;
   @override
   bool get isFinished;
+
+  /// Create a copy of SeriesProgress
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SeriesProgressImplCopyWith<_$SeriesProgressImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -24,8 +24,12 @@ mixin _$StreamErrorEvent {
   String get streamId => throw _privateConstructorUsedError;
   String get error => throw _privateConstructorUsedError;
 
+  /// Serializes this StreamErrorEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StreamErrorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StreamErrorEventCopyWith<StreamErrorEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$StreamErrorEventCopyWithImpl<$Res, $Val extends StreamErrorEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StreamErrorEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$StreamErrorEventImplCopyWithImpl<$Res>
       $Res Function(_$StreamErrorEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StreamErrorEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -136,11 +144,13 @@ class _$StreamErrorEventImpl implements _StreamErrorEvent {
             (identical(other.error, error) || other.error == error));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, streamId, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StreamErrorEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StreamErrorEventImplCopyWith<_$StreamErrorEventImpl> get copyWith =>
@@ -168,8 +178,11 @@ abstract class _StreamErrorEvent implements StreamErrorEvent {
   String get streamId;
   @override
   String get error;
+
+  /// Create a copy of StreamErrorEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StreamErrorEventImplCopyWith<_$StreamErrorEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

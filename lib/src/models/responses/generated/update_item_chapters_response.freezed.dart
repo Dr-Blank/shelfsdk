@@ -24,8 +24,12 @@ mixin _$UpdateItemChaptersResponse {
   bool get success => throw _privateConstructorUsedError;
   bool get updated => throw _privateConstructorUsedError;
 
+  /// Serializes this UpdateItemChaptersResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateItemChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UpdateItemChaptersResponseCopyWith<UpdateItemChaptersResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$UpdateItemChaptersResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UpdateItemChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$UpdateItemChaptersResponseImplCopyWithImpl<$Res>
       $Res Function(_$UpdateItemChaptersResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateItemChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,11 +148,13 @@ class _$UpdateItemChaptersResponseImpl implements _UpdateItemChaptersResponse {
             (identical(other.updated, updated) || other.updated == updated));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, success, updated);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateItemChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateItemChaptersResponseImplCopyWith<_$UpdateItemChaptersResponseImpl>
@@ -172,8 +182,11 @@ abstract class _UpdateItemChaptersResponse
   bool get success;
   @override
   bool get updated;
+
+  /// Create a copy of UpdateItemChaptersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateItemChaptersResponseImplCopyWith<_$UpdateItemChaptersResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

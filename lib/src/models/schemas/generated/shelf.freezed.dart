@@ -99,8 +99,13 @@ mixin _$Shelf {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this Shelf to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ShelfCopyWith<Shelf> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -127,6 +132,8 @@ class _$ShelfCopyWithImpl<$Res, $Val extends Shelf>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -186,6 +193,8 @@ class __$$LibraryItemShelfImplCopyWithImpl<$Res>
       $Res Function(_$LibraryItemShelfImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -283,12 +292,14 @@ class _$LibraryItemShelfImpl implements LibraryItemShelf {
             (identical(other.total, total) || other.total == total));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, label, labelStringKey, type,
       const DeepCollectionEquality().hash(_entities), total);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LibraryItemShelfImplCopyWith<_$LibraryItemShelfImpl> get copyWith =>
@@ -413,8 +424,11 @@ abstract class LibraryItemShelf implements Shelf {
   List<LibraryItem> get entities;
   @override
   int get total;
+
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LibraryItemShelfImplCopyWith<_$LibraryItemShelfImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -444,6 +458,8 @@ class __$$SeriesShelfImplCopyWithImpl<$Res>
       _$SeriesShelfImpl _value, $Res Function(_$SeriesShelfImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -541,12 +557,14 @@ class _$SeriesShelfImpl implements SeriesShelf {
             (identical(other.total, total) || other.total == total));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, label, labelStringKey, type,
       const DeepCollectionEquality().hash(_entities), total);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SeriesShelfImplCopyWith<_$SeriesShelfImpl> get copyWith =>
@@ -670,8 +688,11 @@ abstract class SeriesShelf implements Shelf {
   List<Series> get entities;
   @override
   int get total;
+
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SeriesShelfImplCopyWith<_$SeriesShelfImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -701,6 +722,8 @@ class __$$AuthorShelfImplCopyWithImpl<$Res>
       _$AuthorShelfImpl _value, $Res Function(_$AuthorShelfImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -798,12 +821,14 @@ class _$AuthorShelfImpl implements AuthorShelf {
             (identical(other.total, total) || other.total == total));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, label, labelStringKey, type,
       const DeepCollectionEquality().hash(_entities), total);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthorShelfImplCopyWith<_$AuthorShelfImpl> get copyWith =>
@@ -927,8 +952,11 @@ abstract class AuthorShelf implements Shelf {
   List<Author> get entities;
   @override
   int get total;
+
+  /// Create a copy of Shelf
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthorShelfImplCopyWith<_$AuthorShelfImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

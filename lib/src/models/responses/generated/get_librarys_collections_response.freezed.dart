@@ -28,8 +28,12 @@ mixin _$GetLibrarysCollectionsResponse {
   bool get minified => throw _privateConstructorUsedError;
   String get include => throw _privateConstructorUsedError;
 
+  /// Serializes this GetLibrarysCollectionsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetLibrarysCollectionsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetLibrarysCollectionsResponseCopyWith<GetLibrarysCollectionsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$GetLibrarysCollectionsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetLibrarysCollectionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,6 +135,8 @@ class __$$GetLibrarysCollectionsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetLibrarysCollectionsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetLibrarysCollectionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -223,7 +231,7 @@ class _$GetLibrarysCollectionsResponseImpl
             (identical(other.include, include) || other.include == include));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -234,7 +242,9 @@ class _$GetLibrarysCollectionsResponseImpl
       minified,
       include);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetLibrarysCollectionsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetLibrarysCollectionsResponseImplCopyWith<
@@ -275,8 +285,11 @@ abstract class _GetLibrarysCollectionsResponse
   bool get minified;
   @override
   String get include;
+
+  /// Create a copy of GetLibrarysCollectionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetLibrarysCollectionsResponseImplCopyWith<
           _$GetLibrarysCollectionsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
