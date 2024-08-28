@@ -20,35 +20,35 @@ ServerSettings _$ServerSettingsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ServerSettings {
-  String get id => throw _privateConstructorUsedError;
-  bool get scannerFindCovers => throw _privateConstructorUsedError;
-  MetadataProvider get scannerCoverProvider =>
+  String? get id => throw _privateConstructorUsedError;
+  bool? get scannerFindCovers => throw _privateConstructorUsedError;
+  MetadataProvider? get scannerCoverProvider =>
       throw _privateConstructorUsedError;
-  bool get scannerParseSubtitle => throw _privateConstructorUsedError;
-  bool get scannerPreferMatchedMetadata => throw _privateConstructorUsedError;
-  bool get scannerDisableWatcher => throw _privateConstructorUsedError;
-  bool get storeCoverWithItem => throw _privateConstructorUsedError;
-  bool get storeMetadataWithItem => throw _privateConstructorUsedError;
-  String get metadataFileFormat => throw _privateConstructorUsedError;
-  int get rateLimitLoginRequests => throw _privateConstructorUsedError;
+  bool? get scannerParseSubtitle => throw _privateConstructorUsedError;
+  bool? get scannerPreferMatchedMetadata => throw _privateConstructorUsedError;
+  bool? get scannerDisableWatcher => throw _privateConstructorUsedError;
+  bool? get storeCoverWithItem => throw _privateConstructorUsedError;
+  bool? get storeMetadataWithItem => throw _privateConstructorUsedError;
+  String? get metadataFileFormat => throw _privateConstructorUsedError;
+  int? get rateLimitLoginRequests => throw _privateConstructorUsedError;
   @DurationMsConverter()
-  Duration get rateLimitLoginWindow => throw _privateConstructorUsedError;
-  CronExpression get backupSchedule => throw _privateConstructorUsedError;
-  int get backupsToKeep => throw _privateConstructorUsedError;
-  int get maxBackupSize => throw _privateConstructorUsedError;
-  int get loggerDailyLogsToKeep => throw _privateConstructorUsedError;
-  int get loggerScannerLogsToKeep => throw _privateConstructorUsedError;
+  Duration? get rateLimitLoginWindow =>
+      throw _privateConstructorUsedError; // CronExpression? backupSchedule,
+  int? get backupsToKeep => throw _privateConstructorUsedError;
+  int? get maxBackupSize => throw _privateConstructorUsedError;
+  int? get loggerDailyLogsToKeep => throw _privateConstructorUsedError;
+  int? get loggerScannerLogsToKeep => throw _privateConstructorUsedError;
   @BoolBinaryConverter()
-  bool get homeBookshelfView => throw _privateConstructorUsedError;
+  bool? get homeBookshelfView => throw _privateConstructorUsedError;
   @BoolBinaryConverter()
-  bool get bookshelfView => throw _privateConstructorUsedError;
-  bool get sortingIgnorePrefix => throw _privateConstructorUsedError;
-  List<String> get sortingPrefixes => throw _privateConstructorUsedError;
-  bool get chromecastEnabled => throw _privateConstructorUsedError;
-  DateFormat get dateFormat => throw _privateConstructorUsedError;
-  ServerLanguage get language => throw _privateConstructorUsedError;
-  LogLevel get logLevel => throw _privateConstructorUsedError;
-  String get version => throw _privateConstructorUsedError;
+  bool? get bookshelfView => throw _privateConstructorUsedError;
+  bool? get sortingIgnorePrefix => throw _privateConstructorUsedError;
+  List<String>? get sortingPrefixes => throw _privateConstructorUsedError;
+  bool? get chromecastEnabled => throw _privateConstructorUsedError;
+  DateFormat? get dateFormat => throw _privateConstructorUsedError;
+  ServerLanguage? get language => throw _privateConstructorUsedError;
+  LogLevel? get logLevel => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
 
   /// Serializes this ServerSettings to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -67,33 +67,30 @@ abstract class $ServerSettingsCopyWith<$Res> {
       _$ServerSettingsCopyWithImpl<$Res, ServerSettings>;
   @useResult
   $Res call(
-      {String id,
-      bool scannerFindCovers,
-      MetadataProvider scannerCoverProvider,
-      bool scannerParseSubtitle,
-      bool scannerPreferMatchedMetadata,
-      bool scannerDisableWatcher,
-      bool storeCoverWithItem,
-      bool storeMetadataWithItem,
-      String metadataFileFormat,
-      int rateLimitLoginRequests,
-      @DurationMsConverter() Duration rateLimitLoginWindow,
-      CronExpression backupSchedule,
-      int backupsToKeep,
-      int maxBackupSize,
-      int loggerDailyLogsToKeep,
-      int loggerScannerLogsToKeep,
-      @BoolBinaryConverter() bool homeBookshelfView,
-      @BoolBinaryConverter() bool bookshelfView,
-      bool sortingIgnorePrefix,
-      List<String> sortingPrefixes,
-      bool chromecastEnabled,
-      DateFormat dateFormat,
-      ServerLanguage language,
-      LogLevel logLevel,
-      String version});
-
-  $CronExpressionCopyWith<$Res> get backupSchedule;
+      {String? id,
+      bool? scannerFindCovers,
+      MetadataProvider? scannerCoverProvider,
+      bool? scannerParseSubtitle,
+      bool? scannerPreferMatchedMetadata,
+      bool? scannerDisableWatcher,
+      bool? storeCoverWithItem,
+      bool? storeMetadataWithItem,
+      String? metadataFileFormat,
+      int? rateLimitLoginRequests,
+      @DurationMsConverter() Duration? rateLimitLoginWindow,
+      int? backupsToKeep,
+      int? maxBackupSize,
+      int? loggerDailyLogsToKeep,
+      int? loggerScannerLogsToKeep,
+      @BoolBinaryConverter() bool? homeBookshelfView,
+      @BoolBinaryConverter() bool? bookshelfView,
+      bool? sortingIgnorePrefix,
+      List<String>? sortingPrefixes,
+      bool? chromecastEnabled,
+      DateFormat? dateFormat,
+      ServerLanguage? language,
+      LogLevel? logLevel,
+      String? version});
 }
 
 /// @nodoc
@@ -111,144 +108,129 @@ class _$ServerSettingsCopyWithImpl<$Res, $Val extends ServerSettings>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? scannerFindCovers = null,
-    Object? scannerCoverProvider = null,
-    Object? scannerParseSubtitle = null,
-    Object? scannerPreferMatchedMetadata = null,
-    Object? scannerDisableWatcher = null,
-    Object? storeCoverWithItem = null,
-    Object? storeMetadataWithItem = null,
-    Object? metadataFileFormat = null,
-    Object? rateLimitLoginRequests = null,
-    Object? rateLimitLoginWindow = null,
-    Object? backupSchedule = null,
-    Object? backupsToKeep = null,
-    Object? maxBackupSize = null,
-    Object? loggerDailyLogsToKeep = null,
-    Object? loggerScannerLogsToKeep = null,
-    Object? homeBookshelfView = null,
-    Object? bookshelfView = null,
-    Object? sortingIgnorePrefix = null,
-    Object? sortingPrefixes = null,
-    Object? chromecastEnabled = null,
-    Object? dateFormat = null,
-    Object? language = null,
-    Object? logLevel = null,
-    Object? version = null,
+    Object? id = freezed,
+    Object? scannerFindCovers = freezed,
+    Object? scannerCoverProvider = freezed,
+    Object? scannerParseSubtitle = freezed,
+    Object? scannerPreferMatchedMetadata = freezed,
+    Object? scannerDisableWatcher = freezed,
+    Object? storeCoverWithItem = freezed,
+    Object? storeMetadataWithItem = freezed,
+    Object? metadataFileFormat = freezed,
+    Object? rateLimitLoginRequests = freezed,
+    Object? rateLimitLoginWindow = freezed,
+    Object? backupsToKeep = freezed,
+    Object? maxBackupSize = freezed,
+    Object? loggerDailyLogsToKeep = freezed,
+    Object? loggerScannerLogsToKeep = freezed,
+    Object? homeBookshelfView = freezed,
+    Object? bookshelfView = freezed,
+    Object? sortingIgnorePrefix = freezed,
+    Object? sortingPrefixes = freezed,
+    Object? chromecastEnabled = freezed,
+    Object? dateFormat = freezed,
+    Object? language = freezed,
+    Object? logLevel = freezed,
+    Object? version = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      scannerFindCovers: null == scannerFindCovers
+              as String?,
+      scannerFindCovers: freezed == scannerFindCovers
           ? _value.scannerFindCovers
           : scannerFindCovers // ignore: cast_nullable_to_non_nullable
-              as bool,
-      scannerCoverProvider: null == scannerCoverProvider
+              as bool?,
+      scannerCoverProvider: freezed == scannerCoverProvider
           ? _value.scannerCoverProvider
           : scannerCoverProvider // ignore: cast_nullable_to_non_nullable
-              as MetadataProvider,
-      scannerParseSubtitle: null == scannerParseSubtitle
+              as MetadataProvider?,
+      scannerParseSubtitle: freezed == scannerParseSubtitle
           ? _value.scannerParseSubtitle
           : scannerParseSubtitle // ignore: cast_nullable_to_non_nullable
-              as bool,
-      scannerPreferMatchedMetadata: null == scannerPreferMatchedMetadata
+              as bool?,
+      scannerPreferMatchedMetadata: freezed == scannerPreferMatchedMetadata
           ? _value.scannerPreferMatchedMetadata
           : scannerPreferMatchedMetadata // ignore: cast_nullable_to_non_nullable
-              as bool,
-      scannerDisableWatcher: null == scannerDisableWatcher
+              as bool?,
+      scannerDisableWatcher: freezed == scannerDisableWatcher
           ? _value.scannerDisableWatcher
           : scannerDisableWatcher // ignore: cast_nullable_to_non_nullable
-              as bool,
-      storeCoverWithItem: null == storeCoverWithItem
+              as bool?,
+      storeCoverWithItem: freezed == storeCoverWithItem
           ? _value.storeCoverWithItem
           : storeCoverWithItem // ignore: cast_nullable_to_non_nullable
-              as bool,
-      storeMetadataWithItem: null == storeMetadataWithItem
+              as bool?,
+      storeMetadataWithItem: freezed == storeMetadataWithItem
           ? _value.storeMetadataWithItem
           : storeMetadataWithItem // ignore: cast_nullable_to_non_nullable
-              as bool,
-      metadataFileFormat: null == metadataFileFormat
+              as bool?,
+      metadataFileFormat: freezed == metadataFileFormat
           ? _value.metadataFileFormat
           : metadataFileFormat // ignore: cast_nullable_to_non_nullable
-              as String,
-      rateLimitLoginRequests: null == rateLimitLoginRequests
+              as String?,
+      rateLimitLoginRequests: freezed == rateLimitLoginRequests
           ? _value.rateLimitLoginRequests
           : rateLimitLoginRequests // ignore: cast_nullable_to_non_nullable
-              as int,
-      rateLimitLoginWindow: null == rateLimitLoginWindow
+              as int?,
+      rateLimitLoginWindow: freezed == rateLimitLoginWindow
           ? _value.rateLimitLoginWindow
           : rateLimitLoginWindow // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      backupSchedule: null == backupSchedule
-          ? _value.backupSchedule
-          : backupSchedule // ignore: cast_nullable_to_non_nullable
-              as CronExpression,
-      backupsToKeep: null == backupsToKeep
+              as Duration?,
+      backupsToKeep: freezed == backupsToKeep
           ? _value.backupsToKeep
           : backupsToKeep // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxBackupSize: null == maxBackupSize
+              as int?,
+      maxBackupSize: freezed == maxBackupSize
           ? _value.maxBackupSize
           : maxBackupSize // ignore: cast_nullable_to_non_nullable
-              as int,
-      loggerDailyLogsToKeep: null == loggerDailyLogsToKeep
+              as int?,
+      loggerDailyLogsToKeep: freezed == loggerDailyLogsToKeep
           ? _value.loggerDailyLogsToKeep
           : loggerDailyLogsToKeep // ignore: cast_nullable_to_non_nullable
-              as int,
-      loggerScannerLogsToKeep: null == loggerScannerLogsToKeep
+              as int?,
+      loggerScannerLogsToKeep: freezed == loggerScannerLogsToKeep
           ? _value.loggerScannerLogsToKeep
           : loggerScannerLogsToKeep // ignore: cast_nullable_to_non_nullable
-              as int,
-      homeBookshelfView: null == homeBookshelfView
+              as int?,
+      homeBookshelfView: freezed == homeBookshelfView
           ? _value.homeBookshelfView
           : homeBookshelfView // ignore: cast_nullable_to_non_nullable
-              as bool,
-      bookshelfView: null == bookshelfView
+              as bool?,
+      bookshelfView: freezed == bookshelfView
           ? _value.bookshelfView
           : bookshelfView // ignore: cast_nullable_to_non_nullable
-              as bool,
-      sortingIgnorePrefix: null == sortingIgnorePrefix
+              as bool?,
+      sortingIgnorePrefix: freezed == sortingIgnorePrefix
           ? _value.sortingIgnorePrefix
           : sortingIgnorePrefix // ignore: cast_nullable_to_non_nullable
-              as bool,
-      sortingPrefixes: null == sortingPrefixes
+              as bool?,
+      sortingPrefixes: freezed == sortingPrefixes
           ? _value.sortingPrefixes
           : sortingPrefixes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      chromecastEnabled: null == chromecastEnabled
+              as List<String>?,
+      chromecastEnabled: freezed == chromecastEnabled
           ? _value.chromecastEnabled
           : chromecastEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      dateFormat: null == dateFormat
+              as bool?,
+      dateFormat: freezed == dateFormat
           ? _value.dateFormat
           : dateFormat // ignore: cast_nullable_to_non_nullable
-              as DateFormat,
-      language: null == language
+              as DateFormat?,
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as ServerLanguage,
-      logLevel: null == logLevel
+              as ServerLanguage?,
+      logLevel: freezed == logLevel
           ? _value.logLevel
           : logLevel // ignore: cast_nullable_to_non_nullable
-              as LogLevel,
-      version: null == version
+              as LogLevel?,
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
-  }
-
-  /// Create a copy of ServerSettings
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $CronExpressionCopyWith<$Res> get backupSchedule {
-    return $CronExpressionCopyWith<$Res>(_value.backupSchedule, (value) {
-      return _then(_value.copyWith(backupSchedule: value) as $Val);
-    });
   }
 }
 
@@ -261,34 +243,30 @@ abstract class _$$ServerSettingsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id,
-      bool scannerFindCovers,
-      MetadataProvider scannerCoverProvider,
-      bool scannerParseSubtitle,
-      bool scannerPreferMatchedMetadata,
-      bool scannerDisableWatcher,
-      bool storeCoverWithItem,
-      bool storeMetadataWithItem,
-      String metadataFileFormat,
-      int rateLimitLoginRequests,
-      @DurationMsConverter() Duration rateLimitLoginWindow,
-      CronExpression backupSchedule,
-      int backupsToKeep,
-      int maxBackupSize,
-      int loggerDailyLogsToKeep,
-      int loggerScannerLogsToKeep,
-      @BoolBinaryConverter() bool homeBookshelfView,
-      @BoolBinaryConverter() bool bookshelfView,
-      bool sortingIgnorePrefix,
-      List<String> sortingPrefixes,
-      bool chromecastEnabled,
-      DateFormat dateFormat,
-      ServerLanguage language,
-      LogLevel logLevel,
-      String version});
-
-  @override
-  $CronExpressionCopyWith<$Res> get backupSchedule;
+      {String? id,
+      bool? scannerFindCovers,
+      MetadataProvider? scannerCoverProvider,
+      bool? scannerParseSubtitle,
+      bool? scannerPreferMatchedMetadata,
+      bool? scannerDisableWatcher,
+      bool? storeCoverWithItem,
+      bool? storeMetadataWithItem,
+      String? metadataFileFormat,
+      int? rateLimitLoginRequests,
+      @DurationMsConverter() Duration? rateLimitLoginWindow,
+      int? backupsToKeep,
+      int? maxBackupSize,
+      int? loggerDailyLogsToKeep,
+      int? loggerScannerLogsToKeep,
+      @BoolBinaryConverter() bool? homeBookshelfView,
+      @BoolBinaryConverter() bool? bookshelfView,
+      bool? sortingIgnorePrefix,
+      List<String>? sortingPrefixes,
+      bool? chromecastEnabled,
+      DateFormat? dateFormat,
+      ServerLanguage? language,
+      LogLevel? logLevel,
+      String? version});
 }
 
 /// @nodoc
@@ -304,133 +282,128 @@ class __$$ServerSettingsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? scannerFindCovers = null,
-    Object? scannerCoverProvider = null,
-    Object? scannerParseSubtitle = null,
-    Object? scannerPreferMatchedMetadata = null,
-    Object? scannerDisableWatcher = null,
-    Object? storeCoverWithItem = null,
-    Object? storeMetadataWithItem = null,
-    Object? metadataFileFormat = null,
-    Object? rateLimitLoginRequests = null,
-    Object? rateLimitLoginWindow = null,
-    Object? backupSchedule = null,
-    Object? backupsToKeep = null,
-    Object? maxBackupSize = null,
-    Object? loggerDailyLogsToKeep = null,
-    Object? loggerScannerLogsToKeep = null,
-    Object? homeBookshelfView = null,
-    Object? bookshelfView = null,
-    Object? sortingIgnorePrefix = null,
-    Object? sortingPrefixes = null,
-    Object? chromecastEnabled = null,
-    Object? dateFormat = null,
-    Object? language = null,
-    Object? logLevel = null,
-    Object? version = null,
+    Object? id = freezed,
+    Object? scannerFindCovers = freezed,
+    Object? scannerCoverProvider = freezed,
+    Object? scannerParseSubtitle = freezed,
+    Object? scannerPreferMatchedMetadata = freezed,
+    Object? scannerDisableWatcher = freezed,
+    Object? storeCoverWithItem = freezed,
+    Object? storeMetadataWithItem = freezed,
+    Object? metadataFileFormat = freezed,
+    Object? rateLimitLoginRequests = freezed,
+    Object? rateLimitLoginWindow = freezed,
+    Object? backupsToKeep = freezed,
+    Object? maxBackupSize = freezed,
+    Object? loggerDailyLogsToKeep = freezed,
+    Object? loggerScannerLogsToKeep = freezed,
+    Object? homeBookshelfView = freezed,
+    Object? bookshelfView = freezed,
+    Object? sortingIgnorePrefix = freezed,
+    Object? sortingPrefixes = freezed,
+    Object? chromecastEnabled = freezed,
+    Object? dateFormat = freezed,
+    Object? language = freezed,
+    Object? logLevel = freezed,
+    Object? version = freezed,
   }) {
     return _then(_$ServerSettingsImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      scannerFindCovers: null == scannerFindCovers
+              as String?,
+      scannerFindCovers: freezed == scannerFindCovers
           ? _value.scannerFindCovers
           : scannerFindCovers // ignore: cast_nullable_to_non_nullable
-              as bool,
-      scannerCoverProvider: null == scannerCoverProvider
+              as bool?,
+      scannerCoverProvider: freezed == scannerCoverProvider
           ? _value.scannerCoverProvider
           : scannerCoverProvider // ignore: cast_nullable_to_non_nullable
-              as MetadataProvider,
-      scannerParseSubtitle: null == scannerParseSubtitle
+              as MetadataProvider?,
+      scannerParseSubtitle: freezed == scannerParseSubtitle
           ? _value.scannerParseSubtitle
           : scannerParseSubtitle // ignore: cast_nullable_to_non_nullable
-              as bool,
-      scannerPreferMatchedMetadata: null == scannerPreferMatchedMetadata
+              as bool?,
+      scannerPreferMatchedMetadata: freezed == scannerPreferMatchedMetadata
           ? _value.scannerPreferMatchedMetadata
           : scannerPreferMatchedMetadata // ignore: cast_nullable_to_non_nullable
-              as bool,
-      scannerDisableWatcher: null == scannerDisableWatcher
+              as bool?,
+      scannerDisableWatcher: freezed == scannerDisableWatcher
           ? _value.scannerDisableWatcher
           : scannerDisableWatcher // ignore: cast_nullable_to_non_nullable
-              as bool,
-      storeCoverWithItem: null == storeCoverWithItem
+              as bool?,
+      storeCoverWithItem: freezed == storeCoverWithItem
           ? _value.storeCoverWithItem
           : storeCoverWithItem // ignore: cast_nullable_to_non_nullable
-              as bool,
-      storeMetadataWithItem: null == storeMetadataWithItem
+              as bool?,
+      storeMetadataWithItem: freezed == storeMetadataWithItem
           ? _value.storeMetadataWithItem
           : storeMetadataWithItem // ignore: cast_nullable_to_non_nullable
-              as bool,
-      metadataFileFormat: null == metadataFileFormat
+              as bool?,
+      metadataFileFormat: freezed == metadataFileFormat
           ? _value.metadataFileFormat
           : metadataFileFormat // ignore: cast_nullable_to_non_nullable
-              as String,
-      rateLimitLoginRequests: null == rateLimitLoginRequests
+              as String?,
+      rateLimitLoginRequests: freezed == rateLimitLoginRequests
           ? _value.rateLimitLoginRequests
           : rateLimitLoginRequests // ignore: cast_nullable_to_non_nullable
-              as int,
-      rateLimitLoginWindow: null == rateLimitLoginWindow
+              as int?,
+      rateLimitLoginWindow: freezed == rateLimitLoginWindow
           ? _value.rateLimitLoginWindow
           : rateLimitLoginWindow // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      backupSchedule: null == backupSchedule
-          ? _value.backupSchedule
-          : backupSchedule // ignore: cast_nullable_to_non_nullable
-              as CronExpression,
-      backupsToKeep: null == backupsToKeep
+              as Duration?,
+      backupsToKeep: freezed == backupsToKeep
           ? _value.backupsToKeep
           : backupsToKeep // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxBackupSize: null == maxBackupSize
+              as int?,
+      maxBackupSize: freezed == maxBackupSize
           ? _value.maxBackupSize
           : maxBackupSize // ignore: cast_nullable_to_non_nullable
-              as int,
-      loggerDailyLogsToKeep: null == loggerDailyLogsToKeep
+              as int?,
+      loggerDailyLogsToKeep: freezed == loggerDailyLogsToKeep
           ? _value.loggerDailyLogsToKeep
           : loggerDailyLogsToKeep // ignore: cast_nullable_to_non_nullable
-              as int,
-      loggerScannerLogsToKeep: null == loggerScannerLogsToKeep
+              as int?,
+      loggerScannerLogsToKeep: freezed == loggerScannerLogsToKeep
           ? _value.loggerScannerLogsToKeep
           : loggerScannerLogsToKeep // ignore: cast_nullable_to_non_nullable
-              as int,
-      homeBookshelfView: null == homeBookshelfView
+              as int?,
+      homeBookshelfView: freezed == homeBookshelfView
           ? _value.homeBookshelfView
           : homeBookshelfView // ignore: cast_nullable_to_non_nullable
-              as bool,
-      bookshelfView: null == bookshelfView
+              as bool?,
+      bookshelfView: freezed == bookshelfView
           ? _value.bookshelfView
           : bookshelfView // ignore: cast_nullable_to_non_nullable
-              as bool,
-      sortingIgnorePrefix: null == sortingIgnorePrefix
+              as bool?,
+      sortingIgnorePrefix: freezed == sortingIgnorePrefix
           ? _value.sortingIgnorePrefix
           : sortingIgnorePrefix // ignore: cast_nullable_to_non_nullable
-              as bool,
-      sortingPrefixes: null == sortingPrefixes
+              as bool?,
+      sortingPrefixes: freezed == sortingPrefixes
           ? _value._sortingPrefixes
           : sortingPrefixes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      chromecastEnabled: null == chromecastEnabled
+              as List<String>?,
+      chromecastEnabled: freezed == chromecastEnabled
           ? _value.chromecastEnabled
           : chromecastEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      dateFormat: null == dateFormat
+              as bool?,
+      dateFormat: freezed == dateFormat
           ? _value.dateFormat
           : dateFormat // ignore: cast_nullable_to_non_nullable
-              as DateFormat,
-      language: null == language
+              as DateFormat?,
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as ServerLanguage,
-      logLevel: null == logLevel
+              as ServerLanguage?,
+      logLevel: freezed == logLevel
           ? _value.logLevel
           : logLevel // ignore: cast_nullable_to_non_nullable
-              as LogLevel,
-      version: null == version
+              as LogLevel?,
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -440,99 +413,99 @@ class __$$ServerSettingsImplCopyWithImpl<$Res>
 @jsonConverters
 class _$ServerSettingsImpl implements _ServerSettings {
   const _$ServerSettingsImpl(
-      {required this.id,
-      required this.scannerFindCovers,
-      required this.scannerCoverProvider,
-      required this.scannerParseSubtitle,
-      required this.scannerPreferMatchedMetadata,
-      required this.scannerDisableWatcher,
-      required this.storeCoverWithItem,
-      required this.storeMetadataWithItem,
-      required this.metadataFileFormat,
-      required this.rateLimitLoginRequests,
-      @DurationMsConverter() required this.rateLimitLoginWindow,
-      required this.backupSchedule,
-      required this.backupsToKeep,
-      required this.maxBackupSize,
-      required this.loggerDailyLogsToKeep,
-      required this.loggerScannerLogsToKeep,
-      @BoolBinaryConverter() required this.homeBookshelfView,
-      @BoolBinaryConverter() required this.bookshelfView,
-      required this.sortingIgnorePrefix,
-      required final List<String> sortingPrefixes,
-      required this.chromecastEnabled,
-      required this.dateFormat,
-      required this.language,
-      required this.logLevel,
-      required this.version})
+      {this.id,
+      this.scannerFindCovers,
+      this.scannerCoverProvider,
+      this.scannerParseSubtitle,
+      this.scannerPreferMatchedMetadata,
+      this.scannerDisableWatcher,
+      this.storeCoverWithItem,
+      this.storeMetadataWithItem,
+      this.metadataFileFormat,
+      this.rateLimitLoginRequests,
+      @DurationMsConverter() this.rateLimitLoginWindow,
+      this.backupsToKeep,
+      this.maxBackupSize,
+      this.loggerDailyLogsToKeep,
+      this.loggerScannerLogsToKeep,
+      @BoolBinaryConverter() this.homeBookshelfView,
+      @BoolBinaryConverter() this.bookshelfView,
+      this.sortingIgnorePrefix,
+      final List<String>? sortingPrefixes,
+      this.chromecastEnabled,
+      this.dateFormat,
+      this.language,
+      this.logLevel,
+      this.version})
       : _sortingPrefixes = sortingPrefixes;
 
   factory _$ServerSettingsImpl.fromJson(Map<String, dynamic> json) =>
       _$$ServerSettingsImplFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
-  final bool scannerFindCovers;
+  final bool? scannerFindCovers;
   @override
-  final MetadataProvider scannerCoverProvider;
+  final MetadataProvider? scannerCoverProvider;
   @override
-  final bool scannerParseSubtitle;
+  final bool? scannerParseSubtitle;
   @override
-  final bool scannerPreferMatchedMetadata;
+  final bool? scannerPreferMatchedMetadata;
   @override
-  final bool scannerDisableWatcher;
+  final bool? scannerDisableWatcher;
   @override
-  final bool storeCoverWithItem;
+  final bool? storeCoverWithItem;
   @override
-  final bool storeMetadataWithItem;
+  final bool? storeMetadataWithItem;
   @override
-  final String metadataFileFormat;
+  final String? metadataFileFormat;
   @override
-  final int rateLimitLoginRequests;
+  final int? rateLimitLoginRequests;
   @override
   @DurationMsConverter()
-  final Duration rateLimitLoginWindow;
+  final Duration? rateLimitLoginWindow;
+// CronExpression? backupSchedule,
   @override
-  final CronExpression backupSchedule;
+  final int? backupsToKeep;
   @override
-  final int backupsToKeep;
+  final int? maxBackupSize;
   @override
-  final int maxBackupSize;
+  final int? loggerDailyLogsToKeep;
   @override
-  final int loggerDailyLogsToKeep;
-  @override
-  final int loggerScannerLogsToKeep;
-  @override
-  @BoolBinaryConverter()
-  final bool homeBookshelfView;
+  final int? loggerScannerLogsToKeep;
   @override
   @BoolBinaryConverter()
-  final bool bookshelfView;
+  final bool? homeBookshelfView;
   @override
-  final bool sortingIgnorePrefix;
-  final List<String> _sortingPrefixes;
+  @BoolBinaryConverter()
+  final bool? bookshelfView;
   @override
-  List<String> get sortingPrefixes {
+  final bool? sortingIgnorePrefix;
+  final List<String>? _sortingPrefixes;
+  @override
+  List<String>? get sortingPrefixes {
+    final value = _sortingPrefixes;
+    if (value == null) return null;
     if (_sortingPrefixes is EqualUnmodifiableListView) return _sortingPrefixes;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_sortingPrefixes);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
-  final bool chromecastEnabled;
+  final bool? chromecastEnabled;
   @override
-  final DateFormat dateFormat;
+  final DateFormat? dateFormat;
   @override
-  final ServerLanguage language;
+  final ServerLanguage? language;
   @override
-  final LogLevel logLevel;
+  final LogLevel? logLevel;
   @override
-  final String version;
+  final String? version;
 
   @override
   String toString() {
-    return 'ServerSettings(id: $id, scannerFindCovers: $scannerFindCovers, scannerCoverProvider: $scannerCoverProvider, scannerParseSubtitle: $scannerParseSubtitle, scannerPreferMatchedMetadata: $scannerPreferMatchedMetadata, scannerDisableWatcher: $scannerDisableWatcher, storeCoverWithItem: $storeCoverWithItem, storeMetadataWithItem: $storeMetadataWithItem, metadataFileFormat: $metadataFileFormat, rateLimitLoginRequests: $rateLimitLoginRequests, rateLimitLoginWindow: $rateLimitLoginWindow, backupSchedule: $backupSchedule, backupsToKeep: $backupsToKeep, maxBackupSize: $maxBackupSize, loggerDailyLogsToKeep: $loggerDailyLogsToKeep, loggerScannerLogsToKeep: $loggerScannerLogsToKeep, homeBookshelfView: $homeBookshelfView, bookshelfView: $bookshelfView, sortingIgnorePrefix: $sortingIgnorePrefix, sortingPrefixes: $sortingPrefixes, chromecastEnabled: $chromecastEnabled, dateFormat: $dateFormat, language: $language, logLevel: $logLevel, version: $version)';
+    return 'ServerSettings(id: $id, scannerFindCovers: $scannerFindCovers, scannerCoverProvider: $scannerCoverProvider, scannerParseSubtitle: $scannerParseSubtitle, scannerPreferMatchedMetadata: $scannerPreferMatchedMetadata, scannerDisableWatcher: $scannerDisableWatcher, storeCoverWithItem: $storeCoverWithItem, storeMetadataWithItem: $storeMetadataWithItem, metadataFileFormat: $metadataFileFormat, rateLimitLoginRequests: $rateLimitLoginRequests, rateLimitLoginWindow: $rateLimitLoginWindow, backupsToKeep: $backupsToKeep, maxBackupSize: $maxBackupSize, loggerDailyLogsToKeep: $loggerDailyLogsToKeep, loggerScannerLogsToKeep: $loggerScannerLogsToKeep, homeBookshelfView: $homeBookshelfView, bookshelfView: $bookshelfView, sortingIgnorePrefix: $sortingIgnorePrefix, sortingPrefixes: $sortingPrefixes, chromecastEnabled: $chromecastEnabled, dateFormat: $dateFormat, language: $language, logLevel: $logLevel, version: $version)';
   }
 
   @override
@@ -563,8 +536,6 @@ class _$ServerSettingsImpl implements _ServerSettings {
                 other.rateLimitLoginRequests == rateLimitLoginRequests) &&
             (identical(other.rateLimitLoginWindow, rateLimitLoginWindow) ||
                 other.rateLimitLoginWindow == rateLimitLoginWindow) &&
-            (identical(other.backupSchedule, backupSchedule) ||
-                other.backupSchedule == backupSchedule) &&
             (identical(other.backupsToKeep, backupsToKeep) ||
                 other.backupsToKeep == backupsToKeep) &&
             (identical(other.maxBackupSize, maxBackupSize) ||
@@ -608,7 +579,6 @@ class _$ServerSettingsImpl implements _ServerSettings {
         metadataFileFormat,
         rateLimitLoginRequests,
         rateLimitLoginWindow,
-        backupSchedule,
         backupsToKeep,
         maxBackupSize,
         loggerDailyLogsToKeep,
@@ -643,88 +613,85 @@ class _$ServerSettingsImpl implements _ServerSettings {
 
 abstract class _ServerSettings implements ServerSettings {
   const factory _ServerSettings(
-      {required final String id,
-      required final bool scannerFindCovers,
-      required final MetadataProvider scannerCoverProvider,
-      required final bool scannerParseSubtitle,
-      required final bool scannerPreferMatchedMetadata,
-      required final bool scannerDisableWatcher,
-      required final bool storeCoverWithItem,
-      required final bool storeMetadataWithItem,
-      required final String metadataFileFormat,
-      required final int rateLimitLoginRequests,
-      @DurationMsConverter() required final Duration rateLimitLoginWindow,
-      required final CronExpression backupSchedule,
-      required final int backupsToKeep,
-      required final int maxBackupSize,
-      required final int loggerDailyLogsToKeep,
-      required final int loggerScannerLogsToKeep,
-      @BoolBinaryConverter() required final bool homeBookshelfView,
-      @BoolBinaryConverter() required final bool bookshelfView,
-      required final bool sortingIgnorePrefix,
-      required final List<String> sortingPrefixes,
-      required final bool chromecastEnabled,
-      required final DateFormat dateFormat,
-      required final ServerLanguage language,
-      required final LogLevel logLevel,
-      required final String version}) = _$ServerSettingsImpl;
+      {final String? id,
+      final bool? scannerFindCovers,
+      final MetadataProvider? scannerCoverProvider,
+      final bool? scannerParseSubtitle,
+      final bool? scannerPreferMatchedMetadata,
+      final bool? scannerDisableWatcher,
+      final bool? storeCoverWithItem,
+      final bool? storeMetadataWithItem,
+      final String? metadataFileFormat,
+      final int? rateLimitLoginRequests,
+      @DurationMsConverter() final Duration? rateLimitLoginWindow,
+      final int? backupsToKeep,
+      final int? maxBackupSize,
+      final int? loggerDailyLogsToKeep,
+      final int? loggerScannerLogsToKeep,
+      @BoolBinaryConverter() final bool? homeBookshelfView,
+      @BoolBinaryConverter() final bool? bookshelfView,
+      final bool? sortingIgnorePrefix,
+      final List<String>? sortingPrefixes,
+      final bool? chromecastEnabled,
+      final DateFormat? dateFormat,
+      final ServerLanguage? language,
+      final LogLevel? logLevel,
+      final String? version}) = _$ServerSettingsImpl;
 
   factory _ServerSettings.fromJson(Map<String, dynamic> json) =
       _$ServerSettingsImpl.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
-  bool get scannerFindCovers;
+  bool? get scannerFindCovers;
   @override
-  MetadataProvider get scannerCoverProvider;
+  MetadataProvider? get scannerCoverProvider;
   @override
-  bool get scannerParseSubtitle;
+  bool? get scannerParseSubtitle;
   @override
-  bool get scannerPreferMatchedMetadata;
+  bool? get scannerPreferMatchedMetadata;
   @override
-  bool get scannerDisableWatcher;
+  bool? get scannerDisableWatcher;
   @override
-  bool get storeCoverWithItem;
+  bool? get storeCoverWithItem;
   @override
-  bool get storeMetadataWithItem;
+  bool? get storeMetadataWithItem;
   @override
-  String get metadataFileFormat;
+  String? get metadataFileFormat;
   @override
-  int get rateLimitLoginRequests;
+  int? get rateLimitLoginRequests;
   @override
   @DurationMsConverter()
-  Duration get rateLimitLoginWindow;
+  Duration? get rateLimitLoginWindow; // CronExpression? backupSchedule,
   @override
-  CronExpression get backupSchedule;
+  int? get backupsToKeep;
   @override
-  int get backupsToKeep;
+  int? get maxBackupSize;
   @override
-  int get maxBackupSize;
+  int? get loggerDailyLogsToKeep;
   @override
-  int get loggerDailyLogsToKeep;
-  @override
-  int get loggerScannerLogsToKeep;
+  int? get loggerScannerLogsToKeep;
   @override
   @BoolBinaryConverter()
-  bool get homeBookshelfView;
+  bool? get homeBookshelfView;
   @override
   @BoolBinaryConverter()
-  bool get bookshelfView;
+  bool? get bookshelfView;
   @override
-  bool get sortingIgnorePrefix;
+  bool? get sortingIgnorePrefix;
   @override
-  List<String> get sortingPrefixes;
+  List<String>? get sortingPrefixes;
   @override
-  bool get chromecastEnabled;
+  bool? get chromecastEnabled;
   @override
-  DateFormat get dateFormat;
+  DateFormat? get dateFormat;
   @override
-  ServerLanguage get language;
+  ServerLanguage? get language;
   @override
-  LogLevel get logLevel;
+  LogLevel? get logLevel;
   @override
-  String get version;
+  String? get version;
 
   /// Create a copy of ServerSettings
   /// with the given fields replaced by the non-null parameter values.

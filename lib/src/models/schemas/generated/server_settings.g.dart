@@ -8,39 +8,38 @@ part of '../server_settings.dart';
 
 _$ServerSettingsImpl _$$ServerSettingsImplFromJson(Map<String, dynamic> json) =>
     _$ServerSettingsImpl(
-      id: json['id'] as String,
-      scannerFindCovers: json['scannerFindCovers'] as bool,
-      scannerCoverProvider:
-          $enumDecode(_$MetadataProviderEnumMap, json['scannerCoverProvider']),
-      scannerParseSubtitle: json['scannerParseSubtitle'] as bool,
+      id: json['id'] as String?,
+      scannerFindCovers: json['scannerFindCovers'] as bool?,
+      scannerCoverProvider: $enumDecodeNullable(
+          _$MetadataProviderEnumMap, json['scannerCoverProvider']),
+      scannerParseSubtitle: json['scannerParseSubtitle'] as bool?,
       scannerPreferMatchedMetadata:
-          json['scannerPreferMatchedMetadata'] as bool,
-      scannerDisableWatcher: json['scannerDisableWatcher'] as bool,
-      storeCoverWithItem: json['storeCoverWithItem'] as bool,
-      storeMetadataWithItem: json['storeMetadataWithItem'] as bool,
-      metadataFileFormat: json['metadataFileFormat'] as String,
-      rateLimitLoginRequests: (json['rateLimitLoginRequests'] as num).toInt(),
-      rateLimitLoginWindow: const DurationMsConverter()
-          .fromJson((json['rateLimitLoginWindow'] as num).toInt()),
-      backupSchedule: const CronExpressionConverter()
-          .fromJson(json['backupSchedule'] as String),
-      backupsToKeep: (json['backupsToKeep'] as num).toInt(),
-      maxBackupSize: (json['maxBackupSize'] as num).toInt(),
-      loggerDailyLogsToKeep: (json['loggerDailyLogsToKeep'] as num).toInt(),
-      loggerScannerLogsToKeep: (json['loggerScannerLogsToKeep'] as num).toInt(),
-      homeBookshelfView: const BoolBinaryConverter()
-          .fromJson((json['homeBookshelfView'] as num).toInt()),
-      bookshelfView: const BoolBinaryConverter()
-          .fromJson((json['bookshelfView'] as num).toInt()),
-      sortingIgnorePrefix: json['sortingIgnorePrefix'] as bool,
-      sortingPrefixes: (json['sortingPrefixes'] as List<dynamic>)
-          .map((e) => e as String)
+          json['scannerPreferMatchedMetadata'] as bool?,
+      scannerDisableWatcher: json['scannerDisableWatcher'] as bool?,
+      storeCoverWithItem: json['storeCoverWithItem'] as bool?,
+      storeMetadataWithItem: json['storeMetadataWithItem'] as bool?,
+      metadataFileFormat: json['metadataFileFormat'] as String?,
+      rateLimitLoginRequests: (json['rateLimitLoginRequests'] as num?)?.toInt(),
+      rateLimitLoginWindow: _$JsonConverterFromJson<int, Duration>(
+          json['rateLimitLoginWindow'], const DurationMsConverter().fromJson),
+      backupsToKeep: (json['backupsToKeep'] as num?)?.toInt(),
+      maxBackupSize: (json['maxBackupSize'] as num?)?.toInt(),
+      loggerDailyLogsToKeep: (json['loggerDailyLogsToKeep'] as num?)?.toInt(),
+      loggerScannerLogsToKeep:
+          (json['loggerScannerLogsToKeep'] as num?)?.toInt(),
+      homeBookshelfView: _$JsonConverterFromJson<int, bool>(
+          json['homeBookshelfView'], const BoolBinaryConverter().fromJson),
+      bookshelfView: _$JsonConverterFromJson<int, bool>(
+          json['bookshelfView'], const BoolBinaryConverter().fromJson),
+      sortingIgnorePrefix: json['sortingIgnorePrefix'] as bool?,
+      sortingPrefixes: (json['sortingPrefixes'] as List<dynamic>?)
+          ?.map((e) => e as String)
           .toList(),
-      chromecastEnabled: json['chromecastEnabled'] as bool,
-      dateFormat: $enumDecode(_$DateFormatEnumMap, json['dateFormat']),
-      language: $enumDecode(_$ServerLanguageEnumMap, json['language']),
-      logLevel: $enumDecode(_$LogLevelEnumMap, json['logLevel']),
-      version: json['version'] as String,
+      chromecastEnabled: json['chromecastEnabled'] as bool?,
+      dateFormat: $enumDecodeNullable(_$DateFormatEnumMap, json['dateFormat']),
+      language: $enumDecodeNullable(_$ServerLanguageEnumMap, json['language']),
+      logLevel: $enumDecodeNullable(_$LogLevelEnumMap, json['logLevel']),
+      version: json['version'] as String?,
     );
 
 Map<String, dynamic> _$$ServerSettingsImplToJson(
@@ -49,7 +48,7 @@ Map<String, dynamic> _$$ServerSettingsImplToJson(
       'id': instance.id,
       'scannerFindCovers': instance.scannerFindCovers,
       'scannerCoverProvider':
-          _$MetadataProviderEnumMap[instance.scannerCoverProvider]!,
+          _$MetadataProviderEnumMap[instance.scannerCoverProvider],
       'scannerParseSubtitle': instance.scannerParseSubtitle,
       'scannerPreferMatchedMetadata': instance.scannerPreferMatchedMetadata,
       'scannerDisableWatcher': instance.scannerDisableWatcher,
@@ -57,24 +56,22 @@ Map<String, dynamic> _$$ServerSettingsImplToJson(
       'storeMetadataWithItem': instance.storeMetadataWithItem,
       'metadataFileFormat': instance.metadataFileFormat,
       'rateLimitLoginRequests': instance.rateLimitLoginRequests,
-      'rateLimitLoginWindow':
-          const DurationMsConverter().toJson(instance.rateLimitLoginWindow),
-      'backupSchedule':
-          const CronExpressionConverter().toJson(instance.backupSchedule),
+      'rateLimitLoginWindow': _$JsonConverterToJson<int, Duration>(
+          instance.rateLimitLoginWindow, const DurationMsConverter().toJson),
       'backupsToKeep': instance.backupsToKeep,
       'maxBackupSize': instance.maxBackupSize,
       'loggerDailyLogsToKeep': instance.loggerDailyLogsToKeep,
       'loggerScannerLogsToKeep': instance.loggerScannerLogsToKeep,
-      'homeBookshelfView':
-          const BoolBinaryConverter().toJson(instance.homeBookshelfView),
-      'bookshelfView':
-          const BoolBinaryConverter().toJson(instance.bookshelfView),
+      'homeBookshelfView': _$JsonConverterToJson<int, bool>(
+          instance.homeBookshelfView, const BoolBinaryConverter().toJson),
+      'bookshelfView': _$JsonConverterToJson<int, bool>(
+          instance.bookshelfView, const BoolBinaryConverter().toJson),
       'sortingIgnorePrefix': instance.sortingIgnorePrefix,
       'sortingPrefixes': instance.sortingPrefixes,
       'chromecastEnabled': instance.chromecastEnabled,
-      'dateFormat': _$DateFormatEnumMap[instance.dateFormat]!,
-      'language': _$ServerLanguageEnumMap[instance.language]!,
-      'logLevel': _$LogLevelEnumMap[instance.logLevel]!,
+      'dateFormat': _$DateFormatEnumMap[instance.dateFormat],
+      'language': _$ServerLanguageEnumMap[instance.language],
+      'logLevel': _$LogLevelEnumMap[instance.logLevel],
       'version': instance.version,
     };
 
@@ -94,6 +91,12 @@ const _$MetadataProviderEnumMap = {
   MetadataProvider.audibleEs: 'audible.es',
   MetadataProvider.fantLab: 'fantlab',
 };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
 
 const _$DateFormatEnumMap = {
   DateFormat.monthFirst: 'MM/dd/yyyy',
@@ -117,3 +120,9 @@ const _$LogLevelEnumMap = {
   LogLevel.warning: 3,
   LogLevel.error: 4,
 };
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
