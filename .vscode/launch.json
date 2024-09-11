@@ -8,8 +8,7 @@
       "name": "debug debug.dart",
       "request": "launch",
       "type": "dart",
-      "program": "${workspaceFolder}/.playground/debug.dart",
-
+      "program": "${workspaceFolder}/playground/debug.dart"
     }
   ]
 }
