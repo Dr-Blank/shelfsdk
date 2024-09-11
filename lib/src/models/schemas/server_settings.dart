@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/json_converters.dart';
-import '../enums/date_format.dart';
 import '../enums/log_level.dart';
 import '../enums/metadata_provider.dart';
 import '../enums/server_language.dart';
@@ -36,7 +35,7 @@ class ServerSettings with _$ServerSettings {
     bool? sortingIgnorePrefix,
     List<String>? sortingPrefixes,
     bool? chromecastEnabled,
-    DateFormat? dateFormat,
+    String? dateFormat,
     ServerLanguage? language,
     LogLevel? logLevel,
     String? version,

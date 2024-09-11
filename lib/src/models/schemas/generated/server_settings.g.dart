@@ -36,7 +36,7 @@ _$ServerSettingsImpl _$$ServerSettingsImplFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       chromecastEnabled: json['chromecastEnabled'] as bool?,
-      dateFormat: $enumDecodeNullable(_$DateFormatEnumMap, json['dateFormat']),
+      dateFormat: json['dateFormat'] as String?,
       language: $enumDecodeNullable(_$ServerLanguageEnumMap, json['language']),
       logLevel: $enumDecodeNullable(_$LogLevelEnumMap, json['logLevel']),
       version: json['version'] as String?,
@@ -69,7 +69,7 @@ Map<String, dynamic> _$$ServerSettingsImplToJson(
       'sortingIgnorePrefix': instance.sortingIgnorePrefix,
       'sortingPrefixes': instance.sortingPrefixes,
       'chromecastEnabled': instance.chromecastEnabled,
-      'dateFormat': _$DateFormatEnumMap[instance.dateFormat],
+      'dateFormat': instance.dateFormat,
       'language': _$ServerLanguageEnumMap[instance.language],
       'logLevel': _$LogLevelEnumMap[instance.logLevel],
       'version': instance.version,
@@ -97,12 +97,6 @@ Value? _$JsonConverterFromJson<Json, Value>(
   Value? Function(Json json) fromJson,
 ) =>
     json == null ? null : fromJson(json as Json);
-
-const _$DateFormatEnumMap = {
-  DateFormat.monthFirst: 'MM/dd/yyyy',
-  DateFormat.dayFirst: 'dd/MM/yyyy',
-  DateFormat.yearFirst: 'yyyy-MM-dd',
-};
 
 const _$ServerLanguageEnumMap = {
   ServerLanguage.dutch: 'de',

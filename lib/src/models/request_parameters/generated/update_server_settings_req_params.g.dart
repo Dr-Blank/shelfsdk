@@ -56,7 +56,7 @@ Map<String, dynamic> _$UpdateServerSettingsReqParamsToJson(
   writeNotNull('sortingPrefixes', instance.sortingPrefixes);
   writeNotNull('chromecastEnabled', instance.chromecastEnabled);
   writeNotNull('enableEReader', instance.enableEReader);
-  writeNotNull('dateFormat', _$DateFormatEnumMap[instance.dateFormat]);
+  writeNotNull('dateFormat', instance.dateFormat);
   writeNotNull('language', _$ServerLanguageEnumMap[instance.language]);
   writeNotNull('logLevel', _$LogLevelEnumMap[instance.logLevel]);
   return val;
@@ -84,12 +84,6 @@ Json? _$JsonConverterToJson<Json, Value>(
   Json? Function(Value value) toJson,
 ) =>
     value == null ? null : toJson(value);
-
-const _$DateFormatEnumMap = {
-  DateFormat.monthFirst: 'MM/dd/yyyy',
-  DateFormat.dayFirst: 'dd/MM/yyyy',
-  DateFormat.yearFirst: 'yyyy-MM-dd',
-};
 
 const _$ServerLanguageEnumMap = {
   ServerLanguage.dutch: 'de',

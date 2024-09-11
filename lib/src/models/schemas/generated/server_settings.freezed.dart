@@ -45,7 +45,7 @@ mixin _$ServerSettings {
   bool? get sortingIgnorePrefix => throw _privateConstructorUsedError;
   List<String>? get sortingPrefixes => throw _privateConstructorUsedError;
   bool? get chromecastEnabled => throw _privateConstructorUsedError;
-  DateFormat? get dateFormat => throw _privateConstructorUsedError;
+  String? get dateFormat => throw _privateConstructorUsedError;
   ServerLanguage? get language => throw _privateConstructorUsedError;
   LogLevel? get logLevel => throw _privateConstructorUsedError;
   String? get version => throw _privateConstructorUsedError;
@@ -87,7 +87,7 @@ abstract class $ServerSettingsCopyWith<$Res> {
       bool? sortingIgnorePrefix,
       List<String>? sortingPrefixes,
       bool? chromecastEnabled,
-      DateFormat? dateFormat,
+      String? dateFormat,
       ServerLanguage? language,
       LogLevel? logLevel,
       String? version});
@@ -217,7 +217,7 @@ class _$ServerSettingsCopyWithImpl<$Res, $Val extends ServerSettings>
       dateFormat: freezed == dateFormat
           ? _value.dateFormat
           : dateFormat // ignore: cast_nullable_to_non_nullable
-              as DateFormat?,
+              as String?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
@@ -263,7 +263,7 @@ abstract class _$$ServerSettingsImplCopyWith<$Res>
       bool? sortingIgnorePrefix,
       List<String>? sortingPrefixes,
       bool? chromecastEnabled,
-      DateFormat? dateFormat,
+      String? dateFormat,
       ServerLanguage? language,
       LogLevel? logLevel,
       String? version});
@@ -391,7 +391,7 @@ class __$$ServerSettingsImplCopyWithImpl<$Res>
       dateFormat: freezed == dateFormat
           ? _value.dateFormat
           : dateFormat // ignore: cast_nullable_to_non_nullable
-              as DateFormat?,
+              as String?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
@@ -495,7 +495,7 @@ class _$ServerSettingsImpl implements _ServerSettings {
   @override
   final bool? chromecastEnabled;
   @override
-  final DateFormat? dateFormat;
+  final String? dateFormat;
   @override
   final ServerLanguage? language;
   @override
@@ -633,7 +633,7 @@ abstract class _ServerSettings implements ServerSettings {
       final bool? sortingIgnorePrefix,
       final List<String>? sortingPrefixes,
       final bool? chromecastEnabled,
-      final DateFormat? dateFormat,
+      final String? dateFormat,
       final ServerLanguage? language,
       final LogLevel? logLevel,
       final String? version}) = _$ServerSettingsImpl;
@@ -685,7 +685,7 @@ abstract class _ServerSettings implements ServerSettings {
   @override
   bool? get chromecastEnabled;
   @override
-  DateFormat? get dateFormat;
+  String? get dateFormat;
   @override
   ServerLanguage? get language;
   @override

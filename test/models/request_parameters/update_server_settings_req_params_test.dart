@@ -27,7 +27,7 @@ void main() {
     const sortingPrefixes = ['prefix'];
     const chromecastEnabled = true;
     const enableEReader = true;
-    const dateFormat = DateFormat.dayFirst;
+    const dateFormat = 'MM/dd/yyyy';
     const language = ServerLanguage.english;
     const logLevel = LogLevel.info;
 
@@ -93,7 +93,7 @@ void main() {
           'sortingPrefixes': sortingPrefixes,
           'chromecastEnabled': chromecastEnabled,
           'enableEReader': enableEReader,
-          'dateFormat': dateFormat.value,
+          'dateFormat': dateFormat,
           'language': language.value,
           'logLevel': logLevel.value,
         });
