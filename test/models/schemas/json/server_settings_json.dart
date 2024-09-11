@@ -28,7 +28,7 @@ const sortingPrefixes = ['the', 'a'];
 const chromecastEnabled = false;
 const enableEReader = false;
 const dateFormatJson = 'MM/dd/yyyy';
-const dateFormat = DateFormat.monthFirst;
+const dateFormat = 'MM/dd/yyyy';
 const languageJson = 'en-us';
 const language = ServerLanguage.english;
 const logLevelJson = 2;
@@ -47,7 +47,7 @@ const json = {
   'metadataFileFormat': metadataFileFormat,
   'rateLimitLoginRequests': rateLimitLoginRequests,
   'rateLimitLoginWindow': rateLimitLoginWindowJson,
-  'backupSchedule': backupScheduleJson,
+  // 'backupSchedule': backupScheduleJson,
   'backupsToKeep': backupsToKeep,
   'maxBackupSize': maxBackupSize,
   'loggerDailyLogsToKeep': loggerDailyLogsToKeep,
@@ -75,7 +75,7 @@ const serverSettings = ServerSettings(
   metadataFileFormat: metadataFileFormat,
   rateLimitLoginRequests: rateLimitLoginRequests,
   rateLimitLoginWindow: rateLimitLoginWindow,
-  backupSchedule: backupSchedule,
+  // backupSchedule: backupSchedule,
   backupsToKeep: backupsToKeep,
   maxBackupSize: maxBackupSize,
   loggerDailyLogsToKeep: loggerDailyLogsToKeep,

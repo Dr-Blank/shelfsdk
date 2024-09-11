@@ -1,6 +1,5 @@
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
-import '../enums/date_format.dart';
 import '../enums/log_level.dart';
 import '../enums/metadata_provider.dart';
 import '../enums/server_language.dart';
@@ -37,7 +36,7 @@ class UpdateServerSettingsReqParams {
   final List<String>? sortingPrefixes;
   final bool? chromecastEnabled;
   final bool? enableEReader;
-  final DateFormat? dateFormat;
+  final String? dateFormat;
   final ServerLanguage? language;
   final LogLevel? logLevel;
 
