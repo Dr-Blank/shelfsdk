@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
@@ -119,6 +120,7 @@ class AudiobookshelfApi {
     Map<String, dynamic>? queryParameters,
     bool requiresAuth = false,
     ResponseErrorHandler? responseErrorHandler,
+    bool followRedirects = true,
   }) {
     return request(
       method: 'GET',
@@ -126,6 +128,7 @@ class AudiobookshelfApi {
       queryParameters: queryParameters,
       requiresAuth: requiresAuth,
       responseErrorHandler: responseErrorHandler,
+      followRedirects: followRedirects,
     );
   }
 
@@ -135,6 +138,7 @@ class AudiobookshelfApi {
     required String path,
     Map<String, dynamic>? queryParameters,
     bool requiresAuth = false,
+    Cookie? cookie,
     ResponseErrorHandler? responseErrorHandler,
     required FromJson<T> fromJson,
   }) {
@@ -143,6 +147,7 @@ class AudiobookshelfApi {
       path: path,
       queryParameters: queryParameters,
       requiresAuth: requiresAuth,
+      cookie: cookie,
       responseErrorHandler: responseErrorHandler,
       fromJson: fromJson,
     );
@@ -297,6 +302,7 @@ class AudiobookshelfApi {
     Map<String, String>? formData,
     Map<String, FileUpload>? files,
     bool requiresAuth = false,
+    Cookie? cookie,
     ResponseErrorHandler? responseErrorHandler,
     required FromJson<T> fromJson,
   }) async {
@@ -308,6 +314,7 @@ class AudiobookshelfApi {
       formData: formData,
       files: files,
       requiresAuth: requiresAuth,
+      cookie: cookie,
       responseErrorHandler: responseErrorHandler,
     );
 
@@ -360,6 +367,8 @@ class AudiobookshelfApi {
     Map<String, FileUpload>? files,
     bool requiresAuth = false,
     ResponseErrorHandler? responseErrorHandler,
+    bool followRedirects = true,
+    Cookie? cookie,
   }) async {
     if (jsonObject != null && (formData != null || files != null)) {
       throw RequestError(
@@ -459,11 +468,17 @@ class AudiobookshelfApi {
       baseRequest.headers.addAll(authHeader);
     }
 
+    if (cookie != null) {
+      baseRequest.headers['cookie'] = "${cookie.name}=${cookie.value}";
+    }
+
+    baseRequest.followRedirects = followRedirects;
+
     final response = await http.Response.fromStream(
       await client.send(baseRequest),
     );
 
-    if (responseErrorHandler != null && response.statusCode >= 300) {
+    if (responseErrorHandler != null) {
       responseErrorHandler(response);
     }
 
