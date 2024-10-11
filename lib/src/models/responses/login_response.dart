@@ -11,7 +11,7 @@ part 'generated/login_response.g.dart';
 class LoginResponse with _$LoginResponse {
   const factory LoginResponse({
     required User user,
-    required String userDefaultLibraryId,
+    String? userDefaultLibraryId,
     required ServerSettings serverSettings,
     @JsonKey(name: 'Source') required String source,
   }) = _LoginResponse;

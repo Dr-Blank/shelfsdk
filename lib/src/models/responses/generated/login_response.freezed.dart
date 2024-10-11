@@ -21,7 +21,7 @@ LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LoginResponse {
   User get user => throw _privateConstructorUsedError;
-  String get userDefaultLibraryId => throw _privateConstructorUsedError;
+  String? get userDefaultLibraryId => throw _privateConstructorUsedError;
   ServerSettings get serverSettings => throw _privateConstructorUsedError;
   @JsonKey(name: 'Source')
   String get source => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $LoginResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {User user,
-      String userDefaultLibraryId,
+      String? userDefaultLibraryId,
       ServerSettings serverSettings,
       @JsonKey(name: 'Source') String source});
 
@@ -68,7 +68,7 @@ class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse>
   @override
   $Res call({
     Object? user = null,
-    Object? userDefaultLibraryId = null,
+    Object? userDefaultLibraryId = freezed,
     Object? serverSettings = null,
     Object? source = null,
   }) {
@@ -77,10 +77,10 @@ class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User,
-      userDefaultLibraryId: null == userDefaultLibraryId
+      userDefaultLibraryId: freezed == userDefaultLibraryId
           ? _value.userDefaultLibraryId
           : userDefaultLibraryId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       serverSettings: null == serverSettings
           ? _value.serverSettings
           : serverSettings // ignore: cast_nullable_to_non_nullable
@@ -123,7 +123,7 @@ abstract class _$$LoginResponseImplCopyWith<$Res>
   @useResult
   $Res call(
       {User user,
-      String userDefaultLibraryId,
+      String? userDefaultLibraryId,
       ServerSettings serverSettings,
       @JsonKey(name: 'Source') String source});
 
@@ -147,7 +147,7 @@ class __$$LoginResponseImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? user = null,
-    Object? userDefaultLibraryId = null,
+    Object? userDefaultLibraryId = freezed,
     Object? serverSettings = null,
     Object? source = null,
   }) {
@@ -156,10 +156,10 @@ class __$$LoginResponseImplCopyWithImpl<$Res>
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User,
-      userDefaultLibraryId: null == userDefaultLibraryId
+      userDefaultLibraryId: freezed == userDefaultLibraryId
           ? _value.userDefaultLibraryId
           : userDefaultLibraryId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       serverSettings: null == serverSettings
           ? _value.serverSettings
           : serverSettings // ignore: cast_nullable_to_non_nullable
@@ -177,7 +177,7 @@ class __$$LoginResponseImplCopyWithImpl<$Res>
 class _$LoginResponseImpl implements _LoginResponse {
   const _$LoginResponseImpl(
       {required this.user,
-      required this.userDefaultLibraryId,
+      this.userDefaultLibraryId,
       required this.serverSettings,
       @JsonKey(name: 'Source') required this.source});
 
@@ -187,7 +187,7 @@ class _$LoginResponseImpl implements _LoginResponse {
   @override
   final User user;
   @override
-  final String userDefaultLibraryId;
+  final String? userDefaultLibraryId;
   @override
   final ServerSettings serverSettings;
   @override
@@ -236,7 +236,7 @@ class _$LoginResponseImpl implements _LoginResponse {
 abstract class _LoginResponse implements LoginResponse {
   const factory _LoginResponse(
           {required final User user,
-          required final String userDefaultLibraryId,
+          final String? userDefaultLibraryId,
           required final ServerSettings serverSettings,
           @JsonKey(name: 'Source') required final String source}) =
       _$LoginResponseImpl;
@@ -247,7 +247,7 @@ abstract class _LoginResponse implements LoginResponse {
   @override
   User get user;
   @override
-  String get userDefaultLibraryId;
+  String? get userDefaultLibraryId;
   @override
   ServerSettings get serverSettings;
   @override
