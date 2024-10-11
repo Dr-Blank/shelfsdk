@@ -17,7 +17,7 @@ void main() async {
   print(api.token);
 
   final getLibraryResponse = await api.libraries.get(
-    libraryId: loginResponse.userDefaultLibraryId,
+    libraryId: loginResponse.userDefaultLibraryId ?? '',
   );
   if (getLibraryResponse == null) {
     throw Exception('Error getting default library');
