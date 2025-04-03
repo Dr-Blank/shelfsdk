@@ -7,22 +7,15 @@ part of '../update_library_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$UpdateLibraryReqParamsToJson(
-    UpdateLibraryReqParams instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('displayOrder', instance.displayOrder);
-  writeNotNull('icon', _$LibraryIconEnumMap[instance.icon]);
-  writeNotNull('provider', _$MetadataProviderEnumMap[instance.provider]);
-  writeNotNull('settings', instance.settings?.toJson());
-  return val;
-}
+        UpdateLibraryReqParams instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.displayOrder case final value?) 'displayOrder': value,
+      if (_$LibraryIconEnumMap[instance.icon] case final value?) 'icon': value,
+      if (_$MetadataProviderEnumMap[instance.provider] case final value?)
+        'provider': value,
+      if (instance.settings?.toJson() case final value?) 'settings': value,
+    };
 
 const _$LibraryIconEnumMap = {
   LibraryIcon.database: 'database',
@@ -62,23 +55,19 @@ const _$MetadataProviderEnumMap = {
 };
 
 Map<String, dynamic> _$UpdateLibrarySettingsReqParamsToJson(
-    UpdateLibrarySettingsReqParams instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('coverAspectRatio', instance.coverAspectRatio);
-  writeNotNull('disableWatcher', instance.disableWatcher);
-  writeNotNull('skipMatchingMediaWithAsin', instance.skipMatchingMediaWithAsin);
-  writeNotNull('skipMatchingMediaWithIsbn', instance.skipMatchingMediaWithIsbn);
-  val['autoScanCronExpression'] = _$JsonConverterToJson<String, CronExpression>(
-      instance.autoScanCronExpression, const CronExpressionConverter().toJson);
-  return val;
-}
+        UpdateLibrarySettingsReqParams instance) =>
+    <String, dynamic>{
+      if (instance.coverAspectRatio case final value?)
+        'coverAspectRatio': value,
+      if (instance.disableWatcher case final value?) 'disableWatcher': value,
+      if (instance.skipMatchingMediaWithAsin case final value?)
+        'skipMatchingMediaWithAsin': value,
+      if (instance.skipMatchingMediaWithIsbn case final value?)
+        'skipMatchingMediaWithIsbn': value,
+      'autoScanCronExpression': _$JsonConverterToJson<String, CronExpression>(
+          instance.autoScanCronExpression,
+          const CronExpressionConverter().toJson),
+    };
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,

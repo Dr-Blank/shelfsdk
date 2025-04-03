@@ -7,32 +7,24 @@ part of '../get_librarys_series_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$GetLibrarysSeriesReqParamsToJson(
-    GetLibrarysSeriesReqParams instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('limit', instance.limit);
-  writeNotNull('page', instance.page);
-  writeNotNull('sort', instance.sort);
-  writeNotNull(
-      'desc',
-      _$JsonConverterToJson<int, bool>(
-          instance.desc, const BoolBinaryConverter().toJson));
-  writeNotNull(
-      'filter',
-      _$JsonConverterToJson<String, Filter>(
-          instance.filter, const FilterConverter().toJson));
-  writeNotNull(
-      'minified',
-      _$JsonConverterToJson<int, bool>(
-          instance.minified, const BoolBinaryConverter().toJson));
-  return val;
-}
+        GetLibrarysSeriesReqParams instance) =>
+    <String, dynamic>{
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.page case final value?) 'page': value,
+      if (instance.sort case final value?) 'sort': value,
+      if (_$JsonConverterToJson<int, bool>(
+              instance.desc, const BoolBinaryConverter().toJson)
+          case final value?)
+        'desc': value,
+      if (_$JsonConverterToJson<String, Filter>(
+              instance.filter, const FilterConverter().toJson)
+          case final value?)
+        'filter': value,
+      if (_$JsonConverterToJson<int, bool>(
+              instance.minified, const BoolBinaryConverter().toJson)
+          case final value?)
+        'minified': value,
+    };
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,

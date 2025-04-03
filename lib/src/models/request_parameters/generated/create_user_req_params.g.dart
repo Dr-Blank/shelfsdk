@@ -6,40 +6,36 @@ part of '../create_user_req_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$CreateUserReqParamsToJson(CreateUserReqParams instance) {
-  final val = <String, dynamic>{
-    'username': instance.username,
-    'password': instance.password,
-    'type': _$UserTypeEnumMap[instance.type]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull(
-      'mediaProgress', instance.mediaProgress?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'bookmarks', instance.bookmarks?.map((e) => e.toJson()).toList());
-  writeNotNull('seriesHideFromContinueListening',
-      instance.seriesHideFromContinueListening);
-  val['isActive'] = instance.isActive;
-  val['isLocked'] = instance.isLocked;
-  writeNotNull(
-      'lastSeen',
-      _$JsonConverterToJson<int, DateTime>(
-          instance.lastSeen, const DateTimeEpochConverter().toJson));
-  writeNotNull(
-      'createdAt',
-      _$JsonConverterToJson<int, DateTime>(
-          instance.createdAt, const DateTimeEpochConverter().toJson));
-  writeNotNull('permissions', instance.permissions?.toJson());
-  writeNotNull('librariesAccessible', instance.librariesAccessible);
-  writeNotNull('itemTagsAccessible', instance.itemTagsAccessible);
-  return val;
-}
+Map<String, dynamic> _$CreateUserReqParamsToJson(
+        CreateUserReqParams instance) =>
+    <String, dynamic>{
+      'username': instance.username,
+      'password': instance.password,
+      'type': _$UserTypeEnumMap[instance.type]!,
+      if (instance.mediaProgress?.map((e) => e.toJson()).toList()
+          case final value?)
+        'mediaProgress': value,
+      if (instance.bookmarks?.map((e) => e.toJson()).toList() case final value?)
+        'bookmarks': value,
+      if (instance.seriesHideFromContinueListening case final value?)
+        'seriesHideFromContinueListening': value,
+      'isActive': instance.isActive,
+      'isLocked': instance.isLocked,
+      if (_$JsonConverterToJson<int, DateTime>(
+              instance.lastSeen, const DateTimeEpochConverter().toJson)
+          case final value?)
+        'lastSeen': value,
+      if (_$JsonConverterToJson<int, DateTime>(
+              instance.createdAt, const DateTimeEpochConverter().toJson)
+          case final value?)
+        'createdAt': value,
+      if (instance.permissions?.toJson() case final value?)
+        'permissions': value,
+      if (instance.librariesAccessible case final value?)
+        'librariesAccessible': value,
+      if (instance.itemTagsAccessible case final value?)
+        'itemTagsAccessible': value,
+    };
 
 const _$UserTypeEnumMap = {
   UserType.root: 'root',

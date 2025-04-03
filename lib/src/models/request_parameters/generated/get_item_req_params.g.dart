@@ -6,23 +6,16 @@ part of '../get_item_req_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$GetItemReqParamsToJson(GetItemReqParams instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull(
-      'expanded',
-      _$JsonConverterToJson<int, bool>(
-          instance.expanded, const BoolBinaryConverter().toJson));
-  writeNotNull('include', includeListToString(instance.include));
-  writeNotNull('episode', instance.episodeId);
-  return val;
-}
+Map<String, dynamic> _$GetItemReqParamsToJson(GetItemReqParams instance) =>
+    <String, dynamic>{
+      if (_$JsonConverterToJson<int, bool>(
+              instance.expanded, const BoolBinaryConverter().toJson)
+          case final value?)
+        'expanded': value,
+      if (includeListToString(instance.include) case final value?)
+        'include': value,
+      if (instance.episodeId case final value?) 'episode': value,
+    };
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,

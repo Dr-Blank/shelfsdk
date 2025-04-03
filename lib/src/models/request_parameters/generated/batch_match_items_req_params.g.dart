@@ -7,19 +7,11 @@ part of '../batch_match_items_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$BatchMatchItemsReqParamsToJson(
-    BatchMatchItemsReqParams instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('options', instance.options?.toJson());
-  val['libraryItemIds'] = instance.libraryItemIds;
-  return val;
-}
+        BatchMatchItemsReqParams instance) =>
+    <String, dynamic>{
+      if (instance.options?.toJson() case final value?) 'options': value,
+      'libraryItemIds': instance.libraryItemIds,
+    };
 
 Map<String, dynamic> _$BatchMatchOptionsReqParamsToJson(
         BatchMatchOptionsReqParams instance) =>

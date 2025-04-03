@@ -6,16 +6,8 @@ part of '../limit_page_req_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$LimitPageReqParamsToJson(LimitPageReqParams instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('limit', instance.limit);
-  writeNotNull('page', instance.page);
-  return val;
-}
+Map<String, dynamic> _$LimitPageReqParamsToJson(LimitPageReqParams instance) =>
+    <String, dynamic>{
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.page case final value?) 'page': value,
+    };

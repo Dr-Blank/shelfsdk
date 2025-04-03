@@ -7,23 +7,15 @@ part of '../get_librarys_collections_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$GetLibrarysCollectionsReqParamsToJson(
-    GetLibrarysCollectionsReqParams instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('limit', instance.limit);
-  writeNotNull('page', instance.page);
-  writeNotNull(
-      'minified',
-      _$JsonConverterToJson<int, bool>(
-          instance.minified, const BoolBinaryConverter().toJson));
-  return val;
-}
+        GetLibrarysCollectionsReqParams instance) =>
+    <String, dynamic>{
+      if (instance.limit case final value?) 'limit': value,
+      if (instance.page case final value?) 'page': value,
+      if (_$JsonConverterToJson<int, bool>(
+              instance.minified, const BoolBinaryConverter().toJson)
+          case final value?)
+        'minified': value,
+    };
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,

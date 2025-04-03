@@ -16,16 +16,9 @@ _$GetOpmlFeedsResponseImpl _$$GetOpmlFeedsResponseImplFromJson(
     );
 
 Map<String, dynamic> _$$GetOpmlFeedsResponseImplToJson(
-    _$GetOpmlFeedsResponseImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('feeds', instance.feeds?.map((e) => e.toJson()).toList());
-  writeNotNull('error', instance.error);
-  return val;
-}
+        _$GetOpmlFeedsResponseImpl instance) =>
+    <String, dynamic>{
+      if (instance.feeds?.map((e) => e.toJson()).toList() case final value?)
+        'feeds': value,
+      if (instance.error case final value?) 'error': value,
+    };

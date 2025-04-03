@@ -7,21 +7,12 @@ part of '../create_collection_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$CreateCollectionReqParamsToJson(
-    CreateCollectionReqParams instance) {
-  final val = <String, dynamic>{
-    'libraryId': instance.libraryId,
-    'name': instance.name,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('description', instance.description);
-  writeNotNull('cover', instance.cover);
-  writeNotNull('coverFullPath', instance.coverFullPath);
-  writeNotNull('books', instance.books);
-  return val;
-}
+        CreateCollectionReqParams instance) =>
+    <String, dynamic>{
+      'libraryId': instance.libraryId,
+      'name': instance.name,
+      if (instance.description case final value?) 'description': value,
+      if (instance.cover case final value?) 'cover': value,
+      if (instance.coverFullPath case final value?) 'coverFullPath': value,
+      if (instance.books case final value?) 'books': value,
+    };

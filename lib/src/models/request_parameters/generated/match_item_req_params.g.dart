@@ -6,24 +6,15 @@ part of '../match_item_req_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$MatchItemReqParamsToJson(MatchItemReqParams instance) {
-  final val = <String, dynamic>{
-    'provider': _$MetadataProviderEnumMap[instance.provider]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('title', instance.title);
-  writeNotNull('author', instance.author);
-  val['overrideDefaults'] = instance.overrideDefaults;
-  writeNotNull('isbn', instance.isbn);
-  writeNotNull('asin', instance.asin);
-  return val;
-}
+Map<String, dynamic> _$MatchItemReqParamsToJson(MatchItemReqParams instance) =>
+    <String, dynamic>{
+      'provider': _$MetadataProviderEnumMap[instance.provider]!,
+      if (instance.title case final value?) 'title': value,
+      if (instance.author case final value?) 'author': value,
+      'overrideDefaults': instance.overrideDefaults,
+      if (instance.isbn case final value?) 'isbn': value,
+      if (instance.asin case final value?) 'asin': value,
+    };
 
 const _$MetadataProviderEnumMap = {
   MetadataProvider.google: 'google',

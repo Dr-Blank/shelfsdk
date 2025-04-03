@@ -14,16 +14,8 @@ _$ChangePasswordResponseImpl _$$ChangePasswordResponseImplFromJson(
     );
 
 Map<String, dynamic> _$$ChangePasswordResponseImplToJson(
-    _$ChangePasswordResponseImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('success', instance.success);
-  writeNotNull('error', instance.error);
-  return val;
-}
+        _$ChangePasswordResponseImpl instance) =>
+    <String, dynamic>{
+      if (instance.success case final value?) 'success': value,
+      if (instance.error case final value?) 'error': value,
+    };

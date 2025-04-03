@@ -6,38 +6,24 @@ part of '../play_item_req_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$PlayItemReqParamsToJson(PlayItemReqParams instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$PlayItemReqParamsToJson(PlayItemReqParams instance) =>
+    <String, dynamic>{
+      if (instance.deviceInfo?.toJson() case final value?) 'deviceInfo': value,
+      'forceDirectPlay': instance.forceDirectPlay,
+      'forceTranscode': instance.forceTranscode,
+      if (instance.supportedMimeTypes case final value?)
+        'supportedMimeTypes': value,
+      'mediaPlayer': instance.mediaPlayer,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('deviceInfo', instance.deviceInfo?.toJson());
-  val['forceDirectPlay'] = instance.forceDirectPlay;
-  val['forceTranscode'] = instance.forceTranscode;
-  writeNotNull('supportedMimeTypes', instance.supportedMimeTypes);
-  val['mediaPlayer'] = instance.mediaPlayer;
-  return val;
-}
-
-Map<String, dynamic> _$DeviceInfoReqParamsToJson(DeviceInfoReqParams instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('deviceId', instance.deviceId);
-  writeNotNull('clientName', instance.clientName);
-  writeNotNull('deviceName', instance.deviceName);
-  writeNotNull('clientVersion', instance.clientVersion);
-  writeNotNull('manufacturer', instance.manufacturer);
-  writeNotNull('model', instance.model);
-  writeNotNull('sdkVersion', instance.sdkVersion);
-  return val;
-}
+Map<String, dynamic> _$DeviceInfoReqParamsToJson(
+        DeviceInfoReqParams instance) =>
+    <String, dynamic>{
+      if (instance.deviceId case final value?) 'deviceId': value,
+      if (instance.clientName case final value?) 'clientName': value,
+      if (instance.deviceName case final value?) 'deviceName': value,
+      if (instance.clientVersion case final value?) 'clientVersion': value,
+      if (instance.manufacturer case final value?) 'manufacturer': value,
+      if (instance.model case final value?) 'model': value,
+      if (instance.sdkVersion case final value?) 'sdkVersion': value,
+    };

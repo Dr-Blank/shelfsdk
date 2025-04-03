@@ -7,21 +7,13 @@ part of '../create_notification_req_params.dart';
 // **************************************************************************
 
 Map<String, dynamic> _$CreateNotificationReqParamsToJson(
-    CreateNotificationReqParams instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('libraryId', instance.libraryId);
-  val['eventName'] = instance.eventName;
-  val['urls'] = instance.urls.map((e) => e.toString()).toList();
-  val['titleTemplate'] = instance.titleTemplate;
-  val['bodyTemplate'] = instance.bodyTemplate;
-  val['enabled'] = instance.enabled;
-  writeNotNull('type', instance.type);
-  return val;
-}
+        CreateNotificationReqParams instance) =>
+    <String, dynamic>{
+      if (instance.libraryId case final value?) 'libraryId': value,
+      'eventName': instance.eventName,
+      'urls': instance.urls.map((e) => e.toString()).toList(),
+      'titleTemplate': instance.titleTemplate,
+      'bodyTemplate': instance.bodyTemplate,
+      'enabled': instance.enabled,
+      if (instance.type case final value?) 'type': value,
+    };

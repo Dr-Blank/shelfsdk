@@ -41,45 +41,43 @@ _$AudioMetaTagsImpl _$$AudioMetaTagsImplFromJson(Map<String, dynamic> json) =>
       tagMusicBrainzArtistId: json['tagMusicBrainzArtistId'] as String?,
     );
 
-Map<String, dynamic> _$$AudioMetaTagsImplToJson(_$AudioMetaTagsImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('tagAlbum', instance.tagAlbum);
-  writeNotNull('tagArtist', instance.tagArtist);
-  writeNotNull('tagGenre', instance.tagGenre);
-  writeNotNull('tagTitle', instance.tagTitle);
-  writeNotNull('tagSeries', instance.tagSeries);
-  writeNotNull('tagSeriesPart', instance.tagSeriesPart);
-  writeNotNull('tagTrack', instance.tagTrack);
-  writeNotNull('tagDisc', instance.tagDisc);
-  writeNotNull('tagSubtitle', instance.tagSubtitle);
-  writeNotNull('tagAlbumArtist', instance.tagAlbumArtist);
-  writeNotNull('tagDate', instance.tagDate);
-  writeNotNull('tagComposer', instance.tagComposer);
-  writeNotNull('tagPublisher', instance.tagPublisher);
-  writeNotNull('tagComment', instance.tagComment);
-  writeNotNull('tagDescription', instance.tagDescription);
-  writeNotNull('tagEncoder', instance.tagEncoder);
-  writeNotNull('tagEncodedBy', instance.tagEncodedBy);
-  writeNotNull('tagIsbn', instance.tagIsbn);
-  writeNotNull('tagLanguage', instance.tagLanguage);
-  writeNotNull('tagASIN', instance.tagASIN);
-  writeNotNull('tagOverdriveMediaMarker', instance.tagOverdriveMediaMarker);
-  writeNotNull('tagOriginalYear', instance.tagOriginalYear);
-  writeNotNull('tagReleaseCountry', instance.tagReleaseCountry);
-  writeNotNull('tagReleaseType', instance.tagReleaseType);
-  writeNotNull('tagReleaseStatus', instance.tagReleaseStatus);
-  writeNotNull('tagISRC', instance.tagISRC);
-  writeNotNull('tagMusicBrainzTrackId', instance.tagMusicBrainzTrackId);
-  writeNotNull('tagMusicBrainzAlbumId', instance.tagMusicBrainzAlbumId);
-  writeNotNull(
-      'tagMusicBrainzAlbumArtistId', instance.tagMusicBrainzAlbumArtistId);
-  writeNotNull('tagMusicBrainzArtistId', instance.tagMusicBrainzArtistId);
-  return val;
-}
+Map<String, dynamic> _$$AudioMetaTagsImplToJson(_$AudioMetaTagsImpl instance) =>
+    <String, dynamic>{
+      if (instance.tagAlbum case final value?) 'tagAlbum': value,
+      if (instance.tagArtist case final value?) 'tagArtist': value,
+      if (instance.tagGenre case final value?) 'tagGenre': value,
+      if (instance.tagTitle case final value?) 'tagTitle': value,
+      if (instance.tagSeries case final value?) 'tagSeries': value,
+      if (instance.tagSeriesPart case final value?) 'tagSeriesPart': value,
+      if (instance.tagTrack case final value?) 'tagTrack': value,
+      if (instance.tagDisc case final value?) 'tagDisc': value,
+      if (instance.tagSubtitle case final value?) 'tagSubtitle': value,
+      if (instance.tagAlbumArtist case final value?) 'tagAlbumArtist': value,
+      if (instance.tagDate case final value?) 'tagDate': value,
+      if (instance.tagComposer case final value?) 'tagComposer': value,
+      if (instance.tagPublisher case final value?) 'tagPublisher': value,
+      if (instance.tagComment case final value?) 'tagComment': value,
+      if (instance.tagDescription case final value?) 'tagDescription': value,
+      if (instance.tagEncoder case final value?) 'tagEncoder': value,
+      if (instance.tagEncodedBy case final value?) 'tagEncodedBy': value,
+      if (instance.tagIsbn case final value?) 'tagIsbn': value,
+      if (instance.tagLanguage case final value?) 'tagLanguage': value,
+      if (instance.tagASIN case final value?) 'tagASIN': value,
+      if (instance.tagOverdriveMediaMarker case final value?)
+        'tagOverdriveMediaMarker': value,
+      if (instance.tagOriginalYear case final value?) 'tagOriginalYear': value,
+      if (instance.tagReleaseCountry case final value?)
+        'tagReleaseCountry': value,
+      if (instance.tagReleaseType case final value?) 'tagReleaseType': value,
+      if (instance.tagReleaseStatus case final value?)
+        'tagReleaseStatus': value,
+      if (instance.tagISRC case final value?) 'tagISRC': value,
+      if (instance.tagMusicBrainzTrackId case final value?)
+        'tagMusicBrainzTrackId': value,
+      if (instance.tagMusicBrainzAlbumId case final value?)
+        'tagMusicBrainzAlbumId': value,
+      if (instance.tagMusicBrainzAlbumArtistId case final value?)
+        'tagMusicBrainzAlbumArtistId': value,
+      if (instance.tagMusicBrainzArtistId case final value?)
+        'tagMusicBrainzArtistId': value,
+    };
