@@ -37,7 +37,7 @@ class UpdateServerSettingsReqParams {
   final bool? chromecastEnabled;
   final bool? enableEReader;
   final String? dateFormat;
-  final ServerLanguage? language;
+  final String? language;
   final LogLevel? logLevel;
 
   /// See [Update Server Settings](https://api.audiobookshelf.org/#update-server-settings)

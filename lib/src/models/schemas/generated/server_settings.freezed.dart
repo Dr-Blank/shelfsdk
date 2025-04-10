@@ -46,7 +46,7 @@ mixin _$ServerSettings {
   List<String>? get sortingPrefixes => throw _privateConstructorUsedError;
   bool? get chromecastEnabled => throw _privateConstructorUsedError;
   String? get dateFormat => throw _privateConstructorUsedError;
-  ServerLanguage? get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   LogLevel? get logLevel => throw _privateConstructorUsedError;
   String? get version => throw _privateConstructorUsedError;
 
@@ -88,7 +88,7 @@ abstract class $ServerSettingsCopyWith<$Res> {
       List<String>? sortingPrefixes,
       bool? chromecastEnabled,
       String? dateFormat,
-      ServerLanguage? language,
+      String? language,
       LogLevel? logLevel,
       String? version});
 }
@@ -221,7 +221,7 @@ class _$ServerSettingsCopyWithImpl<$Res, $Val extends ServerSettings>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as ServerLanguage?,
+              as String?,
       logLevel: freezed == logLevel
           ? _value.logLevel
           : logLevel // ignore: cast_nullable_to_non_nullable
@@ -264,7 +264,7 @@ abstract class _$$ServerSettingsImplCopyWith<$Res>
       List<String>? sortingPrefixes,
       bool? chromecastEnabled,
       String? dateFormat,
-      ServerLanguage? language,
+      String? language,
       LogLevel? logLevel,
       String? version});
 }
@@ -395,7 +395,7 @@ class __$$ServerSettingsImplCopyWithImpl<$Res>
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as ServerLanguage?,
+              as String?,
       logLevel: freezed == logLevel
           ? _value.logLevel
           : logLevel // ignore: cast_nullable_to_non_nullable
@@ -497,7 +497,7 @@ class _$ServerSettingsImpl implements _ServerSettings {
   @override
   final String? dateFormat;
   @override
-  final ServerLanguage? language;
+  final String? language;
   @override
   final LogLevel? logLevel;
   @override
@@ -634,7 +634,7 @@ abstract class _ServerSettings implements ServerSettings {
       final List<String>? sortingPrefixes,
       final bool? chromecastEnabled,
       final String? dateFormat,
-      final ServerLanguage? language,
+      final String? language,
       final LogLevel? logLevel,
       final String? version}) = _$ServerSettingsImpl;
 
@@ -687,7 +687,7 @@ abstract class _ServerSettings implements ServerSettings {
   @override
   String? get dateFormat;
   @override
-  ServerLanguage? get language;
+  String? get language;
   @override
   LogLevel? get logLevel;
   @override

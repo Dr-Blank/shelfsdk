@@ -12,7 +12,7 @@ _$ServerStatusResponseImpl _$$ServerStatusResponseImplFromJson(
       app: json['app'] as String?,
       serverVersion: json['serverVersion'] as String?,
       isInit: json['isInit'] as bool,
-      language: $enumDecode(_$ServerLanguageEnumMap, json['language']),
+      language: json['language'] as String?,
       authMethods: (json['authMethods'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$AuthMethodEnumMap, e))
           .toList(),
@@ -29,23 +29,13 @@ Map<String, dynamic> _$$ServerStatusResponseImplToJson(
       'app': instance.app,
       'serverVersion': instance.serverVersion,
       'isInit': instance.isInit,
-      'language': _$ServerLanguageEnumMap[instance.language]!,
+      'language': instance.language,
       'authMethods':
           instance.authMethods?.map((e) => _$AuthMethodEnumMap[e]!).toList(),
       'ConfigPath': instance.configPath,
       'MetadataPath': instance.metadataPath,
       'authFormData': instance.authFormData?.toJson(),
     };
-
-const _$ServerLanguageEnumMap = {
-  ServerLanguage.dutch: 'de',
-  ServerLanguage.english: 'en-us',
-  ServerLanguage.french: 'fr',
-  ServerLanguage.croatian: 'hr',
-  ServerLanguage.italian: 'it',
-  ServerLanguage.polish: 'pl',
-  ServerLanguage.simplifiedChinese: 'zh-cn',
-};
 
 const _$AuthMethodEnumMap = {
   AuthMethod.local: 'local',

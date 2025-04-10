@@ -23,7 +23,7 @@ mixin _$ServerStatusResponse {
   String? get app => throw _privateConstructorUsedError;
   String? get serverVersion => throw _privateConstructorUsedError;
   bool get isInit => throw _privateConstructorUsedError;
-  ServerLanguage get language => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
   List<AuthMethod>? get authMethods => throw _privateConstructorUsedError;
   @JsonKey(name: 'ConfigPath')
   String? get configPath => throw _privateConstructorUsedError;
@@ -51,7 +51,7 @@ abstract class $ServerStatusResponseCopyWith<$Res> {
       {String? app,
       String? serverVersion,
       bool isInit,
-      ServerLanguage language,
+      String? language,
       List<AuthMethod>? authMethods,
       @JsonKey(name: 'ConfigPath') String? configPath,
       @JsonKey(name: 'MetadataPath') String? metadataPath,
@@ -79,7 +79,7 @@ class _$ServerStatusResponseCopyWithImpl<$Res,
     Object? app = freezed,
     Object? serverVersion = freezed,
     Object? isInit = null,
-    Object? language = null,
+    Object? language = freezed,
     Object? authMethods = freezed,
     Object? configPath = freezed,
     Object? metadataPath = freezed,
@@ -98,10 +98,10 @@ class _$ServerStatusResponseCopyWithImpl<$Res,
           ? _value.isInit
           : isInit // ignore: cast_nullable_to_non_nullable
               as bool,
-      language: null == language
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as ServerLanguage,
+              as String?,
       authMethods: freezed == authMethods
           ? _value.authMethods
           : authMethods // ignore: cast_nullable_to_non_nullable
@@ -148,7 +148,7 @@ abstract class _$$ServerStatusResponseImplCopyWith<$Res>
       {String? app,
       String? serverVersion,
       bool isInit,
-      ServerLanguage language,
+      String? language,
       List<AuthMethod>? authMethods,
       @JsonKey(name: 'ConfigPath') String? configPath,
       @JsonKey(name: 'MetadataPath') String? metadataPath,
@@ -174,7 +174,7 @@ class __$$ServerStatusResponseImplCopyWithImpl<$Res>
     Object? app = freezed,
     Object? serverVersion = freezed,
     Object? isInit = null,
-    Object? language = null,
+    Object? language = freezed,
     Object? authMethods = freezed,
     Object? configPath = freezed,
     Object? metadataPath = freezed,
@@ -193,10 +193,10 @@ class __$$ServerStatusResponseImplCopyWithImpl<$Res>
           ? _value.isInit
           : isInit // ignore: cast_nullable_to_non_nullable
               as bool,
-      language: null == language
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as ServerLanguage,
+              as String?,
       authMethods: freezed == authMethods
           ? _value._authMethods
           : authMethods // ignore: cast_nullable_to_non_nullable
@@ -224,7 +224,7 @@ class _$ServerStatusResponseImpl implements _ServerStatusResponse {
       {this.app,
       this.serverVersion,
       required this.isInit,
-      required this.language,
+      this.language,
       final List<AuthMethod>? authMethods,
       @JsonKey(name: 'ConfigPath') this.configPath,
       @JsonKey(name: 'MetadataPath') this.metadataPath,
@@ -241,7 +241,7 @@ class _$ServerStatusResponseImpl implements _ServerStatusResponse {
   @override
   final bool isInit;
   @override
-  final ServerLanguage language;
+  final String? language;
   final List<AuthMethod>? _authMethods;
   @override
   List<AuthMethod>? get authMethods {
@@ -323,7 +323,7 @@ abstract class _ServerStatusResponse implements ServerStatusResponse {
       {final String? app,
       final String? serverVersion,
       required final bool isInit,
-      required final ServerLanguage language,
+      final String? language,
       final List<AuthMethod>? authMethods,
       @JsonKey(name: 'ConfigPath') final String? configPath,
       @JsonKey(name: 'MetadataPath') final String? metadataPath,
@@ -339,7 +339,7 @@ abstract class _ServerStatusResponse implements ServerStatusResponse {
   @override
   bool get isInit;
   @override
-  ServerLanguage get language;
+  String? get language;
   @override
   List<AuthMethod>? get authMethods;
   @override

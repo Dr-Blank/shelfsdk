@@ -36,7 +36,7 @@ class ServerSettings with _$ServerSettings {
     List<String>? sortingPrefixes,
     bool? chromecastEnabled,
     String? dateFormat,
-    ServerLanguage? language,
+    String? language,
     LogLevel? logLevel,
     String? version,
   }) = _ServerSettings;

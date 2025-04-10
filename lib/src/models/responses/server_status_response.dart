@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../enums/auth_method.dart';
-import '../enums/server_language.dart';
 
 part 'generated/server_status_response.freezed.dart';
 part 'generated/server_status_response.g.dart';
@@ -13,7 +12,7 @@ class ServerStatusResponse with _$ServerStatusResponse {
     String? app,
     String? serverVersion,
     required bool isInit,
-    required ServerLanguage language,
+    String? language,
     List<AuthMethod>? authMethods,
     @JsonKey(name: 'ConfigPath') String? configPath,
     @JsonKey(name: 'MetadataPath') String? metadataPath,

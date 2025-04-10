@@ -7,7 +7,7 @@ void main() {
     const serverVersion = 'serverVersion';
     const isInit = true;
     const languageJson = 'en-us';
-    const language = ServerLanguage.english;
+    const language = languageJson;
     const authMethods = <AuthMethod>[AuthMethod.local, AuthMethod.openid];
     const configPath = 'configPath';
     const String? metadataPath = null;

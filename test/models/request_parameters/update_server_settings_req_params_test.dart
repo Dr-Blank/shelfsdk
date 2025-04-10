@@ -28,7 +28,7 @@ void main() {
     const chromecastEnabled = true;
     const enableEReader = true;
     const dateFormat = 'MM/dd/yyyy';
-    const language = ServerLanguage.english;
+    const language = 'en-us';
     const logLevel = LogLevel.info;
 
     late UpdateServerSettingsReqParams sut;

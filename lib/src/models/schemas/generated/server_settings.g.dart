@@ -37,7 +37,7 @@ _$ServerSettingsImpl _$$ServerSettingsImplFromJson(Map<String, dynamic> json) =>
           .toList(),
       chromecastEnabled: json['chromecastEnabled'] as bool?,
       dateFormat: json['dateFormat'] as String?,
-      language: $enumDecodeNullable(_$ServerLanguageEnumMap, json['language']),
+      language: json['language'] as String?,
       logLevel: $enumDecodeNullable(_$LogLevelEnumMap, json['logLevel']),
       version: json['version'] as String?,
     );
@@ -70,7 +70,7 @@ Map<String, dynamic> _$$ServerSettingsImplToJson(
       'sortingPrefixes': instance.sortingPrefixes,
       'chromecastEnabled': instance.chromecastEnabled,
       'dateFormat': instance.dateFormat,
-      'language': _$ServerLanguageEnumMap[instance.language],
+      'language': instance.language,
       'logLevel': _$LogLevelEnumMap[instance.logLevel],
       'version': instance.version,
     };
@@ -97,16 +97,6 @@ Value? _$JsonConverterFromJson<Json, Value>(
   Value? Function(Json json) fromJson,
 ) =>
     json == null ? null : fromJson(json as Json);
-
-const _$ServerLanguageEnumMap = {
-  ServerLanguage.dutch: 'de',
-  ServerLanguage.english: 'en-us',
-  ServerLanguage.french: 'fr',
-  ServerLanguage.croatian: 'hr',
-  ServerLanguage.italian: 'it',
-  ServerLanguage.polish: 'pl',
-  ServerLanguage.simplifiedChinese: 'zh-cn',
-};
 
 const _$LogLevelEnumMap = {
   LogLevel.debug: 1,

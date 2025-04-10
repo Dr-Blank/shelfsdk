@@ -63,8 +63,7 @@ Map<String, dynamic> _$UpdateServerSettingsReqParamsToJson(
         'chromecastEnabled': value,
       if (instance.enableEReader case final value?) 'enableEReader': value,
       if (instance.dateFormat case final value?) 'dateFormat': value,
-      if (_$ServerLanguageEnumMap[instance.language] case final value?)
-        'language': value,
+      if (instance.language case final value?) 'language': value,
       if (_$LogLevelEnumMap[instance.logLevel] case final value?)
         'logLevel': value,
     };
@@ -91,16 +90,6 @@ Json? _$JsonConverterToJson<Json, Value>(
   Json? Function(Value value) toJson,
 ) =>
     value == null ? null : toJson(value);
-
-const _$ServerLanguageEnumMap = {
-  ServerLanguage.dutch: 'de',
-  ServerLanguage.english: 'en-us',
-  ServerLanguage.french: 'fr',
-  ServerLanguage.croatian: 'hr',
-  ServerLanguage.italian: 'it',
-  ServerLanguage.polish: 'pl',
-  ServerLanguage.simplifiedChinese: 'zh-cn',
-};
 
 const _$LogLevelEnumMap = {
   LogLevel.debug: 1,
