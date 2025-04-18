@@ -1,5 +1,4 @@
 import 'package:shelfsdk/audiobookshelf_api.dart';
-import 'package:shelfsdk/src/utils/json_converters.dart';
 
 const filename = 'Terry Goodkind - SOT Bk01 - Wizards First Rule 01.mp3';
 const ext = '.mp3';

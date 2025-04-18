@@ -1,5 +1,4 @@
 import 'package:shelfsdk/audiobookshelf_api.dart';
-import 'package:shelfsdk/src/utils/json_converters.dart';
 
 const id = 'epdl_pgv4d47j6dtqpk4r0v';
 const episodeDisplayTitle = '2 - Glow Cloud';

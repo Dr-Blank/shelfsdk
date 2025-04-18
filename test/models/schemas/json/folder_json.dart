@@ -1,5 +1,4 @@
 import 'package:shelfsdk/audiobookshelf_api.dart';
-import 'package:shelfsdk/src/utils/json_converters.dart';
 
 const id = 'fol_bev1zuxhb0j0s1wehr';
 const fullPath = '/podcasts';

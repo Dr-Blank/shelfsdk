@@ -1,5 +1,4 @@
 import 'package:shelfsdk/audiobookshelf_api.dart';
-import 'package:shelfsdk/src/utils/json_converters.dart';
 
 import 'audio_file_json.dart' as audio_file;
 import 'audio_track_json.dart' as audio_track;

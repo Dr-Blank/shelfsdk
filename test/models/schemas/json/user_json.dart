@@ -1,5 +1,4 @@
 import 'package:shelfsdk/audiobookshelf_api.dart';
-import 'package:shelfsdk/src/utils/json_converters.dart';
 
 import 'media_progress_json.dart' as media_progress;
 import 'playback_session_json.dart' as playback_session;

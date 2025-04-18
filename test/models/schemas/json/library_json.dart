@@ -1,5 +1,4 @@
 import 'package:shelfsdk/audiobookshelf_api.dart';
-import 'package:shelfsdk/src/utils/json_converters.dart';
 
 import 'folder_json.dart' as folder;
 import 'library_settings_json.dart' as library_settings;

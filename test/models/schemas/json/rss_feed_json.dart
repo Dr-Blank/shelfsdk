@@ -1,5 +1,4 @@
 import 'package:shelfsdk/audiobookshelf_api.dart';
-import 'package:shelfsdk/src/utils/json_converters.dart';
 
 import 'rss_feed_episode_json.dart' as rss_feed_episode;
 import 'rss_feed_metadata_json.dart' as rss_feed_metadata;

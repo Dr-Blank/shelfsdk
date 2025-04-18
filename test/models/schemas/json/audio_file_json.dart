@@ -1,5 +1,4 @@
 import 'package:shelfsdk/audiobookshelf_api.dart';
-import 'package:shelfsdk/src/utils/json_converters.dart';
 
 import 'audio_meta_tags_json.dart' as audio_meta_tags;
 import 'file_metadata_json.dart' as file_metadata;

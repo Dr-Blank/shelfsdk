@@ -3,8 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../utils/json_converters.dart';
 import '../enums/log_level.dart';
 import '../enums/metadata_provider.dart';
-import '../enums/server_language.dart';
-import '../utils/cron_expression.dart';
 
 part 'generated/server_settings.freezed.dart';
 part 'generated/server_settings.g.dart';

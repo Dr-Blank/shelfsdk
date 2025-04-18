@@ -1,5 +1,4 @@
 import 'package:shelfsdk/audiobookshelf_api.dart';
-import 'package:shelfsdk/src/utils/json_converters.dart';
 
 const id = 'noti_nod281qwkj5ow7h7fi';
 const String? libraryId = null;
