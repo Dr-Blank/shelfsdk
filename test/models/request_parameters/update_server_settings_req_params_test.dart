@@ -94,7 +94,7 @@ void main() {
           'chromecastEnabled': chromecastEnabled,
           'enableEReader': enableEReader,
           'dateFormat': dateFormat,
-          'language': language.value,
+          'language': 'en-us',
           'logLevel': logLevel.value,
         });
       });

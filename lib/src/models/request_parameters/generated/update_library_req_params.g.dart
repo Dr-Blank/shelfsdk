@@ -11,31 +11,11 @@ Map<String, dynamic> _$UpdateLibraryReqParamsToJson(
     <String, dynamic>{
       if (instance.name case final value?) 'name': value,
       if (instance.displayOrder case final value?) 'displayOrder': value,
-      if (_$LibraryIconEnumMap[instance.icon] case final value?) 'icon': value,
+      if (instance.icon case final value?) 'icon': value,
       if (_$MetadataProviderEnumMap[instance.provider] case final value?)
         'provider': value,
       if (instance.settings?.toJson() case final value?) 'settings': value,
     };
-
-const _$LibraryIconEnumMap = {
-  LibraryIcon.database: 'database',
-  LibraryIcon.audiobookshelf: 'audiobookshelf',
-  LibraryIcon.books1: 'books-1',
-  LibraryIcon.books2: 'books-2',
-  LibraryIcon.book1: 'book-1',
-  LibraryIcon.microphone1: 'microphone-1',
-  LibraryIcon.microphone3: 'microphone-3',
-  LibraryIcon.radio: 'radio',
-  LibraryIcon.podcast: 'podcast',
-  LibraryIcon.rss: 'rss',
-  LibraryIcon.headphones: 'headphones',
-  LibraryIcon.music: 'music',
-  LibraryIcon.filePicture: 'file-picture',
-  LibraryIcon.rocket: 'rocket',
-  LibraryIcon.power: 'power',
-  LibraryIcon.star: 'star',
-  LibraryIcon.heart: 'heart',
-};
 
 const _$MetadataProviderEnumMap = {
   MetadataProvider.google: 'google',

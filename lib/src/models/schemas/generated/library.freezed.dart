@@ -24,7 +24,7 @@ mixin _$Library {
   String get name => throw _privateConstructorUsedError;
   List<Folder> get folders => throw _privateConstructorUsedError;
   int get displayOrder => throw _privateConstructorUsedError;
-  LibraryIcon get icon => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
   MediaType get mediaType => throw _privateConstructorUsedError;
   MetadataProvider get provider => throw _privateConstructorUsedError;
   LibrarySettings get settings => throw _privateConstructorUsedError;
@@ -50,7 +50,7 @@ abstract class $LibraryCopyWith<$Res> {
       String name,
       List<Folder> folders,
       int displayOrder,
-      LibraryIcon icon,
+      String? icon,
       MediaType mediaType,
       MetadataProvider provider,
       LibrarySettings settings,
@@ -79,7 +79,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
     Object? name = null,
     Object? folders = null,
     Object? displayOrder = null,
-    Object? icon = null,
+    Object? icon = freezed,
     Object? mediaType = null,
     Object? provider = null,
     Object? settings = null,
@@ -103,10 +103,10 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
           ? _value.displayOrder
           : displayOrder // ignore: cast_nullable_to_non_nullable
               as int,
-      icon: null == icon
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as LibraryIcon,
+              as String?,
       mediaType: null == mediaType
           ? _value.mediaType
           : mediaType // ignore: cast_nullable_to_non_nullable
@@ -153,7 +153,7 @@ abstract class _$$LibraryImplCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       String name,
       List<Folder> folders,
       int displayOrder,
-      LibraryIcon icon,
+      String? icon,
       MediaType mediaType,
       MetadataProvider provider,
       LibrarySettings settings,
@@ -181,7 +181,7 @@ class __$$LibraryImplCopyWithImpl<$Res>
     Object? name = null,
     Object? folders = null,
     Object? displayOrder = null,
-    Object? icon = null,
+    Object? icon = freezed,
     Object? mediaType = null,
     Object? provider = null,
     Object? settings = null,
@@ -205,10 +205,10 @@ class __$$LibraryImplCopyWithImpl<$Res>
           ? _value.displayOrder
           : displayOrder // ignore: cast_nullable_to_non_nullable
               as int,
-      icon: null == icon
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
-              as LibraryIcon,
+              as String?,
       mediaType: null == mediaType
           ? _value.mediaType
           : mediaType // ignore: cast_nullable_to_non_nullable
@@ -242,7 +242,7 @@ class _$LibraryImpl implements _Library {
       required this.name,
       required final List<Folder> folders,
       required this.displayOrder,
-      required this.icon,
+      this.icon,
       required this.mediaType,
       required this.provider,
       required this.settings,
@@ -268,7 +268,7 @@ class _$LibraryImpl implements _Library {
   @override
   final int displayOrder;
   @override
-  final LibraryIcon icon;
+  final String? icon;
   @override
   final MediaType mediaType;
   @override
@@ -345,7 +345,7 @@ abstract class _Library implements Library {
       required final String name,
       required final List<Folder> folders,
       required final int displayOrder,
-      required final LibraryIcon icon,
+      final String? icon,
       required final MediaType mediaType,
       required final MetadataProvider provider,
       required final LibrarySettings settings,
@@ -363,7 +363,7 @@ abstract class _Library implements Library {
   @override
   int get displayOrder;
   @override
-  LibraryIcon get icon;
+  String? get icon;
   @override
   MediaType get mediaType;
   @override

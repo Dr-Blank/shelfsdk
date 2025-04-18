@@ -6,7 +6,7 @@ void main() {
   group('UpdateLibraryReqParams', () {
     const name = 'name';
     const displayOrder = 1;
-    const icon = LibraryIcon.audiobookshelf;
+    const icon = 'icon';
     const provider = MetadataProvider.audible;
 
     final mockFolder = MockFolder();
@@ -45,7 +45,7 @@ void main() {
           'name': name,
           'folders': [testMap, testMap],
           'displayOrder': displayOrder,
-          'icon': icon.name,
+          'icon': icon,
           'provider': provider.value,
           'settings': testMap,
         });

@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/json_converters.dart';
-import '../enums/library_icon.dart';
 import '../enums/metadata_provider.dart';
 import '../enums/media_type.dart';
 import 'folder.dart';
@@ -19,7 +18,7 @@ class Library with _$Library {
     required String name,
     required List<Folder> folders,
     required int displayOrder,
-    required LibraryIcon icon,
+    String? icon,
     required MediaType mediaType,
     required MetadataProvider provider,
     required LibrarySettings settings,

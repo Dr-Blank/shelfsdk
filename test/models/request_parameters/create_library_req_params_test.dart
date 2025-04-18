@@ -5,7 +5,7 @@ import 'package:test/test.dart';
 void main() {
   group('CreateLibraryReqParams', () {
     const name = 'name';
-    const icon = LibraryIcon.audiobookshelf;
+    const icon = 'icon';
     const mediaType = MediaType.podcast;
     const provider = MetadataProvider.audible;
     const testMap = {'test': 'test'};
@@ -39,7 +39,7 @@ void main() {
         expect(sut.toJson(), {
           'name': name,
           'folders': [testMap],
-          'icon': icon.name,
+          'icon': icon,
           'mediaType': mediaType.type,
           'provider': provider.value,
           'settings': testMap,

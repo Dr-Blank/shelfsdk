@@ -14,7 +14,7 @@ _$LibraryImpl _$$LibraryImplFromJson(Map<String, dynamic> json) =>
           .map((e) => Folder.fromJson(e as Map<String, dynamic>))
           .toList(),
       displayOrder: (json['displayOrder'] as num).toInt(),
-      icon: $enumDecode(_$LibraryIconEnumMap, json['icon']),
+      icon: json['icon'] as String?,
       mediaType: $enumDecode(_$MediaTypeEnumMap, json['mediaType']),
       provider: $enumDecode(_$MetadataProviderEnumMap, json['provider']),
       settings:
@@ -31,33 +31,13 @@ Map<String, dynamic> _$$LibraryImplToJson(_$LibraryImpl instance) =>
       'name': instance.name,
       'folders': instance.folders.map((e) => e.toJson()).toList(),
       'displayOrder': instance.displayOrder,
-      'icon': _$LibraryIconEnumMap[instance.icon]!,
+      'icon': instance.icon,
       'mediaType': _$MediaTypeEnumMap[instance.mediaType]!,
       'provider': _$MetadataProviderEnumMap[instance.provider]!,
       'settings': instance.settings.toJson(),
       'createdAt': const DateTimeEpochConverter().toJson(instance.createdAt),
       'lastUpdate': const DateTimeEpochConverter().toJson(instance.lastUpdate),
     };
-
-const _$LibraryIconEnumMap = {
-  LibraryIcon.database: 'database',
-  LibraryIcon.audiobookshelf: 'audiobookshelf',
-  LibraryIcon.books1: 'books-1',
-  LibraryIcon.books2: 'books-2',
-  LibraryIcon.book1: 'book-1',
-  LibraryIcon.microphone1: 'microphone-1',
-  LibraryIcon.microphone3: 'microphone-3',
-  LibraryIcon.radio: 'radio',
-  LibraryIcon.podcast: 'podcast',
-  LibraryIcon.rss: 'rss',
-  LibraryIcon.headphones: 'headphones',
-  LibraryIcon.music: 'music',
-  LibraryIcon.filePicture: 'file-picture',
-  LibraryIcon.rocket: 'rocket',
-  LibraryIcon.power: 'power',
-  LibraryIcon.star: 'star',
-  LibraryIcon.heart: 'heart',
-};
 
 const _$MediaTypeEnumMap = {
   MediaType.book: 'book',

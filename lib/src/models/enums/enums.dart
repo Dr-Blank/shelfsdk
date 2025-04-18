@@ -1,6 +1,5 @@
 export 'auth_method.dart';
 export 'file_type.dart';
-export 'library_icon.dart';
 export 'log_level.dart';
 export 'media_type.dart';
 export 'metadata_provider.dart';

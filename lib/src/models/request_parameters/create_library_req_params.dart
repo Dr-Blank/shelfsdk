@@ -1,6 +1,5 @@
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
-import '../enums/library_icon.dart';
 import '../enums/media_type.dart';
 import '../enums/metadata_provider.dart';
 import '../utils/cron_expression.dart';
@@ -19,7 +18,7 @@ class CreateLibraryReqParams {
 
   final String name;
   final List<NewFolder> folders;
-  final LibraryIcon icon;
+  final String icon;
   final MediaType mediaType;
   final MetadataProvider provider;
   final CreateLibrarySettingsReqParams? settings;
@@ -28,7 +27,7 @@ class CreateLibraryReqParams {
   const CreateLibraryReqParams({
     required this.name,
     required this.folders,
-    this.icon = LibraryIcon.database,
+    this.icon = 'database',
     this.mediaType = MediaType.book,
     this.provider = MetadataProvider.google,
     this.settings,

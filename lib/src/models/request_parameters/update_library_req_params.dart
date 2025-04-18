@@ -2,7 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../utils/json_converters.dart';
 import '../../utils/json_remove_defaults.dart';
-import '../enums/library_icon.dart';
 import '../enums/metadata_provider.dart';
 import '../schemas/folder.dart';
 import '../utils/cron_expression.dart';
@@ -18,7 +17,7 @@ class UpdateLibraryReqParams {
   @JsonKey(includeToJson: false)
   final List<NewFolder>? newFolders;
   final int? displayOrder;
-  final LibraryIcon? icon;
+  final String? icon;
   final MetadataProvider? provider;
   final UpdateLibrarySettingsReqParams? settings;
 
